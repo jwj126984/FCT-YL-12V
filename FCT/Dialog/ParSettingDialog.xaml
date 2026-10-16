@@ -132,6 +132,10 @@
                             <ComboBox x:Name="cbxN69206HPort" Style="{StaticResource CommonComboBoxStyle}"/>
                         </DockPanel>
                         <DockPanel Margin="0,5">
+                            <TextBlock Text="N36200/N36300端口：" Style="{StaticResource CommonTextBlockStyle}"/>
+                            <ComboBox x:Name="cbxN36200Port" Style="{StaticResource CommonComboBoxStyle}"/>
+                        </DockPanel>
+                        <DockPanel Margin="0,5">
                             <TextBlock Text="NXI-6400 IP：" Style="{StaticResource CommonTextBlockStyle}"/>
                             <TextBox x:Name="txtNXI6400IP" Style="{StaticResource CommonTextBoxStyle}"/>
                         </DockPanel>

@@ -2558,6 +2558,9 @@ namespace FCT.Dialog
             cbxN69206HPort.ItemsSource = ports.Select(m => m).OrderBy(m => m);
             cbxN69206HPort.SelectedItem = ConfigHelper.N69206HPort;
 
+            cbxN36200Port.ItemsSource = ports.Select(m => m).OrderBy(m => m);
+            cbxN36200Port.SelectedItem = ConfigHelper.N36200Port;
+
             cbxGunPort.ItemsSource = ports.Select(m => m).OrderBy(m => m);
             cbxGunPort.SelectedItem = ConfigHelper.GunPort;
 
@@ -2645,6 +2648,7 @@ namespace FCT.Dialog
             ConfigHelper.N8331Port = cbxN8331Port.SelectedItem?.ToString();
             ConfigHelper.IT6322Port = cbxIT6322Port.SelectedItem?.ToString();
             ConfigHelper.N69206HPort = cbxN69206HPort.SelectedItem?.ToString();
+            ConfigHelper.N36200Port = cbxN36200Port.SelectedItem?.ToString();
             ConfigHelper.GunPort = cbxGunPort.SelectedItem?.ToString();
             ConfigHelper.RelayPort = cbxRelayPort.SelectedItem?.ToString();
             ConfigHelper.ToolControlPort = cbxToolControlPort.SelectedItem?.ToString();
@@ -2904,6 +2908,7 @@ namespace FCT.Dialog
             backModel.IT6122BPort = ConfigHelper.IT6122BPort;
             backModel.M3905DPort = ConfigHelper.M3905DPort;
             backModel.N8331Port = ConfigHelper.N8331Port;
+            backModel.N36200Port = ConfigHelper.N36200Port;
             backModel.BackTime = DateTime.Now;
 
             backModel.Key_Vals = Key_ValDal.GetAll().ToList();
@@ -2926,6 +2931,7 @@ namespace FCT.Dialog
             ConfigHelper.IT6122BPort = backModel.IT6122BPort;
             ConfigHelper.M3905DPort = backModel.M3905DPort;
             ConfigHelper.N8331Port = backModel.N8331Port;
+            ConfigHelper.N36200Port = backModel.N36200Port;
 
 
             Key_ValDal.Reset(backModel.Key_Vals);
@@ -3197,6 +3203,7 @@ namespace FCT.Dialog
         public string IT6122BPort { get; set; }
         public string M3905DPort { get; set; }
         public string N8331Port { get; set; }
+        public string N36200Port { get; set; }
 
         public string NXI_6400 { get; set; }
 

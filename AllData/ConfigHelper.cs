@@ -195,6 +195,15 @@ namespace AllData
         }
 
         /// <summary>
+        /// N36200/N36300 可编程直流电源端口
+        /// </summary>
+        public static string N36200Port
+        {
+            get { return GetValue("PortName", "N36200"); }
+            set { SetValue("PortName", "N36200", value); }
+        }
+
+        /// <summary>
         /// 继电器控制板端口
         /// </summary>
         public static string RelayPort

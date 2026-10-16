@@ -275,6 +275,10 @@ namespace Common
         /// </summary>
         public static N69206H N69206H { get; set; }
         /// <summary>
+        /// N36200 系列 / N36300 系列 可编程直流电源
+        /// </summary>
+        public static N36200 N36200 { get; set; }
+        /// <summary>
         /// 继电器控制板（共用一个串口）
         /// </summary>
         public static RelayHelper Relay { get; set; }

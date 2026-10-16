@@ -130,6 +130,7 @@
     <Compile Include="PlayEnum.cs" />
     <Compile Include="SerialportHelper\IT6322.cs" />
     <Compile Include="SerialportHelper\N69206H.cs" />
+    <Compile Include="SerialportHelper\N36200.cs" />
     <Compile Include="SerialportHelper\N8331.cs" />
     <Compile Include="SerialportHelper\NXI_6400.cs" />
     <Compile Include="SerialportHelper\PowerHelper.cs" />

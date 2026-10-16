@@ -49,6 +49,7 @@ namespace FCT
         NXI_6400 nXI_6400_2;
         IT6322 IT6322;
         N69206H N69206H;
+        N36200 N36200;
         RelayHelper relay; // 继电器控制板（共用一个串口）
         ToolControlHelper toolControl; // 治具控制卡（独立串口）
         #endregion
@@ -118,6 +119,7 @@ namespace FCT
             var N8331Port = ConfigHelper.N8331Port;
             var IT6322Port = ConfigHelper.IT6322Port;
             var N69206HPort = ConfigHelper.N69206HPort;
+            var N36200Port = ConfigHelper.N36200Port;
             var gunPort = ConfigHelper.GunPort;
             var relayPort = ConfigHelper.RelayPort;
             var toolControlPort = ConfigHelper.ToolControlPort;
@@ -301,6 +303,22 @@ namespace FCT
                     }
                 }
 
+                if (string.IsNullOrEmpty(N36200Port))
+                {
+                    msg += "N36200/N36300 端口未设置\n";
+                }
+                else
+                {
+                    try
+                    {
+                        N36200 = new N36200(N36200Port);
+                    }
+                    catch (Exception ex)
+                    {
+                        msg += "N36200/N36300" + ex.Message + "\n";
+                    }
+                }
+
 
 
 
@@ -347,6 +365,7 @@ namespace FCT
                 CommonData.N8331 = N8331;
                 CommonData.IT6322 = IT6322;
                 CommonData.N69206H = N69206H;
+                CommonData.N36200 = N36200;
                 CommonData.NXI_6400 = nXI_6400;
                 //CommonData.NXI_6400_2 = nXI_6400_2;
 
