@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="FCT.Ctrl.DetectCtrlGEELY.MOSControlParSetting"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FCT.Ctrl.DetectCtrlGEELY" xmlns:playctrl="clr-namespace:FCT.Ctrl.PlayCtrl"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <FrameworkElement.Resources>
+        <!--<Style TargetType="playctrl:DecimalTextBox">
+        <Setter Property="Width" Value="40"/>
+    </Style>-->
+        <Style TargetType="TextBlock">
+            <Setter Property="Margin" Value="2 0"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="left">
+            <Setter Property="Width" Value="220"/>
+            <Setter Property="TextAlignment" Value="Right"/>
+        </Style>
+        <Style TargetType="DockPanel">
+            <Setter Property="Margin" Value="0,4"/>
+        </Style>
+    </FrameworkElement.Resources>
+    <Grid>
+        <StackPanel>
+            <DockPanel>
+                <TextBlock Style="{StaticResource left}" Text="高驱闭合"/>
+                <TextBlock Text="±"/>
+                <playctrl:DecimalTextBox x:Name="box1"/>
+                <TextBlock Text="V"/>
+            </DockPanel>
+            <DockPanel>
+                <TextBlock Style="{StaticResource left}" Text="高驱断开"/>
+                <TextBlock Text="≤"/>
+                <playctrl:DecimalTextBox x:Name="box2"/>
+                <TextBlock Text="V"/>
+            </DockPanel>
+            <DockPanel>
+                <TextBlock Style="{StaticResource left}" Text="继电器闭合"/>
+                <TextBlock Text="±"/>
+                <playctrl:DecimalTextBox x:Name="box3"/>
+                <TextBlock Text="V"/>
+            </DockPanel>
+            <DockPanel>
+                <TextBlock Style="{StaticResource left}" Text="继电器断开"/>
+                <TextBlock Text="≤"/>
+                <playctrl:DecimalTextBox  x:Name="box4"/>
+                <TextBlock Text="V"/>
+            </DockPanel>
+           
+        </StackPanel>
+    </Grid>
+</UserControl>

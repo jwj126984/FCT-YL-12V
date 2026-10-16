@@ -1,0 +1,2462 @@
+VERSION "v00.03.00_00"
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: LBM
+
+
+BO_ 511 BMS_1FF: 32 Vector__XXX
+ SG_ BMSPackThermOutOfCtrlAlrm : 36|2@0+ (1,0) [0|3] ""  LBM
+ SG_ BMSPackThermOutOfCtrlVld : 37|1@0+ (1,0) [0|1] ""  LBM
+
+BO_ 1292 NM_BMS: 8 Vector__XXX
+ SG_ ActvWakeup_BMS : 12|1@0+ (1,0) [0|1] ""  LBM
+ SG_ NetMngtCoorn_BMS : 10|2@0+ (1,0) [0|3] ""  LBM
+ SG_ NetMngtCoorrSleepRdy_BMS : 11|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN10_BMS : 25|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN11_BMS : 26|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN12_BMS : 27|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN13_BMS : 28|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN14_BMS : 29|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN15_BMS : 30|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN16_BMS : 31|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN17_BMS : 32|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN18_BMS : 33|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN19_BMS : 34|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN1_BMS : 16|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN20_BMS : 35|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN21_BMS : 36|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN22_BMS : 37|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN23_BMS : 38|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN24_BMS : 39|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN25_BMS : 40|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN26_BMS : 41|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN27_BMS : 42|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN28_BMS : 43|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN29_BMS : 44|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN2_BMS : 17|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN30_BMS : 45|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN31_BMS : 46|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN32_BMS : 47|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN33_BMS : 48|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN34_BMS : 49|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN35_BMS : 50|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN36_BMS : 51|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN37_BMS : 52|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN38_BMS : 53|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN39_BMS : 54|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN3_BMS : 18|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN40_BMS : 55|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN41_BMS : 56|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN42_BMS : 57|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN43_BMS : 58|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN44_BMS : 59|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN45_BMS : 60|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN46_BMS : 61|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN47_BMS : 62|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN48_BMS : 63|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN4_BMS : 19|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN5_BMS : 20|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN6_BMS : 21|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN7_BMS : 22|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN8_BMS : 23|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN9_BMS : 24|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PtlNetInfo_BMS : 14|1@0+ (1,0) [0|1] ""  LBM
+ SG_ RepMsgReq_BMS : 8|1@0+ (1,0) [0|1] ""  LBM
+ SG_ ResdBit1_BMS : 13|1@0+ (1,0) [0|1] ""  LBM
+ SG_ ResdBit2_BMS : 15|1@0+ (1,0) [0|1] ""  LBM
+ SG_ ScrNodId_BMS : 7|8@0+ (1,0) [0|255] ""  LBM
+
+BO_ 1327 NM_ECCU: 8 Vector__XXX
+ SG_ ActvWakeup_ECCU : 12|1@0+ (1,0) [0|1] ""  LBM
+ SG_ NetMngtCoorn_ECCU : 10|2@0+ (1,0) [0|3] ""  LBM
+ SG_ NetMngtCoorrSleepRdy_ECCU : 11|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN10_ECCU : 25|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN11_ECCU : 26|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN12_ECCU : 27|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN13_ECCU : 28|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN14_ECCU : 29|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN15_ECCU : 30|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN16_ECCU : 31|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN17_ECCU : 32|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN18_ECCU : 33|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN19_ECCU : 34|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN1_ECCU : 16|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN20_ECCU : 35|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN21_ECCU : 36|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN22_ECCU : 37|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN23_ECCU : 38|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN24_ECCU : 39|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN25_ECCU : 40|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN26_ECCU : 41|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN27_ECCU : 42|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN28_ECCU : 43|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN29_ECCU : 44|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN2_ECCU : 17|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN30_ECCU : 45|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN31_ECCU : 46|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN32_ECCU : 47|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN33_ECCU : 48|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN34_ECCU : 49|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN35_ECCU : 50|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN36_ECCU : 51|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN37_ECCU : 52|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN38_ECCU : 53|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN39_ECCU : 54|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN3_ECCU : 18|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN40_ECCU : 55|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN41_ECCU : 56|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN42_ECCU : 57|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN43_ECCU : 58|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN44_ECCU : 59|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN45_ECCU : 60|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN46_ECCU : 61|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN47_ECCU : 62|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN48_ECCU : 63|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN4_ECCU : 19|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN5_ECCU : 20|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN6_ECCU : 21|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN7_ECCU : 22|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN8_ECCU : 23|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN9_ECCU : 24|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PtlNetInfo_ECCU : 14|1@0+ (1,0) [0|1] ""  LBM
+ SG_ RepMsgReq_ECCU : 8|1@0+ (1,0) [0|1] ""  LBM
+ SG_ ResdBit1_ECCU : 13|1@0+ (1,0) [0|1] ""  LBM
+ SG_ ResdBit2_ECCU : 15|1@0+ (1,0) [0|1] ""  LBM
+ SG_ ScrNodId_ECCU : 7|8@0+ (1,0) [0|255] ""  LBM
+
+BO_ 1347 NM_IPU: 8 Vector__XXX
+ SG_ ActvWakeup_IPU : 12|1@0+ (1,0) [0|1] ""  LBM
+ SG_ NetMngtCoorn_IPU : 10|2@0+ (1,0) [0|3] ""  LBM
+ SG_ NetMngtCoorrSleepRdy_IPU : 11|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN10_IPU : 25|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN11_IPU : 26|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN12_IPU : 27|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN13_IPU : 28|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN14_IPU : 29|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN15_IPU : 30|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN16_IPU : 31|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN17_IPU : 32|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN18_IPU : 33|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN19_IPU : 34|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN1_IPU : 16|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN20_IPU : 35|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN21_IPU : 36|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN22_IPU : 37|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN23_IPU : 38|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN24_IPU : 39|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN25_IPU : 40|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN26_IPU : 41|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN27_IPU : 42|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN28_IPU : 43|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN29_IPU : 44|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN2_IPU : 17|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN30_IPU : 45|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN31_IPU : 46|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN32_IPU : 47|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN33_IPU : 48|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN34_IPU : 49|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN35_IPU : 50|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN36_IPU : 51|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN37_IPU : 52|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN38_IPU : 53|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN39_IPU : 54|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN3_IPU : 18|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN40_IPU : 55|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN41_IPU : 56|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN42_IPU : 57|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN43_IPU : 58|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN44_IPU : 59|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN45_IPU : 60|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN46_IPU : 61|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN47_IPU : 62|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN48_IPU : 63|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN4_IPU : 19|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN5_IPU : 20|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN6_IPU : 21|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN7_IPU : 22|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN8_IPU : 23|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN9_IPU : 24|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PtlNetInfo_IPU : 14|1@0+ (1,0) [0|1] ""  LBM
+ SG_ RepMsgReq_IPU : 8|1@0+ (1,0) [0|1] ""  LBM
+ SG_ ResdBit1_IPU : 13|1@0+ (1,0) [0|1] ""  LBM
+ SG_ ResdBit2_IPU : 15|1@0+ (1,0) [0|1] ""  LBM
+ SG_ ScrNodId_IPU : 7|8@0+ (1,0) [0|255] ""  LBM
+
+BO_ 94 IPU_R_5E: 16 Vector__XXX
+ SG_ DCDC1LvCrnt_12V : 79|13@0+ (0.1,-409.6) [-409.6|409.5] "A"  LBM
+ SG_ DCDC1LvVltg_12V : 47|11@0+ (0.01,0) [0|20.47] "V"  LBM
+ SG_ DCDC1Sts_12V : 36|3@0+ (1,0) [0|7] ""  LBM
+ SG_ IPU_R_5E_CRC : 7|16@0+ (1,0) [0|65535] ""  LBM
+ SG_ IPU_R_5E_MsgCntr : 23|8@0+ (1,0) [0|255] ""  LBM
+
+BO_ 584 LBM_248: 64 LBM
+ SG_ BalanceTemp1_LBMR : 183|12@0+ (0.5,-50) [-50|1997.5] "DegC" Vector__XXX
+ SG_ BalanceTemp2_LBMR : 279|12@0+ (0.5,-50) [-50|1997.5] "DegC" Vector__XXX
+ SG_ BattCp_LBMR : 75|12@0+ (0.01,0) [0|40.95] "Ah" Vector__XXX
+ SG_ BattCurrentISts_LBMRVld : 186|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BattCurrent_LBMR : 39|24@0+ (0.001,-2000) [-2000|14777.215] "A" Vector__XXX
+ SG_ BattMosTSts_LBMRVld : 168|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BattMosT_LBMR : 167|9@0+ (0.5,-50) [-50|205.5] "DegC" Vector__XXX
+ SG_ BattSOCSts_LBMRVld : 209|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BattSOC_LBMR : 63|8@0+ (1,0) [0|100] "%" Vector__XXX
+ SG_ BattType_LBMR : 260|3@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ BattVoltSts_LBMRVld : 211|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BattVolt_LBMR : 143|16@0+ (0.001,0) [0|65.535] "V" Vector__XXX
+ SG_ BuckStatus_LBMR : 507|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Cell1BalanceSts_LBMR : 257|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cell2BalanceSts_LBMR : 239|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cell3BalanceSts_LBMR : 187|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Cell4BalanceSts_LBMR : 261|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CellVolt1_LBMR : 95|16@0+ (0.001,0) [0|65.535] "V" Vector__XXX
+ SG_ CellVolt2_LBMR : 399|16@0+ (0.001,0) [0|65.535] "V" Vector__XXX
+ SG_ CellVolt3_LBMR : 111|16@0+ (0.001,0) [0|65.535] "V" Vector__XXX
+ SG_ CellVolt4_LBMR : 223|16@0+ (0.001,0) [0|65.535] "V" Vector__XXX
+ SG_ Cell_T1_LBMR : 255|9@0+ (0.5,-50) [-50|205.5] "DegC" Vector__XXX
+ SG_ Cell_T2_LBMR : 256|9@0+ (0.5,-50) [-50|205.5] "DegC" Vector__XXX
+ SG_ Cell_T3_LBMR : 68|9@0+ (0.5,-50) [-50|205.5] "DegC" Vector__XXX
+ SG_ ChrgMosSts_LBMR : 415|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ ChrgMosTemp_LBMR : 235|12@0+ (0.5,-50) [-50|1997.5] "DegC" Vector__XXX
+ SG_ DisChrgMosSts_LBMR : 509|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ DischrgMosTemp_LBMR : 283|12@0+ (0.5,-50) [-50|1997.5] "DegC" Vector__XXX
+ SG_ HwWakeupStatus_LBMR : 213|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ IR_LBMR : 495|18@0+ (0.001,0) [0|262.143] "mohm" Vector__XXX
+ SG_ LBMMosDiagSts_LBMR : 215|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ LBM_248_CRC : 7|16@0+ (1,0) [0|65535] "" Vector__XXX
+ SG_ LBM_248_MsgCntr : 23|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ MaxChrgCurrent_2S_LBMR : 463|32@0+ (0.001,0) [0|4294967.295] "A" Vector__XXX
+ SG_ MaxChrgCurrent_60S_LBMR : 431|32@0+ (0.001,0) [0|4294967.295] "A" Vector__XXX
+ SG_ MaxDischrgCurrent_2S_LBMR : 367|32@0+ (0.001,0) [0|4294967.295] "A" Vector__XXX
+ SG_ MaxDischrgCurrent_5s_LBMR : 335|32@0+ (0.001,0) [0|4294967.295] "A" Vector__XXX
+ SG_ MaxDischrgCurrent_60S_LBMR : 303|32@0+ (0.001,0) [0|4294967.295] "A" Vector__XXX
+ SG_ MosMidVolt_LBMR : 127|16@0+ (0.001,0) [0|65.535] "V" Vector__XXX
+ SG_ PackExtVolt_LBMR : 199|16@0+ (0.001,0) [0|65.535] "V" Vector__XXX
+ SG_ SOCLowProtn_LBMR : 505|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ SOESts_LBMRVld : 185|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ SOE_LBMR : 31|8@0+ (1,0) [0|255] "%" Vector__XXX
+ SG_ SOHSts_LBMRVld : 184|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ SOH_LBMR : 159|8@0+ (1,0) [0|255] "%" Vector__XXX
+ SG_ VehicleQuiescentCurrent_LBMR : 413|14@0+ (0.1,0) [0|1638.3] "A" Vector__XXX
+ SG_ WakeupInfo_LBMR : 238|3@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ WorkSts_LBMR : 174|3@0+ (1,0) [0|7] "" Vector__XXX
+
+BO_ 585 LBM_249: 48 LBM
+ SG_ AfeHwFault_LBMR : 209|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BalanceOvTempFault_LBMR : 225|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BuckFault_LBMR : 237|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CalCurrentResult_LBMR : 263|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ CellOverVoltageFault_LBMR : 223|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ CellUnderVoltage_Fault_LBMR : 253|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ CellVoltDiffFault_LBMR : 228|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CellVoltOpenWireFault_LBMR : 248|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CellVoltOutRangeFault_LBMR : 202|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ ChrgOvCurFault_LBMR : 247|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ DischrgOvCurFaultCnt_LBMR : 245|6@0+ (1,0) [0|63] "" Vector__XXX
+ SG_ DischrgOvCurFault_LBMR : 204|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ EepromFault_LBMR : 236|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ HwLineWakeupStuckFault_LBMR : 226|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ LBM_249_CRC : 7|16@0+ (1,0) [0|65535] "" Vector__XXX
+ SG_ LBM_249_MsgCntr : 23|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ MosFault_LBMR : 249|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MosOvTempFault_LBMR : 235|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ PackOverTempFault_LBMR : 206|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ PackOverVoltageFault_LBMR : 255|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ PackTempDiffFault_LBMR : 208|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PackThermOutofCtrlAlrm_LBMR : 201|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ PackThermOutofCtrlVld_LBMRVld : 207|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PackUnTempFault_LBMR : 233|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ PackUnVoltFault_LBMR : 215|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ PackVoltOutRangeFault_LBMR : 227|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ SbcFault_LBMR : 229|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ ShortCircuitFault_LBMR : 251|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ SocLowFault_LBMR : 231|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ SohLowFault_LBMR : 239|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ TempSenOutHighRangeFault_LBMR : 216|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ TempSenOutLowRangeFault_LBMR : 217|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 597 LBM_255: 32 LBM
+ SG_ BattChrgMod_LBMR : 71|3@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ BattManufacture_LBMR : 43|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ BattMaxChrgSOCSts_LBMR : 63|8@0+ (1,0) [0|255] "%" Vector__XXX
+ SG_ ChrgMosSt_LBMR : 45|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ ChrgVoltageReq_LBMR : 87|16@0+ (0.001,0) [0|65.535] "V" Vector__XXX
+ SG_ ChrgcurrentReq_LBMR : 111|24@0+ (0.001,-2000) [-2000|14777.215] "A" Vector__XXX
+ SG_ DischrgMosSt_LBMR : 47|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ HwOverDchaEna_LBMR : 97|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ LBM_255_CRC : 7|16@0+ (1,0) [0|65535] "" Vector__XXX
+ SG_ LBM_255_MsgCntr : 23|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ LVBattLowSOCChrgSts_LBMR : 68|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ LVBattLowUChrgSts_LBMR : 65|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ LVBattSOCWakeUpSts_LBMR : 66|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ LVBattUWakeupSts_LBMR : 103|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ LowSOCChrgReq_LBMR : 98|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ LowSOCWakeUpReq_LBMR : 102|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ LowUpackChrgReq_LBMR : 96|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ LowUpackWakeupReq_LBMR : 101|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 856 LBM_358: 32 LBM
+ SG_ BCU_TimeOut_LBMR : 150|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CanBusOffFault_LBMR : 148|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ IPU_R_TimeOut_LBMR : 149|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ LBMChrgPwrCost : 205|14@0+ (1,0) [0|16383] "Wh" Vector__XXX
+ SG_ LBMDischrgPwrCost : 221|14@0+ (1,0) [0|16383] "" Vector__XXX
+ SG_ LBM_358_CRC : 7|16@0+ (1,0) [0|65535] "" Vector__XXX
+ SG_ LBM_358_MsgCntr : 23|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ SWVersion_LBMR : 159|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ TotoalLifeChrgAh_LBMR : 39|32@0+ (0.001,0) [0|4294967.295] "Ah" Vector__XXX
+ SG_ TotoalLifeDischrgAh_LBMR : 119|32@0+ (0.001,0) [0|4294967.295] "Ah" Vector__XXX
+ SG_ ZONEL_TimeOut_LBMR : 151|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1338 NM_LBM: 8 LBM
+ SG_ ActvWakeup_LBM : 12|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ NetMngtCoorn_LBM : 10|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ NetMngtCoorrSleepRdy_LBM : 11|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN10_LBM : 25|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN11_LBM : 26|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN12_LBM : 27|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN13_LBM : 28|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN14_LBM : 29|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN15_LBM : 30|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN16_LBM : 31|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN17_LBM : 32|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN18_LBM : 33|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN19_LBM : 34|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN1_LBM : 16|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN20_LBM : 35|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN21_LBM : 36|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN22_LBM : 37|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN23_LBM : 38|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN24_LBM : 39|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN25_LBM : 40|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN26_LBM : 41|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN27_LBM : 42|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN28_LBM : 43|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN29_LBM : 44|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN2_LBM : 17|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN30_LBM : 45|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN31_LBM : 46|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN32_LBM : 47|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN33_LBM : 48|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN34_LBM : 49|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN35_LBM : 50|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN36_LBM : 51|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN37_LBM : 52|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN38_LBM : 53|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN39_LBM : 54|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN3_LBM : 18|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN40_LBM : 55|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN41_LBM : 56|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN42_LBM : 57|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN43_LBM : 58|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN44_LBM : 59|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN45_LBM : 60|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN46_LBM : 61|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN47_LBM : 62|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN48_LBM : 63|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN4_LBM : 19|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN5_LBM : 20|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN6_LBM : 21|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN7_LBM : 22|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN8_LBM : 23|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PN9_LBM : 24|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PtlNetInfo_LBM : 14|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ RepMsgReq_LBM : 8|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ ResdBit1_LBM : 13|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ ResdBit2_LBM : 15|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ ScrNodId_LBM : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 1722 DIAG_RESP_LBM: 64 LBM
+ SG_ DiagRespData0_LBM : 7|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ DiagRespData10_LBM : 327|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ DiagRespData11_LBM : 359|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ DiagRespData12_LBM : 391|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ DiagRespData13_LBM : 423|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ DiagRespData14_LBM : 455|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ DiagRespData15_LBM : 487|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ DiagRespData1_LBM : 39|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ DiagRespData2_LBM : 71|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ DiagRespData3_LBM : 103|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ DiagRespData4_LBM : 135|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ DiagRespData5_LBM : 167|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ DiagRespData6_LBM : 199|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ DiagRespData7_LBM : 231|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ DiagRespData8_LBM : 263|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ DiagRespData9_LBM : 295|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+
+BO_ 1976 LBM_7B8: 64 LBM
+ SG_ Debug_RealSOC : 215|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ OEM_HW_Version : 199|16@0+ (1,0) [0|65535] "" Vector__XXX
+ SG_ Supplier_SW_Version : 175|24@0+ (1,0) [0|16777215] "" Vector__XXX
+ SG_ OEM_SW_Version : 159|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Debug_AccQuiescentTime : 127|32@0+ (1,0) [0|0] "Min" Vector__XXX
+ SG_ Debug_WakeupInfo : 115|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Debug_VehicleSt : 51|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Ecu_WakeupSource : 119|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ LBM_HWversion : 111|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ LBM_FaultIdentifier : 103|6@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ LBM_TotalFaultNum : 95|6@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Debug_WakeupTime : 71|24@0+ (1,0) [0|0] "S" Vector__XXX
+ SG_ Debug_TheResonOpenDMos : 50|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Debug_BMS_Mode : 55|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ LBM_DMosDriveU : 47|8@0+ (1,0) [0|0] "V" Vector__XXX
+ SG_ LBM_CMosDriveU : 39|8@0+ (1,0) [0|0] "V" Vector__XXX
+ SG_ LBM_SleepTime : 15|24@0+ (1,0) [0|0] "S" Vector__XXX
+
+BO_ 1407 NM_OBC: 8 Vector__XXX
+ SG_ ActvWakeup_OBC : 12|1@0+ (1,0) [0|1] ""  LBM
+ SG_ NetMngtCoorn_OBC : 10|2@0+ (1,0) [0|3] ""  LBM
+ SG_ NetMngtCoorrSleepRdy_OBC : 11|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN10_OBC : 25|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN11_OBC : 26|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN12_OBC : 27|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN13_OBC : 28|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN14_OBC : 29|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN15_OBC : 30|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN16_OBC : 31|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN17_OBC : 32|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN18_OBC : 33|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN19_OBC : 34|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN1_OBC : 16|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN20_OBC : 35|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN21_OBC : 36|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN22_OBC : 37|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN23_OBC : 38|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN24_OBC : 39|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN25_OBC : 40|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN26_OBC : 41|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN27_OBC : 42|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN28_OBC : 43|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN29_OBC : 44|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN2_OBC : 17|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN30_OBC : 45|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN31_OBC : 46|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN32_OBC : 47|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN33_OBC : 48|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN34_OBC : 49|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN35_OBC : 50|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN36_OBC : 51|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN37_OBC : 52|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN38_OBC : 53|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN39_OBC : 54|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN3_OBC : 18|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN40_OBC : 55|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN41_OBC : 56|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN42_OBC : 57|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN43_OBC : 58|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN44_OBC : 59|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN45_OBC : 60|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN46_OBC : 61|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN47_OBC : 62|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN48_OBC : 63|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN4_OBC : 19|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN5_OBC : 20|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN6_OBC : 21|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN7_OBC : 22|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN8_OBC : 23|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN9_OBC : 24|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PtlNetInfo_OBC : 14|1@0+ (1,0) [0|1] ""  LBM
+ SG_ RepMsgReq_OBC : 8|1@0+ (1,0) [0|1] ""  LBM
+ SG_ ResdBit1_OBC : 13|1@0+ (1,0) [0|1] ""  LBM
+ SG_ ResdBit2_OBC : 15|1@0+ (1,0) [0|1] ""  LBM
+ SG_ ScrNodId_OBC : 7|8@0+ (1,0) [0|255] ""  LBM
+
+BO_ 1350 NM_UWB_FT: 8 Vector__XXX
+ SG_ ActvWakeup_UWB_FT : 12|1@0+ (1,0) [0|1] ""  LBM
+ SG_ NetMngtCoorn_UWB_FT : 10|2@0+ (1,0) [0|3] ""  LBM
+ SG_ NetMngtCoorrSleepRdy_UWB_FT : 11|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN10_UWB_FT : 25|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN11_UWB_FT : 26|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN12_UWB_FT : 27|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN13_UWB_FT : 28|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN14_UWB_FT : 29|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN15_UWB_FT : 30|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN16_UWB_FT : 31|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN17_UWB_FT : 32|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN18_UWB_FT : 33|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN19_UWB_FT : 34|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN1_UWB_FT : 16|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN20_UWB_FT : 35|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN21_UWB_FT : 36|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN22_UWB_FT : 37|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN23_UWB_FT : 38|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN24_UWB_FT : 39|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN25_UWB_FT : 40|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN26_UWB_FT : 41|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN27_UWB_FT : 42|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN28_UWB_FT : 43|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN29_UWB_FT : 44|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN2_UWB_FT : 17|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN30_UWB_FT : 45|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN31_UWB_FT : 46|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN32_UWB_FT : 47|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN33_UWB_FT : 48|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN34_UWB_FT : 49|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN35_UWB_FT : 50|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN36_UWB_FT : 51|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN37_UWB_FT : 52|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN38_UWB_FT : 53|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN39_UWB_FT : 54|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN3_UWB_FT : 18|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN40_UWB_FT : 55|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN41_UWB_FT : 56|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN42_UWB_FT : 57|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN43_UWB_FT : 58|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN44_UWB_FT : 59|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN45_UWB_FT : 60|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN46_UWB_FT : 61|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN47_UWB_FT : 62|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN48_UWB_FT : 63|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN4_UWB_FT : 19|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN5_UWB_FT : 20|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN6_UWB_FT : 21|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN7_UWB_FT : 22|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN8_UWB_FT : 23|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN9_UWB_FT : 24|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PtlNetInfo_UWB_FT : 14|1@0+ (1,0) [0|1] ""  LBM
+ SG_ RepMsgReq_UWB_FT : 8|1@0+ (1,0) [0|1] ""  LBM
+ SG_ ResdBit1_UWB_FT : 13|1@0+ (1,0) [0|1] ""  LBM
+ SG_ ResdBit2_UWB_FT : 15|1@0+ (1,0) [0|1] ""  LBM
+ SG_ ScrNodId_UWB_FT : 7|8@0+ (1,0) [0|255] ""  LBM
+
+BO_ 286 BCU_11E: 8 Vector__XXX
+ SG_ VehSpdSts_Rdnt1 : 29|1@0+ (1,0) [0|1] ""  LBM
+ SG_ VehSpd_Rdnt1 : 28|13@0+ (0.05625,0) [0|360] "km/h"  LBM
+
+BO_ 316 ZONE_13C: 8 Vector__XXX
+ SG_ DrvState : 18|3@0+ (1,0) [0|7] ""  LBM
+ SG_ OperatorState : 21|3@0+ (1,0) [0|7] ""  LBM
+ SG_ VehStateDetailed : 27|4@0+ (1,0) [0|15] ""  LBM
+ SG_ ZONE_13C_CRC : 7|8@0+ (1,0) [0|255] ""  LBM
+ SG_ ZONE_13C_MsgCntr : 11|4@0+ (1,0) [0|14] ""  LBM
+
+BO_ 598 ZONE_256: 32 Vector__XXX
+ SG_ ChargeMosCtrl_ZONER : 74|2@0+ (1,0) [0|3] ""  LBM
+ SG_ CrashDetd : 106|1@0+ (1,0) [0|1] ""  LBM
+ SG_ DischargeMosCtrl_ZONER : 76|2@0+ (1,0) [0|3] ""  LBM
+ SG_ LBMMaxChrgSOCReq_ZONER : 39|8@0+ (1,0) [0|100] "%"  LBM
+ SG_ LowSOCChrgEna_ZONER : 72|1@0+ (1,0) [0|1] ""  LBM
+ SG_ LowSOCChrg_Threshold_ZONER : 71|8@0+ (1,0) [0|255] "%"  LBM
+ SG_ LowUChrgEna_ZONER : 103|1@0+ (1,0) [0|1] ""  LBM
+ SG_ LowUChrg_Treshold_ZONER : 47|16@0+ (0.001,0) [0|65.535] "V"  LBM
+ SG_ ParkDCDCOffReq : 101|1@0+ (1,0) [0|1] ""  LBM
+ SG_ SOCWake_Treshold_ZONER : 63|8@0+ (1,0) [0|255] "%"  LBM
+ SG_ SOCWakeupEna_ZONER : 102|1@0+ (1,0) [0|1] ""  LBM
+ SG_ UWake_Treshold_ZONER : 87|16@0+ (0.001,0) [0|65.535] "V"  LBM
+ SG_ UWakeupEna_ZONER : 77|1@0+ (1,0) [0|1] ""  LBM
+ SG_ ZONE_256_CRC : 7|16@0+ (1,0) [0|65535] ""  LBM
+ SG_ ZONE_256_MsgCntr : 23|8@0+ (1,0) [0|255] ""  LBM
+ SG_ ZoneRHVBattCutOffWarn : 79|2@0+ (1,0) [0|3] ""  LBM
+
+BO_ 938 ZONE_3AA: 8 Vector__XXX
+ SG_ VehOdometer : 7|24@0+ (1,0) [0|16777214] "kM"  LBM
+
+BO_ 946 ZONE_3B2: 8 Vector__XXX
+ SG_ Day : 20|5@0+ (1,0) [1|31] "Day"  LBM
+ SG_ Hr : 28|5@0+ (1,0) [0|23] "Hour"  LBM
+ SG_ Min : 37|6@0+ (1,0) [0|59] "Minute"  LBM
+ SG_ Msec : 49|10@0+ (1,0) [0|999] "Millisecond"  LBM
+ SG_ Mth : 11|4@0+ (1,0) [1|12] "Month"  LBM
+ SG_ Sec : 45|6@0+ (1,0) [0|60] "Second"  LBM
+ SG_ Yr : 7|8@0+ (1,2000) [2000|2254] "Year"  LBM
+
+BO_ 1285 NM_ZONE_LEM: 8 Vector__XXX
+ SG_ ActvWakeup_ZONE_LEM : 12|1@0+ (1,0) [0|1] ""  LBM
+ SG_ NetMngtCoorn_ZONE_LEM : 10|2@0+ (1,0) [0|3] ""  LBM
+ SG_ NetMngtCoorrSleepRdy_ZONE_LEM : 11|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN10_ZONE_LEM : 25|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN11_ZONE_LEM : 26|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN12_ZONE_LEM : 27|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN13_ZONE_LEM : 28|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN14_ZONE_LEM : 29|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN15_ZONE_LEM : 30|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN16_ZONE_LEM : 31|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN17_ZONE_LEM : 32|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN18_ZONE_LEM : 33|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN19_ZONE_LEM : 34|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN1_ZONE_LEM : 16|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN20_ZONE_LEM : 35|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN21_ZONE_LEM : 36|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN22_ZONE_LEM : 37|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN23_ZONE_LEM : 38|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN24_ZONE_LEM : 39|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN25_ZONE_LEM : 40|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN26_ZONE_LEM : 41|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN27_ZONE_LEM : 42|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN28_ZONE_LEM : 43|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN29_ZONE_LEM : 44|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN2_ZONE_LEM : 17|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN30_ZONE_LEM : 45|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN31_ZONE_LEM : 46|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN32_ZONE_LEM : 47|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN33_ZONE_LEM : 48|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN34_ZONE_LEM : 49|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN35_ZONE_LEM : 50|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN36_ZONE_LEM : 51|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN37_ZONE_LEM : 52|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN38_ZONE_LEM : 53|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN39_ZONE_LEM : 54|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN3_ZONE_LEM : 18|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN40_ZONE_LEM : 55|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN41_ZONE_LEM : 56|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN42_ZONE_LEM : 57|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN43_ZONE_LEM : 58|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN44_ZONE_LEM : 59|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN45_ZONE_LEM : 60|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN46_ZONE_LEM : 61|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN47_ZONE_LEM : 62|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN48_ZONE_LEM : 63|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN4_ZONE_LEM : 19|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN5_ZONE_LEM : 20|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN6_ZONE_LEM : 21|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN7_ZONE_LEM : 22|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN8_ZONE_LEM : 23|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PN9_ZONE_LEM : 24|1@0+ (1,0) [0|1] ""  LBM
+ SG_ PtlNetInfo_ZONE_LEM : 14|1@0+ (1,0) [0|1] ""  LBM
+ SG_ RepMsgReq_ZONE_LEM : 8|1@0+ (1,0) [0|1] ""  LBM
+ SG_ ResdBit1_ZONE_LEM : 13|1@0+ (1,0) [0|1] ""  LBM
+ SG_ ResdBit2_ZONE_LEM : 15|1@0+ (1,0) [0|1] ""  LBM
+ SG_ ScrNodId_ZONE_LEM : 7|8@0+ (1,0) [0|255] ""  LBM
+
+BO_ 1504 VC_Data_5E0: 8 Vector__XXX
+ SG_ VC_Data_5E0_CRC : 7|8@0+ (1,0) [0|255] ""  LBM
+ SG_ VC_Data_5E0_MsgCntr : 11|4@0+ (1,0) [0|14] ""  LBM
+ SG_ VC_Data_5E0_Payload : 23|48@0+ (1,0) [0|281474976710655] ""  LBM
+
+BO_ 1537 DIAG_REQ_AllECU: 8 Vector__XXX
+ SG_ DiagReqData0_AllECU : 7|8@0+ (1,0) [0|255] ""  LBM
+ SG_ DiagReqData1_AllECU : 15|8@0+ (1,0) [0|255] ""  LBM
+ SG_ DiagReqData2_AllECU : 23|8@0+ (1,0) [0|255] ""  LBM
+ SG_ DiagReqData3_AllECU : 31|8@0+ (1,0) [0|255] ""  LBM
+ SG_ DiagReqData4_AllECU : 39|8@0+ (1,0) [0|255] ""  LBM
+ SG_ DiagReqData5_AllECU : 47|8@0+ (1,0) [0|255] ""  LBM
+ SG_ DiagReqData6_AllECU : 55|8@0+ (1,0) [0|255] ""  LBM
+ SG_ DiagReqData7_AllECU : 63|8@0+ (1,0) [0|255] ""  LBM
+
+BO_ 1594 DIAG_REQ_LBM: 64 Vector__XXX
+ SG_ DiagReqData0_LBM : 7|32@0+ (1,0) [0|4294967295] ""  LBM
+ SG_ DiagReqData10_LBM : 327|32@0+ (1,0) [0|4294967295] ""  LBM
+ SG_ DiagReqData11_LBM : 359|32@0+ (1,0) [0|4294967295] ""  LBM
+ SG_ DiagReqData12_LBM : 391|32@0+ (1,0) [0|4294967295] ""  LBM
+ SG_ DiagReqData13_LBM : 423|32@0+ (1,0) [0|4294967295] ""  LBM
+ SG_ DiagReqData14_LBM : 455|32@0+ (1,0) [0|4294967295] ""  LBM
+ SG_ DiagReqData15_LBM : 487|32@0+ (1,0) [0|4294967295] ""  LBM
+ SG_ DiagReqData1_LBM : 39|32@0+ (1,0) [0|4294967295] ""  LBM
+ SG_ DiagReqData2_LBM : 71|32@0+ (1,0) [0|4294967295] ""  LBM
+ SG_ DiagReqData3_LBM : 103|32@0+ (1,0) [0|4294967295] ""  LBM
+ SG_ DiagReqData4_LBM : 135|32@0+ (1,0) [0|4294967295] ""  LBM
+ SG_ DiagReqData5_LBM : 167|32@0+ (1,0) [0|4294967295] ""  LBM
+ SG_ DiagReqData6_LBM : 199|32@0+ (1,0) [0|4294967295] ""  LBM
+ SG_ DiagReqData7_LBM : 231|32@0+ (1,0) [0|4294967295] ""  LBM
+ SG_ DiagReqData8_LBM : 263|32@0+ (1,0) [0|4294967295] ""  LBM
+ SG_ DiagReqData9_LBM : 295|32@0+ (1,0) [0|4294967295] ""  LBM
+
+
+
+CM_ SG_ 511 BMSPackThermOutOfCtrlAlrm "Pack Thermal Out of Control Alarm";
+CM_ SG_ 511 BMSPackThermOutOfCtrlVld "Pack Thermal Out of Control Validity";
+CM_ SG_ 1292 ActvWakeup_BMS "Control bit vector, Active wakeup - Reserved";
+CM_ SG_ 1292 NetMngtCoorn_BMS "Control bit vector, Network management coordination - Reserved";
+CM_ SG_ 1292 NetMngtCoorrSleepRdy_BMS "Control bit vector, Network management coordinator sleep ready - Reserved";
+CM_ SG_ 1292 PtlNetInfo_BMS "Control bit vector, Partial network information - Reserved";
+CM_ SG_ 1292 RepMsgReq_BMS "Control bit vector, Repeat Message Request";
+CM_ SG_ 1292 ResdBit1_BMS "Control bit vector, Reserved";
+CM_ SG_ 1292 ResdBit2_BMS "Control bit vector, Reserved";
+CM_ SG_ 1292 ScrNodId_BMS "Source node identifier BMS";
+CM_ SG_ 1327 ActvWakeup_ECCU "Control bit vector, Active wakeup - Reserved";
+CM_ SG_ 1327 NetMngtCoorn_ECCU "Control bit vector, Network management coordination - Reserved";
+CM_ SG_ 1327 NetMngtCoorrSleepRdy_ECCU "Control bit vector, Network management coordinator sleep ready - Reserved";
+CM_ SG_ 1327 PtlNetInfo_ECCU "Control bit vector, Partial network information - Reserved";
+CM_ SG_ 1327 RepMsgReq_ECCU "Control bit vector, Repeat Message Request";
+CM_ SG_ 1327 ResdBit1_ECCU "Control bit vector, Reserved";
+CM_ SG_ 1327 ResdBit2_ECCU "Control bit vector, Reserved";
+CM_ SG_ 1327 ScrNodId_ECCU "Source node identifier ECCU";
+CM_ SG_ 1347 ActvWakeup_IPU "Control bit vector, Active wakeup - Reserved";
+CM_ SG_ 1347 NetMngtCoorn_IPU "Control bit vector, Network management coordination - Reserved";
+CM_ SG_ 1347 NetMngtCoorrSleepRdy_IPU "Control bit vector, Network management coordinator sleep ready - Reserved";
+CM_ SG_ 1347 PtlNetInfo_IPU "Control bit vector, Partial network information - Reserved";
+CM_ SG_ 1347 RepMsgReq_IPU "Control bit vector, Repeat Message Request";
+CM_ SG_ 1347 ResdBit1_IPU "Control bit vector, Reserved";
+CM_ SG_ 1347 ResdBit2_IPU "Control bit vector, Reserved";
+CM_ SG_ 1347 ScrNodId_IPU "Source node identifier IPU";
+CM_ SG_ 94 DCDC1LvCrnt_12V "DCDC actual LV side current";
+CM_ SG_ 94 DCDC1LvVltg_12V "DCDC actual LV side voltage";
+CM_ SG_ 94 DCDC1Sts_12V "DCDC status";
+CM_ SG_ 94 IPU_R_5E_CRC "AUTOSAR E2E profile5, CRC";
+CM_ SG_ 94 IPU_R_5E_MsgCntr "AUTOSAR E2E profile5, Message Counter";
+CM_ SG_ 584 BalanceTemp1_LBMR "Temperature of equilibrium temperature point 1";
+CM_ SG_ 584 BalanceTemp2_LBMR "Temperature of equilibrium temperature point 2";
+CM_ SG_ 584 BattCp_LBMR "Battery capacity";
+CM_ SG_ 584 BattCurrentISts_LBMRVld "12V Battery current status";
+CM_ SG_ 584 BattCurrent_LBMR "12V Battery current";
+CM_ SG_ 584 BattMosTSts_LBMRVld "12V Battery MOS temperature status";
+CM_ SG_ 584 BattMosT_LBMR "12V Battery MOS temperature";
+CM_ SG_ 584 BattSOCSts_LBMRVld "12V battery State of Charge (SOC) status   ";
+CM_ SG_ 584 BattSOC_LBMR "12V battery State of Charge (SOC) ";
+CM_ SG_ 584 BattType_LBMR "BatteryType";
+CM_ SG_ 584 BattVoltSts_LBMRVld "12V battery voltage status";
+CM_ SG_ 584 BattVolt_LBMR "12V battery voltage";
+CM_ SG_ 584 BuckStatus_LBMR "Buck circuit Status";
+CM_ SG_ 584 Cell1BalanceSts_LBMR "LBM cell1 balance status";
+CM_ SG_ 584 Cell2BalanceSts_LBMR "LBM cell2 balance status";
+CM_ SG_ 584 Cell3BalanceSts_LBMR "LBM cell3 balance status";
+CM_ SG_ 584 Cell4BalanceSts_LBMR "LBM cell4 balance status";
+CM_ SG_ 584 CellVolt1_LBMR "12V battery cell1 voltage";
+CM_ SG_ 584 CellVolt2_LBMR "12V battery cell2 voltage";
+CM_ SG_ 584 CellVolt3_LBMR "12V battery cell3 voltage";
+CM_ SG_ 584 CellVolt4_LBMR "12V battery cell4 voltage";
+CM_ SG_ 584 Cell_T1_LBMR "12V battery cell1 temperature";
+CM_ SG_ 584 Cell_T2_LBMR "12V battery cell2 temperature";
+CM_ SG_ 584 Cell_T3_LBMR "12V battery cell3 temperature";
+CM_ SG_ 584 ChrgMosSts_LBMR "LBM Charge Mos Status";
+CM_ SG_ 584 ChrgMosTemp_LBMR "Charging MOS temperature";
+CM_ SG_ 584 DisChrgMosSts_LBMR "LBM DisCharge Mos Status";
+CM_ SG_ 584 DischrgMosTemp_LBMR "DisCharging MOS temperature";
+CM_ SG_ 584 HwWakeupStatus_LBMR "LBM hardwire wakeup  status";
+CM_ SG_ 584 IR_LBMR "IR_LBMR";
+CM_ SG_ 584 LBMMosDiagSts_LBMR "LBMMosDiagSts_LBMR";
+CM_ SG_ 584 LBM_248_CRC "AUTOSAR E2E profile5, CRC";
+CM_ SG_ 584 LBM_248_MsgCntr "AUTOSAR E2E profile5, Message Counter";
+CM_ SG_ 584 MaxChrgCurrent_2S_LBMR "The maximum allowable charging current in 2S";
+CM_ SG_ 584 MaxChrgCurrent_60S_LBMR "The maximum allowable charging current in 60S";
+CM_ SG_ 584 MaxDischrgCurrent_2S_LBMR "The maximum allowable discharge current in 2S";
+CM_ SG_ 584 MaxDischrgCurrent_5s_LBMR "MaxDischrgCurrent_5s_LBMR";
+CM_ SG_ 584 MaxDischrgCurrent_60S_LBMR "The maximum allowable discharge current in 60S";
+CM_ SG_ 584 MosMidVolt_LBMR "Voltage in the middle of charging MOS and discharging MOS";
+CM_ SG_ 584 PackExtVolt_LBMR "Total external voltage of the battery (P+)";
+CM_ SG_ 584 SOCLowProtn_LBMR "when SOC is lower than 10%, battery open the mainmosfet switch to protection itself.";
+CM_ SG_ 584 SOESts_LBMRVld "12v battery SOE status";
+CM_ SG_ 584 SOE_LBMR "12v battery SOE";
+CM_ SG_ 584 SOHSts_LBMRVld "12v battery SOH status";
+CM_ SG_ 584 SOH_LBMR "12v battery SOH ";
+CM_ SG_ 584 VehicleQuiescentCurrent_LBMR "quiescent current of vehicle";
+CM_ SG_ 584 WakeupInfo_LBMR "LBM wakeup reason";
+CM_ SG_ 584 WorkSts_LBMR "LBM work status";
+CM_ SG_ 585 AfeHwFault_LBMR "AFE Hw Fault";
+CM_ SG_ 585 BalanceOvTempFault_LBMR "Balance Over Temp Fault";
+CM_ SG_ 585 BuckFault_LBMR "Buck Fault";
+CM_ SG_ 585 CalCurrentResult_LBMR "Current calibration result
+other Value except 0x77:Invalid calibration coefficient";
+CM_ SG_ 585 CellOverVoltageFault_LBMR "LBM Cell Over Voltage Fault";
+CM_ SG_ 585 CellUnderVoltage_Fault_LBMR "LBM Cell Under Voltage Fault";
+CM_ SG_ 585 CellVoltDiffFault_LBMR "Cell Voltage difference Fault";
+CM_ SG_ 585 CellVoltOpenWireFault_LBMR "Cell Voltage Open Wire Fault";
+CM_ SG_ 585 CellVoltOutRangeFault_LBMR "Cell Voltage Out Range Fault ";
+CM_ SG_ 585 ChrgOvCurFault_LBMR "LBM Charging OverCurrent fault";
+CM_ SG_ 585 DischrgOvCurFaultCnt_LBMR "LBM Discharge OverCurrent fault counter";
+CM_ SG_ 585 DischrgOvCurFault_LBMR "LBM Discharge OverCurrent fault";
+CM_ SG_ 585 EepromFault_LBMR "Eeprom Fault";
+CM_ SG_ 585 HwLineWakeupStuckFault_LBMR "Hw Line Wakeup signal Stuck Fault";
+CM_ SG_ 585 LBM_249_CRC "AUTOSAR E2E profile5, CRC";
+CM_ SG_ 585 LBM_249_MsgCntr "AUTOSAR E2E profile5, Message Counter";
+CM_ SG_ 585 MosFault_LBMR "Mos Fault";
+CM_ SG_ 585 MosOvTempFault_LBMR "Mos Over Temp Fault";
+CM_ SG_ 585 PackOverTempFault_LBMR "LBM Pack Over Temp Fault";
+CM_ SG_ 585 PackOverVoltageFault_LBMR "LBM Pack Over Voltage Fault";
+CM_ SG_ 585 PackTempDiffFault_LBMR "Pack Temperature difference Fault";
+CM_ SG_ 585 PackThermOutofCtrlAlrm_LBMR "12V pack thermal of control monitor, pack temperature increase in shot time";
+CM_ SG_ 585 PackThermOutofCtrlVld_LBMRVld "Pack thermal runaway alarm validity";
+CM_ SG_ 585 PackUnTempFault_LBMR "Pack Under Temp Fault";
+CM_ SG_ 585 PackUnVoltFault_LBMR "LBM pack under voltage fault";
+CM_ SG_ 585 PackVoltOutRangeFault_LBMR "Pack Voltage Out Range Fault";
+CM_ SG_ 585 SbcFault_LBMR "SBC Fault";
+CM_ SG_ 585 ShortCircuitFault_LBMR "Short Circuit Fault";
+CM_ SG_ 585 SocLowFault_LBMR "SoC Low Fault";
+CM_ SG_ 585 SohLowFault_LBMR "SoH Low Fault";
+CM_ SG_ 585 TempSenOutHighRangeFault_LBMR "Temp Sense Out High Range Fault";
+CM_ SG_ 585 TempSenOutLowRangeFault_LBMR "Temp Sense Out Low Range Fault";
+CM_ SG_ 597 BattChrgMod_LBMR "LBM Charging Mode request";
+CM_ SG_ 597 BattManufacture_LBMR "Battery manufacturer";
+CM_ SG_ 597 BattMaxChrgSOCSts_LBMR "Battery Max Charge SOC";
+CM_ SG_ 597 ChrgMosSt_LBMR "Charge Mos Status";
+CM_ SG_ 597 ChrgVoltageReq_LBMR "LBM Charge Voltage Request ";
+CM_ SG_ 597 ChrgcurrentReq_LBMR "LBM Charge Current Request ";
+CM_ SG_ 597 DischrgMosSt_LBMR "Discharge Mos Status";
+CM_ SG_ 597 HwOverDchaEna_LBMR "LBM Hardware Over discharge function enable status";
+CM_ SG_ 597 LBM_255_CRC "AUTOSAR E2E profile5, CRC";
+CM_ SG_ 597 LBM_255_MsgCntr "AUTOSAR E2E profile5, Message Counter";
+CM_ SG_ 597 LVBattLowSOCChrgSts_LBMR "LVBattLowSOCChrgSts_LBMR";
+CM_ SG_ 597 LVBattLowUChrgSts_LBMR "LowVoltage charging function  status";
+CM_ SG_ 597 LVBattSOCWakeUpSts_LBMR "SOC Wakeup enable status";
+CM_ SG_ 597 LVBattUWakeupSts_LBMR "Voltage wakeup enable status";
+CM_ SG_ 597 LowSOCChrgReq_LBMR "Low SOC charge request";
+CM_ SG_ 597 LowSOCWakeUpReq_LBMR "Low SOC wake up vehicle to request charging";
+CM_ SG_ 597 LowUpackChrgReq_LBMR "Low packvoltage charging request";
+CM_ SG_ 597 LowUpackWakeupReq_LBMR "Low packvoltage wake up vehicle to request charging";
+CM_ SG_ 856 BCU_TimeOut_LBMR "TimeOut with BCU ";
+CM_ SG_ 856 CanBusOffFault_LBMR "Can BusOff Fault";
+CM_ SG_ 856 IPU_R_TimeOut_LBMR "TimeOut with DCDC";
+CM_ SG_ 856 LBM_358_CRC "AUTOSAR E2E profile5, CRC";
+CM_ SG_ 856 LBM_358_MsgCntr "AUTOSAR E2E profile5, Message Counter";
+CM_ SG_ 856 SWVersion_LBMR "SWVersion_LBMR";
+CM_ SG_ 856 TotoalLifeChrgAh_LBMR "The charging Ah number of the entire life cycle";
+CM_ SG_ 856 TotoalLifeDischrgAh_LBMR "The discharging Ah number of the entire life cycle";
+CM_ SG_ 856 ZONEL_TimeOut_LBMR "TimeOut with ZONEF";
+CM_ SG_ 1338 ActvWakeup_LBM "Control bit vector, Active wakeup - Reserved";
+CM_ SG_ 1338 NetMngtCoorn_LBM "Control bit vector, Network management coordination - Reserved";
+CM_ SG_ 1338 NetMngtCoorrSleepRdy_LBM "Control bit vector, Network management coordinator sleep ready - Reserved";
+CM_ SG_ 1338 PtlNetInfo_LBM "Control bit vector, Partial network information - Reserved";
+CM_ SG_ 1338 RepMsgReq_LBM "Control bit vector, Repeat Message Request";
+CM_ SG_ 1338 ResdBit1_LBM "Control bit vector, Reserved";
+CM_ SG_ 1338 ResdBit2_LBM "Control bit vector, Reserved";
+CM_ SG_ 1338 ScrNodId_LBM "Source node identifier LBM";
+CM_ SG_ 1722 DiagRespData0_LBM "Diagnostic response data 0 LBM";
+CM_ SG_ 1722 DiagRespData10_LBM "Diagnostic response data 10 LBM";
+CM_ SG_ 1722 DiagRespData11_LBM "Diagnostic response data 11 LBM";
+CM_ SG_ 1722 DiagRespData12_LBM "Diagnostic response data 12 LBM";
+CM_ SG_ 1722 DiagRespData13_LBM "Diagnostic response data 13 LBM";
+CM_ SG_ 1722 DiagRespData14_LBM "Diagnostic response data 14 LBM";
+CM_ SG_ 1722 DiagRespData15_LBM "Diagnostic response data 15 LBM";
+CM_ SG_ 1722 DiagRespData1_LBM "Diagnostic response data 1 LBM";
+CM_ SG_ 1722 DiagRespData2_LBM "Diagnostic response data 2 LBM";
+CM_ SG_ 1722 DiagRespData3_LBM "Diagnostic response data 3 LBM";
+CM_ SG_ 1722 DiagRespData4_LBM "Diagnostic response data 4 LBM";
+CM_ SG_ 1722 DiagRespData5_LBM "Diagnostic response data 5 LBM";
+CM_ SG_ 1722 DiagRespData6_LBM "Diagnostic response data 6 LBM";
+CM_ SG_ 1722 DiagRespData7_LBM "Diagnostic response data 7 LBM";
+CM_ SG_ 1722 DiagRespData8_LBM "Diagnostic response data 8 LBM";
+CM_ SG_ 1722 DiagRespData9_LBM "Diagnostic response data 9 LBM";
+CM_ SG_ 1976 OEM_HW_Version "High 8 bits of the signal is major version, low 8 bits is minor version. signal data format : ascii .";
+CM_ SG_ 1976 Supplier_SW_Version "High byte is major version, middle byte is minor version, low byte is patch version";
+CM_ SG_ 1976 OEM_SW_Version "High 8 bits of the signal is major version, low 8 bits is minor version. signal data format : ascii .";
+CM_ SG_ 1407 ActvWakeup_OBC "Control bit vector, Active wakeup - Reserved";
+CM_ SG_ 1407 NetMngtCoorn_OBC "Control bit vector, Network management coordination - Reserved";
+CM_ SG_ 1407 NetMngtCoorrSleepRdy_OBC "Control bit vector, Network management coordinator sleep ready - Reserved";
+CM_ SG_ 1407 PtlNetInfo_OBC "Control bit vector, Partial network information - Reserved";
+CM_ SG_ 1407 RepMsgReq_OBC "Control bit vector, Repeat Message Request";
+CM_ SG_ 1407 ResdBit1_OBC "Control bit vector, Reserved";
+CM_ SG_ 1407 ResdBit2_OBC "Control bit vector, Reserved";
+CM_ SG_ 1407 ScrNodId_OBC "Source node identifier OBC";
+CM_ SG_ 1350 ActvWakeup_UWB_FT "Control bit vector Active wakeup - Reserved";
+CM_ SG_ 1350 NetMngtCoorn_UWB_FT "Control bit vector Network management coordination - Reserved";
+CM_ SG_ 1350 NetMngtCoorrSleepRdy_UWB_FT "Control bit vector Network management coordinator sleep ready - Reserved";
+CM_ SG_ 1350 PtlNetInfo_UWB_FT "Control bit vector DCM_FL Partial network information - Reserved";
+CM_ SG_ 1350 RepMsgReq_UWB_FT "Control bit vector DCM_FL Repeat Message Request";
+CM_ SG_ 1350 ResdBit1_UWB_FT "Control bit vector DCM_FL Reserved";
+CM_ SG_ 1350 ResdBit2_UWB_FT "Control bit vector DCM_FL Reserved";
+CM_ SG_ 1350 ScrNodId_UWB_FT "Source node identifier DCM_FL";
+CM_ SG_ 286 VehSpdSts_Rdnt1 "Vehicle speed validity and initialization status";
+CM_ SG_ 286 VehSpd_Rdnt1 "Vehicle speed. Invalid values 1901 - 1FFF";
+CM_ SG_ 316 DrvState "Driving States";
+CM_ SG_ 316 OperatorState "Operator State";
+CM_ SG_ 316 VehStateDetailed "Vehicle State";
+CM_ SG_ 316 ZONE_13C_CRC "AUTOSAR E2E profile1, CRC";
+CM_ SG_ 316 ZONE_13C_MsgCntr "AUTOSAR E2E profile1, Message Counter";
+CM_ SG_ 598 ChargeMosCtrl_ZONER "Charge Mos Control";
+CM_ SG_ 598 CrashDetd "Crash detection status";
+CM_ SG_ 598 DischargeMosCtrl_ZONER "Discharge Mos Control";
+CM_ SG_ 598 LBMMaxChrgSOCReq_ZONER "LV Battery Max Charge SOC Requirement";
+CM_ SG_ 598 LowSOCChrgEna_ZONER "LowSOCChrgEna_ZONER";
+CM_ SG_ 598 LowSOCChrg_Threshold_ZONER "LowSOCChrg_Threshold_ZONER";
+CM_ SG_ 598 LowUChrgEna_ZONER "Low voltage charge enable";
+CM_ SG_ 598 LowUChrg_Treshold_ZONER "Low voltage charge treshold";
+CM_ SG_ 598 ParkDCDCOffReq "Park DCDC Off Request";
+CM_ SG_ 598 SOCWake_Treshold_ZONER "Low SOC Wakeup treshold";
+CM_ SG_ 598 SOCWakeupEna_ZONER "Low SOC Wakeup enable";
+CM_ SG_ 598 UWake_Treshold_ZONER "Low voltage Wakeup treshold";
+CM_ SG_ 598 UWakeupEna_ZONER "Low voltage Wakeup enable";
+CM_ SG_ 598 ZONE_256_CRC "AUTOSAR E2E profile5, CRC";
+CM_ SG_ 598 ZONE_256_MsgCntr "AUTOSAR E2E profile5, Message Counter";
+CM_ SG_ 598 ZoneRHVBattCutOffWarn "High voltage battery disconnect warning";
+CM_ SG_ 938 VehOdometer "Vehicle odometer,Invalid value FFFFFF";
+CM_ SG_ 946 Day "Day";
+CM_ SG_ 946 Hr "Hour";
+CM_ SG_ 946 Min "Minute";
+CM_ SG_ 946 Msec "Millisecond";
+CM_ SG_ 946 Mth "Month";
+CM_ SG_ 946 Sec "Second";
+CM_ SG_ 946 Yr "Year";
+CM_ SG_ 1285 ActvWakeup_ZONE_LEM "Control bit vector, Active wakeup - Reserved";
+CM_ SG_ 1285 NetMngtCoorn_ZONE_LEM "Control bit vector, Network management coordination - Reserved";
+CM_ SG_ 1285 NetMngtCoorrSleepRdy_ZONE_LEM "Control bit vector, Network management coordinator sleep ready - Reserved";
+CM_ SG_ 1285 PtlNetInfo_ZONE_LEM "Control bit vector, Partial network information - Reserved";
+CM_ SG_ 1285 RepMsgReq_ZONE_LEM "Control bit vector, Repeat Message Request";
+CM_ SG_ 1285 ResdBit1_ZONE_LEM "Control bit vector, Reserved";
+CM_ SG_ 1285 ResdBit2_ZONE_LEM "Control bit vector, Reserved";
+CM_ SG_ 1285 ScrNodId_ZONE_LEM "Source node identifier ZONE_L";
+CM_ SG_ 1504 VC_Data_5E0_CRC "Data_CRC";
+CM_ SG_ 1504 VC_Data_5E0_MsgCntr "Data_MsgCntr";
+CM_ SG_ 1504 VC_Data_5E0_Payload "VC_Data";
+CM_ SG_ 1537 DiagReqData0_AllECU "Diagnostic request data 0 for all ECUs (Functional address mode)";
+CM_ SG_ 1537 DiagReqData1_AllECU "Diagnostic request data 1 for all ECUs (Functional address mode)";
+CM_ SG_ 1537 DiagReqData2_AllECU "Diagnostic request data 2 for all ECUs (Functional address mode)";
+CM_ SG_ 1537 DiagReqData3_AllECU "Diagnostic request data 3 for all ECUs (Functional address mode)";
+CM_ SG_ 1537 DiagReqData4_AllECU "Diagnostic request data 4 for all ECUs (Functional address mode)";
+CM_ SG_ 1537 DiagReqData5_AllECU "Diagnostic request data 5 for all ECUs (Functional address mode)";
+CM_ SG_ 1537 DiagReqData6_AllECU "Diagnostic request data 6 for all ECUs (Functional address mode)";
+CM_ SG_ 1537 DiagReqData7_AllECU "Diagnostic request data 7 for all ECUs (Functional address mode)";
+CM_ SG_ 1594 DiagReqData0_LBM "Diagnostic request data 0 LBM";
+CM_ SG_ 1594 DiagReqData10_LBM "Diagnostic request data 10 LBM   ";
+CM_ SG_ 1594 DiagReqData11_LBM "Diagnostic request data 11 LBM   ";
+CM_ SG_ 1594 DiagReqData12_LBM "Diagnostic request data 12 LBM   ";
+CM_ SG_ 1594 DiagReqData13_LBM "Diagnostic request data 13 LBM    ";
+CM_ SG_ 1594 DiagReqData14_LBM "Diagnostic request data 14 LBM  ";
+CM_ SG_ 1594 DiagReqData15_LBM "Diagnostic request data 15 LBM";
+CM_ SG_ 1594 DiagReqData1_LBM "Diagnostic request data 1 LBM ";
+CM_ SG_ 1594 DiagReqData2_LBM "Diagnostic request data 2 LBM    ";
+CM_ SG_ 1594 DiagReqData3_LBM "Diagnostic request data 3 LBM   ";
+CM_ SG_ 1594 DiagReqData4_LBM "Diagnostic request data 4 LBM    ";
+CM_ SG_ 1594 DiagReqData5_LBM "Diagnostic request data 5 LBM ";
+CM_ SG_ 1594 DiagReqData6_LBM "Diagnostic request data 6 LBM   ";
+CM_ SG_ 1594 DiagReqData7_LBM "Diagnostic request data 7 LBM  ";
+CM_ SG_ 1594 DiagReqData8_LBM "Diagnostic request data 8 LBM   ";
+CM_ SG_ 1594 DiagReqData9_LBM "Diagnostic request data 9 LBM    ";
+BA_DEF_  "Baudrate" INT 0 5000000;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BO_  "CANFD_BRS" ENUM  "0","1";
+BA_DEF_  "DBName" STRING ;
+BA_DEF_ BO_  "DiagRequest" ENUM  "no","yes";
+BA_DEF_ BO_  "DiagResponse" ENUM  "no","yes";
+BA_DEF_ BO_  "DiagState" ENUM  "no","yes";
+BA_DEF_ BO_  "DiagUudtResponse" ENUM  "false","true";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 65535;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 65535;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 65535;
+BA_DEF_ BO_  "GenMsgFastOnStart" INT 0 65535;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "no","yes";
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 65535;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","IfActive","NoMsgSendType","NotUsed";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 65535;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 2147483647;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed";
+BA_DEF_ SG_  "GenSigStartValue" INT 0 2147483647;
+BA_DEF_ SG_  "GenSigTimeoutTime_LBM" INT 0 65535;
+BA_DEF_  "ILTxTimeout" INT 0 65535;
+BA_DEF_ BU_  "ILUsed" ENUM  "no","yes";
+BA_DEF_  "Manufacturer" STRING ;
+BA_DEF_  "NmAsrBaseAddress" HEX 0 2047;
+BA_DEF_ BU_  "NmAsrCanMsgCycleOffset" INT 0 65535;
+BA_DEF_  "NmAsrCanMsgCycleTime" INT 1 65535;
+BA_DEF_ BU_  "NmAsrCanMsgReducedTime" INT 0 65535;
+BA_DEF_ BO_  "NmAsrMessage" ENUM  "no","yes";
+BA_DEF_  "NmAsrMessageCount" INT 1 256;
+BA_DEF_ BU_  "NmAsrNode" ENUM  "no","yes";
+BA_DEF_ BU_  "NmAsrNodeIdentifier" HEX 0 255;
+BA_DEF_  "NmAsrRepeatMessageTime" INT 0 65535;
+BA_DEF_  "NmAsrTimeoutTime" INT 1 65535;
+BA_DEF_  "NmAsrWaitBusSleepTime" INT 0 65535;
+BA_DEF_ BO_  "NmMessage" ENUM  "no","yes";
+BA_DEF_ BU_  "NmNode" ENUM  "no","yes";
+BA_DEF_ BU_  "NmStationAddress" HEX 0 255;
+BA_DEF_  "NmType" STRING ;
+BA_DEF_ BO_  "Timestamp" ENUM  "0","1";
+BA_DEF_ BO_  "TpTxIndex" INT 0 255;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_DEF_  "Baudrate" 500000;
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "CANFD_BRS" "0";
+BA_DEF_DEF_  "DBName" "LBM";
+BA_DEF_DEF_  "DiagRequest" "no";
+BA_DEF_DEF_  "DiagResponse" "no";
+BA_DEF_DEF_  "DiagState" "no";
+BA_DEF_DEF_  "DiagUudtResponse" "false";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgFastOnStart" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "no";
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenMsgSendType" "Cyclic";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigTimeoutTime_LBM" 0;
+BA_DEF_DEF_  "ILTxTimeout" 0;
+BA_DEF_DEF_  "ILUsed" "no";
+BA_DEF_DEF_  "Manufacturer" "NIO";
+BA_DEF_DEF_  "NmAsrBaseAddress" 1280;
+BA_DEF_DEF_  "NmAsrCanMsgCycleOffset" 0;
+BA_DEF_DEF_  "NmAsrCanMsgCycleTime" 640;
+BA_DEF_DEF_  "NmAsrCanMsgReducedTime" 0;
+BA_DEF_DEF_  "NmAsrMessage" "no";
+BA_DEF_DEF_  "NmAsrMessageCount" 128;
+BA_DEF_DEF_  "NmAsrNode" "no";
+BA_DEF_DEF_  "NmAsrNodeIdentifier" 0;
+BA_DEF_DEF_  "NmAsrRepeatMessageTime" 3200;
+BA_DEF_DEF_  "NmAsrTimeoutTime" 2000;
+BA_DEF_DEF_  "NmAsrWaitBusSleepTime" 2000;
+BA_DEF_DEF_  "NmMessage" "no";
+BA_DEF_DEF_  "NmNode" "no";
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "NmType" "NmAsr";
+BA_DEF_DEF_  "Timestamp" "0";
+BA_DEF_DEF_  "TpTxIndex" 0;
+BA_DEF_DEF_  "VFrameFormat" "StandardCAN";
+BA_ "BusType" "CAN FD";
+BA_ "Baudrate" 2000000;
+BA_ "DBName" "LBM";
+BA_ "NmStationAddress" BU_ LBM 58;
+BA_ "NmNode" BU_ LBM 1;
+BA_ "NmAsrNodeIdentifier" BU_ LBM 58;
+BA_ "NmAsrNode" BU_ LBM 1;
+BA_ "ILUsed" BU_ LBM 1;
+BA_ "NmMessage" BO_ 511 0;
+BA_ "NmAsrMessage" BO_ 511 0;
+BA_ "GenMsgSendType" BO_ 511 0;
+BA_ "GenMsgILSupport" BO_ 511 1;
+BA_ "GenMsgCycleTime" BO_ 511 100;
+BA_ "DiagUudtResponse" BO_ 511 0;
+BA_ "DiagState" BO_ 511 0;
+BA_ "DiagResponse" BO_ 511 0;
+BA_ "DiagRequest" BO_ 511 0;
+BA_ "CANFD_BRS" BO_ 511 1;
+BA_ "VFrameFormat" BO_ 511 14;
+BA_ "NmMessage" BO_ 1292 1;
+BA_ "NmAsrMessage" BO_ 1292 1;
+BA_ "GenMsgSendType" BO_ 1292 8;
+BA_ "DiagUudtResponse" BO_ 1292 0;
+BA_ "DiagState" BO_ 1292 0;
+BA_ "NmMessage" BO_ 1327 1;
+BA_ "NmAsrMessage" BO_ 1327 1;
+BA_ "GenMsgSendType" BO_ 1327 8;
+BA_ "DiagUudtResponse" BO_ 1327 0;
+BA_ "DiagState" BO_ 1327 0;
+BA_ "NmMessage" BO_ 1347 1;
+BA_ "NmAsrMessage" BO_ 1347 1;
+BA_ "GenMsgSendType" BO_ 1347 8;
+BA_ "DiagUudtResponse" BO_ 1347 0;
+BA_ "DiagState" BO_ 1347 0;
+BA_ "NmMessage" BO_ 94 0;
+BA_ "GenMsgSendType" BO_ 94 0;
+BA_ "GenMsgILSupport" BO_ 94 1;
+BA_ "GenMsgCycleTime" BO_ 94 10;
+BA_ "DiagUudtResponse" BO_ 94 0;
+BA_ "DiagState" BO_ 94 0;
+BA_ "CANFD_BRS" BO_ 94 1;
+BA_ "VFrameFormat" BO_ 94 14;
+BA_ "NmMessage" BO_ 584 0;
+BA_ "NmAsrMessage" BO_ 584 0;
+BA_ "GenMsgSendType" BO_ 584 0;
+BA_ "GenMsgILSupport" BO_ 584 1;
+BA_ "GenMsgCycleTime" BO_ 584 100;
+BA_ "DiagUudtResponse" BO_ 584 0;
+BA_ "DiagState" BO_ 584 0;
+BA_ "DiagResponse" BO_ 584 0;
+BA_ "DiagRequest" BO_ 584 0;
+BA_ "CANFD_BRS" BO_ 584 1;
+BA_ "VFrameFormat" BO_ 584 14;
+BA_ "NmMessage" BO_ 585 0;
+BA_ "NmAsrMessage" BO_ 585 0;
+BA_ "GenMsgSendType" BO_ 585 0;
+BA_ "GenMsgILSupport" BO_ 585 1;
+BA_ "GenMsgCycleTime" BO_ 585 100;
+BA_ "DiagUudtResponse" BO_ 585 0;
+BA_ "DiagState" BO_ 585 0;
+BA_ "DiagResponse" BO_ 585 0;
+BA_ "DiagRequest" BO_ 585 0;
+BA_ "CANFD_BRS" BO_ 585 1;
+BA_ "VFrameFormat" BO_ 585 14;
+BA_ "NmMessage" BO_ 597 0;
+BA_ "GenMsgSendType" BO_ 597 0;
+BA_ "GenMsgILSupport" BO_ 597 1;
+BA_ "GenMsgCycleTime" BO_ 597 100;
+BA_ "DiagUudtResponse" BO_ 597 0;
+BA_ "DiagState" BO_ 597 0;
+BA_ "CANFD_BRS" BO_ 597 1;
+BA_ "VFrameFormat" BO_ 597 14;
+BA_ "NmMessage" BO_ 856 0;
+BA_ "GenMsgSendType" BO_ 856 0;
+BA_ "GenMsgILSupport" BO_ 856 1;
+BA_ "GenMsgCycleTime" BO_ 856 200;
+BA_ "DiagUudtResponse" BO_ 856 0;
+BA_ "DiagState" BO_ 856 0;
+BA_ "CANFD_BRS" BO_ 856 1;
+BA_ "VFrameFormat" BO_ 856 14;
+BA_ "NmMessage" BO_ 1338 1;
+BA_ "NmAsrMessage" BO_ 1338 1;
+BA_ "GenMsgSendType" BO_ 1338 8;
+BA_ "DiagUudtResponse" BO_ 1338 0;
+BA_ "DiagState" BO_ 1338 0;
+BA_ "NmMessage" BO_ 1722 0;
+BA_ "NmAsrMessage" BO_ 1722 0;
+BA_ "GenMsgSendType" BO_ 1722 8;
+BA_ "GenMsgILSupport" BO_ 1722 0;
+BA_ "DiagUudtResponse" BO_ 1722 0;
+BA_ "DiagState" BO_ 1722 0;
+BA_ "DiagResponse" BO_ 1722 1;
+BA_ "DiagRequest" BO_ 1722 0;
+BA_ "CANFD_BRS" BO_ 1722 1;
+BA_ "VFrameFormat" BO_ 1722 14;
+BA_ "GenMsgSendType" BO_ 1976 0;
+BA_ "GenMsgILSupport" BO_ 1976 1;
+BA_ "GenMsgCycleTime" BO_ 1976 1000;
+BA_ "CANFD_BRS" BO_ 1976 1;
+BA_ "VFrameFormat" BO_ 1976 14;
+BA_ "VFrameFormat" BO_ 1407 0;
+BA_ "NmMessage" BO_ 1407 1;
+BA_ "NmAsrMessage" BO_ 1407 1;
+BA_ "GenMsgSendType" BO_ 1407 8;
+BA_ "GenMsgILSupport" BO_ 1407 0;
+BA_ "DiagUudtResponse" BO_ 1407 0;
+BA_ "DiagState" BO_ 1407 0;
+BA_ "DiagResponse" BO_ 1407 0;
+BA_ "DiagRequest" BO_ 1407 0;
+BA_ "CANFD_BRS" BO_ 1407 0;
+BA_ "NmAsrMessage" BO_ 1350 1;
+BA_ "GenMsgSendType" BO_ 1350 8;
+BA_ "Timestamp" BO_ 286 1;
+BA_ "NmMessage" BO_ 286 0;
+BA_ "GenMsgSendType" BO_ 286 0;
+BA_ "GenMsgILSupport" BO_ 286 1;
+BA_ "GenMsgCycleTime" BO_ 286 20;
+BA_ "DiagUudtResponse" BO_ 286 0;
+BA_ "DiagState" BO_ 286 0;
+BA_ "CANFD_BRS" BO_ 286 1;
+BA_ "VFrameFormat" BO_ 286 14;
+BA_ "NmMessage" BO_ 316 0;
+BA_ "GenMsgSendType" BO_ 316 0;
+BA_ "GenMsgILSupport" BO_ 316 1;
+BA_ "GenMsgCycleTime" BO_ 316 20;
+BA_ "DiagUudtResponse" BO_ 316 0;
+BA_ "DiagState" BO_ 316 0;
+BA_ "CANFD_BRS" BO_ 316 1;
+BA_ "VFrameFormat" BO_ 316 14;
+BA_ "NmMessage" BO_ 598 0;
+BA_ "GenMsgSendType" BO_ 598 0;
+BA_ "GenMsgILSupport" BO_ 598 1;
+BA_ "GenMsgCycleTime" BO_ 598 50;
+BA_ "DiagUudtResponse" BO_ 598 0;
+BA_ "DiagState" BO_ 598 0;
+BA_ "CANFD_BRS" BO_ 598 1;
+BA_ "VFrameFormat" BO_ 598 14;
+BA_ "NmMessage" BO_ 938 0;
+BA_ "GenMsgSendType" BO_ 938 0;
+BA_ "GenMsgILSupport" BO_ 938 1;
+BA_ "GenMsgCycleTime" BO_ 938 1000;
+BA_ "DiagUudtResponse" BO_ 938 0;
+BA_ "DiagState" BO_ 938 0;
+BA_ "CANFD_BRS" BO_ 938 1;
+BA_ "VFrameFormat" BO_ 938 14;
+BA_ "NmMessage" BO_ 946 0;
+BA_ "GenMsgSendType" BO_ 946 0;
+BA_ "GenMsgILSupport" BO_ 946 1;
+BA_ "GenMsgCycleTime" BO_ 946 1000;
+BA_ "DiagUudtResponse" BO_ 946 0;
+BA_ "DiagState" BO_ 946 0;
+BA_ "CANFD_BRS" BO_ 946 1;
+BA_ "VFrameFormat" BO_ 946 14;
+BA_ "NmMessage" BO_ 1285 1;
+BA_ "NmAsrMessage" BO_ 1285 1;
+BA_ "GenMsgSendType" BO_ 1285 8;
+BA_ "DiagUudtResponse" BO_ 1285 0;
+BA_ "DiagState" BO_ 1285 0;
+BA_ "NmMessage" BO_ 1504 0;
+BA_ "GenMsgSendType" BO_ 1504 0;
+BA_ "GenMsgCycleTime" BO_ 1504 50;
+BA_ "DiagUudtResponse" BO_ 1504 0;
+BA_ "DiagState" BO_ 1504 0;
+BA_ "CANFD_BRS" BO_ 1504 1;
+BA_ "VFrameFormat" BO_ 1504 14;
+BA_ "NmMessage" BO_ 1537 0;
+BA_ "GenMsgSendType" BO_ 1537 8;
+BA_ "DiagUudtResponse" BO_ 1537 0;
+BA_ "DiagState" BO_ 1537 1;
+BA_ "CANFD_BRS" BO_ 1537 1;
+BA_ "VFrameFormat" BO_ 1537 14;
+BA_ "NmMessage" BO_ 1594 0;
+BA_ "NmAsrMessage" BO_ 1594 0;
+BA_ "GenMsgSendType" BO_ 1594 8;
+BA_ "GenMsgILSupport" BO_ 1594 0;
+BA_ "DiagUudtResponse" BO_ 1594 0;
+BA_ "DiagState" BO_ 1594 0;
+BA_ "DiagResponse" BO_ 1594 0;
+BA_ "DiagRequest" BO_ 1594 1;
+BA_ "CANFD_BRS" BO_ 1594 1;
+BA_ "VFrameFormat" BO_ 1594 14;
+BA_ "GenSigSendType" SG_ 511 BMSPackThermOutOfCtrlAlrm 7;
+BA_ "GenSigSendType" SG_ 511 BMSPackThermOutOfCtrlVld 7;
+BA_ "GenSigSendType" SG_ 1292 ActvWakeup_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 NetMngtCoorn_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 NetMngtCoorrSleepRdy_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN10_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN11_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN12_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN13_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN14_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN15_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN16_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN17_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN18_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN19_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN1_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN20_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN21_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN22_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN23_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN24_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN25_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN26_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN27_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN28_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN29_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN2_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN30_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN31_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN32_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN33_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN34_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN35_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN36_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN37_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN38_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN39_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN3_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN40_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN41_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN42_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN43_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN44_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN45_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN46_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN47_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN48_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN4_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN5_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN6_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN7_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN8_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PN9_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 PtlNetInfo_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 RepMsgReq_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 ResdBit1_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 ResdBit2_BMS 7;
+BA_ "GenSigSendType" SG_ 1292 ScrNodId_BMS 7;
+BA_ "GenSigSendType" SG_ 1327 ActvWakeup_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 NetMngtCoorn_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 NetMngtCoorrSleepRdy_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN10_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN11_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN12_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN13_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN14_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN15_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN16_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN17_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN18_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN19_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN1_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN20_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN21_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN22_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN23_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN24_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN25_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN26_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN27_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN28_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN29_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN2_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN30_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN31_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN32_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN33_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN34_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN35_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN36_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN37_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN38_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN39_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN3_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN40_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN41_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN42_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN43_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN44_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN45_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN46_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN47_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN48_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN4_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN5_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN6_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN7_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN8_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PN9_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 PtlNetInfo_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 RepMsgReq_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 ResdBit1_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 ResdBit2_ECCU 7;
+BA_ "GenSigSendType" SG_ 1327 ScrNodId_ECCU 7;
+BA_ "GenSigStartValue" SG_ 1347 ActvWakeup_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 ActvWakeup_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 NetMngtCoorn_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 NetMngtCoorn_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 NetMngtCoorrSleepRdy_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 NetMngtCoorrSleepRdy_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN10_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN10_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN11_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN11_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN12_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN12_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN13_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN13_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN14_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN14_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN15_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN15_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN16_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN16_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN17_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN17_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN18_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN18_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN19_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN19_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN1_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN1_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN20_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN20_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN21_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN21_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN22_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN22_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN23_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN23_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN24_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN24_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN25_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN25_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN26_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN26_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN27_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN27_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN28_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN28_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN29_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN29_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN2_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN2_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN30_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN30_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN31_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN31_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN32_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN32_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN33_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN33_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN34_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN34_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN35_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN35_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN36_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN36_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN37_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN37_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN38_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN38_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN39_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN39_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN3_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN3_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN40_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN40_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN41_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN41_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN42_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN42_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN43_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN43_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN44_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN44_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN45_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN45_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN46_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN46_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN47_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN47_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN48_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN48_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN4_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN4_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN5_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN5_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN6_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN6_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN7_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN7_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN8_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN8_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PN9_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PN9_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 PtlNetInfo_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 PtlNetInfo_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 RepMsgReq_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 RepMsgReq_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 ResdBit1_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 ResdBit1_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 ResdBit2_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 ResdBit2_IPU 7;
+BA_ "GenSigStartValue" SG_ 1347 ScrNodId_IPU 0;
+BA_ "GenSigSendType" SG_ 1347 ScrNodId_IPU 7;
+BA_ "GenSigSendType" SG_ 94 DCDC1LvCrnt_12V 7;
+BA_ "GenSigSendType" SG_ 94 DCDC1LvVltg_12V 7;
+BA_ "GenSigSendType" SG_ 94 DCDC1Sts_12V 7;
+BA_ "GenSigSendType" SG_ 94 IPU_R_5E_CRC 7;
+BA_ "GenSigSendType" SG_ 94 IPU_R_5E_MsgCntr 7;
+BA_ "GenSigStartValue" SG_ 584 BalanceTemp1_LBMR 100;
+BA_ "GenSigSendType" SG_ 584 BalanceTemp1_LBMR 7;
+BA_ "GenSigStartValue" SG_ 584 BalanceTemp2_LBMR 100;
+BA_ "GenSigSendType" SG_ 584 BalanceTemp2_LBMR 7;
+BA_ "GenSigStartValue" SG_ 584 BattCp_LBMR 0;
+BA_ "GenSigSendType" SG_ 584 BattCp_LBMR 7;
+BA_ "GenSigSendType" SG_ 584 BattCurrentISts_LBMRVld 7;
+BA_ "GenSigStartValue" SG_ 584 BattCurrent_LBMR 2000000;
+BA_ "GenSigSendType" SG_ 584 BattCurrent_LBMR 7;
+BA_ "GenSigSendType" SG_ 584 BattMosTSts_LBMRVld 7;
+BA_ "GenSigStartValue" SG_ 584 BattMosT_LBMR 100;
+BA_ "GenSigSendType" SG_ 584 BattMosT_LBMR 7;
+BA_ "GenSigSendType" SG_ 584 BattSOCSts_LBMRVld 7;
+BA_ "GenSigSendType" SG_ 584 BattSOC_LBMR 7;
+BA_ "GenSigSendType" SG_ 584 BattType_LBMR 7;
+BA_ "GenSigSendType" SG_ 584 BattVoltSts_LBMRVld 7;
+BA_ "GenSigSendType" SG_ 584 BattVolt_LBMR 7;
+BA_ "GenSigStartValue" SG_ 584 BuckStatus_LBMR 0;
+BA_ "GenSigSendType" SG_ 584 BuckStatus_LBMR 7;
+BA_ "GenSigStartValue" SG_ 584 Cell1BalanceSts_LBMR 0;
+BA_ "GenSigSendType" SG_ 584 Cell1BalanceSts_LBMR 7;
+BA_ "GenSigStartValue" SG_ 584 Cell2BalanceSts_LBMR 0;
+BA_ "GenSigSendType" SG_ 584 Cell2BalanceSts_LBMR 7;
+BA_ "GenSigStartValue" SG_ 584 Cell3BalanceSts_LBMR 0;
+BA_ "GenSigSendType" SG_ 584 Cell3BalanceSts_LBMR 7;
+BA_ "GenSigStartValue" SG_ 584 Cell4BalanceSts_LBMR 0;
+BA_ "GenSigSendType" SG_ 584 Cell4BalanceSts_LBMR 7;
+BA_ "GenSigStartValue" SG_ 584 CellVolt1_LBMR 0;
+BA_ "GenSigSendType" SG_ 584 CellVolt1_LBMR 7;
+BA_ "GenSigStartValue" SG_ 584 CellVolt2_LBMR 0;
+BA_ "GenSigSendType" SG_ 584 CellVolt2_LBMR 7;
+BA_ "GenSigStartValue" SG_ 584 CellVolt3_LBMR 0;
+BA_ "GenSigSendType" SG_ 584 CellVolt3_LBMR 7;
+BA_ "GenSigStartValue" SG_ 584 CellVolt4_LBMR 0;
+BA_ "GenSigSendType" SG_ 584 CellVolt4_LBMR 7;
+BA_ "GenSigStartValue" SG_ 584 Cell_T1_LBMR 100;
+BA_ "GenSigSendType" SG_ 584 Cell_T1_LBMR 7;
+BA_ "GenSigStartValue" SG_ 584 Cell_T2_LBMR 100;
+BA_ "GenSigSendType" SG_ 584 Cell_T2_LBMR 7;
+BA_ "GenSigStartValue" SG_ 584 Cell_T3_LBMR 100;
+BA_ "GenSigSendType" SG_ 584 Cell_T3_LBMR 7;
+BA_ "GenSigStartValue" SG_ 584 ChrgMosSts_LBMR 0;
+BA_ "GenSigSendType" SG_ 584 ChrgMosSts_LBMR 7;
+BA_ "GenSigStartValue" SG_ 584 ChrgMosTemp_LBMR 100;
+BA_ "GenSigSendType" SG_ 584 ChrgMosTemp_LBMR 7;
+BA_ "GenSigStartValue" SG_ 584 DisChrgMosSts_LBMR 0;
+BA_ "GenSigSendType" SG_ 584 DisChrgMosSts_LBMR 7;
+BA_ "GenSigStartValue" SG_ 584 DischrgMosTemp_LBMR 100;
+BA_ "GenSigSendType" SG_ 584 DischrgMosTemp_LBMR 7;
+BA_ "GenSigStartValue" SG_ 584 HwWakeupStatus_LBMR 0;
+BA_ "GenSigSendType" SG_ 584 HwWakeupStatus_LBMR 7;
+BA_ "GenSigStartValue" SG_ 584 IR_LBMR 0;
+BA_ "GenSigSendType" SG_ 584 IR_LBMR 7;
+BA_ "GenSigStartValue" SG_ 584 LBMMosDiagSts_LBMR 0;
+BA_ "GenSigSendType" SG_ 584 LBMMosDiagSts_LBMR 7;
+BA_ "GenSigStartValue" SG_ 584 LBM_248_CRC 0;
+BA_ "GenSigSendType" SG_ 584 LBM_248_CRC 7;
+BA_ "GenSigStartValue" SG_ 584 LBM_248_MsgCntr 0;
+BA_ "GenSigSendType" SG_ 584 LBM_248_MsgCntr 7;
+BA_ "GenSigStartValue" SG_ 584 MaxChrgCurrent_2S_LBMR 0;
+BA_ "GenSigSendType" SG_ 584 MaxChrgCurrent_2S_LBMR 7;
+BA_ "GenSigStartValue" SG_ 584 MaxChrgCurrent_60S_LBMR 0;
+BA_ "GenSigSendType" SG_ 584 MaxChrgCurrent_60S_LBMR 7;
+BA_ "GenSigStartValue" SG_ 584 MaxDischrgCurrent_2S_LBMR 0;
+BA_ "GenSigSendType" SG_ 584 MaxDischrgCurrent_2S_LBMR 7;
+BA_ "GenSigStartValue" SG_ 584 MaxDischrgCurrent_5s_LBMR 0;
+BA_ "GenSigSendType" SG_ 584 MaxDischrgCurrent_5s_LBMR 7;
+BA_ "GenSigStartValue" SG_ 584 MaxDischrgCurrent_60S_LBMR 0;
+BA_ "GenSigSendType" SG_ 584 MaxDischrgCurrent_60S_LBMR 7;
+BA_ "GenSigStartValue" SG_ 584 MosMidVolt_LBMR 0;
+BA_ "GenSigSendType" SG_ 584 MosMidVolt_LBMR 7;
+BA_ "GenSigStartValue" SG_ 584 PackExtVolt_LBMR 0;
+BA_ "GenSigSendType" SG_ 584 PackExtVolt_LBMR 7;
+BA_ "GenSigStartValue" SG_ 584 SOCLowProtn_LBMR 0;
+BA_ "GenSigSendType" SG_ 584 SOCLowProtn_LBMR 7;
+BA_ "GenSigSendType" SG_ 584 SOESts_LBMRVld 7;
+BA_ "GenSigSendType" SG_ 584 SOE_LBMR 7;
+BA_ "GenSigSendType" SG_ 584 SOHSts_LBMRVld 7;
+BA_ "GenSigStartValue" SG_ 584 SOH_LBMR 0;
+BA_ "GenSigSendType" SG_ 584 SOH_LBMR 7;
+BA_ "GenSigStartValue" SG_ 584 VehicleQuiescentCurrent_LBMR 0;
+BA_ "GenSigSendType" SG_ 584 VehicleQuiescentCurrent_LBMR 7;
+BA_ "GenSigStartValue" SG_ 584 WakeupInfo_LBMR 0;
+BA_ "GenSigSendType" SG_ 584 WakeupInfo_LBMR 7;
+BA_ "GenSigStartValue" SG_ 584 WorkSts_LBMR 0;
+BA_ "GenSigSendType" SG_ 584 WorkSts_LBMR 7;
+BA_ "GenSigStartValue" SG_ 585 AfeHwFault_LBMR 0;
+BA_ "GenSigSendType" SG_ 585 AfeHwFault_LBMR 7;
+BA_ "GenSigStartValue" SG_ 585 BalanceOvTempFault_LBMR 0;
+BA_ "GenSigSendType" SG_ 585 BalanceOvTempFault_LBMR 7;
+BA_ "GenSigStartValue" SG_ 585 BuckFault_LBMR 0;
+BA_ "GenSigSendType" SG_ 585 BuckFault_LBMR 7;
+BA_ "GenSigStartValue" SG_ 585 CalCurrentResult_LBMR 0;
+BA_ "GenSigSendType" SG_ 585 CalCurrentResult_LBMR 7;
+BA_ "GenSigStartValue" SG_ 585 CellOverVoltageFault_LBMR 0;
+BA_ "GenSigSendType" SG_ 585 CellOverVoltageFault_LBMR 7;
+BA_ "GenSigStartValue" SG_ 585 CellUnderVoltage_Fault_LBMR 0;
+BA_ "GenSigSendType" SG_ 585 CellUnderVoltage_Fault_LBMR 7;
+BA_ "GenSigStartValue" SG_ 585 CellVoltDiffFault_LBMR 0;
+BA_ "GenSigSendType" SG_ 585 CellVoltDiffFault_LBMR 7;
+BA_ "GenSigStartValue" SG_ 585 CellVoltOpenWireFault_LBMR 0;
+BA_ "GenSigSendType" SG_ 585 CellVoltOpenWireFault_LBMR 7;
+BA_ "GenSigStartValue" SG_ 585 CellVoltOutRangeFault_LBMR 0;
+BA_ "GenSigSendType" SG_ 585 CellVoltOutRangeFault_LBMR 7;
+BA_ "GenSigStartValue" SG_ 585 ChrgOvCurFault_LBMR 0;
+BA_ "GenSigSendType" SG_ 585 ChrgOvCurFault_LBMR 7;
+BA_ "GenSigStartValue" SG_ 585 DischrgOvCurFaultCnt_LBMR 0;
+BA_ "GenSigSendType" SG_ 585 DischrgOvCurFaultCnt_LBMR 7;
+BA_ "GenSigStartValue" SG_ 585 DischrgOvCurFault_LBMR 0;
+BA_ "GenSigSendType" SG_ 585 DischrgOvCurFault_LBMR 7;
+BA_ "GenSigStartValue" SG_ 585 EepromFault_LBMR 0;
+BA_ "GenSigSendType" SG_ 585 EepromFault_LBMR 7;
+BA_ "GenSigStartValue" SG_ 585 HwLineWakeupStuckFault_LBMR 0;
+BA_ "GenSigSendType" SG_ 585 HwLineWakeupStuckFault_LBMR 7;
+BA_ "GenSigStartValue" SG_ 585 LBM_249_CRC 0;
+BA_ "GenSigSendType" SG_ 585 LBM_249_CRC 7;
+BA_ "GenSigStartValue" SG_ 585 LBM_249_MsgCntr 0;
+BA_ "GenSigSendType" SG_ 585 LBM_249_MsgCntr 7;
+BA_ "GenSigStartValue" SG_ 585 MosFault_LBMR 0;
+BA_ "GenSigSendType" SG_ 585 MosFault_LBMR 7;
+BA_ "GenSigStartValue" SG_ 585 MosOvTempFault_LBMR 0;
+BA_ "GenSigSendType" SG_ 585 MosOvTempFault_LBMR 7;
+BA_ "GenSigStartValue" SG_ 585 PackOverTempFault_LBMR 0;
+BA_ "GenSigSendType" SG_ 585 PackOverTempFault_LBMR 7;
+BA_ "GenSigStartValue" SG_ 585 PackOverVoltageFault_LBMR 0;
+BA_ "GenSigSendType" SG_ 585 PackOverVoltageFault_LBMR 7;
+BA_ "GenSigStartValue" SG_ 585 PackTempDiffFault_LBMR 0;
+BA_ "GenSigSendType" SG_ 585 PackTempDiffFault_LBMR 7;
+BA_ "GenSigStartValue" SG_ 585 PackThermOutofCtrlAlrm_LBMR 0;
+BA_ "GenSigSendType" SG_ 585 PackThermOutofCtrlAlrm_LBMR 7;
+BA_ "GenSigSendType" SG_ 585 PackThermOutofCtrlVld_LBMRVld 7;
+BA_ "GenSigStartValue" SG_ 585 PackUnTempFault_LBMR 0;
+BA_ "GenSigSendType" SG_ 585 PackUnTempFault_LBMR 7;
+BA_ "GenSigStartValue" SG_ 585 PackUnVoltFault_LBMR 0;
+BA_ "GenSigSendType" SG_ 585 PackUnVoltFault_LBMR 7;
+BA_ "GenSigStartValue" SG_ 585 PackVoltOutRangeFault_LBMR 0;
+BA_ "GenSigSendType" SG_ 585 PackVoltOutRangeFault_LBMR 7;
+BA_ "GenSigStartValue" SG_ 585 SbcFault_LBMR 0;
+BA_ "GenSigSendType" SG_ 585 SbcFault_LBMR 7;
+BA_ "GenSigStartValue" SG_ 585 ShortCircuitFault_LBMR 0;
+BA_ "GenSigSendType" SG_ 585 ShortCircuitFault_LBMR 7;
+BA_ "GenSigStartValue" SG_ 585 SocLowFault_LBMR 0;
+BA_ "GenSigSendType" SG_ 585 SocLowFault_LBMR 7;
+BA_ "GenSigStartValue" SG_ 585 SohLowFault_LBMR 0;
+BA_ "GenSigSendType" SG_ 585 SohLowFault_LBMR 7;
+BA_ "GenSigStartValue" SG_ 585 TempSenOutHighRangeFault_LBMR 0;
+BA_ "GenSigSendType" SG_ 585 TempSenOutHighRangeFault_LBMR 7;
+BA_ "GenSigStartValue" SG_ 585 TempSenOutLowRangeFault_LBMR 0;
+BA_ "GenSigSendType" SG_ 585 TempSenOutLowRangeFault_LBMR 7;
+BA_ "GenSigStartValue" SG_ 597 BattChrgMod_LBMR 0;
+BA_ "GenSigSendType" SG_ 597 BattChrgMod_LBMR 7;
+BA_ "GenSigStartValue" SG_ 597 BattManufacture_LBMR 0;
+BA_ "GenSigSendType" SG_ 597 BattManufacture_LBMR 7;
+BA_ "GenSigStartValue" SG_ 597 BattMaxChrgSOCSts_LBMR 0;
+BA_ "GenSigSendType" SG_ 597 BattMaxChrgSOCSts_LBMR 7;
+BA_ "GenSigStartValue" SG_ 597 ChrgMosSt_LBMR 0;
+BA_ "GenSigSendType" SG_ 597 ChrgMosSt_LBMR 7;
+BA_ "GenSigStartValue" SG_ 597 ChrgVoltageReq_LBMR 0;
+BA_ "GenSigSendType" SG_ 597 ChrgVoltageReq_LBMR 7;
+BA_ "GenSigStartValue" SG_ 597 ChrgcurrentReq_LBMR 2000000;
+BA_ "GenSigSendType" SG_ 597 ChrgcurrentReq_LBMR 7;
+BA_ "GenSigSendType" SG_ 597 DischrgMosSt_LBMR 7;
+BA_ "GenSigStartValue" SG_ 597 HwOverDchaEna_LBMR 0;
+BA_ "GenSigSendType" SG_ 597 HwOverDchaEna_LBMR 7;
+BA_ "GenSigStartValue" SG_ 597 LBM_255_CRC 0;
+BA_ "GenSigSendType" SG_ 597 LBM_255_CRC 7;
+BA_ "GenSigStartValue" SG_ 597 LBM_255_MsgCntr 0;
+BA_ "GenSigSendType" SG_ 597 LBM_255_MsgCntr 7;
+BA_ "GenSigStartValue" SG_ 597 LVBattLowSOCChrgSts_LBMR 0;
+BA_ "GenSigSendType" SG_ 597 LVBattLowSOCChrgSts_LBMR 7;
+BA_ "GenSigStartValue" SG_ 597 LVBattLowUChrgSts_LBMR 0;
+BA_ "GenSigSendType" SG_ 597 LVBattLowUChrgSts_LBMR 7;
+BA_ "GenSigStartValue" SG_ 597 LVBattSOCWakeUpSts_LBMR 0;
+BA_ "GenSigSendType" SG_ 597 LVBattSOCWakeUpSts_LBMR 7;
+BA_ "GenSigStartValue" SG_ 597 LVBattUWakeupSts_LBMR 0;
+BA_ "GenSigSendType" SG_ 597 LVBattUWakeupSts_LBMR 7;
+BA_ "GenSigStartValue" SG_ 597 LowSOCChrgReq_LBMR 0;
+BA_ "GenSigSendType" SG_ 597 LowSOCChrgReq_LBMR 7;
+BA_ "GenSigStartValue" SG_ 597 LowSOCWakeUpReq_LBMR 0;
+BA_ "GenSigSendType" SG_ 597 LowSOCWakeUpReq_LBMR 7;
+BA_ "GenSigStartValue" SG_ 597 LowUpackChrgReq_LBMR 0;
+BA_ "GenSigSendType" SG_ 597 LowUpackChrgReq_LBMR 7;
+BA_ "GenSigStartValue" SG_ 597 LowUpackWakeupReq_LBMR 0;
+BA_ "GenSigSendType" SG_ 597 LowUpackWakeupReq_LBMR 7;
+BA_ "GenSigStartValue" SG_ 856 BCU_TimeOut_LBMR 0;
+BA_ "GenSigSendType" SG_ 856 BCU_TimeOut_LBMR 7;
+BA_ "GenSigStartValue" SG_ 856 CanBusOffFault_LBMR 0;
+BA_ "GenSigSendType" SG_ 856 CanBusOffFault_LBMR 7;
+BA_ "GenSigStartValue" SG_ 856 IPU_R_TimeOut_LBMR 0;
+BA_ "GenSigSendType" SG_ 856 IPU_R_TimeOut_LBMR 7;
+BA_ "GenSigSendType" SG_ 856 LBMChrgPwrCost 0;
+BA_ "GenSigSendType" SG_ 856 LBMDischrgPwrCost 0;
+BA_ "GenSigStartValue" SG_ 856 LBM_358_CRC 0;
+BA_ "GenSigSendType" SG_ 856 LBM_358_CRC 7;
+BA_ "GenSigStartValue" SG_ 856 LBM_358_MsgCntr 0;
+BA_ "GenSigSendType" SG_ 856 LBM_358_MsgCntr 7;
+BA_ "GenSigStartValue" SG_ 856 SWVersion_LBMR 0;
+BA_ "GenSigSendType" SG_ 856 SWVersion_LBMR 7;
+BA_ "GenSigSendType" SG_ 856 TotoalLifeChrgAh_LBMR 7;
+BA_ "GenSigStartValue" SG_ 856 TotoalLifeDischrgAh_LBMR 0;
+BA_ "GenSigSendType" SG_ 856 TotoalLifeDischrgAh_LBMR 7;
+BA_ "GenSigStartValue" SG_ 856 ZONEL_TimeOut_LBMR 0;
+BA_ "GenSigSendType" SG_ 856 ZONEL_TimeOut_LBMR 7;
+BA_ "GenSigSendType" SG_ 1338 ActvWakeup_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 NetMngtCoorn_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 NetMngtCoorrSleepRdy_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN10_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN11_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN12_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN13_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN14_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN15_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN16_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN17_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN18_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN19_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN1_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN20_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN21_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN22_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN23_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN24_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN25_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN26_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN27_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN28_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN29_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN2_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN30_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN31_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN32_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN33_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN34_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN35_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN36_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN37_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN38_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN39_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN3_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN40_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN41_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN42_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN43_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN44_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN45_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN46_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN47_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN48_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN4_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN5_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN6_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN7_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN8_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PN9_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 PtlNetInfo_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 RepMsgReq_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 ResdBit1_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 ResdBit2_LBM 7;
+BA_ "GenSigSendType" SG_ 1338 ScrNodId_LBM 7;
+BA_ "GenSigStartValue" SG_ 1722 DiagRespData0_LBM 0;
+BA_ "GenSigSendType" SG_ 1722 DiagRespData0_LBM 7;
+BA_ "GenSigStartValue" SG_ 1722 DiagRespData10_LBM 0;
+BA_ "GenSigSendType" SG_ 1722 DiagRespData10_LBM 7;
+BA_ "GenSigStartValue" SG_ 1722 DiagRespData11_LBM 0;
+BA_ "GenSigSendType" SG_ 1722 DiagRespData11_LBM 7;
+BA_ "GenSigStartValue" SG_ 1722 DiagRespData12_LBM 0;
+BA_ "GenSigSendType" SG_ 1722 DiagRespData12_LBM 7;
+BA_ "GenSigStartValue" SG_ 1722 DiagRespData13_LBM 0;
+BA_ "GenSigSendType" SG_ 1722 DiagRespData13_LBM 7;
+BA_ "GenSigStartValue" SG_ 1722 DiagRespData14_LBM 0;
+BA_ "GenSigSendType" SG_ 1722 DiagRespData14_LBM 7;
+BA_ "GenSigStartValue" SG_ 1722 DiagRespData15_LBM 0;
+BA_ "GenSigSendType" SG_ 1722 DiagRespData15_LBM 7;
+BA_ "GenSigStartValue" SG_ 1722 DiagRespData1_LBM 0;
+BA_ "GenSigSendType" SG_ 1722 DiagRespData1_LBM 7;
+BA_ "GenSigStartValue" SG_ 1722 DiagRespData2_LBM 0;
+BA_ "GenSigSendType" SG_ 1722 DiagRespData2_LBM 7;
+BA_ "GenSigStartValue" SG_ 1722 DiagRespData3_LBM 0;
+BA_ "GenSigSendType" SG_ 1722 DiagRespData3_LBM 7;
+BA_ "GenSigStartValue" SG_ 1722 DiagRespData4_LBM 0;
+BA_ "GenSigSendType" SG_ 1722 DiagRespData4_LBM 7;
+BA_ "GenSigStartValue" SG_ 1722 DiagRespData5_LBM 0;
+BA_ "GenSigSendType" SG_ 1722 DiagRespData5_LBM 7;
+BA_ "GenSigStartValue" SG_ 1722 DiagRespData6_LBM 0;
+BA_ "GenSigSendType" SG_ 1722 DiagRespData6_LBM 7;
+BA_ "GenSigStartValue" SG_ 1722 DiagRespData7_LBM 0;
+BA_ "GenSigSendType" SG_ 1722 DiagRespData7_LBM 7;
+BA_ "GenSigStartValue" SG_ 1722 DiagRespData8_LBM 0;
+BA_ "GenSigSendType" SG_ 1722 DiagRespData8_LBM 7;
+BA_ "GenSigStartValue" SG_ 1722 DiagRespData9_LBM 0;
+BA_ "GenSigSendType" SG_ 1722 DiagRespData9_LBM 7;
+BA_ "GenSigStartValue" SG_ 1976 OEM_HW_Version 65535;
+BA_ "GenSigStartValue" SG_ 1976 Supplier_SW_Version 16777215;
+BA_ "GenSigStartValue" SG_ 1976 OEM_SW_Version 65535;
+BA_ "GenSigStartValue" SG_ 1407 ActvWakeup_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 ActvWakeup_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 NetMngtCoorn_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 NetMngtCoorn_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 NetMngtCoorrSleepRdy_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 NetMngtCoorrSleepRdy_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN10_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN10_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN11_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN11_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN12_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN12_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN13_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN13_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN14_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN14_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN15_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN15_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN16_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN16_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN17_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN17_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN18_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN18_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN19_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN19_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN1_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN1_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN20_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN20_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN21_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN21_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN22_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN22_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN23_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN23_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN24_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN24_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN25_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN25_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN26_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN26_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN27_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN27_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN28_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN28_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN29_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN29_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN2_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN2_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN30_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN30_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN31_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN31_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN32_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN32_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN33_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN33_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN34_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN34_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN35_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN35_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN36_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN36_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN37_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN37_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN38_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN38_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN39_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN39_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN3_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN3_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN40_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN40_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN41_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN41_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN42_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN42_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN43_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN43_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN44_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN44_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN45_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN45_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN46_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN46_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN47_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN47_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN48_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN48_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN4_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN4_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN5_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN5_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN6_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN6_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN7_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN7_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN8_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN8_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PN9_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PN9_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 PtlNetInfo_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 PtlNetInfo_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 RepMsgReq_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 RepMsgReq_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 ResdBit1_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 ResdBit1_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 ResdBit2_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 ResdBit2_OBC 7;
+BA_ "GenSigStartValue" SG_ 1407 ScrNodId_OBC 0;
+BA_ "GenSigSendType" SG_ 1407 ScrNodId_OBC 7;
+BA_ "GenSigSendType" SG_ 1350 ActvWakeup_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 NetMngtCoorn_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 NetMngtCoorrSleepRdy_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN10_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN11_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN12_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN13_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN14_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN15_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN16_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN17_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN18_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN19_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN1_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN20_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN21_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN22_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN23_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN24_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN25_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN26_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN27_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN28_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN29_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN2_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN30_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN31_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN32_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN33_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN34_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN35_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN36_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN37_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN38_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN39_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN3_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN40_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN41_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN42_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN43_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN44_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN45_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN46_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN47_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN48_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN4_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN5_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN6_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN7_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN8_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PN9_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 PtlNetInfo_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 RepMsgReq_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 ResdBit1_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 ResdBit2_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 1350 ScrNodId_UWB_FT 7;
+BA_ "GenSigSendType" SG_ 286 VehSpdSts_Rdnt1 7;
+BA_ "GenSigSendType" SG_ 286 VehSpd_Rdnt1 7;
+BA_ "GenSigSendType" SG_ 316 DrvState 7;
+BA_ "GenSigSendType" SG_ 316 OperatorState 7;
+BA_ "GenSigSendType" SG_ 316 VehStateDetailed 7;
+BA_ "GenSigSendType" SG_ 316 ZONE_13C_CRC 7;
+BA_ "GenSigSendType" SG_ 316 ZONE_13C_MsgCntr 7;
+BA_ "GenSigStartValue" SG_ 598 ChargeMosCtrl_ZONER 0;
+BA_ "GenSigSendType" SG_ 598 ChargeMosCtrl_ZONER 7;
+BA_ "GenSigSendType" SG_ 598 CrashDetd 0;
+BA_ "GenSigStartValue" SG_ 598 DischargeMosCtrl_ZONER 0;
+BA_ "GenSigSendType" SG_ 598 DischargeMosCtrl_ZONER 7;
+BA_ "GenSigStartValue" SG_ 598 LBMMaxChrgSOCReq_ZONER 0;
+BA_ "GenSigSendType" SG_ 598 LBMMaxChrgSOCReq_ZONER 7;
+BA_ "GenSigStartValue" SG_ 598 LowSOCChrgEna_ZONER 1;
+BA_ "GenSigSendType" SG_ 598 LowSOCChrgEna_ZONER 7;
+BA_ "GenSigStartValue" SG_ 598 LowSOCChrg_Threshold_ZONER 0;
+BA_ "GenSigSendType" SG_ 598 LowSOCChrg_Threshold_ZONER 7;
+BA_ "GenSigStartValue" SG_ 598 LowUChrgEna_ZONER 1;
+BA_ "GenSigSendType" SG_ 598 LowUChrgEna_ZONER 7;
+BA_ "GenSigStartValue" SG_ 598 LowUChrg_Treshold_ZONER 0;
+BA_ "GenSigSendType" SG_ 598 LowUChrg_Treshold_ZONER 7;
+BA_ "GenSigSendType" SG_ 598 ParkDCDCOffReq 7;
+BA_ "GenSigStartValue" SG_ 598 SOCWake_Treshold_ZONER 0;
+BA_ "GenSigSendType" SG_ 598 SOCWake_Treshold_ZONER 7;
+BA_ "GenSigStartValue" SG_ 598 SOCWakeupEna_ZONER 1;
+BA_ "GenSigSendType" SG_ 598 SOCWakeupEna_ZONER 7;
+BA_ "GenSigStartValue" SG_ 598 UWake_Treshold_ZONER 0;
+BA_ "GenSigSendType" SG_ 598 UWake_Treshold_ZONER 7;
+BA_ "GenSigStartValue" SG_ 598 UWakeupEna_ZONER 1;
+BA_ "GenSigSendType" SG_ 598 UWakeupEna_ZONER 7;
+BA_ "GenSigSendType" SG_ 598 ZONE_256_CRC 7;
+BA_ "GenSigSendType" SG_ 598 ZONE_256_MsgCntr 7;
+BA_ "GenSigStartValue" SG_ 598 ZoneRHVBattCutOffWarn 0;
+BA_ "GenSigSendType" SG_ 598 ZoneRHVBattCutOffWarn 7;
+BA_ "GenSigSendType" SG_ 938 VehOdometer 7;
+BA_ "GenSigStartValue" SG_ 946 Day 1;
+BA_ "GenSigSendType" SG_ 946 Day 7;
+BA_ "GenSigSendType" SG_ 946 Hr 7;
+BA_ "GenSigSendType" SG_ 946 Min 7;
+BA_ "GenSigSendType" SG_ 946 Msec 7;
+BA_ "GenSigStartValue" SG_ 946 Mth 1;
+BA_ "GenSigSendType" SG_ 946 Mth 7;
+BA_ "GenSigSendType" SG_ 946 Sec 7;
+BA_ "GenSigSendType" SG_ 946 Yr 7;
+BA_ "GenSigSendType" SG_ 1285 ActvWakeup_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 NetMngtCoorn_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 NetMngtCoorrSleepRdy_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN10_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN11_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN12_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN13_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN14_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN15_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN16_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN17_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN18_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN19_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN1_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN20_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN21_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN22_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN23_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN24_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN25_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN26_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN27_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN28_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN29_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN2_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN30_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN31_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN32_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN33_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN34_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN35_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN36_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN37_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN38_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN39_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN3_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN40_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN41_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN42_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN43_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN44_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN45_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN46_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN47_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN48_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN4_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN5_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN6_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN7_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN8_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PN9_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 PtlNetInfo_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 RepMsgReq_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 ResdBit1_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 ResdBit2_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1285 ScrNodId_ZONE_LEM 7;
+BA_ "GenSigSendType" SG_ 1504 VC_Data_5E0_CRC 7;
+BA_ "GenSigSendType" SG_ 1504 VC_Data_5E0_MsgCntr 7;
+BA_ "GenSigSendType" SG_ 1504 VC_Data_5E0_Payload 7;
+BA_ "GenSigSendType" SG_ 1537 DiagReqData0_AllECU 7;
+BA_ "GenSigSendType" SG_ 1537 DiagReqData1_AllECU 7;
+BA_ "GenSigSendType" SG_ 1537 DiagReqData2_AllECU 7;
+BA_ "GenSigSendType" SG_ 1537 DiagReqData3_AllECU 7;
+BA_ "GenSigSendType" SG_ 1537 DiagReqData4_AllECU 7;
+BA_ "GenSigSendType" SG_ 1537 DiagReqData5_AllECU 7;
+BA_ "GenSigSendType" SG_ 1537 DiagReqData6_AllECU 7;
+BA_ "GenSigSendType" SG_ 1537 DiagReqData7_AllECU 7;
+BA_ "GenSigStartValue" SG_ 1594 DiagReqData0_LBM 0;
+BA_ "GenSigSendType" SG_ 1594 DiagReqData0_LBM 7;
+BA_ "GenSigStartValue" SG_ 1594 DiagReqData10_LBM 0;
+BA_ "GenSigSendType" SG_ 1594 DiagReqData10_LBM 7;
+BA_ "GenSigStartValue" SG_ 1594 DiagReqData11_LBM 0;
+BA_ "GenSigSendType" SG_ 1594 DiagReqData11_LBM 7;
+BA_ "GenSigStartValue" SG_ 1594 DiagReqData12_LBM 0;
+BA_ "GenSigSendType" SG_ 1594 DiagReqData12_LBM 7;
+BA_ "GenSigStartValue" SG_ 1594 DiagReqData13_LBM 0;
+BA_ "GenSigSendType" SG_ 1594 DiagReqData13_LBM 7;
+BA_ "GenSigStartValue" SG_ 1594 DiagReqData14_LBM 0;
+BA_ "GenSigSendType" SG_ 1594 DiagReqData14_LBM 7;
+BA_ "GenSigStartValue" SG_ 1594 DiagReqData15_LBM 0;
+BA_ "GenSigSendType" SG_ 1594 DiagReqData15_LBM 7;
+BA_ "GenSigStartValue" SG_ 1594 DiagReqData1_LBM 0;
+BA_ "GenSigSendType" SG_ 1594 DiagReqData1_LBM 7;
+BA_ "GenSigStartValue" SG_ 1594 DiagReqData2_LBM 0;
+BA_ "GenSigSendType" SG_ 1594 DiagReqData2_LBM 7;
+BA_ "GenSigStartValue" SG_ 1594 DiagReqData3_LBM 0;
+BA_ "GenSigSendType" SG_ 1594 DiagReqData3_LBM 7;
+BA_ "GenSigStartValue" SG_ 1594 DiagReqData4_LBM 0;
+BA_ "GenSigSendType" SG_ 1594 DiagReqData4_LBM 7;
+BA_ "GenSigStartValue" SG_ 1594 DiagReqData5_LBM 0;
+BA_ "GenSigSendType" SG_ 1594 DiagReqData5_LBM 7;
+BA_ "GenSigStartValue" SG_ 1594 DiagReqData6_LBM 0;
+BA_ "GenSigSendType" SG_ 1594 DiagReqData6_LBM 7;
+BA_ "GenSigStartValue" SG_ 1594 DiagReqData7_LBM 0;
+BA_ "GenSigSendType" SG_ 1594 DiagReqData7_LBM 7;
+BA_ "GenSigStartValue" SG_ 1594 DiagReqData8_LBM 0;
+BA_ "GenSigSendType" SG_ 1594 DiagReqData8_LBM 7;
+BA_ "GenSigStartValue" SG_ 1594 DiagReqData9_LBM 0;
+BA_ "GenSigSendType" SG_ 1594 DiagReqData9_LBM 7;
+VAL_ 511 BMSPackThermOutOfCtrlAlrm 3 "Reserved" 2 "Out of control" 1 "Normal" 0 "Undetermined" ;
+VAL_ 511 BMSPackThermOutOfCtrlVld 1 "Valid" 0 "Invalid" ;
+VAL_ 1292 PN10_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN11_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN12_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN13_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN14_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN15_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN16_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN17_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN18_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN19_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN1_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN20_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN21_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN22_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN23_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN24_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN25_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN26_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN27_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN28_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN29_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN2_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN30_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN31_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN32_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN33_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN34_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN35_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN36_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN37_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN38_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN39_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN3_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN40_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN41_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN42_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN43_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN44_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN45_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN46_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN47_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN48_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN4_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN5_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN6_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN7_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN8_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 PN9_BMS 1 "Awake" 0 "Not awake" ;
+VAL_ 1292 RepMsgReq_BMS 1 "Repeat message request" 0 "No repeat message request" ;
+VAL_ 1327 PN10_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN11_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN12_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN13_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN14_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN15_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN16_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN17_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN18_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN19_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN1_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN20_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN21_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN22_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN23_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN24_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN25_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN26_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN27_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN28_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN29_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN2_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN30_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN31_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN32_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN33_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN34_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN35_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN36_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN37_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN38_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN39_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN3_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN40_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN41_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN42_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN43_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN44_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN45_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN46_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN47_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN48_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN4_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN5_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN6_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN7_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN8_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 PN9_ECCU 1 "Awake" 0 "Not awake" ;
+VAL_ 1327 RepMsgReq_ECCU 1 "Repeat message request" 0 "No repeat message request" ;
+VAL_ 1347 PN10_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN11_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN12_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN13_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN14_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN15_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN16_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN17_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN18_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN19_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN1_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN20_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN21_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN22_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN23_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN24_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN25_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN26_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN27_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN28_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN29_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN2_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN30_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN31_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN32_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN33_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN34_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN35_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN36_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN37_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN38_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN39_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN3_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN40_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN41_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN42_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN43_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN44_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN45_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN46_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN47_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN48_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN4_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN5_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN6_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN7_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN8_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 PN9_IPU 1 "Awake" 0 "Not awake" ;
+VAL_ 1347 RepMsgReq_IPU 1 "Repeat message request" 0 "No repeat message request" ;
+VAL_ 94 DCDC1Sts_12V 7 "Invalid" 6 "Discharge" 5 "Failure" 4 "Precharge complete" 3 "Precharge process" 2 "Buck" 1 "Standby" 0 "Init" ;
+VAL_ 584 BattCp_LBMR 4095 "Invalid" ;
+VAL_ 584 BattCurrentISts_LBMRVld 1 "Valid" 0 "Invalid" ;
+VAL_ 584 BattMosTSts_LBMRVld 1 "Valid" 0 "Invalid" ;
+VAL_ 584 BattSOCSts_LBMRVld 1 "Valid" 0 "Invalid" ;
+VAL_ 584 BattType_LBMR 7 "Invlaid" 6 "Reserved" 5 "Reserved" 4 "Reserved" 3 "Reserved" 2 "Reserved" 1 "AGM" 0 "LFP" ;
+VAL_ 584 BattVoltSts_LBMRVld 1 "Valid" 0 "Invalid" ;
+VAL_ 584 BuckStatus_LBMR 3 " Invallid" 2 "Reserved" 1 "Closed" 0 "Open" ;
+VAL_ 584 Cell1BalanceSts_LBMR 1 "Balance" 0 "No balance" ;
+VAL_ 584 Cell2BalanceSts_LBMR 1 "Balance" 0 "No balance" ;
+VAL_ 584 Cell3BalanceSts_LBMR 1 "Balance" 0 "No balance" ;
+VAL_ 584 Cell4BalanceSts_LBMR 1 "Balance" 0 "No balance" ;
+VAL_ 584 ChrgMosSts_LBMR 3 "Invalid" 2 "Reserved" 1 "Open" 0 "Closed" ;
+VAL_ 584 DisChrgMosSts_LBMR 3 "Invalid" 2 "Reserved" 1 "Open" 0 "Closed" ;
+VAL_ 584 HwWakeupStatus_LBMR 3 "Invalid" 2 "Reserved" 1 "Wakeup effective" 0 "No wakeup" ;
+VAL_ 584 LBMMosDiagSts_LBMR 0 "No error" 1 "Level 1" 2 "Level 2" 3 "Level 3" ;
+VAL_ 584 SOCLowProtn_LBMR 3 "Reserved" 2 "Reserved" 1 "Protection" 0 "No protection" ;
+VAL_ 584 SOESts_LBMRVld 1 "Valid" 0 "Invalid" ;
+VAL_ 584 SOE_LBMR 255 "Invalid" ;
+VAL_ 584 SOHSts_LBMRVld 1 "Valid" 0 "Invalid" ;
+VAL_ 584 SOH_LBMR 255 "Invalid" ;
+VAL_ 584 WakeupInfo_LBMR 7 "Reserved" 6 "wakeup by Hardwire" 5 "wakeup by OC" 4 "wakeup by UV" 3 "wakeup by RTC" 2 "wakeup by OV" 1 "wakeup by NM" 0 "No wakeup" ;
+VAL_ 584 WorkSts_LBMR 7 "Reserved" 6 "Reserved" 5 "Reserved" 4 "Tiny Fault" 3 "Fault Mode" 2 "Normal Mode" 1 "Sleep Mode" 0 "Initial Mode" ;
+VAL_ 585 AfeHwFault_LBMR 1 "fault" 0 "No fault" ;
+VAL_ 585 BalanceOvTempFault_LBMR 3 "Invalid" 2 "Level2" 1 "Level1" 0 "No fault" ;
+VAL_ 585 BuckFault_LBMR 1 "fault" 0 "No fault" ;
+VAL_ 585 CalCurrentResult_LBMR 119 "Valid calibration coefficient" ;
+VAL_ 585 CellOverVoltageFault_LBMR 3 "Invalid" 2 "Level2" 1 "Level1" 0 "No error" ;
+VAL_ 585 CellUnderVoltage_Fault_LBMR 3 "Invalid" 2 "Level2" 1 "Level1" 0 "No error" ;
+VAL_ 585 CellVoltDiffFault_LBMR 1 "fault" 0 "No fault" ;
+VAL_ 585 CellVoltOpenWireFault_LBMR 1 "fault" 0 "No fault" ;
+VAL_ 585 CellVoltOutRangeFault_LBMR 1 "fault" 0 "No fault" ;
+VAL_ 585 ChrgOvCurFault_LBMR 3 "Invalid" 2 "Level2" 1 "Level1" 0 "No error" ;
+VAL_ 585 DischrgOvCurFault_LBMR 3 "Level 3" 2 "Level 2" 1 "Level 1" 0 "No error" ;
+VAL_ 585 EepromFault_LBMR 1 "fault" 0 "No fault" ;
+VAL_ 585 HwLineWakeupStuckFault_LBMR 1 "fault" 0 "No fault" ;
+VAL_ 585 MosFault_LBMR 1 "fault" 0 "No fault" ;
+VAL_ 585 MosOvTempFault_LBMR 3 "Invalid" 2 "Level2" 1 "Level1" 0 "No fault" ;
+VAL_ 585 PackOverTempFault_LBMR 3 "Invalid" 2 "Level2" 1 "Level1" 0 "No error" ;
+VAL_ 585 PackOverVoltageFault_LBMR 3 "Invalid" 2 "Level2" 1 "Level1" 0 "No error" ;
+VAL_ 585 PackTempDiffFault_LBMR 1 "fault" 0 "No fault" ;
+VAL_ 585 PackThermOutofCtrlAlrm_LBMR 3 "Reserved" 2 "Reserved" 1 "Out of control" 0 "Normal" ;
+VAL_ 585 PackThermOutofCtrlVld_LBMRVld 1 "Valid" 0 "Invalid" ;
+VAL_ 585 PackUnTempFault_LBMR 3 "Invalid" 2 "Level2" 1 "Level1" 0 "No fault" ;
+VAL_ 585 PackUnVoltFault_LBMR 3 "Invalid" 2 "Level2" 1 "Level1" 0 "No error" ;
+VAL_ 585 PackVoltOutRangeFault_LBMR 1 "fault" 0 "No fault" ;
+VAL_ 585 SbcFault_LBMR 1 "fault" 0 "No fault" ;
+VAL_ 585 ShortCircuitFault_LBMR 1 "fault" 0 "No fault" ;
+VAL_ 585 SocLowFault_LBMR 3 "Invalid" 2 "Level2" 1 "Level1" 0 "No fault" ;
+VAL_ 585 SohLowFault_LBMR 3 "Invalid" 2 "Level2" 1 "Level1" 0 "No fault" ;
+VAL_ 585 TempSenOutHighRangeFault_LBMR 1 "fault" 0 "No fault" ;
+VAL_ 585 TempSenOutLowRangeFault_LBMR 1 "fault" 0 "No fault" ;
+VAL_ 597 BattChrgMod_LBMR 7 "Invalid" 6 "Reserved" 5 "Reserved" 4 "ECO mode" 3 "Voltage follow mode" 2 "Constant voltage mode" 1 "Constant current mode" 0 "Undetermine" ;
+VAL_ 597 BattManufacture_LBMR 15 "Invalid" 1 "CATL" 0 "Camel" ;
+VAL_ 597 BattMaxChrgSOCSts_LBMR 255 "Invalid" ;
+VAL_ 597 ChrgMosSt_LBMR 3 " Invallid" 2 "Reserved" 1 "Open" 0 "Closed" ;
+VAL_ 597 DischrgMosSt_LBMR 3 " Invallid" 2 "Reserved" 1 "Open" 0 "Closed" ;
+VAL_ 597 HwOverDchaEna_LBMR 1 "Enable" 0 "Disable" ;
+VAL_ 597 LVBattLowSOCChrgSts_LBMR 1 "enable" 0 "disable" ;
+VAL_ 597 LVBattLowUChrgSts_LBMR 1 "Enable" 0 "Disable" ;
+VAL_ 597 LVBattSOCWakeUpSts_LBMR 1 "Enable" 0 "Disable" ;
+VAL_ 597 LVBattUWakeupSts_LBMR 1 "Enable" 0 "Disable" ;
+VAL_ 597 LowSOCChrgReq_LBMR 1 "Request" 0 "No Request" ;
+VAL_ 597 LowSOCWakeUpReq_LBMR 1 "Request" 0 "No Request" ;
+VAL_ 597 LowUpackChrgReq_LBMR 1 "Request" 0 "No Request" ;
+VAL_ 597 LowUpackWakeupReq_LBMR 1 "Request" 0 "No Request" ;
+VAL_ 856 BCU_TimeOut_LBMR 1 "fault" 0 "No fault" ;
+VAL_ 856 CanBusOffFault_LBMR 1 "fault" 0 "No fault" ;
+VAL_ 856 IPU_R_TimeOut_LBMR 1 "fault" 0 "No fault" ;
+VAL_ 856 ZONEL_TimeOut_LBMR 1 "fault" 0 "No fault" ;
+VAL_ 1338 PN10_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN11_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN12_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN13_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN14_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN15_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN16_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN17_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN18_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN19_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN1_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN20_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN21_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN22_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN23_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN24_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN25_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN26_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN27_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN28_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN29_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN2_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN30_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN31_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN32_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN33_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN34_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN35_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN36_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN37_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN38_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN39_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN3_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN40_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN41_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN42_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN43_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN44_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN45_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN46_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN47_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN48_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN4_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN5_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN6_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN7_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN8_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 PN9_LBM 1 "Awake" 0 "Not awake" ;
+VAL_ 1338 RepMsgReq_LBM 1 "Repeat message request" 0 "No repeat message request" ;
+VAL_ 1407 PN10_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN11_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN12_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN13_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN14_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN15_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN16_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN17_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN18_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN19_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN1_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN20_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN21_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN22_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN23_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN24_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN25_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN26_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN27_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN28_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN29_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN2_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN30_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN31_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN32_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN33_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN34_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN35_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN36_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN37_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN38_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN39_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN3_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN40_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN41_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN42_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN43_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN44_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN45_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN46_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN47_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN48_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN4_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN5_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN6_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN7_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN8_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 PN9_OBC 1 "Awake" 0 "Not awake" ;
+VAL_ 1407 RepMsgReq_OBC 1 "Repeat message request" 0 "No repeat message request" ;
+VAL_ 1350 PN10_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN11_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN12_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN13_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN14_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN15_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN16_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN17_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN18_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN19_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN1_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN20_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN21_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN22_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN23_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN24_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN25_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN26_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN27_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN28_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN29_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN2_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN30_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN31_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN32_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN33_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN34_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN35_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN36_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN37_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN38_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN39_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN3_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN40_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN41_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN42_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN43_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN44_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN45_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN46_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN47_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN48_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN4_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN5_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN6_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN7_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN8_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 PN9_UWB_FT 1 "Awake" 0 "Not awake" ;
+VAL_ 1350 RepMsgReq_UWB_FT 1 "Repeat message request" 0 "No repeat message request" ;
+VAL_ 286 VehSpdSts_Rdnt1 1 "Valid" 0 "Inalid" ;
+VAL_ 286 VehSpd_Rdnt1 8191 "Inalid" ;
+VAL_ 316 DrvState 7 "DRV_ST_INVALID" 2 "DRV_ST_AD" 1 "DRV_ST_MD" 0 "DRV_ST_NONE" ;
+VAL_ 316 OperatorState 7 "OPERATOR_ST_INVALID" 3 "OPERATOR_ST_INSIDE" 2 "OPERATOR_ST_AVAILABLE" 1 "OPERATOR_ST_OUTSIDE" 0 "OPERATOR_ST_NONE      " ;
+VAL_ 316 VehStateDetailed 15 "VEH_ST_INVALID" 5 "VEH_ST_PWRSWAP" 4 "VEH_ST_CHARGING" 3 "VEH_ST_SWUPDATE" 2 "VEH_ST_DRIVING" 1 "VEH_ST_DRIVRDY" 0 "VEH_ST_PARKED" ;
+VAL_ 598 ChargeMosCtrl_ZONER 3 "Reserved" 2 "Closed" 1 "Open" 0 "No request" ;
+VAL_ 598 CrashDetd 1 "Crash detected" 0 "Crash not detected" ;
+VAL_ 598 DischargeMosCtrl_ZONER 3 "Reserved" 2 "Closed" 1 "Open" 0 "No request" ;
+VAL_ 598 LowUChrgEna_ZONER 1 "Enable" 0 "Disable" ;
+VAL_ 598 ParkDCDCOffReq 1 "Req" 0 "NoReq" ;
+VAL_ 598 SOCWakeupEna_ZONER 1 "Enable" 0 "Disable" ;
+VAL_ 598 UWakeupEna_ZONER 1 "Enable" 0 "Disable" ;
+VAL_ 598 ZoneRHVBattCutOffWarn 3 "Invalid" 2 "Reserved" 1 "On" 0 "Off" ;
+VAL_ 1285 PN10_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN11_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN12_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN13_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN14_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN15_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN16_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN17_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN18_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN19_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN1_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN20_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN21_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN22_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN23_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN24_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN25_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN26_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN27_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN28_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN29_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN2_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN30_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN31_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN32_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN33_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN34_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN35_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN36_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN37_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN38_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN39_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN3_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN40_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN41_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN42_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN43_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN44_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN45_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN46_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN47_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN48_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN4_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN5_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN6_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN7_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN8_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 PN9_ZONE_LEM 1 "Awake" 0 "Not awake" ;
+VAL_ 1285 RepMsgReq_ZONE_LEM 1 "Repeat message request" 0 "No repeat message request" ;
+

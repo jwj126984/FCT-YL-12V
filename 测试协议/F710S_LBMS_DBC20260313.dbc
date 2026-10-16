@@ -1,0 +1,470 @@
+VERSION "created by canmatrix"
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: TBOX VCU BMS MCU OBC DCDC
+VAL_TABLE_ DCDCWkSts 3 "故障" 2 "降额工作" 1 "正常工作" 0 "待机" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ LBMSFaultNum : 0|64@0- (1,0) [0|65536] "" Vector__XXX
+
+BO_ 1242 CDDU_General_Status_2: 8 Vector__XXX
+ SG_ DCDCOtpCur2 : 34|13@0+ (1,0) [0|0] ""  BMS
+
+BO_ 1341 VT_Send_Time_Message: 8 Vector__XXX
+ SG_ TBOXTVal : 53|1@0+ (1,0) [0|0] ""  BMS
+ SG_ Year : 47|8@0+ (1,0) [0|0] ""  BMS
+ SG_ Month : 39|4@0+ (1,0) [0|0] ""  BMS
+ SG_ Day : 31|5@0+ (1,0) [0|0] ""  BMS
+ SG_ Hour : 23|5@0+ (1,0) [0|0] ""  BMS
+ SG_ Minute : 15|6@0+ (1,0) [0|0] ""  BMS
+ SG_ second : 7|6@0+ (1,0) [0|0] ""  BMS
+
+BO_ 816 CCU_Charge_Cmd_1: 8 Vector__XXX
+ SG_ OTALBMSChgSOCSetRqstSts : 0|1@0+ (1,0) [0|0] ""  BMS
+ SG_ OTALBMSChgSOCSetRqst : 7|7@0+ (1,0) [0|0] ""  BMS
+
+BO_ 1402 LBMS_Fault_Number: 8 BMS
+ SG_ LBMS_FaultNum4 : 51|12@0+ (1,0) [0|4095] "" Vector__XXX
+ SG_ LBMS_FaultNum3 : 47|12@0+ (1,0) [0|4095] "" Vector__XXX
+ SG_ LBMS_FaultNum2 : 27|12@0+ (1,0) [0|4095] "" Vector__XXX
+ SG_ LBMS_FaultNum1 : 23|12@0+ (1,0) [0|4095] "" Vector__XXX
+ SG_ LBMS_SupplierNum : 15|3@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ LBMS_FrameIndex : 12|5@0+ (1,0) [0|31] "" Vector__XXX
+ SG_ LBMS_TotalFaultNum : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 1931 Diag3: 8 BMS
+ SG_ Diag_PhyResp_LBMS_Data : 7|64@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2015 Diag2: 8 Vector__XXX
+ SG_ Diag_FuncReq_Data : 7|64@0+ (1,0) [0|1] ""  BMS
+
+BO_ 1923 Diag1: 8 Vector__XXX
+ SG_ Diag_PhyReq_LBMS_Data : 7|64@0+ (1,0) [0|1] ""  BMS
+
+BO_ 804 LBMS_General_Status_1: 8 BMS
+ SG_ LBMSCurr : 7|21@0+ (0.001,-1000) [-1000|1000] "A" Vector__XXX
+ SG_ LBMSIntVol : 18|15@0+ (0.001,0) [0|20] "V" Vector__XXX
+ SG_ LBMSExtVol : 35|15@0+ (0.001,0) [0|20] "V" Vector__XXX
+ SG_ LBMSDMosDriveU : 52|6@0+ (1,0) [0|62] "V" Vector__XXX
+ SG_ LBMSCMosDriveU : 62|6@0+ (1,0) [0|62] "V" Vector__XXX
+
+BO_ 805 LBMS_Voltage_Status_1: 8 BMS
+ SG_ LBMSCellVoltage_3 : 29|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ LBMSCellVoltage_4 : 32|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ LBMSCellVoltage_2 : 10|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+ SG_ LBMSCellVoltage_1 : 7|13@0+ (0.001,0) [0|5] "V" Vector__XXX
+
+BO_ 1297 LBMS_Temperature_Status_1: 8 BMS
+ SG_ LBMPakTemp1 : 7|8@0+ (1,-50) [-50|200] "℃" Vector__XXX
+ SG_ LBMPakTemp2 : 15|8@0+ (1,-50) [-50|200] "℃" Vector__XXX
+ SG_ LBMPakTemp3 : 23|8@0+ (1,-50) [-50|200] "℃" Vector__XXX
+ SG_ LBMSDMosTemp : 31|8@0+ (1,-50) [-50|200] "℃" Vector__XXX
+ SG_ LBMSCMosTemp : 39|8@0+ (1,-50) [-50|200] "℃" Vector__XXX
+ SG_ LBMSBuckTemp : 47|8@0+ (1,-50) [-50|200] "℃" Vector__XXX
+ SG_ LBMSBrdTemp : 55|8@0+ (1,-50) [-50|200] "℃" Vector__XXX
+
+BO_ 806 LBMS_General_Status_2: 8 BMS
+ SG_ LowBatyLBMSDiscnnct : 48|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ LBMSSOC : 7|10@0+ (0.1,0) [0|100] "%"  VCU
+ SG_ LBMSChrgRqst : 12|3@0+ (1,0) [0|7] ""  VCU
+ SG_ LBMSChrgVolRqst : 9|9@0+ (0.01,12) [12|16] "V"  VCU
+ SG_ LBMSChrgCurRqst : 31|20@0+ (0.001,0) [0|1000] "A"  VCU
+ SG_ LBMSDMosSts : 43|2@0+ (1,0) [0|3] ""  VCU
+ SG_ LBMSCMosSts : 41|2@0+ (1,0) [0|3] ""  VCU
+ SG_ LBMSSOH : 62|7@0+ (1,0) [0|100] "%"  VCU
+
+BO_ 1299 LBMS_General_Status_3: 8 BMS
+ SG_ LBMSTalChrgAH : 7|32@0+ (0.001,0) [0|4294967.295] "AH" Vector__XXX
+ SG_ LBMSTalDchrgAH : 39|32@0+ (0.001,0) [0|4294967.295] "AH" Vector__XXX
+
+BO_ 807 LBMS_General_Status_4: 8 BMS
+ SG_ LBMSReChrgSOCThd : 38|7@0+ (1,0) [0|0] "%" Vector__XXX
+ SG_ LBMSCellBalanceSts_1 : 7|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ LBMSCellBalanceSts_2 : 5|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ LBMSCellBalanceSts_3 : 3|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ LBMSCellBalanceSts_4 : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ LBMSLstSlpTim : 15|16@0+ (1,0) [0|65535] "min" Vector__XXX
+ SG_ LBMSBuckSts : 31|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ LBMSMOSDiscnnctRsn : 29|3@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ LBMSLstSOCClbrtMthd : 26|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ LBMSHardWireSts : 44|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ LBMSChrgStep : 43|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ LBMSSOCCharReqFlC : 63|8@0+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 1300 LBMS_General_Status_5: 8 BMS
+ SG_ LBMSHdMjrVsin : 7|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ LBMSHdMinrVsin : 3|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ LBMSSftwrMjrVsin : 15|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ LBMSSftwrMinrVsin : 11|4@0+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 1301 LBMS_General_Status_6: 8 BMS
+ SG_ LBMSMOSErrSts : 7|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ LBMSSensErrSts : 5|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ LBMSCurVolErrSts : 3|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ LBMSPackUnTempErrSts : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ LBMSPackOvTempErrSts : 15|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ LBMSCellUndrvolErrSts : 13|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ LBMSCellOvrvolErrSts : 11|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ LBMSPakUndrvolErrSts : 9|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ LBMSPakOvrvolErrSts : 23|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ LBMSDischrgOvCurErrSts : 21|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ LBMSChrgOvCurErrSts : 19|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ LBMSCellTempDiffErrSts : 17|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ LBMSCellVolDiffErrSts : 31|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ LBMSSOCLowErrSts : 29|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ LBMSCANCmmuctErrSts : 27|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ LBMSNTCSensErrSts : 25|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ LBMSErrCodNum : 39|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ LBMSActFltLvl : 47|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ LBMSThermalRunawayFault : 45|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ LBMSShortCircuitFault : 44|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ LBMSErrSts : 55|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 1582 NMF_LBMS: 8 BMS
+ SG_ SNI_LBMS : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ AWB_LBMS : 12|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ RMR_LBMS : 8|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ NMS_LBMS : 22|7@0+ (1,0) [0|127] "" Vector__XXX
+ SG_ WR_LBMS : 31|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ AC_2_LBMS_Diagnosis : 38|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ AC_3_LBMS_Tmin : 37|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ AC_4_LBMSONSTARTInd : 36|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ AC_5_LBMS_AFEFalInd : 35|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ AC_6_LBMS_RigdLinInd : 34|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ AC_7_LBMS_IntllgtRchrg : 33|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PNSngl_LBMS : 63|8@0+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 288 Vehicle_Odometer: 8 Vector__XXX
+ SG_ VehOdo : 7|32@0+ (0.015625,0) [0|67108863] "Km"  BMS
+ SG_ VehOdoV : 32|1@0+ (1,0) [0|1] ""  BMS
+
+BO_ 381 Antilock_Brake_and_TC_Status_HS: 8 Vector__XXX
+ SG_ Ant_Bra_and_TC_Sta_HSRC : 11|2@0+ (1,0) [0|3] ""  BMS
+ SG_ VehSpdAvgDrvn_ABS : 19|15@0+ (0.015625,0) [0|360] "km/h"  BMS
+ SG_ Ant_Bra_and_TC_Sta_HSCksm : 47|8@0+ (1,0) [0|255] ""  BMS
+ SG_ VehSpdAvgDrvnV_ABS : 61|1@0+ (1,0) [0|1] ""  BMS
+
+BO_ 513 HCU_General_Status_1: 8 Vector__XXX
+ SG_ VehRdySts : 3|1@0+ (1,0) [0|1] ""  BMS
+
+BO_ 341 VCU_Vehicle_Command_State: 8 Vector__XXX
+ SG_ VCUVehCmdSttRollCnt : 1|2@0+ (1,0) [0|3] ""  BMS
+ SG_ VecActGearStsV : 11|1@0+ (1,0) [0|1] ""  BMS
+ SG_ VecActGearSts : 35|4@0+ (1,0) [0|15] ""  BMS
+ SG_ VCUVehComSts1Cksm : 63|8@0+ (1,0) [0|255] ""  BMS
+
+BO_ 869 DCDC_General_Status: 8 Vector__XXX
+ SG_ DCDCOtpVol : 7|8@0+ (0.1,0) [0|25.5] "V"  BMS
+ SG_ DCDCOtpCur : 15|11@0+ (0.1,0) [0|204.7] "A"  BMS
+ SG_ DCDCWkSts : 41|2@0+ (1,0) [0|3] ""  BMS
+ SG_ DCDCGenStsRollCnt : 51|4@0+ (1,0) [0|15] ""  BMS
+ SG_ DCDCGenStsStaCksm : 63|8@0+ (1,0) [0|255] ""  BMS
+
+BO_ 497 PPEI_Platform_General_Status: 8 Vector__XXX
+ SG_ IgnKyPstn : 5|2@0+ (1,0) [0|3] ""  BMS
+ SG_ PPEI_Ptf_Gen_StatRC : 15|2@0+ (1,0) [0|3] ""  BMS
+ SG_ PPEI_Ptf_Gen_StatCksm : 63|8@0+ (1,0) [0|255] ""  BMS
+
+BO_ 808 LBMS_General_Status_7: 8 BMS
+ SG_ LBMSGenSts7Cksm : 63|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ LBMSGenSts7RC : 7|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ LBMSIntlgtChrgEnbSts : 5|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ LBMSChrgFltSts : 4|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ LBMSSlpTime : 15|16@0+ (1,0) [0|65535] "min" Vector__XXX
+ SG_ LBMSLowPwModActvSts : 31|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ LBMSLastSlpSts : 30|2@0+ (1,0) [0|7] "" Vector__XXX
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ SG_ 3221225472 LBMSFaultNum "LBMS故障码";
+CM_ SG_ 1402 LBMS_FaultNum4 "故障内部编号4";
+CM_ SG_ 1402 LBMS_FaultNum3 "故障内部编号3";
+CM_ SG_ 1402 LBMS_FaultNum2 "故障内部编号2";
+CM_ SG_ 1402 LBMS_FaultNum1 "故障内部编号1";
+CM_ SG_ 1402 LBMS_SupplierNum "供应商代码";
+CM_ SG_ 1402 LBMS_FrameIndex "帧序号";
+CM_ SG_ 1402 LBMS_TotalFaultNum "当前故障总数";
+CM_ SG_ 1931 Diag_PhyResp_LBMS_Data "Diagnostic Physical Request Data to LBMS";
+CM_ SG_ 2015 Diag_FuncReq_Data "Diagnostic Functional Request Data";
+CM_ SG_ 1923 Diag_PhyReq_LBMS_Data "Diagnostic Physical Request Data to LBMS";
+CM_ SG_ 804 LBMSCurr "低压蓄电池电流";
+CM_ SG_ 804 LBMSIntVol "低压蓄电池内侧总电压";
+CM_ SG_ 804 LBMSExtVol "低压蓄电池外侧总电压";
+CM_ SG_ 804 LBMSDMosDriveU "低压蓄电池DMOS驱动电压";
+CM_ SG_ 804 LBMSCMosDriveU "低压蓄电池CMOS驱动电压";
+CM_ SG_ 805 LBMSCellVoltage_3 "低压蓄电池单体电池电压3";
+CM_ SG_ 805 LBMSCellVoltage_4 "低压蓄电池单体电池电压4";
+CM_ SG_ 805 LBMSCellVoltage_2 "低压蓄电池单体电池电压2";
+CM_ SG_ 805 LBMSCellVoltage_1 "低压蓄电池单体电池电压1";
+CM_ SG_ 1297 LBMPakTemp1 "低压蓄电池温度1";
+CM_ SG_ 1297 LBMPakTemp2 "低压蓄电池温度2";
+CM_ SG_ 1297 LBMPakTemp3 "低压蓄电池温度3";
+CM_ SG_ 1297 LBMSDMosTemp "低压蓄电池放电MOS温度";
+CM_ SG_ 1297 LBMSCMosTemp "低压蓄电池充电MOS温度";
+CM_ SG_ 1297 LBMSBuckTemp "低压蓄电池限流模块温度";
+CM_ SG_ 1297 LBMSBrdTemp "低压蓄电池板子温度";
+CM_ SG_ 806 LowBatyLBMSDiscnnct "小电池电量低LBMS断电指示";
+CM_ SG_ 806 LBMSSOC "低压蓄电池电量";
+CM_ SG_ 806 LBMSChrgRqst "低压蓄电池补电请求";
+CM_ SG_ 806 LBMSChrgVolRqst "低压蓄电池补电电压请求";
+CM_ SG_ 806 LBMSChrgCurRqst "低压蓄电池补电电流请求";
+CM_ SG_ 806 LBMSDMosSts "低压蓄电池放电MOS状态";
+CM_ SG_ 806 LBMSCMosSts "低压蓄电池充电MOS状态";
+CM_ SG_ 806 LBMSSOH "低压蓄电池健康状态";
+CM_ SG_ 1299 LBMSTalChrgAH "低压蓄电池整个生命周期充电AH数";
+CM_ SG_ 1299 LBMSTalDchrgAH "低压蓄电池整个生命周期放电AH数";
+CM_ SG_ 807 LBMSCellBalanceSts_1 "低压蓄电池电芯均衡状态1";
+CM_ SG_ 807 LBMSCellBalanceSts_2 "低压蓄电池电芯均衡状态2";
+CM_ SG_ 807 LBMSCellBalanceSts_3 "低压蓄电池电芯均衡状态3";
+CM_ SG_ 807 LBMSCellBalanceSts_4 "低压蓄电池电芯均衡状态4";
+CM_ SG_ 807 LBMSLstSlpTim "低压蓄电池上次休眠时长";
+CM_ SG_ 807 LBMSBuckSts "低压蓄电池BUCK电路启动状态";
+CM_ SG_ 807 LBMSMOSDiscnnctRsn "MOS断开原因";
+CM_ SG_ 807 LBMSLstSOCClbrtMthd "上次SOC校准方式";
+CM_ SG_ 807 LBMSHardWireSts "硬线状态";
+CM_ SG_ 807 LBMSChrgStep "充电步骤";
+CM_ SG_ 807 LBMSSOCCharReqFlC "低压蓄电池SOC补电请求失败计数";
+CM_ SG_ 1300 LBMSHdMjrVsin "低压蓄电池硬件主版本";
+CM_ SG_ 1300 LBMSHdMinrVsin "低压蓄电池硬件次版本";
+CM_ SG_ 1300 LBMSSftwrMjrVsin "低压蓄电池软件主版本";
+CM_ SG_ 1300 LBMSSftwrMinrVsin "低压蓄电池软件次版本";
+CM_ SG_ 1301 LBMSMOSErrSts "低压蓄电池Mos故障状态";
+CM_ SG_ 1301 LBMSSensErrSts "低压蓄电池传感器故障状态";
+CM_ SG_ 1301 LBMSCurVolErrSts "低压蓄电池电流电压故障状态";
+CM_ SG_ 1301 LBMSPackUnTempErrSts "低压蓄电池低温故障状态";
+CM_ SG_ 1301 LBMSPackOvTempErrSts "低压蓄电池过温故障状态";
+CM_ SG_ 1301 LBMSCellUndrvolErrSts "低压蓄电池单体欠压故障状态";
+CM_ SG_ 1301 LBMSCellOvrvolErrSts "低压蓄电池单体过压故障状态";
+CM_ SG_ 1301 LBMSPakUndrvolErrSts "低压蓄电池总电压欠压故障状态";
+CM_ SG_ 1301 LBMSPakOvrvolErrSts "低压蓄电池总电压过压故障状态";
+CM_ SG_ 1301 LBMSDischrgOvCurErrSts "低压蓄电池放电过流故障状态";
+CM_ SG_ 1301 LBMSChrgOvCurErrSts "低压蓄电池充电过流故障状态";
+CM_ SG_ 1301 LBMSCellTempDiffErrSts "低压蓄电池单体温度不一致故障状态";
+CM_ SG_ 1301 LBMSCellVolDiffErrSts "低压蓄电池单体电压不一致故障状态";
+CM_ SG_ 1301 LBMSSOCLowErrSts "低压蓄电池SOC过低故障状态";
+CM_ SG_ 1301 LBMSCANCmmuctErrSts "低压蓄电池CAN通信失败状态";
+CM_ SG_ 1301 LBMSNTCSensErrSts "低压蓄电池NTC故障状态";
+CM_ SG_ 1301 LBMSErrCodNum "低压蓄电池当前故障码";
+CM_ SG_ 1301 LBMSActFltLvl "低压蓄电池当前故障等级";
+CM_ SG_ 1301 LBMSThermalRunawayFault "热失控故障";
+CM_ SG_ 1301 LBMSShortCircuitFault "短路故障";
+CM_ SG_ 1301 LBMSErrSts "低压蓄电池故障状态";
+CM_ SG_ 1582 SNI_LBMS "节点源地址";
+CM_ SG_ 1582 AWB_LBMS "主动唤醒位";
+CM_ SG_ 1582 RMR_LBMS "重复报文请求位";
+CM_ SG_ 1582 NMS_LBMS "网络管理状态";
+CM_ SG_ 1582 WR_LBMS "唤醒原因";
+CM_ SG_ 1582 AC_2_LBMS_Diagnosis "保持原因2_接收到自身的诊断报文或功能寻址诊断报文";
+CM_ SG_ 1582 AC_3_LBMS_Tmin "保持原因3_TRepeat_message触发";
+CM_ SG_ 1582 AC_4_LBMSONSTARTInd "保持原因4_IgnKyPstn为ON或START唤醒";
+CM_ SG_ 1582 AC_5_LBMS_AFEFalInd "保持原因5_AFE故障唤醒";
+CM_ SG_ 1582 AC_6_LBMS_RigdLinInd "保持原因6_左前门微动开关唤醒";
+CM_ SG_ 1582 AC_7_LBMS_IntllgtRchrg "保持原因7_泵电唤醒";
+CM_ SG_ 1582 PNSngl_LBMS "唤醒网段PN信号_LBMS";
+CM_ SG_ 288 VehOdo "车辆行驶里程";
+CM_ SG_ 288 VehOdoV "车辆行驶里程有效性";
+CM_ SG_ 381 Ant_Bra_and_TC_Sta_HSRC "循环计数";
+CM_ SG_ 381 VehSpdAvgDrvn_ABS "车速";
+CM_ SG_ 381 Ant_Bra_and_TC_Sta_HSCksm "校验和";
+CM_ SG_ 381 VehSpdAvgDrvnV_ABS "车速有效性";
+CM_ SG_ 513 VehRdySts "车辆Ready标志位";
+CM_ SG_ 341 VCUVehCmdSttRollCnt "循环计数";
+CM_ SG_ 341 VecActGearStsV "整车当前档位状态有效性";
+CM_ SG_ 341 VecActGearSts "整车当前档位状态";
+CM_ SG_ 341 VCUVehComSts1Cksm "校验和";
+CM_ SG_ 869 DCDCOtpVol "直流/直流变换器输出电压";
+CM_ SG_ 869 DCDCOtpCur "直流/直流变换器输出电流";
+CM_ SG_ 869 DCDCWkSts "直流/直流变换器工作状态";
+CM_ SG_ 869 DCDCGenStsRollCnt "直流/直流变换器总体状态循环计数";
+CM_ SG_ 869 DCDCGenStsStaCksm "直流/直流变换器总体状态校验和";
+CM_ SG_ 497 IgnKyPstn "点火钥匙位置";
+CM_ SG_ 497 PPEI_Ptf_Gen_StatRC "循环计数";
+CM_ SG_ 497 PPEI_Ptf_Gen_StatCksm "校验和";
+CM_ SG_ 808 LBMSGenSts7Cksm "校验和";
+CM_ SG_ 808 LBMSGenSts7RC "循环计数";
+CM_ SG_ 808 LBMSIntlgtChrgEnbSts "智能补电使能状态";
+CM_ SG_ 808 LBMSChrgFltSts "低压理电池充电异常状态";
+CM_ SG_ 808 LBMSSlpTime "LBMS休眠时长";
+CM_ SG_ 808 LBMSLowPwModActvSts "低功耗模式启动状态";
+CM_ SG_ 808 LBMSLastSlpSts "LBMS上次休眠状态";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 65535;
+BA_DEF_ SG_  "GenSigStartValue" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTimeActive" INT 0 65535;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 65535;
+BA_DEF_ BO_  "GenMsgNrOfRepetitions" INT 0 65535;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","Event";
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_ SG_  "GenSigSNA" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeActive" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgNrOfRepetitions" 0;
+BA_DEF_DEF_  "GenMsgSendType" "";
+BA_DEF_DEF_  "VFrameFormat" "";
+BA_DEF_DEF_  "GenSigSNA" "";
+BA_DEF_DEF_  "BusType" "";
+BA_ "BusType" "CAN";
+BA_ "VFrameFormat" BO_ 1242 0;
+BA_ "VFrameFormat" BO_ 1341 0;
+BA_ "VFrameFormat" BO_ 816 0;
+BA_ "GenMsgCycleTime" BO_ 1402 500;
+BA_ "GenMsgCycleTimeActive" BO_ 1402 0;
+BA_ "GenMsgSendType" BO_ 1402 0;
+BA_ "VFrameFormat" BO_ 1402 0;
+BA_ "VFrameFormat" BO_ 1931 0;
+BA_ "GenMsgSendType" BO_ 1931 1;
+BA_ "VFrameFormat" BO_ 2015 0;
+BA_ "GenMsgSendType" BO_ 2015 1;
+BA_ "VFrameFormat" BO_ 1923 0;
+BA_ "GenMsgSendType" BO_ 1923 1;
+BA_ "VFrameFormat" BO_ 804 0;
+BA_ "GenMsgCycleTime" BO_ 804 100;
+BA_ "GenMsgSendType" BO_ 804 0;
+BA_ "GenMsgCycleTime" BO_ 805 100;
+BA_ "GenMsgSendType" BO_ 805 0;
+BA_ "VFrameFormat" BO_ 805 0;
+BA_ "GenMsgCycleTime" BO_ 1297 1000;
+BA_ "GenMsgSendType" BO_ 1297 0;
+BA_ "VFrameFormat" BO_ 1297 0;
+BA_ "VFrameFormat" BO_ 806 0;
+BA_ "GenMsgCycleTime" BO_ 806 100;
+BA_ "GenMsgSendType" BO_ 806 0;
+BA_ "VFrameFormat" BO_ 1299 0;
+BA_ "GenMsgCycleTime" BO_ 1299 1000;
+BA_ "GenMsgSendType" BO_ 1299 0;
+BA_ "VFrameFormat" BO_ 807 0;
+BA_ "GenMsgCycleTime" BO_ 807 100;
+BA_ "GenMsgSendType" BO_ 807 0;
+BA_ "GenMsgCycleTime" BO_ 1300 1000;
+BA_ "GenMsgSendType" BO_ 1300 0;
+BA_ "VFrameFormat" BO_ 1300 0;
+BA_ "GenMsgCycleTime" BO_ 1301 1000;
+BA_ "GenMsgSendType" BO_ 1301 0;
+BA_ "VFrameFormat" BO_ 1301 0;
+BA_ "VFrameFormat" BO_ 1582 0;
+BA_ "GenMsgCycleTime" BO_ 1582 1000;
+BA_ "GenMsgSendType" BO_ 1582 0;
+BA_ "GenMsgCycleTime" BO_ 288 100;
+BA_ "GenMsgSendType" BO_ 288 0;
+BA_ "VFrameFormat" BO_ 288 0;
+BA_ "GenMsgCycleTime" BO_ 381 100;
+BA_ "GenMsgSendType" BO_ 381 0;
+BA_ "VFrameFormat" BO_ 381 0;
+BA_ "GenMsgCycleTime" BO_ 513 100;
+BA_ "GenMsgSendType" BO_ 513 0;
+BA_ "VFrameFormat" BO_ 513 0;
+BA_ "GenMsgCycleTime" BO_ 341 10;
+BA_ "GenMsgSendType" BO_ 341 0;
+BA_ "VFrameFormat" BO_ 341 0;
+BA_ "GenMsgCycleTime" BO_ 869 100;
+BA_ "GenMsgSendType" BO_ 869 0;
+BA_ "VFrameFormat" BO_ 869 0;
+BA_ "GenMsgCycleTime" BO_ 497 100;
+BA_ "GenMsgSendType" BO_ 497 0;
+BA_ "VFrameFormat" BO_ 497 0;
+BA_ "GenMsgCycleTime" BO_ 808 100;
+BA_ "GenMsgSendType" BO_ 808 0;
+BA_ "VFrameFormat" BO_ 808 0;
+BA_ "GenSigStartValue" SG_ 3221225472 LBMSFaultNum 0;
+BA_ "GenSigStartValue" SG_ 1297 LBMPakTemp1 96;
+BA_ "GenSigStartValue" SG_ 1297 LBMPakTemp2 96;
+BA_ "GenSigStartValue" SG_ 1297 LBMPakTemp3 96;
+BA_ "GenSigStartValue" SG_ 1297 LBMSDMosTemp 96;
+BA_ "GenSigStartValue" SG_ 1297 LBMSCMosTemp 96;
+BA_ "GenSigStartValue" SG_ 1297 LBMSBuckTemp 96;
+BA_ "GenSigStartValue" SG_ 1297 LBMSBrdTemp 96;
+BA_ "GenSigStartValue" SG_ 806 LBMSChrgVolRqst 160;
+BA_ "GenSigStartValue" SG_ 806 LBMSDMosSts 3;
+BA_ "GenSigStartValue" SG_ 806 LBMSCMosSts 3;
+BA_ "GenSigStartValue" SG_ 288 VehOdoV 1;
+VAL_ 806 LowBatyLBMSDiscnnct 1 "Indicate（断电指示）" 0 "No Indicate（未断电）" ;
+VAL_ 806 LBMSChrgRqst 0 "Undefined （无请求）" 1 "SOCChar Req(SOC低请求充电)" 2 "VoltChar Req(电压低请求充电)" 3 "CharQuit Req(请求退出充电)" 4 "Reserved(保留)" ;
+VAL_ 806 LBMSDMosSts 0 "Initial（初始化 ）" 1 "Close(MOS闭合)" 2 "Open(MOS断开)" 3 "Reserved(保留)" ;
+VAL_ 806 LBMSCMosSts 0 "Initial（初始化 ）" 1 "Close(MOS闭合)" 2 "Open(MOS断开)" 3 "Reserved(保留)" ;
+VAL_ 807 LBMSCellBalanceSts_1 0 "No Balance（无均衡）" 1 "Open（开启均衡）" 2 "False（均衡错误）" ;
+VAL_ 807 LBMSCellBalanceSts_2 0 "No Balance（无均衡）" 1 "Open（开启均衡）" 2 "False（均衡错误）" ;
+VAL_ 807 LBMSCellBalanceSts_3 0 "No Balance（无均衡）" 1 "Open（开启均衡）" 2 "False（均衡错误）" ;
+VAL_ 807 LBMSCellBalanceSts_4 0 "No Balance（无均衡）" 1 "Open（开启均衡）" 2 "False（均衡错误）" ;
+VAL_ 807 LBMSBuckSts 2 "ON(均衡启动)" 0 "Unknown(默认)" 1 "OFF(均衡退出)" 3 "Reserved(保留)" ;
+VAL_ 807 LBMSMOSDiscnnctRsn 0 "Default;(保留)" 1 "LowSOC;(SOC过低)" 2 "LowVoltage;(电压过低)" 3 "LBMSFault;(LBMS故障)" 4 "Reserved(保留)" 5 "Reserved(保留)" 6 "Reserved(保留)" 7 "Reserved(保留)" ;
+VAL_ 807 LBMSLstSOCClbrtMthd 0 "No Cal(没校准SOC)" 1 "OCV Cal(OCV校准)" 2 "Full Charge(满充校准)" 3 "Reserved(保留)" ;
+VAL_ 807 LBMSHardWireSts 0 "hang in the air" 1 "Low effective" ;
+VAL_ 807 LBMSChrgStep 0 "Unknown;(未充电)" 1 "Voltage Regulation Charge(调压充电）" 2 "Voltage Regulation DisCharge(调压放电）" 3 "Charge Completion(充电完成)" ;
+VAL_ 1301 LBMSMOSErrSts 0 "Valid（未发生故障）" 1 "Invalid（发生故障）" 2 "Reserved(预留)" 3 "Reserved(预留)" ;
+VAL_ 1301 LBMSSensErrSts 0 "Valid（未发生故障）" 1 "Invalid（发生故障）" 2 "Reserved(预留)" 3 "Reserved(预留)" ;
+VAL_ 1301 LBMSCurVolErrSts 0 "Valid（未发生故障）" 1 "Invalid（发生故障）" 2 "Reserved(预留)" 3 "Reserved(预留)" ;
+VAL_ 1301 LBMSPackUnTempErrSts 0 "Valid（未发生故障）" 1 "Invalid（发生故障）" 2 "Reserved(预留)" 3 "Reserved(预留)" ;
+VAL_ 1301 LBMSPackOvTempErrSts 0 "Valid（未发生故障）" 1 "Invalid（发生故障）" 2 "Reserved(预留)" 3 "Reserved(预留)" ;
+VAL_ 1301 LBMSCellUndrvolErrSts 0 "Valid（未发生故障）" 1 "Invalid（发生故障）" 2 "Reserved(预留)" 3 "Reserved(预留)" ;
+VAL_ 1301 LBMSCellOvrvolErrSts 0 "Valid（未发生故障）" 1 "Invalid（发生故障）" 2 "Reserved(预留)" 3 "Reserved(预留)" ;
+VAL_ 1301 LBMSPakUndrvolErrSts 0 "Valid（未发生故障）" 1 "Invalid（发生故障）" 2 "Reserved(预留)" 3 "Reserved(预留)" ;
+VAL_ 1301 LBMSPakOvrvolErrSts 0 "Valid（未发生故障）" 1 "Invalid（发生故障）" 2 "Reserved(预留)" 3 "Reserved(预留)" ;
+VAL_ 1301 LBMSDischrgOvCurErrSts 0 "Valid（未发生故障）" 1 "Invalid（发生故障）" 2 "Reserved(预留)" 3 "Reserved(预留)" ;
+VAL_ 1301 LBMSChrgOvCurErrSts 0 "Valid（未发生故障）" 1 "Invalid（发生故障）" 2 "Reserved(预留)" 3 "Reserved(预留)" ;
+VAL_ 1301 LBMSCellTempDiffErrSts 0 "Valid（未发生故障）" 1 "Invalid（发生故障）" 2 "Reserved(预留)" 3 "Reserved(预留)" ;
+VAL_ 1301 LBMSCellVolDiffErrSts 0 "Valid（未发生故障）" 1 "Invalid（发生故障）" 2 "Reserved(预留)" 3 "Reserved(预留)" ;
+VAL_ 1301 LBMSSOCLowErrSts 0 "Valid（未发生故障）" 1 "Invalid（发生故障）" 2 "Reserved(预留)" 3 "Reserved(预留)" ;
+VAL_ 1301 LBMSCANCmmuctErrSts 0 "Valid（未发生故障）" 1 "Invalid（发生故障）" 2 "Reserved(预留)" 3 "Reserved(预留)" ;
+VAL_ 1301 LBMSNTCSensErrSts 0 "Valid（未发生故障）" 1 "Invalid（发生故障）" 2 "Reserved(预留)" 3 "Reserved(预留)" ;
+VAL_ 1301 LBMSActFltLvl 0 "Valid(无故障)" 1 "LV1（一级故障）" 2 "LV2（二级故障）" 3 "LV3（三级故障）" ;
+VAL_ 1301 LBMSThermalRunawayFault 0 "Valid(无故障)" 1 "Invalid(发生故障)" ;
+VAL_ 1301 LBMSShortCircuitFault 0 "Valid(无故障)" 1 "Invalid(发生故障)" ;
+VAL_ 1301 LBMSErrSts 0 "Valid（未发生故障）" 1 "Invalid（发生故障）" 2 "Reserved(预留)" 3 "Reserved(预留)" ;
+VAL_ 1582 AWB_LBMS 0 "Unactive（非主动唤醒）" 1 "Active（主动唤醒）" ;
+VAL_ 1582 RMR_LBMS 0 "No Request（无请求）" 1 "Request（请求）" ;
+VAL_ 1582 NMS_LBMS 0 "Initialize（初始化）" 1 "NM_RM_frm_BS" 2 "NM_RM_frm_PBS" 4 "NM_NO_frm_RM" 8 "NM_NO_frm_RS" ;
+VAL_ 1582 WR_LBMS 17 "RTC唤醒" 16 "过温唤醒" 0 "Initialize（初始化）" 1 "CAN Wake Up（总线唤醒）" 2 "Diagnosis Wake Up （诊断唤醒）" 3 "KL15 Active（KL15上电）" 4 "硬线唤醒" 5 "泵电唤醒" 7 "过流唤醒" 8 "过压唤醒" 9 "欠压唤醒" ;
+VAL_ 1582 AC_2_LBMS_Diagnosis 0 "False（未激活）" 1 "True（激活）" ;
+VAL_ 1582 AC_3_LBMS_Tmin 0 "False（未激活）" 1 "True（激活）" ;
+VAL_ 1582 AC_4_LBMSONSTARTInd 0 "False（未激活）" 1 "True（激活）" ;
+VAL_ 1582 AC_5_LBMS_AFEFalInd 0 "False（未激活）" 1 "True（激活）" ;
+VAL_ 1582 AC_6_LBMS_RigdLinInd 0 "False（未激活）" 1 "True（激活）" ;
+VAL_ 1582 AC_7_LBMS_IntllgtRchrg 0 "False（未激活）" 1 "True（激活）" ;
+VAL_ 288 VehOdoV 0 "Valid（有效）" 1 "Invalid（无效）" ;
+VAL_ 381 VehSpdAvgDrvnV_ABS 0 "Valid（有效）" 1 "Invalid（无效）" ;
+VAL_ 513 VehRdySts 0 "Inactive" 1 "Active" ;
+VAL_ 341 VecActGearStsV 0 "Valid（有效）" 1 "Invalid（无效）" ;
+VAL_ 341 VecActGearSts 15 "Unused and Reserved（预留）" 0 "Initialize（初始化）" 1 "Unused and Reserved（预留）" 2 "Unused and Reserved（预留）" 3 "Unused and Reserved（预留）" 4 "Unused and Reserved（预留）" 5 "Unused and Reserved（预留）" 6 "error（ 故障）" 7 "Unused and Reserved（预留）" 8 "Unused and Reserved（预留）" 10 "Park gear（P档）" 11 "Sport Gear（S档）" 12 "Drive Gear（D档）" 13 "Neutral Gear（空档）" 14 "Reverse Gear（倒档）" ;
+VAL_ 869 DCDCWkSts 3 "故障" 2 "降额工作" 1 "正常工作" 0 "待机" ;
+VAL_ 497 IgnKyPstn 0 "OFF" 1 "ACC" 2 "ON" 3 "START" ;
+VAL_ 808 LBMSIntlgtChrgEnbSts 0 "Enable" 1 "Disable" ;
+VAL_ 808 LBMSChrgFltSts 0 "normal（充电正常）" 1 "unnormal（充电异常）" ;
+VAL_ 808 LBMSLowPwModActvSts 0 "Inactive" 1 "Active" ;
+VAL_ 808 LBMSLastSlpSts 0 "初始值" 1 "一级休眠" 2 "二级休眠" 3 "静默" 4 "Reserved" 5 "Reserved" 6 "Reserved" 7 "Invalid" ;
+

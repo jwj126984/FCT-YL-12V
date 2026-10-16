@@ -1,0 +1,311 @@
+<Window x:Class="FCT.Dialog.ControlCenter"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FCT.Dialog"
+        mc:Ignorable="d"
+        Title="控制中心" Height="700" Width="1100"
+        WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <Style TargetType="Border">
+            <Setter Property="BorderBrush" Value="#FF888888"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="CornerRadius" Value="5"/>
+            <Setter Property="Background" Value="White"/>
+        </Style>
+
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontWeight" Value="Normal"/>
+            <Setter Property="Margin" Value="0,5,0,2"/>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="Width" Value="90"/>
+            <Setter Property="Height" Value="28"/>
+            <Setter Property="Margin" Value="0,5,0,5"/>
+            <Setter Property="FontSize" Value="11"/>
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="Height" Value="26"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Margin" Value="0,0,0,5"/>
+            <Setter Property="Padding" Value="3"/>
+        </Style>
+
+        <Style TargetType="ComboBox">
+            <Setter Property="Height" Value="26"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Margin" Value="0,0,0,5"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="1.5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- 6322B电源控制区域 -->
+        <Border Grid.Row="0" Grid.Column="0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0" Content="6322B电源控制" FontWeight="Bold" 
+                       HorizontalAlignment="Center" Background="LightBlue" 
+                       FontSize="14" Padding="10,5"/>
+
+                <StackPanel Grid.Row="1" Orientation="Vertical" Margin="15">
+                    <!-- 电压设置和读取 -->
+                    <Label Content="电压(V)" FontWeight="SemiBold"/>
+                    <TextBox Name="txtVoltage6322B" Text="0.0"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="设置电压" Click="SetVoltage6322B_Click"/>
+                        <Button Content="读取电压" Click="ReadVoltage6322B_Click" Margin="10,0,0,0"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,5,0,15">
+                        <Label Content="当前电压:" FontWeight="SemiBold"/>
+                        <TextBlock Name="tbActualVoltage6322B" Text="0.0 V" Margin="5,0,0,0" 
+                                   VerticalAlignment="Center" FontWeight="Bold" Foreground="Blue"/>
+                    </StackPanel>
+
+                    <!-- 电流设置和读取 -->
+                    <Label Content="电流(A)" FontWeight="SemiBold"/>
+                    <TextBox Name="txtCurrent6322B" Text="0.0"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="设置电流" Click="SetCurrent6322B_Click"/>
+                        <Button Content="读取电流" Click="ReadCurrent6322B_Click" Margin="10,0,0,0"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,5,0,15">
+                        <Label Content="当前电流:" FontWeight="SemiBold"/>
+                        <TextBlock Name="tbActualCurrent6322B" Text="0.0 A" Margin="5,0,0,0" 
+                                   VerticalAlignment="Center" FontWeight="Bold" Foreground="Blue"/>
+                    </StackPanel>
+
+                    <!-- 电源开关 -->
+                    <Button Content="电源开启" Name="btnPowerSwitch6322B" Click="PowerSwitch6322B_Click" 
+                            Background="LightGreen" FontWeight="Bold" Width="120" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- 分隔线 -->
+       
+        <Border Grid.Row="0" Grid.Column="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0" Content="N8331电源控制" FontWeight="Bold" 
+               HorizontalAlignment="Center" Background="LightBlue" 
+               FontSize="14" Padding="10,5"/>
+
+                <StackPanel Grid.Row="1" Orientation="Vertical" Margin="15">
+                    <!-- 电压设置和读取 -->
+                    <Label Content="电压(V)" FontWeight="SemiBold"/>
+                    <TextBox Name="txtVoltageN8331" Text="0.0"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="设置电压" Click="SetVoltageN8331_Click"/>
+                        <Button Content="读取电压" Click="ReadVoltageN8331_Click" Margin="10,0,0,0"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,5,0,15">
+                        <Label Content="当前电压:" FontWeight="SemiBold"/>
+                        <TextBlock Name="tbActualVoltageN8331" Text="0.0 V" Margin="5,0,0,0" 
+                           VerticalAlignment="Center" FontWeight="Bold" Foreground="Blue"/>
+                    </StackPanel>
+
+                    <!-- 电流设置和读取 -->
+                    <Label Content="电流(A)" FontWeight="SemiBold"/>
+                    <TextBox Name="txtCurrentN8331" Text="0.0"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="设置电流" Click="SetCurrentN8331_Click"/>
+                        <Button Content="读取电流" Click="ReadCurrentN8331_Click" Margin="10,0,0,0"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,5,0,15">
+                        <Label Content="当前电流:" FontWeight="SemiBold"/>
+                        <TextBlock Name="tbActualCurrentN8331" Text="0.0 A" Margin="5,0,0,0" 
+                           VerticalAlignment="Center" FontWeight="Bold" Foreground="Blue"/>
+                    </StackPanel>
+
+                    <!-- 电源开关 -->
+                    <Button Content="电源开启" Name="btnPowerSwitchN8331" Click="PowerSwitchN8331_Click" 
+                    Background="LightGreen" FontWeight="Bold" Width="120" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- 工装板控制区域 -->
+        <Border Grid.Row="0" Grid.Column="2">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0" Content="工装板控制" FontWeight="Bold" 
+                       HorizontalAlignment="Center" Background="LightGreen" 
+                       FontSize="14" Padding="10,5"/>
+
+                <StackPanel Grid.Row="1" Orientation="Vertical" Margin="15">
+                    <!-- 治具控制 -->
+                    <Label Content="治具控制" FontWeight="SemiBold" HorizontalAlignment="Center"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,15">
+                        <Button Content="治具下压" Click="FixtureDown_Click" Width="100"/>
+                        <Button Content="治具上抬" Click="FixtureUp_Click" Width="100" Margin="10,0,0,0"/>
+                    </StackPanel>
+
+                    <!-- 继电器控制 -->
+                    <Label Content="继电器控制" FontWeight="SemiBold" HorizontalAlignment="Center"/>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
+                        <Button Content="内总继电器" Name="btnInnerRelay" Click="InnerRelay_Click" Width="100"/>
+                        <Button Content="外总继电器" Name="btnOuterRelay" Click="OuterRelay_Click" Width="100" Margin="10,0,0,0"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
+                        <Button Content="电流表继电器" Name="btnAmmeterRelay" Click="AmmeterRelay_Click" Width="100"/>
+                        <Button Content="内外总测试继电器" Name="btnRelay6322B" Click="Relay6322B_Click" Width="100" Margin="10,0,0,0"/>
+                        
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,15">
+                        <Button Content="电流正向" Name="btnCurrentForward" Click="CurrentForward_Click" Width="100"/>
+                        <Button Content="电流反向" Name="btnCurrentReverse" Click="CurrentReverse_Click" Width="100" Margin="10,0,0,0"/>
+                    </StackPanel>
+
+                    <!-- 状态显示 -->
+                    <Border BorderThickness="1" BorderBrush="Gray" Background="#FFF0F0F0" 
+                            CornerRadius="3" Padding="10,5" Margin="0,10,0,0">
+                        <StackPanel>
+                            <Label Content="继电器状态" FontWeight="SemiBold" HorizontalAlignment="Center"/>
+                            <TextBlock Name="tbRelayStatus" Text="所有继电器未激活" 
+                                      HorizontalAlignment="Center" TextWrapping="Wrap" 
+                                      FontSize="11" Foreground="DarkGray"/>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- N8331控制区域 -->
+        <Border Grid.Row="0" Grid.Column="3">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0" Content="NXI DMM板卡" FontWeight="Bold" 
+                       HorizontalAlignment="Center" Background="LightYellow" 
+                       FontSize="14" Padding="10,5"/>
+
+                <StackPanel Grid.Row="1" Orientation="Vertical" Margin="15">
+                    <!-- 测试类型选择 -->
+                    <Label Content="测试类型:" FontWeight="SemiBold"/>
+                    <ComboBox x:Name="cmbTestType" SelectionChanged="TestType_SelectionChanged">
+                        <ComboBoxItem Content="电压" IsSelected="True"/>
+                        <ComboBoxItem Content="电流"/>
+                    </ComboBox>
+
+                    <!-- 量程选择 -->
+                    <Label Content="量程:" FontWeight="SemiBold"/>
+                    <ComboBox x:Name="cmbRange" SelectionChanged="Range_SelectionChanged"/>
+
+                   
+
+                    <!-- 测试值显示 -->
+                    <Border BorderThickness="2" BorderBrush="DarkBlue" Background="#FFE6F3FF" 
+                            CornerRadius="5" Padding="15,10" Margin="0,10,0,15">
+                        <StackPanel>
+                            <Label Content="测试值" FontWeight="SemiBold" HorizontalAlignment="Center"/>
+                            <TextBlock Name="tbTestValue" Text="0.000" FontSize="20" FontWeight="Bold" 
+                                      HorizontalAlignment="Center" Foreground="DarkBlue"/>
+                            <TextBlock Name="tbTestUnit" Text="V" HorizontalAlignment="Center" 
+                                      FontSize="14" FontWeight="SemiBold"/>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- 控制按钮 -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Content="开始测试" Name="btnStartTest" Click="StartTest_Click" 
+                                Background="LightGreen" FontWeight="Bold" Width="100"/>
+                        <Button Content="停止测试" Name="btnStopTest" Click="StopTest_Click" 
+                                Background="LightCoral" FontWeight="Bold" Width="100" Margin="10,0,0,0"
+                                IsEnabled="False"/>
+                    </StackPanel>
+
+                    <!-- 测试状态 -->
+                    <TextBlock Name="tbTestStatus" Text="就绪" HorizontalAlignment="Center" 
+                              Margin="0,10,0,0" FontSize="11" Foreground="DarkGreen"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- M3905D电源控制区域 -->
+        <Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0" Content="M3905D电源控制" FontWeight="Bold" 
+                       HorizontalAlignment="Center" Background="#FFE6E6FA" 
+                       FontSize="14" Padding="10,5"/>
+
+                <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="15">
+                    <!-- 电压设置和读取 -->
+                    <StackPanel Orientation="Vertical" Margin="0,0,20,0" Width="250">
+                        <Label Content="电压(V)" FontWeight="SemiBold"/>
+                        <TextBox Name="txtVoltage3905D" Text="0.0"/>
+                        <StackPanel Orientation="Horizontal">
+                            <Button Content="设置电压" Click="SetVoltage3905d_Click"/>
+                            <Button Content="读取电压" Click="ReadVoltage3905d_Click" Margin="10,0,0,0"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,5,0,15">
+                            <Label Content="当前电压:" FontWeight="SemiBold"/>
+                            <TextBlock Name="tbActualVoltage3905D" Text="0.0 V" Margin="5,0,0,0" 
+                                       VerticalAlignment="Center" FontWeight="Bold" Foreground="Blue"/>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <!-- 电流设置和读取 -->
+                    <StackPanel Orientation="Vertical" Margin="0,0,20,0" Width="250">
+                        <Label Content="电流(A)" FontWeight="SemiBold"/>
+                        <TextBox Name="txtCurrent3905D" Text="0.0"/>
+                        <StackPanel Orientation="Horizontal">
+                            <Button Content="设置电流" Click="SetCurrent3905d_Click"/>
+                            <Button Content="读取电流" Click="ReadCurrent3905d_Click" Margin="10,0,0,0"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,5,0,15">
+                            <Label Content="当前电流:" FontWeight="SemiBold"/>
+                            <TextBlock Name="tbActualCurrent3905D" Text="0.0 A" Margin="5,0,0,0" 
+                                       VerticalAlignment="Center" FontWeight="Bold" Foreground="Blue"/>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <!-- 电源开关 -->
+                    <StackPanel Orientation="Vertical" Margin="20,0,0,0" VerticalAlignment="Center">
+                        <Button Content="电源开启" Name="btnPowerSwitch3905D" Click="PowerSwitch3905D_Click" 
+                                Background="LightGreen" FontWeight="Bold" Width="120" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

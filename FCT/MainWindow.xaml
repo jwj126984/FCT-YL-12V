@@ -1,0 +1,312 @@
+﻿<Window x:Class="FCT.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FCT" xmlns:pconvert="clr-namespace:FCT.PConvert"
+        mc:Ignorable="d"
+        FontSize="16"
+        Title="FCT" Closed="Window_Closed" Height="900" Width="1800" MinWidth="1045">
+    <FrameworkElement.Resources>
+        <pconvert:TimeConvert x:Key="TimeConvert"/>
+        <pconvert:BTStr x:Key="BTStr"/>
+        <pconvert:ProgressWidthConverter x:Key="ProgressWidthConverter"/>
+        <pconvert:WidthToDurationConverter x:Key="WidthToDurationConverter"/>
+        <pconvert:RowToIndexConverter x:Key="RowToIndexConverter"/>
+        <!--<Storyboard RepeatBehavior="Forever" x:Key="asdasd">
+            <DoubleAnimation Storyboard.TargetName="aaa" From="0" To="1200" Duration="0:0:1.5" Storyboard.TargetProperty="X"/>
+        </Storyboard>-->
+    </FrameworkElement.Resources>
+    <Grid>
+        <DockPanel>
+            <Border DockPanel.Dock="Top" Height="80" BorderThickness="0 0 0 1 " BorderBrush="Black">
+                <StackPanel Orientation="Horizontal" Margin=" 0 16 0 16">
+                    <FrameworkElement.Resources>
+                        <Style TargetType="Button">
+                            <Setter Property="Margin" Value="16 0"/>
+                            <Setter Property="Width" Value="120"/>
+                            <Setter Property="Padding" Value="8"/>
+                        </Style>
+                    </FrameworkElement.Resources>
+                    <ComboBox x:Name="protocolComboBox" Width="400" Margin="16 0" SelectionChanged="ProtocolComboBox_SelectionChanged" FontSize="23" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  />
+                    <Border Width="40">
+                        <TextBlock x:Name="block"></TextBlock>
+                        <!--<Button Click="Button_Click" Content="生成实体类"></Button>-->
+                    </Border>
+                    <Button Content="设备检查" Click="DeviceCheck_Click"></Button>
+                    <Button x:Name="userSetBtn" Content="用户设置" Click="UserSetting_Click"></Button>
+                    <Button x:Name="parSetBtn" Content="参数设置" Click="ParSetting_Click"></Button>
+                   
+
+                    <Button Content="清空日志" Click="ClearLog_Click"/>
+                    <Button Content="控制中心" Visibility="Visible" Click="Button11Click"/>
+
+                </StackPanel>
+            </Border>
+
+            <Grid Margin="0 16 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Border>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <DataGrid IsReadOnly="True" CanUserSortColumns="False" CanUserAddRows="False" x:Name="resultShowGrid" AutoGenerateColumns="False"  FontSize="20" Margin="20 0 0 0" Visibility="Visible">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Binding="{Binding Id}" Header="序号"/>
+                                    <DataGridTextColumn Binding="{Binding ChildrenItem}" Width="360" Header="测试项"/>
+                                    <DataGridTextColumn Binding="{Binding QualifiedValue}" Width="*" Header="合格值"/>
+                                    <DataGridTextColumn Binding="{Binding MeasureVal}" Width="*" Header="实测值">
+
+                                    </DataGridTextColumn>
+                                    <DataGridTextColumn Binding="{Binding DifferenceVal}" Width="*" Header="差值"/>
+
+                                    <DataGridTextColumn Binding="{Binding MeasurementStandard}" Width="*" Header="判断标准"/>
+                                    <DataGridTextColumn Width="*" Header="用时(s)" Binding="{Binding .,Converter={StaticResource TimeConvert}}"/>
+                                    <DataGridTextColumn Binding="{Binding Result,Converter={StaticResource BTStr},Mode=OneWay}" Width="*" Header="结果">
+
+                                    </DataGridTextColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                            <ScrollViewer Visibility="Visible" Grid.Row="1" Height="100" VerticalScrollBarVisibility="Auto">
+                                <ItemsControl x:Name="msgItem1">
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <Border BorderBrush="#666" BorderThickness="1" Margin="0 2">
+                                                <TextBlock Text="{Binding}"/>
+                                            </Border>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </ScrollViewer>
+
+                        </Grid>
+                        <Border Height="100" Grid.Row="1">
+                            <DockPanel VerticalAlignment="Center" Margin="20 0 0 0">
+
+                                <DockPanel>
+                                    <!--<TextBlock Text="测试项目"></TextBlock>-->
+                                    <ProgressBar x:Name="progress" ValueChanged="progress_ValueChanged" IsIndeterminate="False"  Maximum="18" Height="60" Value="0">
+                                        <ProgressBar.Template>
+                                            <ControlTemplate TargetType="ProgressBar">
+
+                                                <Grid>
+                                                    <!-- 背景层 -->
+                                                    <Rectangle Fill="{TemplateBinding Background}" />
+
+                                                    <!-- 前景层，显示进度 -->
+                                                    <Rectangle Name="PART_Track" Fill="{TemplateBinding Foreground}" HorizontalAlignment="Left">
+                                                        <Rectangle.Width>
+                                                            <MultiBinding Converter="{StaticResource ProgressWidthConverter}">
+                                                                <Binding Path="Value" RelativeSource="{RelativeSource TemplatedParent}" />
+                                                                <Binding Path="ActualWidth" RelativeSource="{RelativeSource TemplatedParent}" />
+                                                                <Binding Path="Maximum" RelativeSource="{RelativeSource TemplatedParent}" />
+                                                            </MultiBinding>
+                                                        </Rectangle.Width>
+                                                    </Rectangle>
+                                                    <!-- 白色发光线条 -->
+                                                    <Rectangle Width="20" Visibility="Collapsed" Name="SlidingHighlight" VerticalAlignment="Stretch" HorizontalAlignment="Left">
+                                                        <!-- 渐变填充实现左右透明 -->
+                                                        <Rectangle.Fill>
+                                                            <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,0.5">
+                                                                <GradientStop Color="Transparent" Offset="0" />
+                                                                <GradientStop Color="White" Offset="0.5" />
+                                                                <GradientStop Color="Transparent" Offset="1" />
+                                                            </LinearGradientBrush>
+                                                        </Rectangle.Fill>
+                                                        <!-- 发光效果 -->
+                                                        <Rectangle.Effect>
+                                                            <DropShadowEffect Color="White" BlurRadius="20" ShadowDepth="0" Opacity="0.8" />
+                                                        </Rectangle.Effect>
+                                                        <Rectangle.RenderTransform>
+                                                            <!--<RotateTransform Angle="30"/>-->
+                                                            <TransformGroup>
+                                                                <ScaleTransform/>
+                                                                <SkewTransform AngleX="-20"/>
+                                                                <RotateTransform/>
+                                                                <TranslateTransform x:Name="aaa" X="0"/>
+                                                            </TransformGroup>
+                                                        </Rectangle.RenderTransform>
+                                                    </Rectangle>
+                                                </Grid>
+
+
+
+                                                <!-- 动画 -->
+                                                <ControlTemplate.Triggers>
+                                                    <Trigger Property="IsIndeterminate" Value="True">
+                                                        <Trigger.EnterActions>
+                                                            <BeginStoryboard>
+                                                                <Storyboard RepeatBehavior="Forever">
+                                                                    <DoubleAnimation Storyboard.TargetName="aaa" From="0" To="1200" Duration="0:0:1.5" Storyboard.TargetProperty="X"/>
+                                                                </Storyboard>
+                                                            </BeginStoryboard>
+                                                        </Trigger.EnterActions>
+                                                    </Trigger>
+                                                </ControlTemplate.Triggers>
+                                            </ControlTemplate>
+                                        </ProgressBar.Template>
+                                    </ProgressBar>
+                                </DockPanel>
+
+                            </DockPanel>
+                        </Border>
+                    </Grid>
+
+                </Border>
+
+                <DockPanel Grid.Column="1">
+                    <FrameworkElement.Resources>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                        </Style>
+                        <Style TargetType="TextBox">
+                            <!--<Setter Property="Margin" Value="24 0"/>-->
+                            <Setter Property="Padding" Value="0 8"/>
+                            <Setter Property="IsReadOnly" Value="True"/>
+                            <Setter Property="TextAlignment" Value="Center"/>
+                        </Style>
+                    </FrameworkElement.Resources>
+                    <StackPanel Margin="0 6 0 0" DockPanel.Dock="Top">
+                        <TextBlock MouseLeftButtonDown="GoToLogin_Click" x:Name="userInfo" Text="登录名称（身份）"></TextBlock>
+                    </StackPanel >
+                    <StackPanel Margin="0 12 0 0" DockPanel.Dock="Top">
+                        <Grid>
+                            <TextBlock Text="待测试板号"/>
+                            <!--<Button Width="20" HorizontalAlignment="Right" Margin="0 0 30 0"/>-->
+                        </Grid>
+                        <!--下一块的-->
+                        <TextBox x:Name="nextBoard" Text="" Margin="24 0"></TextBox>
+                    </StackPanel>
+                    <Border BorderBrush="Black" BorderThickness="1" Margin="8 20 8 0" DockPanel.Dock="Top">
+                        <StackPanel>
+                            <StackPanel Margin="0 8 0 0">
+                                <TextBlock Text="当前测试板号"/>
+                                <!--下一块的-->
+                                <TextBox x:Name="currentBoard" Text=""  Margin="15 0"></TextBox>
+                            </StackPanel>
+                            <Grid  Margin="15 8 15 0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Grid.Column="0">
+                                    <TextBlock Text="开始时间"></TextBlock>
+                                    <TextBox x:Name="prjStartTime"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" Margin="4 0 0 0">
+                                    <TextBlock Text="用时(s)"></TextBlock>
+                                    <TextBox x:Name="useTime" Width="80"/>
+                                </StackPanel>
+                            </Grid>
+                            <DockPanel Height="100"  Margin="0 8 0 0">
+                                <TextBlock DockPanel.Dock="Top" x:Name="currentDetect"></TextBlock>
+                                <Border Margin="0 0 0 8">
+                                    <Grid>
+                                        <UniformGrid Columns="5">
+                                            <Border x:Name="border1" Margin="16 0" Background="#06b025"></Border>
+                                            <Border x:Name="border2" Margin="16 0"  Background="#06b025"></Border>
+                                            <Border x:Name="border3" Margin="16 0"  Background="#06b025"></Border>
+                                            <Border x:Name="border4" Margin="16 0"  Background="#06b025"></Border>
+                                            <Border x:Name="border5" Margin="16 0"  Background="#06b025"></Border>
+                                        </UniformGrid>
+                                    </Grid>
+                                </Border>
+                            </DockPanel>
+
+                        </StackPanel>
+
+                    </Border>
+                    <Border BorderBrush="Black" BorderThickness="1" Margin="8 20 8 0" DockPanel.Dock="Top">
+                        <Grid>
+                            <FrameworkElement.Resources>
+                                <Style TargetType="Grid">
+                                    <Setter Property="VerticalAlignment" Value="Center"/>
+                                    <Setter Property="Margin" Value="8 4"/>
+                                </Style>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="VerticalAlignment" Value="Center"/>
+                                    <Setter Property="HorizontalAlignment" Value="Right"/>
+                                </Style>
+                                <Style TargetType="TextBox">
+                                    <Setter Property="Height" Value="28"/>
+                                    <Setter Property="IsReadOnly" Value="True"/>
+                                    <Setter Property="VerticalContentAlignment" Value="Center"/>
+                                </Style>
+                            </FrameworkElement.Resources>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="测试统计" Grid.ColumnSpan="2" Width="auto" HorizontalAlignment="Center"/>
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="120"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="Pass Num：" Grid.Column="0"/>
+                                <TextBox Text="0" TextChanged="Input_Changed" x:Name="passNum" Grid.Column="1" Foreground="Green"/>
+                            </Grid>
+
+                            <Grid Grid.Row="1" Grid.Column="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="120"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="Total Num：" Grid.Column="0"/>
+                                <TextBox Text="0" x:Name="totalNum" Grid.Column="1" Foreground="Blue"/>
+                            </Grid>
+                            <Grid Grid.Row="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="120"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="Fail Num：" Grid.Column="0"/>
+                                <TextBox TextChanged="Input_Changed"  Text="0" x:Name="failNum" Grid.Column="1" Foreground="red"/>
+                            </Grid>
+                            <Grid Grid.Row="2" Grid.Column="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="120"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="Pass Rate(%)：" Grid.Column="0"/>
+                                <TextBox Text="0" x:Name="passRate" Grid.Column="1"  Foreground="Blue"/>
+                            </Grid>
+
+                            <Button Click="OpenStatisticsDialog_Click" Content="设置起始数量" Padding="10 0" Margin="0 8 8 8" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Right"/>
+                        </Grid>
+
+                    </Border>
+                    <Border BorderBrush="Black" BorderThickness="1"  Margin="8 20 8 0">
+                        <DockPanel>
+                            <TextBlock DockPanel.Dock="Top" Margin="0 8">前次测试结果</TextBlock>
+                            <Grid x:Name="bg1" Background="Green" Margin="4">
+                                <StackPanel VerticalAlignment="Center">
+                                    <TextBlock x:Name="txt1"></TextBlock>
+                                    <TextBlock x:Name="txt2"></TextBlock>
+                                    <TextBlock x:Name="txt3"></TextBlock>
+                                </StackPanel>
+                            </Grid>
+                        </DockPanel>
+                    </Border>
+                </DockPanel>
+            </Grid>
+        </DockPanel>
+    </Grid>
+</Window>

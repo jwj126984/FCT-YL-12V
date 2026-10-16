@@ -1,0 +1,761 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: OIB ZCU DKM CWP NFCAM RADP HOD BAT CPM
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ LBMS_ChrgThres : 0|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ LBMS_IntellChrgSetSt : 0|2@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 868 PDCU_Disp2: 8 Vector__XXX
+ SG_ PDCU_DCDC_St : 45|3@0+ (1,0) [0|0] ""  BAT
+
+BO_ 197 DC2: 8 Vector__XXX
+ SG_ ChecksumC5 : 63|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ RollingCounterC5 : 51|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ OutpVoltage : 15|8@0+ (0.1,4) [4|21.5] "V"  BAT
+
+BO_ 778 OTAInfo: 8 Vector__XXX
+ SG_ OTA_IntellChrgThresSetReq : 31|8@0+ (1,0) [0|100] "%" Vector__XXX
+ SG_ Checksum30A : 63|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ RollingCounter30A : 51|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ OTA_EstimatedUpgradeTime : 14|7@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ OTA_ModeSt : 0|1@0+ (1,0) [0|0] ""  BAT
+
+BO_ 828 IBCM3: 8 Vector__XXX
+ SG_ VIUL_IgnitionSt : 1|2@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 131 EMS1: 8 OIB
+ SG_ EMS_EngSpd : 7|16@0+ (0.125,0) [0|8191.875] "rpm"  ZCU,DKM,CWP,NFCAM,RADP,HOD,BAT,CPM
+ SG_ EMS_EngSpdValid : 52|1@0+ (1,0) [0|1] ""  ZCU,DKM,CWP,NFCAM,RADP,HOD,BAT,CPM
+ SG_ RollingCounter083 : 51|4@0+ (1,0) [0|15] ""  ZCU,DKM,CWP,NFCAM,RADP,HOD,BAT,CPM
+ SG_ Checksum083 : 63|8@0+ (1,0) [0|255] ""  ZCU,DKM,CWP,NFCAM,RADP,HOD,BAT,CPM
+
+BO_ 162 IBC_Base1_A2: 8 OIB
+ SG_ IBC_VehicleSpeed : 7|13@0+ (0.05625,0) [0|270] "km/h"  ZCU,DKM,CWP,NFCAM,RADP,HOD,BAT,CPM
+ SG_ IBC_VehicleSpeedValid : 10|1@0+ (1,0) [0|1] ""  ZCU,DKM,CWP,NFCAM,RADP,HOD,BAT,CPM
+ SG_ RollingCounter0A2 : 51|4@0+ (1,0) [0|15] ""  ZCU,DKM,CWP,NFCAM,RADP,HOD,BAT,CPM
+ SG_ Checksum0A2 : 63|8@0+ (1,0) [0|255] ""  ZCU,DKM,CWP,NFCAM,RADP,HOD,BAT,CPM
+
+BO_ 254 PDCU_FE: 8 OIB
+ SG_ PDCU_DriveReady : 0|1@0+ (1,0) [0|1] ""  ZCU,DKM,CWP,NFCAM,RADP,HOD,BAT,CPM
+ SG_ PDCU_ShiftLvlPosn : 11|4@0+ (1,0) [0|10] ""  ZCU,DKM,BAT
+ SG_ PDCU_ShiftLvlPosnValid : 24|1@0+ (1,0) [0|1] ""  BAT
+ SG_ PDCU_12VchargeSt : 29|2@0+ (1,0) [0|3] ""  BAT
+ SG_ PDCU_BMS_SOCCalculate : 39|8@0+ (1,0) [0|100] "%"  ZCU,DKM,CWP,NFCAM,RADP,HOD,BAT,CPM
+
+BO_ 507 BCM_PowerModeInfo: 8 OIB
+ SG_ BCM_UsageMode : 3|4@0+ (1,0) [0|15] ""  ZCU,DKM,CWP,NFCAM,RADP,HOD,BAT,CPM
+ SG_ BCM_CarMode : 7|4@0+ (1,0) [0|15] ""  ZCU,DKM,CWP,NFCAM,RADP,HOD,BAT,CPM
+ SG_ BCM_PowerMode : 15|2@0+ (1,0) [0|3] ""  ZCU,DKM,CWP,NFCAM,RADP,HOD,BAT,CPM
+ SG_ RollingCounter1FB : 51|4@0+ (1,0) [0|15] ""  ZCU,DKM,CWP,NFCAM,RADP,HOD,BAT,CPM
+ SG_ Checksum1FB : 63|8@0+ (1,0) [0|255] ""  ZCU,DKM,CWP,NFCAM,RADP,HOD,BAT,CPM
+
+BO_ 780 ACU_Crash: 8 OIB
+ SG_ ACU_Crashout : 1|2@0+ (1,0) [0|3] ""  BAT,CPM
+ SG_ ACU_RollingSt : 39|2@0+ (1,0) [0|3] ""  BAT
+ SG_ ACU_RollingStValid : 14|1@0+ (1,0) [0|1] ""  BAT
+ SG_ ACU_CrashoutValid : 18|1@0+ (1,0) [0|1] ""  BAT,CPM
+ SG_ RollingCounter30C : 51|4@0+ (1,0) [0|15] ""  BAT,CPM
+ SG_ ACU_CheckSum30C : 63|8@0+ (1,0) [0|255] ""  BAT,CPM
+
+BO_ 800 ZCU: 8 OIB
+ SG_ ZCU_TotalOdmeter : 3|20@0+ (1,0) [0|999999] "km"  ZCU,DKM,CWP,NFCAM,RADP,HOD,BAT,CPM
+
+BO_ 826 LBMS3: 16 BAT
+ SG_ LBMS_DMOSTemp : 93|9@0+ (0.5,-40) [-40|125] "degC" Vector__XXX
+ SG_ LBMS_CellVolt1 : 7|16@0+ (0.001,0) [0|65.535] "V" Vector__XXX
+ SG_ LBMS_CellVolt2 : 23|16@0+ (0.001,0) [0|65.535] "V" Vector__XXX
+ SG_ LBMS_CellVolt3 : 39|16@0+ (0.001,0) [0|65.535] "V" Vector__XXX
+ SG_ LBMS_CellVolt4 : 55|16@0+ (0.001,0) [0|65.535] "V" Vector__XXX
+ SG_ LBMS_BoardTemp : 79|9@0+ (0.5,-40) [-40|125] "degC" Vector__XXX
+ SG_ LBMS_SOH : 71|8@0+ (1,0) [0|100] "%" Vector__XXX
+ SG_ LBMS_Cell1BalanceSt : 100|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ LBMS_Cell2BalanceSt : 99|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ LBMS_Cell3BalanceSt : 98|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ LBMS_Cell4BalanceSt : 97|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ LBMS_CMOSTemp : 86|9@0+ (0.5,-40) [-40|125] "degC" Vector__XXX
+
+BO_ 827 LBMS4: 16 BAT
+ SG_ LBMS_WakeupInfo : 119|3@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ LBMS_AwakeByNM : 116|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ LBMS_AwakeByAFE : 115|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ LBMS_AwakeByRTC : 114|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ LBMS_AwakeByHardline : 113|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ LBMS_AwakeByKL30 : 112|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ LBMS_AwakeByDiagnose : 127|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ LBMS_AwakeByProhibit : 126|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ LBMS_SWVersion : 87|16@0+ (1,0) [0|65535] "" Vector__XXX
+ SG_ LBMS_HWVersion : 103|16@0+ (1,0) [0|65535] "" Vector__XXX
+ SG_ LBMS_ChrgMosSt : 125|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ LBMS_DisChrgMosSt : 124|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ LBMS_CurrentLimSt : 123|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ LBMS_SrvTime : 71|16@0+ (1,0) [0|65535] "day" Vector__XXX
+ SG_ LBMS_AHChargedTotoallife : 7|32@0+ (0.05,0) [0|4294970] "AH" Vector__XXX
+ SG_ LBMS_AHDischargedTotallife : 39|32@0+ (0.05,0) [0|4294970] "AH" Vector__XXX
+ SG_ LBMS_MOSCtrlSt : 121|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 833 EBS_341: 8 BAT
+ SG_ EBS_BattVolt : 7|10@0+ (0.05,0) [0|28] "V"  OIB,ZCU,DKM,CWP,NFCAM,RADP,HOD,CPM
+ SG_ EBS_BattCurrentSt : 13|10@0+ (0.5,-200) [-200|200] "A"  OIB
+ SG_ EBS_BattSOCStatus : 19|2@0+ (1,0) [0|3] ""  OIB
+ SG_ EBS_DisChrgMosCurSt : 16|1@0+ (1,0) [0|1] ""  OIB
+ SG_ EBS_BattSOC : 31|8@0+ (1,0) [0|100] "%"  OIB
+ SG_ EBS_ChrgMosCurSt : 38|7@0+ (1,0) [0|127] ""  OIB
+ SG_ EBS_Sensor_Config : 39|1@0+ (1,0) [0|1] ""  OIB
+ SG_ EBS_BattLowVoltageAlarm : 40|1@0+ (1,0) [0|1] ""  OIB
+ SG_ EBS_LowSoclFltVld : 41|1@0+ (1,0) [0|1] ""  OIB
+ SG_ EBS_BattTempSt : 55|8@0+ (1,-40) [-40|105] "℃"  OIB
+ SG_ EBS_BattQChrgSt : 63|8@0+ (0.125,0) [0|31.875] "Ah"  OIB
+ SG_ EBS_BattPackFault : 47|3@0+ (1,0) [0|7] ""  OIB
+ SG_ EBS_12VChrgReq : 44|1@0+ (1,0) [0|1] ""  OIB
+
+BO_ 851 BMS_SOC_353: 8 OIB
+ SG_ BMS_ThermalRunawayWarn : 13|2@0+ (1,0) [0|3] ""  ZCU,BAT
+ SG_ BMS_ThrmlRunawayWarnValid : 8|1@0+ (1,0) [0|1] ""  ZCU,BAT
+
+BO_ 921 DCDC2: 8 OIB
+ SG_ DCDC_OutputVoltage : 15|8@0+ (0.1,4) [4|21.5] "V"  BAT
+ SG_ RollingCounter399 : 51|4@0+ (1,0) [0|15] ""  BAT
+ SG_ Checksum399 : 63|8@0+ (1,0) [0|255] ""  BAT
+
+BO_ 945 PDCU_SwFB: 8 OIB
+ SG_ PDCU_DCDC1workSt : 7|2@0+ (1,0) [0|3] ""  BAT
+
+BO_ 1113 LBMS2: 16 BAT
+ SG_ LBMS_PackCurrent : 7|32@0+ (0.001,-2000) [-2000|2000] "A" Vector__XXX
+ SG_ LBMS_PackInternalVolt : 39|16@0+ (0.001,0) [0|65.535] "V" Vector__XXX
+ SG_ LBMS_PackExternalVolt : 55|16@0+ (0.001,0) [0|65.535] "V" Vector__XXX
+ SG_ LBMS_RTCsleepcur : 71|16@0+ (0.001,0) [0|65.535] "V" Vector__XXX
+ SG_ LBMS_PackTemp1 : 87|9@0+ (0.5,-40) [-40|125] "degC" Vector__XXX
+ SG_ LBMS_PackTemp2 : 94|9@0+ (0.5,-40) [-40|125] "degC" Vector__XXX
+ SG_ LBMS_PackTemp3 : 101|9@0+ (0.5,-40) [-40|125] "degC" Vector__XXX
+ SG_ LBMS_WorkSt : 108|3@0+ (1,0) [0|7] "" Vector__XXX
+
+BO_ 1114 LBMS1: 8 BAT
+ SG_ LBMS_ChrgThres : 39|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ LBMS_IntellChrgSetSt : 1|2@0- (1,0) [0|0] "" Vector__XXX
+ SG_ LBMS_LowSOCChrgRequest : 7|1@0+ (1,0) [0|1] ""  OIB
+ SG_ LBMS_LowVotageChrgRequest : 6|1@0+ (1,0) [0|1] ""  OIB
+ SG_ LBMS_RequestChrgCurrent : 15|20@0+ (0.001,0) [0|1048.58] "A"  OIB
+ SG_ LBMS_RequestChrgVoltage : 47|16@0+ (0.001,0) [0|65.535] "V"  OIB
+ SG_ LBMS_PISSt : 5|1@0+ (1,0) [0|1] ""  OIB
+ SG_ LBMS_RelayPreCloseStuckSt : 4|1@0+ (1,0) [0|1] ""  OIB
+ SG_ LBMS_BatteryLatchSt : 3|1@0+ (1,0) [0|1] ""  OIB
+ SG_ LBMS_ReqChrgFailCounter : 27|3@0+ (1,0) [0|7] ""  OIB
+ SG_ LBMS_ReqChrgFailReminder : 24|1@0+ (1,0) [0|1] ""  OIB
+
+BO_ 1242 Vehicle_Time: 8 OIB
+ SG_ Vehicle_TimeYear : 47|8@0+ (1,2000) [2000|2254] "year"  ZCU,DKM,CWP,NFCAM,RADP,HOD,BAT,CPM
+ SG_ Vehicle_TimeMonth : 7|4@0+ (1,0) [1|12] "month"  ZCU,DKM,CWP,NFCAM,RADP,HOD,BAT,CPM
+ SG_ Vehicle_TimeDate : 12|5@0+ (1,0) [1|31] "day"  ZCU,DKM,CWP,NFCAM,RADP,HOD,BAT,CPM
+ SG_ Vehicle_TimeHour : 20|5@0+ (1,0) [0|23] "hour"  ZCU,DKM,CWP,NFCAM,RADP,HOD,BAT,CPM
+ SG_ Vehicle_TimeMinute : 29|6@0+ (1,0) [0|59] "minute"  ZCU,DKM,CWP,NFCAM,RADP,HOD,BAT,CPM
+ SG_ Vehicle_TimeSecond : 37|6@0+ (1,0) [0|59] "second"  ZCU,DKM,CWP,NFCAM,RADP,HOD,BAT,CPM
+ SG_ Vehicle_TimeValid : 15|1@0+ (1,0) [0|1] ""  ZCU,DKM,CWP,NFCAM,RADP,HOD,BAT,CPM
+
+BO_ 1409 ZCUL_NM: 8 ZCU
+ SG_ ZCU_NMNode : 7|8@0+ (1,0) [128|255] ""  OIB,DKM,CWP,NFCAM,RADP,BAT,CPM
+ SG_ ZCU_ActiveWakeupBit : 12|1@0+ (1,0) [0|1] ""  OIB,DKM,CWP,NFCAM,RADP,BAT,CPM
+ SG_ ZCU_RepeatMessageReqBit : 8|1@0+ (1,0) [0|1] ""  OIB,DKM,CWP,NFCAM,RADP,BAT,CPM
+ SG_ ZCU_RepeatSt : 16|1@0+ (1,0) [0|1] ""  OIB,DKM,CWP,NFCAM,RADP,BAT,CPM
+ SG_ ZCU_GlobalWakeupFlag : 24|1@0+ (1,0) [0|1] ""  OIB,DKM,CWP,NFCAM,RADP,BAT,CPM
+ SG_ ZCU_ChrgWakeupFlag : 25|1@0+ (1,0) [0|1] ""  OIB,DKM,CWP,NFCAM,RADP,BAT,CPM
+ SG_ ZCU_RemoteWakeupFlag : 26|1@0+ (1,0) [0|1] ""  OIB,DKM,CWP,NFCAM,RADP,BAT,CPM
+ SG_ ZCU_SentinelWakeupFlag : 27|1@0+ (1,0) [0|1] ""  OIB,DKM,CWP,NFCAM,RADP,BAT,CPM
+ SG_ ZCU_SentinelWarnWakeupFlag : 28|1@0+ (1,0) [0|1] ""  OIB,DKM,CWP,NFCAM,RADP,BAT,CPM
+ SG_ ZCU_NMWakeupPower : 51|4@0+ (1,0) [0|15] ""  OIB,DKM,CWP,NFCAM,RADP,BAT,CPM
+ SG_ ZCU_NMWakeupSource : 63|8@0+ (1,0) [0|255] ""  OIB,DKM,CWP,NFCAM,RADP,BAT,CPM
+
+BO_ 1412 ZCUR_NM: 8 OIB
+ SG_ OIB_NMNode : 7|8@0+ (1,0) [128|255] ""  ZCU,DKM,CWP,NFCAM,RADP,BAT,CPM
+ SG_ OIB_ActiveWakeupBit : 12|1@0+ (1,0) [0|1] ""  ZCU,DKM,CWP,NFCAM,RADP,BAT,CPM
+ SG_ OIB_RepeatMessageReqBit : 8|1@0+ (1,0) [0|1] ""  ZCU,DKM,CWP,NFCAM,RADP,BAT,CPM
+ SG_ OIB_PNIBit : 14|1@0+ (1,0) [0|1] ""  ZCU,DKM,CWP,NFCAM,RADP,BAT,CPM
+ SG_ OIB_RepeatSt : 16|1@0+ (1,0) [0|1] ""  ZCU,DKM,CWP,NFCAM,RADP,BAT,CPM
+ SG_ OIB_GlobalWakeupFlag : 24|1@0+ (1,0) [0|1] ""  ZCU,DKM,CWP,NFCAM,RADP,BAT,CPM
+ SG_ OIB_ChrgWakeupFlag : 25|1@0+ (1,0) [0|1] ""  ZCU,DKM,CWP,NFCAM,RADP,BAT,CPM
+ SG_ OIB_RemoteWakeupFlag : 26|1@0+ (1,0) [0|1] ""  ZCU,DKM,CWP,NFCAM,RADP,BAT,CPM
+ SG_ OIB_SentinelWakeupFlag : 27|1@0+ (1,0) [0|1] ""  ZCU,DKM,CWP,NFCAM,RADP,BAT,CPM
+ SG_ OIB_SentinelWarnWakeupFlag : 28|1@0+ (1,0) [0|1] ""  ZCU,DKM,CWP,NFCAM,RADP,BAT,CPM
+ SG_ OIB_NMWakeupPower : 51|4@0+ (1,0) [0|15] ""  ZCU,DKM,CWP,NFCAM,RADP,BAT,CPM
+ SG_ OIB_NMWakeupSource : 63|8@0+ (1,0) [0|255] ""  ZCU,DKM,CWP,NFCAM,RADP,BAT,CPM
+
+BO_ 1453 DKM_NM: 8 DKM
+ SG_ DKM_NMNode : 7|8@0+ (1,0) [128|255] ""  OIB,ZCU,CWP,NFCAM,RADP,BAT,CPM
+ SG_ DKM_ActiveWakeupBit : 12|1@0+ (1,0) [0|1] ""  OIB,ZCU,CWP,NFCAM,RADP,BAT,CPM
+ SG_ DKM_RepeatMessageReqBit : 8|1@0+ (1,0) [0|1] ""  OIB,ZCU,CWP,NFCAM,RADP,BAT,CPM
+ SG_ DKM_RepeatSt : 16|1@0+ (1,0) [0|1] ""  OIB,ZCU,CWP,NFCAM,RADP,BAT,CPM
+ SG_ DKM_GlobalWakeupFlag : 24|1@0+ (1,0) [0|1] ""  OIB,ZCU,CWP,NFCAM,RADP,BAT,CPM
+ SG_ DKM_ChrgWakeupFlag : 25|1@0+ (1,0) [0|1] ""  OIB,ZCU,CWP,NFCAM,RADP,BAT,CPM
+ SG_ DKM_RemoteWakeupFlag : 26|1@0+ (1,0) [0|1] ""  OIB,ZCU,CWP,NFCAM,RADP,BAT,CPM
+ SG_ DKM_SentinelWakeupFlag : 27|1@0+ (1,0) [0|1] ""  OIB,ZCU,CWP,NFCAM,RADP,BAT,CPM
+ SG_ DKM_NMWakeupPower : 51|4@0+ (1,0) [0|15] ""  OIB,ZCU,CWP,NFCAM,RADP,BAT,CPM
+ SG_ DKM_NMWakeupSource : 63|8@0+ (1,0) [0|255] ""  OIB,ZCU,CWP,NFCAM,RADP,BAT,CPM
+
+BO_ 1459 CWP_NM: 8 CWP
+ SG_ CWP_NMNode : 7|8@0+ (1,0) [128|255] ""  OIB,ZCU,DKM,NFCAM,RADP,BAT,CPM
+ SG_ CWP_ActiveWakeupBit : 12|1@0+ (1,0) [0|1] ""  OIB,ZCU,DKM,NFCAM,RADP,BAT,CPM
+ SG_ CWP_RepeatMessageReqBit : 8|1@0+ (1,0) [0|1] ""  OIB,ZCU,DKM,NFCAM,RADP,BAT,CPM
+ SG_ CWP_RepeatSt : 16|1@0+ (1,0) [0|1] ""  OIB,ZCU,DKM,NFCAM,RADP,BAT,CPM
+ SG_ CWP_GlobalWakeupFlag : 24|1@0+ (1,0) [0|1] ""  OIB,ZCU,DKM,NFCAM,RADP,BAT,CPM
+ SG_ CWP_ChrgWakeupFlag : 25|1@0+ (1,0) [0|1] ""  OIB,ZCU,DKM,NFCAM,RADP,BAT,CPM
+ SG_ CWP_RemoteWakeupFlag : 26|1@0+ (1,0) [0|1] ""  OIB,ZCU,DKM,NFCAM,RADP,BAT,CPM
+ SG_ CWP_SentinelWakeupFlag : 27|1@0+ (1,0) [0|1] ""  OIB,ZCU,DKM,NFCAM,RADP,BAT,CPM
+ SG_ CWP_NMWakeupPower : 51|4@0+ (1,0) [0|15] ""  OIB,ZCU,DKM,NFCAM,RADP,BAT,CPM
+ SG_ CWP_NMWakeupSource : 63|8@0+ (1,0) [0|255] ""  OIB,ZCU,DKM,NFCAM,RADP,BAT,CPM
+
+BO_ 1460 LBMS_NM: 8 BAT
+ SG_ LBMS_NMNode : 7|8@0+ (1,0) [128|255] ""  OIB,ZCU,DKM,CWP,NFCAM,RADP
+ SG_ LBMS_ActiveWakeupBit : 12|1@0+ (1,0) [0|1] ""  OIB,ZCU,DKM,CWP,NFCAM,RADP
+ SG_ LBMS_RepeatMessageReqBit : 8|1@0+ (1,0) [0|1] ""  OIB,ZCU,DKM,CWP,NFCAM,RADP
+ SG_ LBMS_RepeatSt : 16|1@0+ (1,0) [0|1] ""  OIB,ZCU,DKM,CWP,NFCAM,RADP
+ SG_ LBMS_GlobalWakeupFlag : 24|1@0+ (1,0) [0|1] ""  OIB,ZCU,DKM,CWP,NFCAM,RADP
+ SG_ LBMS_ChrgWakeupFlag : 25|1@0+ (1,0) [0|1] ""  OIB,ZCU,DKM,CWP,NFCAM,RADP
+ SG_ LBMS_RemoteWakeupFlag : 26|1@0+ (1,0) [0|1] ""  OIB,ZCU,DKM,CWP,NFCAM,RADP
+ SG_ LBMS_SentinelWakeupFlag : 27|1@0+ (1,0) [0|1] ""  OIB,ZCU,DKM,CWP,NFCAM,RADP
+ SG_ LBMS_NMWakeupPower : 51|4@0+ (1,0) [0|15] ""  OIB,ZCU,DKM,CWP,NFCAM,RADP
+ SG_ LBMS_NMWakeupSource : 63|8@0+ (1,0) [0|255] ""  OIB,ZCU,DKM,CWP,NFCAM,RADP
+
+BO_ 1464 NFCAM_NM: 8 NFCAM
+ SG_ NFCAM_NMNode : 7|8@0+ (1,0) [128|255] ""  OIB,ZCU,DKM,CWP,RADP,BAT,CPM
+ SG_ NFCAM_ActiveWakeupBit : 12|1@0+ (1,0) [0|1] ""  OIB,ZCU,DKM,CWP,RADP,BAT,CPM
+ SG_ NFCAM_RepeatMessageReqBit : 8|1@0+ (1,0) [0|1] ""  OIB,ZCU,DKM,CWP,RADP,BAT,CPM
+ SG_ NFCAM_RepeatSt : 16|1@0+ (1,0) [0|1] ""  OIB,ZCU,DKM,CWP,RADP,BAT,CPM
+ SG_ NFCAM_GlobalWakeupFlag : 24|1@0+ (1,0) [0|1] ""  OIB,ZCU,DKM,CWP,RADP,BAT,CPM
+ SG_ NFCAM_ChrgWakeupFlag : 25|1@0+ (1,0) [0|1] ""  OIB,ZCU,DKM,CWP,RADP,BAT,CPM
+ SG_ NFCAM_RemoteWakeupFlag : 26|1@0+ (1,0) [0|1] ""  OIB,ZCU,DKM,CWP,RADP,BAT,CPM
+ SG_ NFCAM_SentinelWakeupFlag : 27|1@0+ (1,0) [0|1] ""  OIB,ZCU,DKM,CWP,RADP,BAT,CPM
+ SG_ NFCAM_NMWakeupPower : 51|4@0+ (1,0) [0|15] ""  OIB,ZCU,DKM,CWP,RADP,BAT,CPM
+ SG_ NFCAM_NMWakeupSource : 63|8@0+ (1,0) [0|255] ""  OIB,ZCU,DKM,CWP,RADP,BAT,CPM
+
+BO_ 1591 LBMS_CurrentDTC: 16 BAT
+ SG_ LBMS_TotalFaultNum : 7|8@0+ (1,0) [0|255] ""  OIB
+ SG_ LBMS_FrameIndex : 12|5@0+ (1,0) [0|31] ""  OIB
+ SG_ LBMS_SupplierNum : 15|3@0+ (1,0) [0|7] ""  OIB
+ SG_ LBMS_FaultNum1 : 23|12@0+ (1,0) [0|4095] ""  OIB
+ SG_ LBMS_FaultNum2 : 27|12@0+ (1,0) [0|4095] ""  OIB
+ SG_ LBMS_FaultNum3 : 47|12@0+ (1,0) [0|4095] ""  OIB
+ SG_ LBMS_FaultNum4 : 51|12@0+ (1,0) [0|4095] ""  OIB
+ SG_ LBMS_FaultNum5 : 71|12@0+ (1,0) [0|4095] ""  OIB
+ SG_ LBMS_FaultNum6 : 75|12@0+ (1,0) [0|4095] ""  OIB
+ SG_ LBMS_FaultNum7 : 95|12@0+ (1,0) [0|4095] ""  OIB
+ SG_ LBMS_FaultNum8 : 99|12@0+ (1,0) [0|4095] ""  OIB
+ SG_ LBMS_FaultNum9 : 119|12@0+ (1,0) [0|4095] ""  OIB
+
+BO_ 1775 LBMS_Debug: 8 BAT
+ SG_ LBMS_SleepTime : 47|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ LBMS_SleepCurr : 55|8@0+ (0.01,0) [0|0] "A" Vector__XXX
+ SG_ LBMS_SysFlt : 37|1@0- (1,0) [0|0] "" Vector__XXX
+ SG_ LBMS_NMReq_RechrgWakeup : 36|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ LBMS_NMReq_Poweron : 34|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ LBMS_NMReq_LowSOCWakeup : 35|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ LBMS_NMReq_Diag : 33|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ LBMS_NMReq_NM : 32|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ LBMS_OTwakeup : 31|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ LBMS_OVwakeup : 30|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ LBMS_UVwakeup : 29|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ LBMS_ChrgMosOpenReason : 28|3@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ LBMS_BuckCloseReason : 25|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ LBMS_DisChargMOSDriU : 23|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ LBMS_ChargMOSDriU : 15|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ LBMS_BuckT : 7|8@0+ (1,-40) [0|0] "" Vector__XXX
+
+BO_ 1825 DiagRequest_BAT: 8 OIB
+ SG_ DiagRequest_BAT : 7|64@0+ (1,0) [0|1] ""  BAT
+
+BO_ 1833 DiagResponse_BAT: 8 BAT
+ SG_ DiagResponse_BAT : 7|64@0+ (1,0) [0|1] ""  OIB
+
+BO_ 2015 DiagReq_FUN: 8 OIB
+ SG_ DiagRequest_Function : 7|64@0+ (1,0) [0|1] ""  ZCU,DKM,CWP,NFCAM,RADP,HOD,BAT,CPM
+
+
+
+CM_ "该DBC由Vehicle.DB.Converter 1.0.25.0110 版本生成";
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ SG_ 197 OutpVoltage "DCDC输出电压";
+CM_ SG_ 131 EMS_EngSpd "发动机转速";
+CM_ SG_ 131 EMS_EngSpdValid "发动机转速有效位";
+CM_ SG_ 131 RollingCounter083 "滚动计数器83";
+CM_ SG_ 131 Checksum083 "信号校验83";
+CM_ SG_ 162 IBC_VehicleSpeed "车速";
+CM_ SG_ 162 IBC_VehicleSpeedValid "车速有效位";
+CM_ SG_ 162 RollingCounter0A2 "滚动计数器0A2";
+CM_ SG_ 162 Checksum0A2 "校验和0A2";
+CM_ SG_ 254 PDCU_DriveReady "行车准备就绪指示";
+CM_ SG_ 254 PDCU_ShiftLvlPosn "实际档位位置";
+CM_ SG_ 254 PDCU_ShiftLvlPosnValid "实际档位位置有效位";
+CM_ SG_ 254 PDCU_12VchargeSt "12V蓄电池低压补电状态";
+CM_ SG_ 254 PDCU_BMS_SOCCalculate "电池计算SOC";
+CM_ SG_ 507 BCM_UsageMode "整车用户模式";
+CM_ SG_ 507 BCM_CarMode "车辆模式";
+CM_ SG_ 507 BCM_PowerMode "整车电源模式";
+CM_ SG_ 507 RollingCounter1FB "滚动计数器1FB";
+CM_ SG_ 507 Checksum1FB "校验值1FB";
+CM_ SG_ 780 ACU_Crashout "碰撞输出";
+CM_ SG_ 780 ACU_RollingSt "翻滚状态";
+CM_ SG_ 780 ACU_RollingStValid "翻滚状态有效性";
+CM_ SG_ 780 ACU_CrashoutValid "碰撞输出有效性";
+CM_ SG_ 780 RollingCounter30C "滚动计数器30C";
+CM_ SG_ 780 ACU_CheckSum30C "ACU校验值30C";
+CM_ SG_ 800 ZCU_TotalOdmeter "总里程（周期事件保持型）";
+CM_ SG_ 826 LBMS_DMOSTemp "均衡温度2";
+CM_ SG_ 826 LBMS_CellVolt1 "Cell电压1";
+CM_ SG_ 826 LBMS_CellVolt2 "Cell电压2";
+CM_ SG_ 826 LBMS_CellVolt3 "Cell电压3";
+CM_ SG_ 826 LBMS_CellVolt4 "Cell电压4";
+CM_ SG_ 826 LBMS_BoardTemp "Shunt温度";
+CM_ SG_ 826 LBMS_SOH "容量";
+CM_ SG_ 826 LBMS_Cell1BalanceSt "Cell1均衡状态";
+CM_ SG_ 826 LBMS_Cell2BalanceSt "Cell2均衡状态";
+CM_ SG_ 826 LBMS_Cell3BalanceSt "Cell3均衡状态";
+CM_ SG_ 826 LBMS_Cell4BalanceSt "Cell4均衡状态";
+CM_ SG_ 826 LBMS_CMOSTemp "均衡温度1";
+CM_ SG_ 827 LBMS_WakeupInfo "首次上电唤醒原因";
+CM_ SG_ 827 LBMS_AwakeByNM "若当前存在NM报文维持唤醒，则发1，否则发0";
+CM_ SG_ 827 LBMS_AwakeByAFE "若当前存在AFE维持唤醒，则发1，否则发0";
+CM_ SG_ 827 LBMS_AwakeByRTC "若当前存在RTC维持唤醒，则发1，否则发0";
+CM_ SG_ 827 LBMS_AwakeByHardline "若当前存在硬线维持唤醒，则发1，否则发0";
+CM_ SG_ 827 LBMS_AwakeByKL30 "若当前存在搭电维持唤醒，则发1，否则发0";
+CM_ SG_ 827 LBMS_AwakeByDiagnose "若当前存在诊断维持唤醒，则发1，否则发0";
+CM_ SG_ 827 LBMS_AwakeByProhibit "若当前存在禁止休眠故障维持唤醒则发1，否则发0";
+CM_ SG_ 827 LBMS_SWVersion "软件版本号";
+CM_ SG_ 827 LBMS_HWVersion "硬件版本号";
+CM_ SG_ 827 LBMS_ChrgMosSt "继电器断开指令";
+CM_ SG_ 827 LBMS_DisChrgMosSt "继电器闭合指令";
+CM_ SG_ 827 LBMS_CurrentLimSt "故障继电器断开指令";
+CM_ SG_ 827 LBMS_SrvTime "累积使用时间";
+CM_ SG_ 827 LBMS_AHChargedTotoallife "生命周期累计充电AH数";
+CM_ SG_ 827 LBMS_AHDischargedTotallife "生命周期累计放电AH数";
+CM_ SG_ 827 LBMS_MOSCtrlSt "电池是否属于继电器强控状态";
+CM_ SG_ 833 EBS_BattVolt "蓄电池电压";
+CM_ SG_ 833 EBS_BattCurrentSt "蓄电池电流";
+CM_ SG_ 833 EBS_BattSOCStatus "蓄电池SOC状态";
+CM_ SG_ 833 EBS_DisChrgMosCurSt "蓄电池继电器当前状态";
+CM_ SG_ 833 EBS_BattSOC "蓄电池SOC";
+CM_ SG_ 833 EBS_ChrgMosCurSt "蓄电池传感器状态";
+CM_ SG_ 833 EBS_Sensor_Config "蓄电池传感器配置";
+CM_ SG_ 833 EBS_BattLowVoltageAlarm "蓄电池低电量提醒";
+CM_ SG_ 833 EBS_LowSoclFltVld "低电量报警有效信号";
+CM_ SG_ 833 EBS_BattTempSt "蓄电池温度";
+CM_ SG_ 833 EBS_BattQChrgSt "蓄电池充电累计容量";
+CM_ SG_ 833 EBS_BattPackFault "蓄电池包故障";
+CM_ SG_ 833 EBS_12VChrgReq "12V蓄电池低压补电请求";
+CM_ SG_ 851 BMS_ThermalRunawayWarn "电池热失控报警";
+CM_ SG_ 851 BMS_ThrmlRunawayWarnValid "热失控报警信号有效位";
+CM_ SG_ 921 DCDC_OutputVoltage "DCDC输出电压";
+CM_ SG_ 921 RollingCounter399 "滚动计数器399";
+CM_ SG_ 921 Checksum399 "校验值399";
+CM_ SG_ 945 PDCU_DCDC1workSt "DCDC工作状态";
+CM_ SG_ 1113 LBMS_PackCurrent "pack电流";
+CM_ SG_ 1113 LBMS_PackInternalVolt "Pack内侧电压";
+CM_ SG_ 1113 LBMS_PackExternalVolt "pack外侧电压";
+CM_ SG_ 1113 LBMS_RTCsleepcur "pack Top电压";
+CM_ SG_ 1113 LBMS_PackTemp1 "pack温度1";
+CM_ SG_ 1113 LBMS_PackTemp2 "Pack温度2";
+CM_ SG_ 1113 LBMS_PackTemp3 "Pack温度3";
+CM_ SG_ 1113 LBMS_WorkSt "LBMS工作状态";
+CM_ SG_ 1114 LBMS_LowSOCChrgRequest "低SOC充电请求";
+CM_ SG_ 1114 LBMS_LowVotageChrgRequest "低电压充电请求";
+CM_ SG_ 1114 LBMS_RequestChrgCurrent "充电请求电流";
+CM_ SG_ 1114 LBMS_RequestChrgVoltage "充电请求电压";
+CM_ SG_ 1114 LBMS_PISSt "低有效开关状态";
+CM_ SG_ 1114 LBMS_RelayPreCloseStuckSt "继电器预闭合卡滞状态";
+CM_ SG_ 1114 LBMS_BatteryLatchSt "电量锁存状态";
+CM_ SG_ 1114 LBMS_ReqChrgFailCounter "请求补电失败计数值";
+CM_ SG_ 1114 LBMS_ReqChrgFailReminder "蓄电池无法补电提醒";
+CM_ SG_ 1242 Vehicle_TimeYear "时间年";
+CM_ SG_ 1242 Vehicle_TimeMonth "时间月";
+CM_ SG_ 1242 Vehicle_TimeDate "时间日";
+CM_ SG_ 1242 Vehicle_TimeHour "时间时（按照24小时制发送）";
+CM_ SG_ 1242 Vehicle_TimeMinute "时间分";
+CM_ SG_ 1242 Vehicle_TimeSecond "时间秒";
+CM_ SG_ 1242 Vehicle_TimeValid "时间有效位";
+CM_ SG_ 1409 ZCU_NMNode "节点地址";
+CM_ SG_ 1409 ZCU_ActiveWakeupBit "主动唤醒";
+CM_ SG_ 1409 ZCU_RepeatMessageReqBit "重复报文请求";
+CM_ SG_ 1409 ZCU_RepeatSt "重复报文状态";
+CM_ SG_ 1409 ZCU_GlobalWakeupFlag "全局唤醒标志位";
+CM_ SG_ 1409 ZCU_ChrgWakeupFlag "充放电相关场景标志位";
+CM_ SG_ 1409 ZCU_RemoteWakeupFlag "远控相关场景标志位";
+CM_ SG_ 1409 ZCU_SentinelWakeupFlag "哨兵模式场景标志位";
+CM_ SG_ 1409 ZCU_SentinelWarnWakeupFlag "哨兵预警模式场景标志位";
+CM_ SG_ 1409 ZCU_NMWakeupPower "唤醒时ECU硬线所监测的电源档位";
+CM_ SG_ 1409 ZCU_NMWakeupSource "本地唤醒源";
+CM_ SG_ 1412 OIB_NMNode "节点地址";
+CM_ SG_ 1412 OIB_ActiveWakeupBit "主动唤醒";
+CM_ SG_ 1412 OIB_RepeatMessageReqBit "重复报文请求";
+CM_ SG_ 1412 OIB_PNIBit "局部网络管理信息位";
+CM_ SG_ 1412 OIB_RepeatSt "重复报文状态";
+CM_ SG_ 1412 OIB_GlobalWakeupFlag "全局唤醒标志位";
+CM_ SG_ 1412 OIB_ChrgWakeupFlag "充放电相关场景标志位";
+CM_ SG_ 1412 OIB_RemoteWakeupFlag "远控相关场景标志位";
+CM_ SG_ 1412 OIB_SentinelWakeupFlag "哨兵模式场景标志位";
+CM_ SG_ 1412 OIB_SentinelWarnWakeupFlag "哨兵预警模式场景标志位";
+CM_ SG_ 1412 OIB_NMWakeupPower "唤醒时ECU硬线所监测的电源档位";
+CM_ SG_ 1412 OIB_NMWakeupSource "本地唤醒源";
+CM_ SG_ 1453 DKM_NMNode "节点地址";
+CM_ SG_ 1453 DKM_ActiveWakeupBit "主动唤醒";
+CM_ SG_ 1453 DKM_RepeatMessageReqBit "重复报文请求";
+CM_ SG_ 1453 DKM_RepeatSt "重复报文状态";
+CM_ SG_ 1453 DKM_GlobalWakeupFlag "全局唤醒标志位";
+CM_ SG_ 1453 DKM_ChrgWakeupFlag "充放电相关场景标志位";
+CM_ SG_ 1453 DKM_RemoteWakeupFlag "远控相关场景标志位";
+CM_ SG_ 1453 DKM_SentinelWakeupFlag "哨兵模式场景标志位";
+CM_ SG_ 1453 DKM_NMWakeupPower "唤醒时ECU硬线所监测的电源档位";
+CM_ SG_ 1453 DKM_NMWakeupSource "本地唤醒源";
+CM_ SG_ 1459 CWP_NMNode "节点地址";
+CM_ SG_ 1459 CWP_ActiveWakeupBit "主动唤醒";
+CM_ SG_ 1459 CWP_RepeatMessageReqBit "重复报文请求";
+CM_ SG_ 1459 CWP_RepeatSt "重复报文状态";
+CM_ SG_ 1459 CWP_GlobalWakeupFlag "全局唤醒标志位";
+CM_ SG_ 1459 CWP_ChrgWakeupFlag "充放电相关场景标志位";
+CM_ SG_ 1459 CWP_RemoteWakeupFlag "远控相关场景标志位";
+CM_ SG_ 1459 CWP_SentinelWakeupFlag "哨兵模式场景标志位";
+CM_ SG_ 1459 CWP_NMWakeupPower "唤醒时ECU硬线所监测的电源档位";
+CM_ SG_ 1459 CWP_NMWakeupSource "本地唤醒源";
+CM_ SG_ 1460 LBMS_NMNode "节点地址";
+CM_ SG_ 1460 LBMS_ActiveWakeupBit "主动唤醒";
+CM_ SG_ 1460 LBMS_RepeatMessageReqBit "重复报文请求";
+CM_ SG_ 1460 LBMS_RepeatSt "重复报文状态";
+CM_ SG_ 1460 LBMS_GlobalWakeupFlag "全局唤醒标志位";
+CM_ SG_ 1460 LBMS_ChrgWakeupFlag "充放电相关场景标志位";
+CM_ SG_ 1460 LBMS_RemoteWakeupFlag "远控相关场景标志位";
+CM_ SG_ 1460 LBMS_SentinelWakeupFlag "哨兵模式场景标志位";
+CM_ SG_ 1460 LBMS_NMWakeupPower "唤醒时ECU硬线所监测的电源档位";
+CM_ SG_ 1460 LBMS_NMWakeupSource "本地唤醒源";
+CM_ SG_ 1464 NFCAM_NMNode "节点地址";
+CM_ SG_ 1464 NFCAM_ActiveWakeupBit "主动唤醒";
+CM_ SG_ 1464 NFCAM_RepeatMessageReqBit "重复报文请求";
+CM_ SG_ 1464 NFCAM_RepeatSt "重复报文状态";
+CM_ SG_ 1464 NFCAM_GlobalWakeupFlag "全局唤醒标志位";
+CM_ SG_ 1464 NFCAM_ChrgWakeupFlag "充放电相关场景标志位";
+CM_ SG_ 1464 NFCAM_RemoteWakeupFlag "远控相关场景标志位";
+CM_ SG_ 1464 NFCAM_SentinelWakeupFlag "哨兵模式场景标志位";
+CM_ SG_ 1464 NFCAM_NMWakeupPower "唤醒时ECU硬线所监测的电源档位";
+CM_ SG_ 1464 NFCAM_NMWakeupSource "本地唤醒源";
+CM_ SG_ 1591 LBMS_TotalFaultNum "当前故障总数";
+CM_ SG_ 1591 LBMS_FrameIndex "帧序号";
+CM_ SG_ 1591 LBMS_SupplierNum "供应商代码";
+CM_ SG_ 1591 LBMS_FaultNum1 "故障内部编号1";
+CM_ SG_ 1591 LBMS_FaultNum2 "故障内部编号2";
+CM_ SG_ 1591 LBMS_FaultNum3 "故障内部编号3";
+CM_ SG_ 1591 LBMS_FaultNum4 "故障内部编号4";
+CM_ SG_ 1591 LBMS_FaultNum5 "故障内部编号5";
+CM_ SG_ 1591 LBMS_FaultNum6 "故障内部编号6";
+CM_ SG_ 1591 LBMS_FaultNum7 "故障内部编号7";
+CM_ SG_ 1591 LBMS_FaultNum8 "故障内部编号8";
+CM_ SG_ 1591 LBMS_FaultNum9 "故障内部编号9";
+CM_ SG_ 1825 DiagRequest_BAT "诊断请求（物理寻址）";
+CM_ SG_ 1833 DiagResponse_BAT "诊断响应";
+CM_ SG_ 2015 DiagRequest_Function "诊断请求（功能寻址）";
+BA_DEF_ BO_  "NmMessage" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagState" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagRequest" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagResponse" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","Event","IfActive","CE","CA","NoMsgSendType";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnChange","OnWrite","IfActive","OnChangeWithRepetition","OnWriteWithRepetition","IfActiveWithRepetition","NoSigSendType","OnChangeAndIfActive","OnChangeAndIfActiveWithRepetition","CA","CE","Event";
+BA_DEF_ SG_  "GenSigStartValue" INT 0 0;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 0;
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 0;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 0;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_ BO_  "CANFD_BRS" ENUM  "0","1";
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_  "NmMessageCount" INT 0 255;
+BA_DEF_ SG_  "NWM-WakeupAllowed" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 65535;
+BA_DEF_ BU_  "NmStationAddress" INT 0 63;
+BA_DEF_ BU_  "NmNode" ENUM  "no","yes";
+BA_DEF_  "NmBaseAddress" HEX 0 2047;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_ BO_  "NmAsrMessage" ENUM  "No","Yes";
+BA_DEF_DEF_  "NmMessage" "No";
+BA_DEF_DEF_  "DiagState" "No";
+BA_DEF_DEF_  "DiagRequest" "No";
+BA_DEF_DEF_  "DiagResponse" "No";
+BA_DEF_DEF_  "GenMsgSendType" "Cyclic";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "CANFD_BRS" "1";
+BA_DEF_DEF_  "VFrameFormat" "StandardCAN_FD";
+BA_DEF_DEF_  "NmMessageCount" 0;
+BA_DEF_DEF_  "NWM-WakeupAllowed" "";
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "NmNode" "no";
+BA_DEF_DEF_  "NmBaseAddress" 1536;
+BA_DEF_DEF_  "BusType" "CAN FD";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+BA_DEF_DEF_  "NmAsrMessage" "No";
+BA_ "BusType" "CAN FD";
+BA_ "DBName" "DH1_Matrix_BodyCANFD2_BAT_v210";
+BA_ "VFrameFormat" BO_ 868 14;
+BA_ "GenMsgCycleTime" BO_ 197 10;
+BA_ "VFrameFormat" BO_ 197 14;
+BA_ "GenMsgCycleTime" BO_ 778 100;
+BA_ "VFrameFormat" BO_ 778 14;
+BA_ "GenMsgCycleTime" BO_ 828 100;
+BA_ "VFrameFormat" BO_ 828 14;
+BA_ "GenMsgCycleTime" BO_ 131 10;
+BA_ "VFrameFormat" BO_ 131 14;
+BA_ "GenMsgCycleTime" BO_ 162 20;
+BA_ "VFrameFormat" BO_ 162 14;
+BA_ "GenMsgCycleTime" BO_ 254 20;
+BA_ "VFrameFormat" BO_ 254 14;
+BA_ "GenMsgCycleTime" BO_ 507 20;
+BA_ "VFrameFormat" BO_ 507 14;
+BA_ "GenMsgSendType" BO_ 780 3;
+BA_ "GenMsgCycleTime" BO_ 780 100;
+BA_ "GenMsgCycleTimeFast" BO_ 780 20;
+BA_ "GenMsgNrOfRepetition" BO_ 780 3;
+BA_ "VFrameFormat" BO_ 780 14;
+BA_ "GenMsgSendType" BO_ 800 3;
+BA_ "GenMsgCycleTime" BO_ 800 100;
+BA_ "GenMsgCycleTimeFast" BO_ 800 20;
+BA_ "GenMsgNrOfRepetition" BO_ 800 8;
+BA_ "VFrameFormat" BO_ 800 14;
+BA_ "GenMsgCycleTime" BO_ 826 100;
+BA_ "VFrameFormat" BO_ 826 14;
+BA_ "GenMsgCycleTime" BO_ 827 100;
+BA_ "VFrameFormat" BO_ 827 14;
+BA_ "GenMsgCycleTime" BO_ 833 100;
+BA_ "VFrameFormat" BO_ 833 14;
+BA_ "GenMsgCycleTime" BO_ 851 100;
+BA_ "VFrameFormat" BO_ 851 14;
+BA_ "GenMsgCycleTime" BO_ 921 100;
+BA_ "VFrameFormat" BO_ 921 14;
+BA_ "GenMsgCycleTime" BO_ 945 100;
+BA_ "VFrameFormat" BO_ 945 14;
+BA_ "GenMsgCycleTime" BO_ 1113 100;
+BA_ "VFrameFormat" BO_ 1113 14;
+BA_ "GenMsgCycleTime" BO_ 1114 100;
+BA_ "VFrameFormat" BO_ 1114 14;
+BA_ "GenMsgCycleTime" BO_ 1242 1000;
+BA_ "VFrameFormat" BO_ 1242 14;
+BA_ "GenMsgCycleTime" BO_ 1409 500;
+BA_ "VFrameFormat" BO_ 1409 0;
+BA_ "CANFD_BRS" BO_ 1409 0;
+BA_ "GenMsgCycleTime" BO_ 1412 500;
+BA_ "VFrameFormat" BO_ 1412 0;
+BA_ "CANFD_BRS" BO_ 1412 0;
+BA_ "GenMsgCycleTime" BO_ 1453 500;
+BA_ "VFrameFormat" BO_ 1453 0;
+BA_ "CANFD_BRS" BO_ 1453 0;
+BA_ "GenMsgCycleTime" BO_ 1459 500;
+BA_ "VFrameFormat" BO_ 1459 0;
+BA_ "CANFD_BRS" BO_ 1459 0;
+BA_ "GenMsgCycleTime" BO_ 1460 500;
+BA_ "VFrameFormat" BO_ 1460 0;
+BA_ "CANFD_BRS" BO_ 1460 0;
+BA_ "GenMsgCycleTime" BO_ 1464 500;
+BA_ "VFrameFormat" BO_ 1464 0;
+BA_ "CANFD_BRS" BO_ 1464 0;
+BA_ "GenMsgCycleTime" BO_ 1591 500;
+BA_ "VFrameFormat" BO_ 1591 14;
+BA_ "GenMsgCycleTime" BO_ 1775 1000;
+BA_ "VFrameFormat" BO_ 1775 14;
+BA_ "GenMsgSendType" BO_ 1825 1;
+BA_ "VFrameFormat" BO_ 1825 14;
+BA_ "GenMsgSendType" BO_ 1833 1;
+BA_ "VFrameFormat" BO_ 1833 14;
+BA_ "GenMsgSendType" BO_ 2015 1;
+BA_ "VFrameFormat" BO_ 2015 14;
+BA_ "GenSigStartValue" SG_ 778 OTA_IntellChrgThresSetReq 126;
+BA_ "GenSigStartValue" SG_ 162 IBC_VehicleSpeed 8190;
+BA_ "GenSigStartValue" SG_ 254 PDCU_ShiftLvlPosn 5;
+BA_ "GenSigStartValue" SG_ 254 PDCU_ShiftLvlPosnValid 1;
+BA_ "GenSigStartValue" SG_ 780 ACU_CrashoutValid 1;
+BA_ "GenSigStartValue" SG_ 833 EBS_BattCurrentSt 1023;
+BA_ "GenSigStartValue" SG_ 833 EBS_BattSOC 255;
+BA_ "GenSigStartValue" SG_ 833 EBS_BattTempSt 255;
+BA_ "GenSigStartValue" SG_ 1242 Vehicle_TimeMonth 1;
+BA_ "GenSigStartValue" SG_ 1242 Vehicle_TimeDate 1;
+BA_ "GenSigStartValue" SG_ 1242 Vehicle_TimeValid 1;
+BA_ "GenSigStartValue" SG_ 1775 LBMS_BuckT 40;
+BA_ "GenSigSendType" SG_ 1825 DiagRequest_BAT 2;
+BA_ "GenSigSendType" SG_ 1833 DiagResponse_BAT 2;
+BA_ "GenSigSendType" SG_ 2015 DiagRequest_Function 2;
+VAL_ 131 EMS_EngSpdValid 0 "Invalid" 1 "Valid" ;
+VAL_ 162 IBC_VehicleSpeed 8191 "INVALID_VALUE" ;
+VAL_ 162 IBC_VehicleSpeedValid 0 "INVALID" 1 "VALID" ;
+VAL_ 254 PDCU_DriveReady 0 "不允许行车" 1 "允许行车" ;
+VAL_ 254 PDCU_ShiftLvlPosn 0 "Neutral" 1 "D" 2 "预留" 3 "预留Reserved" 4 "预留" 5 "Park" 6 "预留Reserved" 7 "Reverse" 8 "预留Reserved" 9 "预留Reserved" 10 "预留Reserved" ;
+VAL_ 254 PDCU_ShiftLvlPosnValid 0 "INVALID" 1 "VALID" ;
+VAL_ 254 PDCU_12VchargeSt 0 "No 12V charging" 1 "12V charging" 2 "12V charing finish" 3 "12V charing error" ;
+VAL_ 254 PDCU_BMS_SOCCalculate 255 "INVALID_VALUE" ;
+VAL_ 507 BCM_UsageMode 0 "reserved" 1 "Inactive（休息模式）" 2 "Convenience（舒适模式）" 3 "Driving" 4 "OTA Updating（OTA）" 5 "Remote（远程模式）" 6 "RemoteDriving（预留）" 7 "reserved" 8 "reserved" 9 "reserved" 10 "reserved" 11 "reserved" 12 "reserved" 13 "reserved" 14 "reserved" 15 "Invalid" ;
+VAL_ 507 BCM_CarMode 0 "Factory（工厂模式）" 1 "Transport（运输模式）" 2 "Dynotest（预留）" 3 "Normal（用户模式）" 4 "ExhibitionInDoor（内展模式，预留）" 5 "ExhibitionOutDoor（展厅模式）" 6 "Reserved" 7 "Reserved" 8 "Reserved" 9 "Reserved" 10 "Reserved" 11 "Reserved" 12 "Reserved" 13 "Reserved" 14 "Initial" 15 "Invalid" ;
+VAL_ 507 BCM_PowerMode 0 "OFF" 1 "预留" 2 "ON" 3 "预留" ;
+VAL_ 780 ACU_Crashout 0 "no crash (startup/default)" 1 "Reserved" 2 "Reserved" 3 "Crash" ;
+VAL_ 780 ACU_RollingSt 0 "无翻滚" 1 "有翻滚" 2 "Reserved" 3 "Reserved" ;
+VAL_ 780 ACU_RollingStValid 0 "无效" 1 "有效" ;
+VAL_ 780 ACU_CrashoutValid 0 "无效" 1 "有效" ;
+VAL_ 826 LBMS_DMOSTemp 511 "INVALID_VALUE" ;
+VAL_ 826 LBMS_CellVolt1 65535 "INVALID_VALUE" ;
+VAL_ 826 LBMS_CellVolt2 65535 "INVALID_VALUE" ;
+VAL_ 826 LBMS_CellVolt3 65535 "INVALID_VALUE" ;
+VAL_ 826 LBMS_CellVolt4 65535 "INVALID_VALUE" ;
+VAL_ 826 LBMS_BoardTemp 511 "INVALID_VALUE" ;
+VAL_ 826 LBMS_SOH 255 "INVALID_VALUE" ;
+VAL_ 826 LBMS_Cell1BalanceSt 0 "均衡关闭" 1 "均衡开启" ;
+VAL_ 826 LBMS_Cell2BalanceSt 0 "均衡关闭" 1 "均衡开启" ;
+VAL_ 826 LBMS_Cell3BalanceSt 0 "均衡关闭" 1 "均衡开启" ;
+VAL_ 826 LBMS_Cell4BalanceSt 0 "均衡关闭" 1 "均衡开启" ;
+VAL_ 826 LBMS_CMOSTemp 511 "INVALID_VALUE" ;
+VAL_ 827 LBMS_WakeupInfo 0 "No wakeup" 1 "wakeup by NM(CAN特定帧)" 2 "wakeup by AFE(AFE反向唤醒)" 3 "wakeup by RTC(定时唤醒，)" 4 "LvBatt_AwakeByHardline（硬线唤醒）" 5 "wakeup by KL30(搭电唤醒)" 6 "LvBatt_AwakeByDiagnose(诊断维持唤醒)" 7 "LvBatt_AwakeByProhibit（禁止休眠故障维持唤醒）" ;
+VAL_ 827 LBMS_AwakeByNM 0 "无效" 1 "有效" ;
+VAL_ 827 LBMS_AwakeByAFE 0 "无效" 1 "有效" ;
+VAL_ 827 LBMS_AwakeByRTC 0 "无效" 1 "有效" ;
+VAL_ 827 LBMS_AwakeByHardline 0 "无效" 1 "有效" ;
+VAL_ 827 LBMS_AwakeByKL30 0 "无效" 1 "有效" ;
+VAL_ 827 LBMS_AwakeByDiagnose 0 "无效" 1 "有效" ;
+VAL_ 827 LBMS_AwakeByProhibit 0 "FALSE" 1 "TRUE" ;
+VAL_ 827 LBMS_ChrgMosSt 0 "未使能" 1 "使能" ;
+VAL_ 827 LBMS_DisChrgMosSt 0 "未使能" 1 "使能" ;
+VAL_ 827 LBMS_CurrentLimSt 0 "未使能" 1 "使能" ;
+VAL_ 827 LBMS_MOSCtrlSt 0 "未使能" 1 "强制闭合状态" 2 "强制断开状态" 3 "预留" ;
+VAL_ 833 EBS_BattVolt 1023 "INVALID_VALUE" ;
+VAL_ 833 EBS_BattCurrentSt 1023 "INVALID_VALUE" ;
+VAL_ 833 EBS_BattSOCStatus 0 "deviation>15%" 1 "deviation>10%&&≤15%" 2 "deviation≤10%" 3 "INVALID_VALUE" ;
+VAL_ 833 EBS_DisChrgMosCurSt 0 "关闭" 1 "开启" ;
+VAL_ 833 EBS_BattSOC 255 "INVALID_VALUE" ;
+VAL_ 833 EBS_ChrgMosCurSt 0 "无故障" 1 "故障" ;
+VAL_ 833 EBS_Sensor_Config 0 "无蓄电池传感器" 1 "有蓄电池传感器" ;
+VAL_ 833 EBS_BattLowVoltageAlarm 0 "无提醒" 1 "有提醒" ;
+VAL_ 833 EBS_LowSoclFltVld 0 "Valid" 1 "Invaild" ;
+VAL_ 833 EBS_BattTempSt 255 "INVALID_VALUE" ;
+VAL_ 833 EBS_BattPackFault 0 "无故障" 1 "一级故障" 2 "二级故障" 3 "三级故障" 4 "四级故障" 5 "预留" 6 "预留" 7 "预留" ;
+VAL_ 833 EBS_12VChrgReq 0 "No Requset" 1 "Requset charging" ;
+VAL_ 851 BMS_ThermalRunawayWarn 0 "正常 Normal" 1 "热失控报警（弹窗） Thermal runaway alarm（popover）" 2 "热失控预警 Thermal runaway early alarm" 3 "预留" ;
+VAL_ 851 BMS_ThrmlRunawayWarnValid 0 "Invalid" 1 "Valid" ;
+VAL_ 945 PDCU_DCDC1workSt 0 "DCDC未工作" 1 "DCDC故障" 2 "DCDC正常工作" 3 "Unavailable Value" ;
+VAL_ 1113 LBMS_PackCurrent -1 "INVALID_VALUE" ;
+VAL_ 1113 LBMS_PackInternalVolt 65535 "INVALID_VALUE" ;
+VAL_ 1113 LBMS_PackExternalVolt 65535 "INVALID_VALUE" ;
+VAL_ 1113 LBMS_RTCsleepcur 65535 "INVALID_VALUE" ;
+VAL_ 1113 LBMS_PackTemp1 511 "INVALID_VALUE" ;
+VAL_ 1113 LBMS_PackTemp2 511 "INVALID_VALUE" ;
+VAL_ 1113 LBMS_PackTemp3 511 "INVALID_VALUE" ;
+VAL_ 1113 LBMS_WorkSt 0 "默认" 1 "初始化" 2 "工作状态" 3 "等待下电" 4 "下电" 5 "预留" 6 "预留" 7 "预留" ;
+VAL_ 1114 LBMS_LowSOCChrgRequest 0 "FALSE" 1 "TRUE" ;
+VAL_ 1114 LBMS_LowVotageChrgRequest 0 "FALSE" 1 "TRUE" ;
+VAL_ 1114 LBMS_PISSt 0 "未按下" 1 "按下" ;
+VAL_ 1114 LBMS_RelayPreCloseStuckSt 0 "无卡滞" 1 "卡滞" ;
+VAL_ 1114 LBMS_BatteryLatchSt 0 "无效" 1 "进入电量锁存状态" ;
+VAL_ 1114 LBMS_ReqChrgFailReminder 0 "无输入" 1 "无法补电" ;
+VAL_ 1242 Vehicle_TimeYear 255 "INVALID_VALUE" ;
+VAL_ 1242 Vehicle_TimeValid 0 "Valid" 1 "Not Valid" ;
+VAL_ 1409 ZCU_ActiveWakeupBit 0 "被动唤醒（被其它节点的NM报文唤醒）" 1 "主动唤醒（监控本地事件并触发网络唤醒）" ;
+VAL_ 1409 ZCU_RepeatMessageReqBit 0 "未请求其它节点进入重复报文状态" 1 "请求其它节点进入重复报文状态" ;
+VAL_ 1409 ZCU_RepeatSt 0 "节点处于正常运行状态" 1 "节点处于重复报文状态" ;
+VAL_ 1409 ZCU_GlobalWakeupFlag 0 "未置位" 1 "置位" ;
+VAL_ 1409 ZCU_ChrgWakeupFlag 0 "未置位" 1 "置位" ;
+VAL_ 1409 ZCU_RemoteWakeupFlag 0 "未置位" 1 "置位" ;
+VAL_ 1409 ZCU_SentinelWakeupFlag 0 "未置位" 1 "置位" ;
+VAL_ 1409 ZCU_SentinelWarnWakeupFlag 0 "未置位" 1 "置位" ;
+VAL_ 1409 ZCU_NMWakeupPower 0 "未置位" 1 "OFF" 2 "ACC" 3 "ON" 4 "START" 5 "预留" 6 "预留" 7 "预留" 8 "预留" 9 "预留" 10 "预留" 11 "预留" 12 "预留" 13 "预留" 14 "预留" 15 "预留" ;
+VAL_ 1409 ZCU_NMWakeupSource 0 "未置位" 1 "KL15硬线" 2 "制动开关" 3 "左前门PE开关（预留）" 4 "左后门PE开关（预留0" 5 "左前门内电释放按键" 6 "左前门外电释放按键" 7 "左后门内电释放按键" 8 "左后门外电释放按键" 9 "中控锁开关" 10 "机舱盖锁开关" 11 "LIN-RLS雨量关窗" ;
+VAL_ 1412 OIB_ActiveWakeupBit 0 "被动唤醒（被其它节点的NM报文唤醒）" 1 "主动唤醒（监控本地事件并触发网络唤醒）" ;
+VAL_ 1412 OIB_RepeatMessageReqBit 0 "未请求其它节点进入重复报文状态" 1 "请求其它节点进入重复报文状态" ;
+VAL_ 1412 OIB_PNIBit 0 "无PNC请求" 1 "有PNC请求" ;
+VAL_ 1412 OIB_RepeatSt 0 "节点处于正常运行状态" 1 "节点处于重复报文状态" ;
+VAL_ 1412 OIB_GlobalWakeupFlag 0 "未置位" 1 "置位" ;
+VAL_ 1412 OIB_ChrgWakeupFlag 0 "未置位" 1 "置位" ;
+VAL_ 1412 OIB_RemoteWakeupFlag 0 "未置位" 1 "置位" ;
+VAL_ 1412 OIB_SentinelWakeupFlag 0 "未置位" 1 "置位" ;
+VAL_ 1412 OIB_SentinelWarnWakeupFlag 0 "未置位" 1 "置位" ;
+VAL_ 1412 OIB_NMWakeupPower 0 "未置位" 1 "OFF" 2 "ACC" 3 "ON" 4 "START" 5 "预留" 6 "预留" 7 "预留" 8 "预留" 9 "预留" 10 "预留" 11 "预留" 12 "预留" 13 "预留" 14 "预留" 15 "预留" ;
+VAL_ 1412 OIB_NMWakeupSource 0 "未置位" 1 "KL15硬线" 2 "右前门PE开关（预留）" 3 "右后门PE开关（预留）" 4 "右前门内电释放按键" 5 "右前门外电释放按键" 6 "右后门内电释放按键" 7 "右后门外电释放按键" 8 "尾门微动开关" 9 "后轴上升开关" 10 "后轴下降开关" 11 "危险报警灯开关" 12 "冰箱报文功能激活" ;
+VAL_ 1453 DKM_ActiveWakeupBit 0 "被动唤醒（被其它节点的NM报文唤醒）" 1 "主动唤醒（监控本地事件并触发网络唤醒）" ;
+VAL_ 1453 DKM_RepeatMessageReqBit 0 "未请求其它节点进入重复报文状态" 1 "请求其它节点进入重复报文状态" ;
+VAL_ 1453 DKM_RepeatSt 0 "节点处于正常运行状态" 1 "节点处于重复报文状态" ;
+VAL_ 1453 DKM_GlobalWakeupFlag 0 "未置位" 1 "置位" ;
+VAL_ 1453 DKM_ChrgWakeupFlag 0 "未置位" 1 "置位" ;
+VAL_ 1453 DKM_RemoteWakeupFlag 0 "未置位" 1 "置位" ;
+VAL_ 1453 DKM_SentinelWakeupFlag 0 "未置位" 1 "置位" ;
+VAL_ 1453 DKM_NMWakeupPower 0 "未置位" 1 "OFF" 2 "ACC" 3 "ON" 4 "START" 5 "预留" 6 "预留" 7 "预留" 8 "预留" 9 "预留" 10 "预留" 11 "预留" 12 "预留" 13 "预留" 14 "预留" 15 "预留" ;
+VAL_ 1453 DKM_NMWakeupSource 0 "未置位" 1 "星闪钥匙/蓝牙钥匙信号" ;
+VAL_ 1459 CWP_ActiveWakeupBit 0 "被动唤醒（被其它节点的NM报文唤醒）" 1 "主动唤醒（监控本地事件并触发网络唤醒）" ;
+VAL_ 1459 CWP_RepeatMessageReqBit 0 "未请求其它节点进入重复报文状态" 1 "请求其它节点进入重复报文状态" ;
+VAL_ 1459 CWP_RepeatSt 0 "节点处于正常运行状态" 1 "节点处于重复报文状态" ;
+VAL_ 1459 CWP_GlobalWakeupFlag 0 "未置位" 1 "置位" ;
+VAL_ 1459 CWP_ChrgWakeupFlag 0 "未置位" 1 "置位" ;
+VAL_ 1459 CWP_RemoteWakeupFlag 0 "未置位" 1 "置位" ;
+VAL_ 1459 CWP_SentinelWakeupFlag 0 "未置位" 1 "置位" ;
+VAL_ 1459 CWP_NMWakeupPower 0 "未置位" 1 "OFF" 2 "ACC" 3 "ON" 4 "START" 5 "预留" 6 "预留" 7 "预留" 8 "预留" 9 "预留" 10 "预留" 11 "预留" 12 "预留" 13 "预留" 14 "预留" 15 "预留" ;
+VAL_ 1459 CWP_NMWakeupSource 0 "未置位" 1 "KL15硬线" ;
+VAL_ 1460 LBMS_ActiveWakeupBit 0 "被动唤醒（被其它节点的NM报文唤醒）" 1 "主动唤醒（监控本地事件并触发网络唤醒）" ;
+VAL_ 1460 LBMS_RepeatMessageReqBit 0 "未请求其它节点进入重复报文状态" 1 "请求其它节点进入重复报文状态" ;
+VAL_ 1460 LBMS_RepeatSt 0 "节点处于正常运行状态" 1 "节点处于重复报文状态" ;
+VAL_ 1460 LBMS_GlobalWakeupFlag 0 "未置位" 1 "置位" ;
+VAL_ 1460 LBMS_ChrgWakeupFlag 0 "未置位" 1 "置位" ;
+VAL_ 1460 LBMS_RemoteWakeupFlag 0 "未置位" 1 "置位" ;
+VAL_ 1460 LBMS_SentinelWakeupFlag 0 "未置位" 1 "置位" ;
+VAL_ 1460 LBMS_NMWakeupPower 0 "未置位" 1 "OFF" 2 "ACC" 3 "ON" 4 "START" 5 "预留" 6 "预留" 7 "预留" 8 "预留" 9 "预留" 10 "预留" 11 "预留" 12 "预留" 13 "预留" 14 "预留" 15 "预留" ;
+VAL_ 1460 LBMS_NMWakeupSource 0 "未置位" 1 "KL15硬线" 2 "低电量唤醒" ;
+VAL_ 1464 NFCAM_ActiveWakeupBit 0 "被动唤醒（被其它节点的NM报文唤醒）" 1 "主动唤醒（监控本地事件并触发网络唤醒）" ;
+VAL_ 1464 NFCAM_RepeatMessageReqBit 0 "未请求其它节点进入重复报文状态" 1 "请求其它节点进入重复报文状态" ;
+VAL_ 1464 NFCAM_RepeatSt 0 "节点处于正常运行状态" 1 "节点处于重复报文状态" ;
+VAL_ 1464 NFCAM_GlobalWakeupFlag 0 "未置位" 1 "置位" ;
+VAL_ 1464 NFCAM_ChrgWakeupFlag 0 "未置位" 1 "置位" ;
+VAL_ 1464 NFCAM_RemoteWakeupFlag 0 "未置位" 1 "置位" ;
+VAL_ 1464 NFCAM_SentinelWakeupFlag 0 "未置位" 1 "置位" ;
+VAL_ 1464 NFCAM_NMWakeupPower 0 "未置位" 1 "OFF" 2 "ACC" 3 "ON" 4 "START" 5 "预留" 6 "预留" 7 "预留" 8 "预留" 9 "预留" 10 "预留" 11 "预留" 12 "预留" 13 "预留" 14 "预留" 15 "预留" ;
+VAL_ 1464 NFCAM_NMWakeupSource 0 "未置位" ;
+

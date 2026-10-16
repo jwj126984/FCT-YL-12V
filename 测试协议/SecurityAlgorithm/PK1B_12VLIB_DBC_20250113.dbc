@@ -1,0 +1,375 @@
+VERSION "chuyz@dfl.com.cn FD CAN Ver"
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: ZCUL Vector_XXX CCM LVBMS TCU VCM ACU IBC ITM DCDC ZCUR
+
+
+BO_ 1026 DCDC_VCM2: 8 DCDC
+ SG_ DC_Operating_Mode : 8|3@1- (1,0) [0|0] ""  LVBMS,ZCUL
+
+BO_ 1580 LVBMS_Packdata2: 64 LVBMS
+ SG_ DarkCurrent : 503|12@0+ (1,0) [0|4000] "mA"  ZCUL
+ SG_ FaultNum : 472|8@1+ (1,0) [0|255] "/"  ZCUL
+ SG_ TotalFaultNum : 464|8@1+ (1,0) [0|255] "/"  ZCUL
+ SG_ RealSOC : 457|7@1+ (1,0) [0|100] "%"  ZCUL
+ SG_ CrnkThdCurrent : 439|21@0+ (0.001,-1000) [-1000|1000] "A"  ZCUL
+ SG_ MinCrnkCurrent : 415|21@0+ (0.001,-1000) [-1000|1000] "A"  ZCUL
+ SG_ MinCrnkU : 399|13@0+ (0.001,0) [0|5] "V"  ZCUL
+ SG_ MinCrnkCrntVltStat : 385|1@1+ (1,0) [0|1] "/"  ZCUL
+ SG_ CurrentLimSt : 386|1@1+ (1,0) [0|1] "/"  ZCUL
+ SG_ MaxAllwDischrgCurrent : 375|21@0+ (0.001,-1000) [-1000|1000] "A"  ZCUL
+ SG_ MaxAllwChrgCurrent : 351|21@0+ (0.001,-1000) [-1000|1000] "A"  ZCUL
+ SG_ MOSDisCnctnReason : 337|4@1+ (1,0) [0|15] "/"  ZCUL
+ SG_ SOCCalMod : 341|3@1+ (1,0) [0|7] "/"  ZCUL
+ SG_ Cell4BalSt : 330|3@1+ (1,0) [0|3] "/"  ZCUL
+ SG_ Cell3BalSt : 333|3@1+ (1,0) [0|3] "/"  ZCUL
+ SG_ Cell2BalSt : 322|3@1+ (1,0) [0|3] "/"  ZCUL
+ SG_ Cell1BalSt : 325|3@1+ (1,0) [0|3] "/"  ZCUL
+ SG_ SOCVld : 312|1@1+ (1,0) [0|1] "/"  ZCUL
+ SG_ ReqChrgU : 311|15@0+ (0.001,0) [0|20] "V"  ZCUL
+ SG_ MaxAllwChrgU : 295|15@0+ (0.001,0) [0|20] "V"  ZCUL
+ SG_ DisChrgRlySt : 282|3@1+ (1,0) [0|3] "/"  ZCUL
+ SG_ ChrgRlySt : 285|3@1+ (1,0) [0|7] "/"  ZCUL
+ SG_ WorkSt : 274|3@1+ (1,0) [0|7] "/"  ZCUL
+ SG_ ReChrgReq : 277|3@1+ (1,0) [0|7] "/"  ZCUL
+ SG_ SOH : 265|7@1+ (1,0) [0|100] "Percent"  ZCUL
+ SG_ SOC : 257|7@1+ (1,0) [0|100] "%"  ZCUL
+ SG_ BoardT : 248|8@1+ (1,-40) [-40|125] "degC"  ZCUL
+ SG_ BuckT : 240|8@1+ (1,-40) [-40|125] "degC"  ZCUL
+ SG_ ChrgCMOST : 232|8@1+ (1,-40) [-40|125] "degC"  ZCUL
+ SG_ DischrgMOST : 224|8@1+ (1,-40) [-40|125] "degC"  ZCUL
+ SG_ AHDisChrgVld : 264|1@1+ (1,0) [0|1] "/"  ZCUL
+ SG_ AHChrgVld : 256|1@1+ (1,0) [0|1] "/"  ZCUL
+ SG_ AHDisChrgTotlife : 199|32@0+ (0.001,0) [0|4294967.295] "Ah"  ZCUL
+ SG_ AHChrgTotlife : 167|32@0+ (0.001,0) [0|4294967.295] "Ah"  ZCUL
+ SG_ PackIntUCalVld : 152|1@1+ (1,0) [0|1] "-"  ZCUL
+ SG_ PackIntUCal : 151|15@0+ (0.001,0) [0|20] "V"  ZCUL
+ SG_ PackT3 : 136|8@1+ (1,-40) [-40|125] "degC"  ZCUL
+ SG_ PackT2 : 128|8@1+ (1,-40) [-40|125] "degC"  ZCUL
+ SG_ PackT1 : 120|8@1+ (1,-40) [-40|125] "degC"  ZCUL
+ SG_ PackCurrentVld : 81|1@1+ (1,0) [0|1] "-"  ZCUL
+ SG_ PackTVld : 82|1@1+ (1,0) [0|1] "-"  ZCUL
+ SG_ PackExtUVld : 112|1@1+ (1,0) [0|1] "-"  ZCUL
+ SG_ PackIntUVld : 96|1@1+ (1,0) [0|1] "-"  ZCUL
+ SG_ PackExtU : 111|15@0+ (0.001,0) [0|20] "V"  ZCUL
+ SG_ PackIntU : 95|15@0+ (0.001,0) [0|20] "V"  ZCUL
+ SG_ PackCurrent : 71|21@0+ (0.001,-1000) [-1000|1000] "A"  ZCUL
+ SG_ Cell4UVld : 10|1@1+ (1,0) [0|1] "-"  ZCUL
+ SG_ Cell3UVld : 56|1@1+ (1,0) [0|1] "-"  ZCUL
+ SG_ Cell2UVld : 57|1@1+ (1,0) [0|1] "-"  ZCUL
+ SG_ Cell1UVld : 58|1@1+ (1,0) [0|1] "-"  ZCUL
+ SG_ CellU4 : 55|13@0+ (0.001,0) [0|5] "V"  ZCUL
+ SG_ CellU3 : 39|13@0+ (0.001,0) [0|5] "V"  ZCUL
+ SG_ CellU2 : 23|13@0+ (0.001,0) [0|5] "V"  ZCUL
+ SG_ CellU1 : 7|13@0+ (0.001,0) [0|5] "V"  ZCUL
+ SG_ Packdata2_RollingCounter : 492|4@1+ (1,1) [0|15] "-"  ZCUL
+ SG_ Packdata2_CheckSum : 480|8@1+ (1,0) [0|255] "-"  ZCUL
+
+BO_ 1579 LVBMS_Packdata1: 20 LVBMS
+ SG_ HardwareMinorVersion : 136|8@1+ (1,0) [0|255] "-"  ZCUL
+ SG_ HardwareMajorVersion : 128|8@1+ (1,0) [0|255] "-"  ZCUL
+ SG_ SoftwareMinorVersion : 120|8@1+ (1,0) [0|255] "-"  ZCUL
+ SG_ SoftwareMajorVersion : 112|8@1+ (1,0) [0|255] "-"  ZCUL
+ SG_ SleepTime : 87|20@0+ (1,0) [0|1048575] "min"  ZCUL
+ SG_ CMosDriveU : 72|8@1+ (1,0) [0|255] "V"  ZCUL
+ SG_ DMosDriveU : 64|8@1+ (1,0) [0|255] "V"  ZCUL
+ SG_ LowSocLatchDisReq : 61|2@1+ (1,0) [0|1] "-"  ZCUL
+ SG_ SysFlt : 63|1@1+ (1,0) [0|1] "-"  ZCUL
+ SG_ ThermalRunawayFlt : 48|1@1+ (1,0) [0|1] "-"  ZCUL
+ SG_ MosCircuitFlt : 49|1@1+ (1,0) [0|1] "-"  ZCUL
+ SG_ DMosDriverOutptAbnorFlt : 50|1@1+ (1,0) [0|1] "-"  ZCUL
+ SG_ MosDriverContrlAbnorFlt : 51|1@1+ (1,0) [0|1] "-"  ZCUL
+ SG_ CellVolSampOpenWireFlt : 52|1@1+ (1,0) [0|1] "-"  ZCUL
+ SG_ AFEHardwareFlt : 53|1@1+ (1,0) [0|1] "-"  ZCUL
+ SG_ HardwareLineStuckFlt : 54|1@1+ (1,0) [0|1] "-"  ZCUL
+ SG_ BalaenFlt : 55|1@1+ (1,0) [0|1] "-"  ZCUL
+ SG_ NtcFlt : 40|4@1+ (1,0) [0|15] "-"  ZCUL
+ SG_ DaisyChainE2EFlt : 44|1@1+ (1,0) [0|1] "-"  ZCUL
+ SG_ LowSOH : 45|1@1+ (1,0) [0|1] "-"  ZCUL
+ SG_ LowSoc2Flt : 46|1@1+ (1,0) [0|1] "-"  ZCUL
+ SG_ LowSoc1Flt : 47|1@1+ (1,0) [0|1] "-"  ZCUL
+ SG_ ChrgOverCurrentFlt : 32|4@1+ (1,0) [0|15] "-"  ZCUL
+ SG_ DischrgOverCurrentFlt : 36|4@1+ (1,0) [0|15] "-"  ZCUL
+ SG_ PackOvVoltFlt : 24|4@1+ (1,0) [0|15] "-"  ZCUL
+ SG_ PackUnderUFlt : 28|4@1+ (1,0) [0|15] "-"  ZCUL
+ SG_ CellOverUFlt : 16|4@1+ (1,0) [0|15] "-"  ZCUL
+ SG_ CellUnderUFlt : 20|4@1+ (1,0) [0|15] "-"  ZCUL
+ SG_ PackOverTFlt : 8|4@1+ (1,0) [0|15] "-"  ZCUL
+ SG_ PackUnderTFlt : 12|1@1+ (1,0) [0|1] "-"  ZCUL
+ SG_ WakeupByCellOverT : 13|1@1+ (1,0) [0|1] "-"  ZCUL
+ SG_ WakeupByCellUnderU2 : 14|1@1+ (1,0) [0|1] "-"  ZCUL
+ SG_ WakeupByHwOverCurrent : 15|1@1+ (1,0) [0|1] "-"  ZCUL
+ SG_ WakeupByJumpStart : 0|1@1+ (1,0) [0|1] "-"  ZCUL
+ SG_ WakeupByRTC : 1|1@1+ (1,0) [0|1] "-"  ZCUL
+ SG_ WakeupByCurrent : 2|1@1+ (1,0) [0|1] "-"  ZCUL
+ SG_ WakeupByCAN : 3|1@1+ (1,0) [0|1] "-"  ZCUL
+ SG_ WakeupByHwLine : 4|1@1+ (1,0) [0|1] "-"  ZCUL
+ SG_ FirstWakeUpsignal : 5|3@1+ (1,0) [0|0] ""  ZCUL
+ SG_ Packdata1_RollingCounter : 156|4@1+ (1,0) [0|0] "-"  ZCUL
+ SG_ Packdata1_CheckSum : 144|8@1+ (1,0) [0|0] "-"  ZCUL
+ SG_ LVBMS_REFUSE : 110|2@1+ (1,0) [0|0] ""  CCM
+
+BO_ 1677 LVBMS_WakeUpFrame: 1 LVBMS
+ SG_ WakeUp_Signal : 0|8@1+ (1,0) [0|0] ""  CCM
+
+BO_ 861 BCM_SystemControl: 8 CCM
+ SG_ GADE : 13|3@1+ (1,0) [0|0] ""  LVBMS
+ SG_ BCM_WAKE_SLEEP_COM : 8|2@1+ (1,0) [0|3] "-"  LVBMS
+
+BO_ 1290 VCM_GeneraStatus_7: 8 VCM
+ SG_ RMT_FOTAHVOFFRQ_flag : 32|1@1+ (1,0) [0|0] "-"  TCU,ZCUL,LVBMS
+
+BO_ 1609 EEM_PbBattMonitor: 64 ZCUL
+ SG_ NextReChrgPermit : 110|1@1+ (1,0) [0|1] "-"  LVBMS
+ SG_ ReChrgPermit : 111|1@1+ (1,0) [0|1] "-"  LVBMS
+
+BO_ 793 SDM_0x319: 8 ACU
+ SG_ CllsnSig : 32|1@1+ (1,0) [0|1] "-"  LVBMS
+
+BO_ 644 Front_Wheel_Speed_Frame: 8 IBC
+ SG_ VSO : 39|16@0+ (0.01,0) [0|655.34] "Km/h"  LVBMS
+
+BO_ 1057 ATCVT_to_MMI_RN1: 4 VCM
+ SG_ IND_RBG : 3|5@1+ (1,0) [0|24] ""  LVBMS
+
+BO_ 1477 CLUSTER_GeneralStatus: 4 ITM
+ SG_ DIS_TOTAL : 15|24@0+ (0.1,0) [0|1677721.5] "Km"  LVBMS
+
+BO_ 1383 SystemTimeInfo: 5 ITM
+ SG_ Second : 27|6@0+ (1,0) [0|0] ""  LVBMS
+ SG_ Minute : 17|6@0+ (1,0) [0|0] ""  LVBMS
+ SG_ Hour : 18|5@1+ (1,0) [0|0] ""  LVBMS
+ SG_ Day : 11|5@0+ (1,0) [0|0] ""  LVBMS
+ SG_ Month : 12|4@1+ (1,0) [0|0] ""  LVBMS
+ SG_ Year : 0|8@1+ (1,2000) [0|2000] ""  LVBMS
+
+BO_ 1025 DCDC_VCM: 8 DCDC
+ SG_ DCDCOutpCrrt : 39|12@0+ (0.1,0) [0|400] "A"  VCM,ZCUL,LVBMS
+ SG_ DCDCOutpU : 24|8@1+ (0.1,0) [0|25] "V"  VCM,ZCUL,LVBMS
+
+BO_ 536 PEPS_Message_Sts: 3 CCM
+ SG_ PEPS_POWER_MODE : 5|3@1+ (1,0) [0|7] "-"  VCM,ZCUR,ZCUL,LVBMS
+
+
+
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 65535;
+BA_DEF_ BO_  "GenMsgCycleTimeActive" INT 0 65535;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 65535;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 65535;
+BA_DEF_ BO_  "GenMsgNrOfRepetitions" INT 0 65535;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cycle","NotUsed","NoMsgSendType";
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 65535;
+BA_DEF_ SG_  "GenSigSendType" STRING ;
+BA_DEF_ SG_  "GenSigStartValue" INT 0 65535;
+BA_DEF_ SG_  "GenSigTimeoutValue" INT 0 65535;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeActive" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgNrOfRepetitions" 0;
+BA_DEF_DEF_  "GenMsgSendType" "";
+BA_DEF_DEF_  "VFrameFormat" "";
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenSigSendType" "";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigTimeoutValue" 0;
+BA_DEF_DEF_  "BusType" "";
+BA_ "BusType" "CAN FD";
+BA_ "VFrameFormat" BO_ 1026 14;
+BA_ "GenMsgCycleTime" BO_ 1580 100;
+BA_ "GenMsgSendType" BO_ 1580 0;
+BA_ "VFrameFormat" BO_ 1580 14;
+BA_ "GenMsgCycleTime" BO_ 1579 100;
+BA_ "GenMsgSendType" BO_ 1579 0;
+BA_ "VFrameFormat" BO_ 1579 14;
+BA_ "GenMsgSendType" BO_ 1677 1;
+BA_ "GenMsgCycleTime" BO_ 861 100;
+BA_ "GenMsgSendType" BO_ 861 4;
+BA_ "VFrameFormat" BO_ 861 14;
+BA_ "GenMsgCycleTime" BO_ 1290 100;
+BA_ "GenMsgSendType" BO_ 1290 4;
+BA_ "VFrameFormat" BO_ 1290 14;
+BA_ "GenMsgCycleTime" BO_ 1609 100;
+BA_ "GenMsgSendType" BO_ 1609 0;
+BA_ "VFrameFormat" BO_ 1609 14;
+BA_ "GenMsgCycleTime" BO_ 793 50;
+BA_ "GenMsgSendType" BO_ 793 0;
+BA_ "VFrameFormat" BO_ 793 14;
+BA_ "GenMsgCycleTime" BO_ 644 20;
+BA_ "GenMsgSendType" BO_ 644 0;
+BA_ "VFrameFormat" BO_ 644 14;
+BA_ "GenMsgCycleTime" BO_ 1057 60;
+BA_ "GenMsgSendType" BO_ 1057 4;
+BA_ "VFrameFormat" BO_ 1057 14;
+BA_ "GenMsgCycleTime" BO_ 1477 100;
+BA_ "GenMsgSendType" BO_ 1477 0;
+BA_ "VFrameFormat" BO_ 1477 14;
+BA_ "GenMsgCycleTime" BO_ 1383 500;
+BA_ "GenMsgSendType" BO_ 1383 0;
+BA_ "VFrameFormat" BO_ 1383 14;
+BA_ "GenMsgCycleTime" BO_ 1025 50;
+BA_ "GenMsgSendType" BO_ 1025 0;
+BA_ "VFrameFormat" BO_ 1025 14;
+BA_ "GenMsgCycleTime" BO_ 536 20;
+BA_ "GenMsgSendType" BO_ 536 0;
+BA_ "VFrameFormat" BO_ 536 14;
+BA_ "GenSigStartValue" SG_ 1580 DarkCurrent 0;
+BA_ "GenSigStartValue" SG_ 1580 RealSOC 100;
+BA_ "GenSigStartValue" SG_ 1580 CrnkThdCurrent 2098150000;
+BA_ "GenSigStartValue" SG_ 1580 MinCrnkCurrent 2098150000;
+BA_ "GenSigStartValue" SG_ 1580 MinCrnkU 8190000;
+BA_ "GenSigStartValue" SG_ 1580 MaxAllwDischrgCurrent 2098150000;
+BA_ "GenSigStartValue" SG_ 1580 MaxAllwChrgCurrent 2098150000;
+BA_ "GenSigStartValue" SG_ 1580 Cell4BalSt 6;
+BA_ "GenSigStartValue" SG_ 1580 Cell3BalSt 6;
+BA_ "GenSigStartValue" SG_ 1580 Cell2BalSt 6;
+BA_ "GenSigStartValue" SG_ 1580 Cell1BalSt 6;
+BA_ "GenSigStartValue" SG_ 1580 ReqChrgU 32766000;
+BA_ "GenSigStartValue" SG_ 1580 MaxAllwChrgU 32766000;
+BA_ "GenSigStartValue" SG_ 1580 DisChrgRlySt 6;
+BA_ "GenSigStartValue" SG_ 1580 ChrgRlySt 6;
+BA_ "GenSigStartValue" SG_ 1580 SOH 126;
+BA_ "GenSigStartValue" SG_ 1580 SOC 126;
+BA_ "GenSigStartValue" SG_ 1580 BoardT 294;
+BA_ "GenSigStartValue" SG_ 1580 BuckT 294;
+BA_ "GenSigStartValue" SG_ 1580 ChrgCMOST 294;
+BA_ "GenSigStartValue" SG_ 1580 DischrgMOST 294;
+BA_ "GenSigStartValue" SG_ 1580 PackIntUCal 32766000;
+BA_ "GenSigStartValue" SG_ 1580 PackT3 294;
+BA_ "GenSigStartValue" SG_ 1580 PackT2 294;
+BA_ "GenSigStartValue" SG_ 1580 PackT1 294;
+BA_ "GenSigStartValue" SG_ 1580 PackExtU 32766000;
+BA_ "GenSigStartValue" SG_ 1580 PackIntU 32766000;
+BA_ "GenSigStartValue" SG_ 1580 PackCurrent 2098150000;
+BA_ "GenSigStartValue" SG_ 1580 CellU4 8190000;
+BA_ "GenSigStartValue" SG_ 1580 CellU3 8190000;
+BA_ "GenSigStartValue" SG_ 1580 CellU2 8190000;
+BA_ "GenSigStartValue" SG_ 1580 CellU1 8190000;
+BA_ "GenSigStartValue" SG_ 1579 WakeupByCellOverT 0;
+BA_ "GenSigStartValue" SG_ 1579 WakeupByCellUnderU2 0;
+BA_ "GenSigStartValue" SG_ 1579 WakeupByHwOverCurrent 0;
+BA_ "GenSigStartValue" SG_ 1579 WakeupByJumpStart 0;
+BA_ "GenSigStartValue" SG_ 1579 WakeupByRTC 0;
+BA_ "GenSigStartValue" SG_ 1579 WakeupByCurrent 0;
+BA_ "GenSigStartValue" SG_ 1579 WakeupByCAN 0;
+BA_ "GenSigStartValue" SG_ 1579 WakeupByHwLine 0;
+BA_ "GenSigStartValue" SG_ 1579 FirstWakeUpsignal 0;
+BA_ "GenSigStartValue" SG_ 1579 Packdata1_RollingCounter 0;
+BA_ "GenSigStartValue" SG_ 1579 Packdata1_CheckSum 0;
+BA_ "GenSigStartValue" SG_ 1579 LVBMS_REFUSE 0;
+BA_ "GenSigStartValue" SG_ 1677 WakeUp_Signal 0;
+BA_ "GenSigStartValue" SG_ 861 GADE 0;
+BA_ "GenSigStartValue" SG_ 1609 NextReChrgPermit 1;
+BA_ "GenSigStartValue" SG_ 1609 ReChrgPermit 1;
+BA_ "GenSigStartValue" SG_ 793 CllsnSig 0;
+BA_ "GenSigStartValue" SG_ 644 VSO 0;
+BA_ "GenSigStartValue" SG_ 1057 IND_RBG 0;
+BA_ "GenSigStartValue" SG_ 1477 DIS_TOTAL 0;
+BA_ "GenSigStartValue" SG_ 1383 Second 0;
+BA_ "GenSigStartValue" SG_ 1383 Minute 0;
+BA_ "GenSigStartValue" SG_ 1383 Hour 0;
+BA_ "GenSigStartValue" SG_ 1383 Day 0;
+BA_ "GenSigStartValue" SG_ 1383 Month 0;
+BA_ "GenSigStartValue" SG_ 1383 Year -2000;
+VAL_ 1026 DC_Operating_Mode 7 "reserve" 6 "reserve" 5 "reserve" 4 "SLEEP" 3 "FAULT" 2 "BUCK" 1 "Standy" 0 "Init" ;
+VAL_ 1580 MinCrnkCrntVltStat 0 "False" 1 "True" ;
+VAL_ 1580 CurrentLimSt 0 "OFF" 1 "ON" ;
+VAL_ 1580 MOSDisCnctnReason 0 "Initial" 1 "low_voltage(second_sleep)" 2 "over_voltage" 3 "LBMS_error(open)" 4 "over_current" 5 "over_temperature" 6 "Reserved" 7 "Reserved" 8 "Reserved" 9 "Reserved" 10 "Reserved" 11 "Reserved" 12 "Reserved" 13 "Reserved" 14 "Reserved" 15 "Invalid" ;
+VAL_ 1580 SOCCalMod 0 "No_Cal" 1 "OCV_Cal" 2 "Full_Charge" 3 "Reserved" 4 "Reserved" 5 "Reserved" 6 "Reserved" 7 "Invalid" ;
+VAL_ 1580 Cell4BalSt 0 "Unknown" 1 "Close" 2 "Open" 3 "Reserved" 4 "Reserved" 5 "Reserved" 6 "Reserved" 7 "Invalid" ;
+VAL_ 1580 Cell3BalSt 0 "Unknown" 1 "Close" 2 "Open" 3 "Reserved" 4 "Reserved" 5 "Reserved" 6 "Reserved" 7 "Invalid" ;
+VAL_ 1580 Cell2BalSt 0 "Unknown" 1 "Close" 2 "Open" 3 "Reserved" 4 "Reserved" 5 "Reserved" 6 "Reserved" 7 "Invalid" ;
+VAL_ 1580 Cell1BalSt 0 "Unknown" 1 "Close" 2 "Open" 3 "Reserved" 4 "Reserved" 5 "Reserved" 6 "Reserved" 7 "Invalid" ;
+VAL_ 1580 SOCVld 0 "Invalid" 1 "Valid" ;
+VAL_ 1580 DisChrgRlySt 0 "Initial/Unknown" 1 "Close" 2 "Open" 3 "mos1close_mos2open" 4 "mos2close_mos1open" 5 "Reserved" 6 "Reserved" 7 "Invalid" ;
+VAL_ 1580 ChrgRlySt 0 "Initial/Unknown" 1 "Close" 2 "Open" 3 "mos1close_mos2open" 4 "mos2close_mos1open" 5 "Reserved" 6 "Reserved" 7 "Invalid" ;
+VAL_ 1580 WorkSt 0 "Initial/Default" 1 "Normal_Charging" 2 "Discharging" 3 "Request_Charging" 4 "Reserved" 5 "Reserved" 6 "Reserved" 7 "Invalid" ;
+VAL_ 1580 ReChrgReq 0 "Initial/Default" 1 "SOCChar_Req" 2 "VoltChar_Req" 3 "InvalidSOCChar_Req" 4 "CharQuit_Req" 5 "EEMReqCharQuit" 6 "Reserved" 7 "Invalid" ;
+VAL_ 1580 SOC 126 "Initial_Value" 127 "invalid" ;
+VAL_ 1580 AHDisChrgVld 0 "Invalid" 1 "Valid" ;
+VAL_ 1580 AHChrgVld 0 "Invalid" 1 "Valid" ;
+VAL_ 1580 PackIntUCalVld 0 "Invalid" 1 "Valid" ;
+VAL_ 1580 PackCurrentVld 0 "Invalid" 1 "Valid" ;
+VAL_ 1580 PackTVld 0 "Invalid" 1 "Valid" ;
+VAL_ 1580 PackExtUVld 0 "Invalid" 1 "Valid" ;
+VAL_ 1580 PackIntUVld 0 "Invalid" 1 "Valid" ;
+VAL_ 1580 Cell4UVld 0 "Invalid" 1 "Valid" ;
+VAL_ 1580 Cell3UVld 0 "Invalid" 1 "Valid" ;
+VAL_ 1580 Cell2UVld 0 "Invalid" 1 "Valid" ;
+VAL_ 1580 Cell1UVld 0 "Invalid" 1 "Valid" ;
+VAL_ 1579 LowSocLatchDisReq 3 "Lock power warning" 2 "SOC lower than40% warning" 0 "No_Active" 1 "SOC lower than 50% warning" ;
+VAL_ 1579 SysFlt 0 "No_Active" 1 "Active" ;
+VAL_ 1579 ThermalRunawayFlt 0 "No_Active" 1 "Active" ;
+VAL_ 1579 MosCircuitFlt 0 "No_Active" 1 "Active" ;
+VAL_ 1579 DMosDriverOutptAbnorFlt 0 "No_Active" 1 "Active" ;
+VAL_ 1579 MosDriverContrlAbnorFlt 0 "No_Active" 1 "Active" ;
+VAL_ 1579 CellVolSampOpenWireFlt 0 "No_Active" 1 "Active" ;
+VAL_ 1579 AFEHardwareFlt 0 "No_Active" 1 "Active" ;
+VAL_ 1579 HardwareLineStuckFlt 0 "No_Active" 1 "Active" ;
+VAL_ 1579 BalaenFlt 0 "No_Active" 1 "Active" ;
+VAL_ 1579 NtcFlt 0 "_No_fault" 1 "Level_1_fault" 2 "Level_2_fault" 3 "Level_3_fault" ;
+VAL_ 1579 DaisyChainE2EFlt 0 "No_Active" 1 "Active" ;
+VAL_ 1579 LowSOH 0 "No_Active" 1 "Active" ;
+VAL_ 1579 LowSoc2Flt 0 "No_Active" 1 "Active" ;
+VAL_ 1579 LowSoc1Flt 0 "No_Active" 1 "Active" ;
+VAL_ 1579 ChrgOverCurrentFlt 0 "_No_fault" 1 "Level_1_fault" 2 "Level_2_fault" 3 "Level_3_fault" ;
+VAL_ 1579 DischrgOverCurrentFlt 0 "_No_fault" 1 "Level_1_fault" 2 "Level_2_fault" 3 "Level_3_fault" ;
+VAL_ 1579 PackOvVoltFlt 0 "_No_fault" 1 "Level_1_fault" 2 "Level_2_fault" 3 "Level_3_fault" ;
+VAL_ 1579 PackUnderUFlt 0 "_No_fault" 1 "Level_1_fault" 2 "Level_2_fault" 3 "Level_3_fault" ;
+VAL_ 1579 CellOverUFlt 0 "_No_fault" 1 "Level_1_fault" 2 "Level_2_fault" 3 "Level_3_fault" ;
+VAL_ 1579 CellUnderUFlt 0 "No_fault" 1 "Level_1_fault" 2 "Level_2_fault" 3 "Level_3_fault" ;
+VAL_ 1579 PackOverTFlt 0 "_No_fault" 1 "Level_1_fault" 2 "Level_2_fault" 3 "Level_3_fault" ;
+VAL_ 1579 PackUnderTFlt 0 "No_Active" 1 "Active" ;
+VAL_ 1579 WakeupByCellOverT 0 "False" 1 "True" ;
+VAL_ 1579 WakeupByCellUnderU2 0 "False" 1 "True" ;
+VAL_ 1579 WakeupByHwOverCurrent 0 "False" 1 "True" ;
+VAL_ 1579 WakeupByRTC 0 "False" 1 "True" ;
+VAL_ 1579 WakeupByCurrent 0 "False" 1 "True" ;
+VAL_ 1579 WakeupByCAN 0 "False" 1 "True" ;
+VAL_ 1579 WakeupByHwLine 0 "False" 1 "True" ;
+VAL_ 1579 LVBMS_REFUSE 0 "Reserved" 1 "RefuseToSleep" 2 "ReadyToSleep" 3 "Reserved" ;
+VAL_ 861 GADE 7 "Unavailable" 6 "Not used
+" 5 "Not used
+" 4 "FOTA  faultDisableDiagMuxDTC" 3 "ALL fault, Enable DiagMuxDTC" 2 "ALL fault  Disable DiagMuxDTC" 1 "AutoACC fault" 0 "Sleep or Crank fault," ;
+VAL_ 861 BCM_WAKE_SLEEP_COM 0 "GoToSleep" 1 "reserved" 2 "reserved" 3 "WakeUp" ;
+VAL_ 1290 RMT_FOTAHVOFFRQ_flag 0 "No Request" 1 "Request" ;
+VAL_ 1609 NextReChrgPermit 0 "Not_Permitted" 1 "Permitted" ;
+VAL_ 1609 ReChrgPermit 0 "Not_Permitted" 1 "Permitted" ;
+VAL_ 793 CllsnSig 1 " Crash" 0 "No Crash" ;
+VAL_ 1057 IND_RBG 14 "not used" 13 "not used" 12 "E6" 11 "E5" 10 "E4" 9 "E3" 8 "E2" 7 "E1" 6 "E" 5 "Ds range" 4 "D range" 3 "N range" 2 "R range" 1 "P range" 0 "OFF" ;
+VAL_ 536 PEPS_POWER_MODE 4 "READY" 3 "Reserved" 2 "IGN" 1 "ACC" 0 "OFF" ;
+
