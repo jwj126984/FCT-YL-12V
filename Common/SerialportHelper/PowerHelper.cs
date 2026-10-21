@@ -590,6 +590,7 @@ namespace Common.SerialportHelper
                 {
                     LogHelper.Debug(PowerType + " " + $"稳定成功,电压为0V，返回0A，无须判断，与余工讨论执行的");
                     //break;
+
                     return cur;
                 }
                 if (Math.Abs((cur - c)) <= o)

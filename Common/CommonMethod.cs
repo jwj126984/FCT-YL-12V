@@ -300,7 +300,7 @@ namespace Common
         {
             if (ConfigHelper.UdsParameters.jiesuo == "T09_M")
             {
-                threshold = 60;
+                threshold = 32;
             }
             if (ConfigHelper.UdsParameters.jiesuo == "ChangAn_C390")
             {

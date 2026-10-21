@@ -544,6 +544,7 @@ namespace DetectionProcess.LT
 
                 if (ConfigHelper.UdsParameters.jiesuo != "WL_F710S")
                 {
+                    CommonMethod.Sleep(200);
                     GetWakeSource(model, 5);
                 }
                 //读取唤醒源
@@ -1210,7 +1211,7 @@ namespace DetectionProcess.LT
             //发送休眠指令
             if(ConfigHelper.UdsParameters.jiesuo == "T09_M")
             {
-                CommonMethod.SetN8331(7);
+                CommonMethod.SetN8331(12);
                 CommonData.IT6322.SetVol(13);
             }
             else
@@ -1440,6 +1441,7 @@ namespace DetectionProcess.LT
             CommonMethod.StartSendAwaken();
 
             dl = CommonMethod.GetWorkCurrentFromPower(awatiTime: 8, threshold: 20);
+
             if (dl.Item1 == false)
             {
                 LogHelper.ShowMsg("Can唤醒失败");

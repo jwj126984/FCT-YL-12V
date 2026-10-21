@@ -330,8 +330,11 @@ namespace DetectionProcess.LT
                     }
                     else if (Math.Abs(parameter.QualifiedValue.Value) < 100 && flagfz == 1)
                     {
-
+                        CommonData.N69206H.SetOutput(false);
+                        CommonMethod.Sleep(150);
                         CommonData.N69206H.SetCCMode();
+                        CommonData.N69206H.SetOutput(true);
+                        CommonMethod.Sleep(100);
                         flagfz = 0;
                     }
 
@@ -339,6 +342,9 @@ namespace DetectionProcess.LT
                     //使能判断
                     if (parameter.QualifiedValue == 0)
                     {
+
+                        //NewCanHelper.CloseTotalCurrentCollection();
+                        //CommonData.N69206H.SetOutput(false);
                         parameter.Extend1 = "0";//不使能将电压设置为0
                         if (isSetOUTPut)
                         {
@@ -346,6 +352,8 @@ namespace DetectionProcess.LT
 
                             if (M3905D.SetOUTPut(0) == false)
                             {
+                                
+
                                 AddModelAction(new TestResult() { ChildrenItem = "总电流测试失败", Result = false });
 
                                 LogHelper.WriteLog("M3905D 关闭使能失败", true);

@@ -308,6 +308,12 @@ namespace Common.UDS
 
             temp = Send(new byte[] { 0x01, 0x02, 0x03 }, 0x31, uint.Parse(ConfigHelper.UdsParameters.TID, System.Globalization.NumberStyles.HexNumber));
             CommonMethod.Sleep(20);
+
+            temp = Send(new byte[] { 0x02 }, 0x85, uint.Parse(ConfigHelper.UdsParameters.TID, System.Globalization.NumberStyles.HexNumber));
+            CommonMethod.Sleep(500);
+            temp = Send(new byte[] { 0x03,0x01 }, 0x28, uint.Parse(ConfigHelper.UdsParameters.TID, System.Globalization.NumberStyles.HexNumber));
+            CommonMethod.Sleep(500);
+
             temp = Send(new byte[] { 0x02 }, 0x10, uint.Parse(ConfigHelper.UdsParameters.TID, System.Globalization.NumberStyles.HexNumber));
             CommonMethod.Sleep(500);
             temp = Send(new byte[] { 0x01, 0xF1, 0x84, 0xF1, 0x1F, 0xF2, 0x2F }, 0x31, uint.Parse(ConfigHelper.UdsParameters.TID, System.Globalization.NumberStyles.HexNumber),16);
@@ -3763,6 +3769,7 @@ namespace Common.UDS
                     bytes1.Add(0x89);
                     break;
             }
+            CommonMethod.Sleep(100);
             var temp = Send(bytes1.ToArray(), 0x22);
             string version = "";
             if (ConfigHelper.UdsParameters.xieyi == "CAN" || ConfigHelper.UdsParameters.jiesuo == "VOYAH_H56C")
