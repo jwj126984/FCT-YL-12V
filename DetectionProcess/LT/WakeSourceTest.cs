@@ -1365,7 +1365,7 @@ namespace DetectionProcess.LT
             #region 电流唤醒
 
             XiuMian(1, true);
-            CommonMethod.Sleep(1000);
+            //CommonMethod.Sleep(1000);
 
             dl = CommonMethod.GetSleep1CurrentFromPower(awatiTime: 8, threshold: 10);
 
