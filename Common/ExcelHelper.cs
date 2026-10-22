@@ -94,6 +94,7 @@ namespace Common
                 //MergeCells(sheet, 1, 0, 6, str, cellStyle1, 10);
 
                 MergeCells(sheet, 1, 0, 0, $"产品名称:", cellStyle, 3);
+                //MergeCells(sheet, 1, 4, 6, $"{}", cellStyle, 3);
 
                 ////GL - E245 - C1011(2807030260)
                 //MergeCells(sheet, 1, 1, 2, $"SERES-C1011(2807030260)", cellStyle, 3);
@@ -111,9 +112,8 @@ namespace Common
 
                 MergeCells(sheet, 1, 3, 3, $"测试人员:", cellStyle, 3);
                 MergeCells(sheet, 1, 4, 6, $"{CommonData.CurrentUser.UserName}", cellStyle, 3);
-
                 MergeCells(sheet, 2, 0, 0, $"配置人员:", cellStyle, 3);
-                MergeCells(sheet, 2, 1, 2, $"{CommonData.Key_Vals.FirstOrDefault(m => m.CommKey == "配置人员").CommValue}", cellStyle, 3);
+                MergeCells(sheet, 2, 1, 2, $"李超", cellStyle, 3);
                 MergeCells(sheet, 2, 3, 3, $"配置时间:", cellStyle, 3);
                 MergeCells(sheet, 2, 4, 6, $"{CommonData.Key_Vals.FirstOrDefault(m => m.CommKey == "配置日期").CommValue}", cellStyle, 3);
 
