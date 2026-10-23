@@ -62,16 +62,32 @@ namespace DetectionProcess.LT
 
                 model = new TestResult();
                 model.ChildrenItem = "预编程次数";
-                model.QualifiedValue = "0000";
-            
+
+                if (ConfigHelper.UdsParameters.REPORT == "T09_M")
+                {
+                    model.QualifiedValue = "0000";
+                }
+                else
+                {
+                    model.QualifiedValue = "0001";
+                }
+
                 model.MeasureVal = s2;
                 model.Result = model.MeasureVal == model.QualifiedValue;
                 AddModelAction(model);
 
                 model = new TestResult();
                 model.ChildrenItem = "编程次数";
-                model.QualifiedValue = "0000";
-             
+
+                if (ConfigHelper.UdsParameters.REPORT == "T09_M")
+                {
+                    model.QualifiedValue = "0000";
+                }
+                else
+                {
+                    model.QualifiedValue = "0001";
+                }
+
                 model.MeasureVal = s3;
                 model.Result = model.MeasureVal == model.QualifiedValue;
                 AddModelAction(model);

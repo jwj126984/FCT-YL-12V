@@ -212,6 +212,8 @@ namespace Common
                         LogHelper.Debug("解锁失败");
                         return false;
                     }
+                    
+
                 }
             }
             
@@ -300,7 +302,9 @@ namespace Common
         {
             if (ConfigHelper.UdsParameters.jiesuo == "T09_M")
             {
+
                 threshold = 30;
+
             }
             if (ConfigHelper.UdsParameters.jiesuo == "ChangAn_C390")
             {

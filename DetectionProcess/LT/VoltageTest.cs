@@ -45,7 +45,6 @@ namespace DetectionProcess.LT
             LogHelper.Debug("开启继电器");
             bool result = true;
             result &= _relay.SetRelayCard1(18, true);
-
             result &= _relay.SetRelayCard1(19, true);
             result &= _relay.SetRelayCard1(20, true);
             result &= _relay.SetRelayCard1(21, true);
@@ -406,7 +405,6 @@ namespace DetectionProcess.LT
 
 
             result &= _relay.SetRelayCard1(18, false);
-
             result &= _relay.SetRelayCard1(19, false);
             result &= _relay.SetRelayCard1(20, false);
             result &= _relay.SetRelayCard1(21, false);

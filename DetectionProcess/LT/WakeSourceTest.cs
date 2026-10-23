@@ -952,6 +952,7 @@ namespace DetectionProcess.LT
 
                 if (ConfigHelper.UdsParameters.jiesuo != "WL_F710S")
                 {
+                    CommonMethod.Sleep(200);
                     GetWakeSource(model, 5);
                 }
                 //读取唤醒源
@@ -1621,7 +1622,9 @@ namespace DetectionProcess.LT
             if (flag== 1)
             {
 
+
                 CommonData.IT6322.SetVol(13.6);
+
             }
             else
             {
@@ -1777,7 +1780,7 @@ namespace DetectionProcess.LT
             #region 电流唤醒
 
             XiuMian(1, true);
-            CommonMethod.Sleep(1000);
+            //CommonMethod.Sleep(1000);
 
             dl = CommonMethod.GetSleep1CurrentFromPower(awatiTime: 8, threshold: 10);
             if (dl.Item1 == false)
@@ -1858,6 +1861,7 @@ namespace DetectionProcess.LT
             CommonMethod.StartSendAwaken();
 
             dl = CommonMethod.GetWorkCurrentFromPower(awatiTime: 8, threshold: 20);
+
             if (dl.Item1 == false)
             {
                 LogHelper.ShowMsg("Can唤醒失败");

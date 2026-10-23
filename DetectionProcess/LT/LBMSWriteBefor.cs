@@ -43,8 +43,16 @@ namespace DetectionProcess.LT
 
             if (ConfigHelper.UdsParameters.jiesuo == "T09_M")
             {
+
                 barCode = barCode.Substring(9);
-                PlayUDSHelper.GoToAPP();
+          
+
+          
+                if (ConfigHelper.UdsParameters.REPORT == "GAV_V57") {
+                    PlayUDSHelper.GoToAPP_V57();
+                } else {
+                    PlayUDSHelper.GoToAPP(); }
+
                 Thread.Sleep(1000);
                 CommonMethod.Unlock();
                 PlayUDSHelper.BarCodeCalibrateGQ(barCode);
