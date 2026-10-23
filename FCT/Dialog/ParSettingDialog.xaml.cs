@@ -293,7 +293,7 @@ namespace FCT.Dialog
                "VoltageTest," +
                "BalancedTest," +
                "CurrentLimiting," +
-               
+                "MOSSleepKeep," +
                "CurrentCalibration," +
                "CurrentCollection," +
                "WorkingCurrent," +
