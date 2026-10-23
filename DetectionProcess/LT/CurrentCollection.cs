@@ -333,7 +333,7 @@ namespace DetectionProcess.LT
                     {
                         CommonData.N69206H.SetOutput(false);
 
-                        CommonMethod.Sleep(300);
+                        CommonMethod.Sleep(500);
                         CommonData.N69206H.SetCCMode();
                         CommonData.N69206H.SetOutput(true);
                         CommonMethod.Sleep(100);

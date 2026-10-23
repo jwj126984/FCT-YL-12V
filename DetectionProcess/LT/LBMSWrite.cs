@@ -21,7 +21,7 @@ namespace DetectionProcess.LT
         {
             LogHelper.Debug("------LBMS写入------");
 
-            
+
 
             var par = pars.FirstOrDefault(m => m.ChildrenItem.Contains("硬件"));
             if (pars.Count() == 0)
@@ -33,7 +33,7 @@ namespace DetectionProcess.LT
             DateTime start = DateTime.Now;
 
             var barCode = CommonData.CurrentBarCode;
-            
+
 
             if (ConfigHelper.UdsParameters.jiesuo == "T09_M")
             {
@@ -55,7 +55,7 @@ namespace DetectionProcess.LT
                 TestResult model = new TestResult();
                 model.ChildrenItem = "指纹信息";
                 model.QualifiedValue = "FF000101FFFFFFFFFFFF";
-              
+
                 model.MeasureVal = s1;
                 model.Result = model.MeasureVal == model.QualifiedValue;
                 AddModelAction(model);
@@ -63,7 +63,7 @@ namespace DetectionProcess.LT
                 model = new TestResult();
                 model.ChildrenItem = "预编程次数";
 
-                if (ConfigHelper.UdsParameters.REPORT == "T09_M")
+                if (ConfigHelper.UdsParameters.REPORT == "T09_M" || ConfigHelper.UdsParameters.REPORT == "GAC_T75") 
                 {
                     model.QualifiedValue = "0000";
                 }
@@ -79,7 +79,7 @@ namespace DetectionProcess.LT
                 model = new TestResult();
                 model.ChildrenItem = "编程次数";
 
-                if (ConfigHelper.UdsParameters.REPORT == "T09_M")
+                if (ConfigHelper.UdsParameters.REPORT == "T09_M" || ConfigHelper.UdsParameters.REPORT == "GAC_T75")
                 {
                     model.QualifiedValue = "0000";
                 }

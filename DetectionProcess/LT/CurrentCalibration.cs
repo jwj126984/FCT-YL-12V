@@ -713,7 +713,7 @@ namespace DetectionProcess.LT
                         {
 
                             CommonData.N69206H.SetOutput(false);
-                            CommonMethod.Sleep(300);
+                            CommonMethod.Sleep(500);
                             CommonData.N69206H.SetCCModeh();
                             //CommonMethod.Sleep(100);
                             CommonData.N69206H.SetOutput(true);
@@ -723,7 +723,7 @@ namespace DetectionProcess.LT
                         else if (Math.Abs(CalibrateTempVal[t + 1].Item1) < 100 && flagfz == 0)
                         {
                             CommonData.N69206H.SetOutput(false);
-                            CommonMethod.Sleep(300);
+                            CommonMethod.Sleep(500);
                             CommonData.N69206H.SetCCMode();
                             //CommonMethod.Sleep(100);
                             CommonData.N69206H.SetOutput(true);
@@ -735,7 +735,8 @@ namespace DetectionProcess.LT
 
                         M3905D.SetVoltage(CalibrateTempVal[t + 1].Item2);
                         CommonData.M3905D.SetCurrentAndStable(CalibrateTempVal[t + 1].Item1, CalibrateTempVal[t + 1].Item2, CalibrateTempVal[t + 1].Item3 / 1000.0);
-                    
+                        CommonMethod.Sleep(500);
+
                         var curall2 = getProduceCurrent();
                         y1 = curall2.Item2;
                         x1 = curall2.Item1;
