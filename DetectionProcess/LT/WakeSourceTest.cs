@@ -22,7 +22,7 @@ namespace DetectionProcess.LT
         public override bool Start(IEnumerable<TestParameter> pars)
         {
 
-            if(ConfigHelper.UdsParameters.jiesuo == "QR_C1068")
+            if (ConfigHelper.UdsParameters.jiesuo == "QR_C1068")
             {
                 //判断是否存在休眠电流流程
                 var tempPar = CommonData.CurrentUserDetects.Select(m => m.Item1).FirstOrDefault(m => m == "SleepingCurrent");
@@ -40,6 +40,7 @@ namespace DetectionProcess.LT
                 currentVot = double.Parse(CommonData.N8331.GetVol4().Sum().ToString("0.0"));
                 //    CommonData.IT6122B.SetVoltageAndStable(12.8);
                 //CommonData.N8331.SetVol4(12 / 4);
+
                 CommonMethod.SetN8331(12.8);
 
 
@@ -272,6 +273,437 @@ namespace DetectionProcess.LT
                 CommonData.TestCount++;
                 return isSuccess;
             }
+            else if (ConfigHelper.UdsParameters.jiesuo == "T09_M")
+            {
+                //判断是否存在休眠电流流程
+                var tempPar = CommonData.CurrentUserDetects.Select(m => m.Item1).FirstOrDefault(m => m == "SleepingCurrent");
+                isTestSleepCurr = !string.IsNullOrEmpty(tempPar);
+
+                NewCanHelper.MOSControlVoltageEnable(true, false, false, gd: false);
+
+                LogHelper.Debug("------唤醒源测试------");
+                par = pars.FirstOrDefault();
+                if (par == null)
+                {
+                    //LogHelper.MessageBoxShow("未配置唤醒源参数");
+                    AddModelAction(new TestResult() { ChildrenItem = "唤醒源测试" });
+                    throw new Exception($"未配置唤醒源参数");
+                }
+                currentVot = double.Parse(CommonData.N8331.GetVol4().Sum().ToString("0.0"));
+
+                CommonMethod.SetN8331(13.6);
+
+
+
+                CommonData.IT6322.SetVol(13.2);
+
+                CommonMethod.Unlock();
+                PlayUDSHelper.SetSOC(100);
+
+                if (ConfigHelper.UdsParameters.jiesuo == "WL_F710S")
+                {
+
+
+                    CommonMethod.Unlock();
+                    CommonMethod.Sleep(200);
+                    PlayUDSHelper.GoToGC();
+                    CommonMethod.Sleep(200);
+                    PlayUDSHelper.SetSOC(98);
+                }
+
+
+                List<(double, double, double)> CalibrateTempVal = new List<(double, double, double)>();
+                CalibrateTempVal.Add((0, 0, 5));
+                CalibrateTempVal.Add((10, 5, 20));
+                CalibrateTempVal.Add((20, 5, 30));
+                CalibrateTempVal.Add((30, 5, 30));
+                CalibrateTempVal.Add((50, 5, 50));
+                CalibrateTempVal.Add((100, 10, 50));
+                CalibrateTempVal.Add((120, 10, 50));
+                CalibrateTempVal.Add((150, 10, 50));
+
+                bool isSuccess = true;
+                bool b1 = true;
+                TestResult model;
+
+                if (ConfigHelper.UdsParameters.jiesuo != "ChangAn_B216" && ConfigHelper.UdsParameters.jiesuo != "ChangAn_C390" && ConfigHelper.UdsParameters.jiesuo.Substring(0, 5) != "AVATR" &&
+                    ConfigHelper.UdsParameters.jiesuo != "RC_PK2C" && ConfigHelper.UdsParameters.jiesuo != "WL_F710S" && ConfigHelper.UdsParameters.jiesuo != "T09_M" && ConfigHelper.UdsParameters.jiesuo != "WL_C1046")
+                {
+                    model = new TestResult();
+                    model.StartTime = DateTime.Now;
+                    model.ChildrenItem = "RTC唤醒";
+                    model.QualifiedValue = ConfigHelper.UdsParameters.GetHX_RTC;
+                    model.MeasurementStandard = ConfigHelper.UdsParameters.GetHX_RTC;
+                    b1 = RTC();
+                    if (b1 == false)
+                    {
+                        isSuccess = false;
+                    }
+                    else
+                    {
+                        //model.Result = true;
+                    }
+                    CommonMethod.StartSendAwaken();
+                    GetWakeSource(model, 1);
+                    if (NewCanHelper.WakeOrSleep(true) == false)
+                    {
+                        LogHelper.ShowMsg("工装唤醒失败");
+                    }
+                    CommonMethod.Unlock();
+                    CommonMethod.StartSendUnlock();
+                    //读取唤醒源
+
+                    model.EndTime = DateTime.Now;
+                    if (model.Result == true)
+                    {
+                        model.DifferenceVal = "0.000";
+                    }
+                    else if (model.Result == false)
+                    {
+                        model.DifferenceVal = "1.000";
+                    }
+                    AddModelAction?.Invoke(model);
+
+                }
+
+
+
+
+
+                if (ConfigHelper.UdsParameters.jiesuo == "VOYAH_H56C")
+                {
+                    for (int i = 0; i < 2; i++)
+                    {
+                        for (int t = 0; t < 7; t++)
+                        {
+                            for (int j = 0; j < 2; j++)
+                            {
+                                model = new TestResult();
+
+                                model.StartTime = DateTime.Now;
+
+
+                                if (i == 0)
+                                {
+                                    if (j == 0)
+                                    {
+                                        model.MeasurementStandard = "[0.92,1.09]";
+                                        model.ChildrenItem = $"回读正向[{CalibrateTempVal[t].Item1}-{CalibrateTempVal[t + 1].Item1}]K";
+                                        GetK2(model, i * 14 + t * 2 + j);
+                                    }
+                                    else
+                                    {
+                                        model.MeasurementStandard = "[-1.2,1.2]";
+                                        model.ChildrenItem = $"回读正向[{CalibrateTempVal[t].Item1} - {CalibrateTempVal[t + 1].Item1}]B";
+                                        GetB(model, i * 14 + t * 2 + j);
+                                    }
+
+                                }
+                                else
+                                {
+                                    if (j == 0)
+                                    {
+                                        model.MeasurementStandard = "[0.92,1.09]";
+                                        model.ChildrenItem = $"回读反向[{CalibrateTempVal[t].Item1}-{CalibrateTempVal[t + 1].Item1}]K";
+                                        GetK2(model, i * 14 + t * 2 + j);
+                                    }
+                                    else
+                                    {
+                                        model.MeasurementStandard = "[-1.2,1.2]";
+                                        model.ChildrenItem = $"回读反向[{CalibrateTempVal[t].Item1} - {CalibrateTempVal[t + 1].Item1}]B";
+                                        GetB(model, i * 14 + t * 2 + j);
+                                    }
+                                }
+
+                                model.EndTime = DateTime.Now;
+
+                                AddModelAction?.Invoke(model);
+                            }
+
+                        }
+                    }
+
+                }
+
+                else if (ConfigHelper.UdsParameters.jiesuo != "VOYAH_H47A" && ConfigHelper.UdsParameters.jiesuo != "WL_C1046" && ConfigHelper.UdsParameters.jiesuo != "VOYAH_H97" &&
+                    ConfigHelper.UdsParameters.jiesuo != "ChangAn_B216" && ConfigHelper.UdsParameters.jiesuo != "ChangAn_C390" &&
+                    ConfigHelper.UdsParameters.jiesuo != "HQ_E702" && ConfigHelper.UdsParameters.jiesuo != "HQ_C1079" &&
+                    ConfigHelper.UdsParameters.jiesuo.Substring(0, 5) != "AVATR" && ConfigHelper.UdsParameters.jiesuo != "RC_PK2C" &&
+                    ConfigHelper.UdsParameters.jiesuo != "WL_F710S" && ConfigHelper.UdsParameters.jiesuo != "T09_M" && ConfigHelper.UdsParameters.jiesuo != "DF_DH1" && ConfigHelper.UdsParameters.jiesuo != "DF_XY-A")
+                {
+                    model = new TestResult();
+
+                    model.StartTime = DateTime.Now;
+                    model.ChildrenItem = "电流标定K值读取";
+                    model.MeasurementStandard = "0000 - FFFE";
+
+                    GetK(model);
+
+                    model.EndTime = DateTime.Now;
+
+                    AddModelAction?.Invoke(model);
+                }
+
+
+
+
+               
+
+
+                model = new TestResult();
+                model.StartTime = DateTime.Now;
+                model.ChildrenItem = "Can唤醒";
+                model.QualifiedValue = ConfigHelper.UdsParameters.GetHX_CAN;
+                model.MeasurementStandard = ConfigHelper.UdsParameters.GetHX_CAN;
+                b1 = CanHX();
+                if (b1 == false)
+                {
+                    isSuccess = false;
+                    model.Result = false;
+                }
+                else
+                {
+                    model.Result = true;
+                }
+
+                CommonMethod.StartSendAwaken();
+
+                if (ConfigHelper.UdsParameters.jiesuo != "WL_F710S")
+                {
+                    GetWakeSource(model, 5);
+                }
+                //读取唤醒源
+
+                if (NewCanHelper.WakeOrSleep(true) == false)
+                {
+                    LogHelper.ShowMsg("工装唤醒失败");
+                }
+                CommonMethod.Unlock();
+                CommonMethod.StartSendUnlock();
+
+
+
+
+                if (b1 == false)
+                {
+                    isSuccess = false;
+                    //model.Result = false;
+                }
+                else
+                {
+                    //model.Result = true;
+                }
+                model.EndTime = DateTime.Now;
+                if (model.Result == true)
+                {
+                    model.DifferenceVal = "0.000";
+                }
+                else if (model.Result == false)
+                {
+                    model.DifferenceVal = "1.000";
+                }
+                AddModelAction?.Invoke(model);
+
+                model = new TestResult();
+                model.StartTime = DateTime.Now;
+                model.ChildrenItem = "电流唤醒";
+                model.QualifiedValue = ConfigHelper.UdsParameters.GetHX_DL;
+                model.MeasurementStandard = ConfigHelper.UdsParameters.GetHX_DL;
+                b1 = DianLiu();
+                if (b1 == false)
+                {
+                    isSuccess = false;
+                    model.Result = false;
+                }
+                else
+                {
+                    model.Result = true;
+                }
+                CommonMethod.StartSendAwaken();
+
+                if (ConfigHelper.UdsParameters.jiesuo != "WL_F710S")
+                {
+                    GetWakeSource(model, 4);
+
+                }
+                if (NewCanHelper.WakeOrSleep(true) == false)
+                {
+                    LogHelper.MessageBoxShow("工装唤醒失败");
+                }
+
+                CommonMethod.Unlock();
+                CommonMethod.StartSendUnlock();
+                //读取唤醒源
+
+                model.EndTime = DateTime.Now;
+                if (model.Result == true)
+                {
+                    model.DifferenceVal = "0.000";
+                }
+                else if (model.Result == false)
+                {
+                    model.DifferenceVal = "1.000";
+                }
+                AddModelAction?.Invoke(model);
+
+
+                model = new TestResult();
+                model.StartTime = DateTime.Now;
+                model.ChildrenItem = "不可以帮电唤醒测试";
+                model.QualifiedValue = ConfigHelper.UdsParameters.GetHX_CAN;
+                model.MeasurementStandard = ConfigHelper.UdsParameters.GetHX_CAN;
+
+                CommonMethod.SetN8331(12.8);
+
+                b1 = GuoYa(2);
+
+
+                if (b1 == false)
+                {
+                    isSuccess = false;
+                    //model.Result = false;
+                }
+                else
+                {
+                    //model.Result = true;
+                }
+                CommonMethod.StartSendAwaken();
+                CommonMethod.Sleep(1000);
+                GetWakeSource(model, 2);
+                if (NewCanHelper.WakeOrSleep(true) == false)
+                {
+                    LogHelper.MessageBoxShow("工装唤醒失败");
+                }
+                CommonMethod.Unlock();
+                CommonMethod.StartSendUnlock();
+                //读取唤醒源
+
+
+                model.EndTime = DateTime.Now;
+                if (model.Result == true)
+                {
+                    model.DifferenceVal = "0.000";
+                }
+                else if (model.Result == false)
+                {
+                    model.DifferenceVal = "1.000";
+                }
+                AddModelAction?.Invoke(model);
+
+
+                model = new TestResult();
+                model.StartTime = DateTime.Now;
+                model.ChildrenItem = "硬件唤醒";
+                model.QualifiedValue = ConfigHelper.UdsParameters.GetHX_YJ;
+                model.MeasurementStandard = ConfigHelper.UdsParameters.GetHX_YJ;
+                b1 = YingJian();
+                if (b1 == false)
+                {
+                    isSuccess = false;
+                    //model.Result = false;
+                }
+                else
+                {
+                    //model.Result = true;
+                }
+
+                if (ConfigHelper.UdsParameters.jiesuo == "WL_F710S")
+                {
+                    NewCanHelper.WakeOrSleep(false);
+                    GetWakeSource(model, 3);
+                    CommonMethod.StartSendAwaken();
+                }
+                else
+                {
+                    CommonMethod.StartSendAwaken();
+
+
+                    GetWakeSource(model, 3);
+                }
+
+
+
+                if (NewCanHelper.WakeOrSleep(true) == false)
+                {
+                    LogHelper.MessageBoxShow("工装唤醒失败");
+                }
+                CommonMethod.Unlock();
+                CommonMethod.StartSendUnlock();
+                //读取唤醒源
+
+                CommonMethod.StartSendAwaken();
+
+                model.EndTime = DateTime.Now;
+                if (model.Result == true)
+                {
+                    model.DifferenceVal = "0.000";
+                }
+                else if (model.Result == false)
+                {
+                    model.DifferenceVal = "1.000";
+                }
+                AddModelAction?.Invoke(model);
+
+
+                model = new TestResult();
+                model.StartTime = DateTime.Now;
+                model.ChildrenItem = "可以帮电唤醒测试";
+                model.QualifiedValue = ConfigHelper.UdsParameters.GetHX_GY;
+                model.MeasurementStandard = ConfigHelper.UdsParameters.GetHX_GY;
+
+                b1 = GuoYa();
+
+
+                if (b1 == false)
+                {
+                    isSuccess = false;
+                    //model.Result = false;
+                }
+                else
+                {
+                    //model.Result = true;
+                }
+                CommonMethod.StartSendAwaken();
+                CommonMethod.Sleep(50);
+                GetWakeSource(model, 2);
+                if (NewCanHelper.WakeOrSleep(true) == false)
+                {
+                    LogHelper.MessageBoxShow("工装唤醒失败");
+                }
+                CommonMethod.Unlock();
+                CommonMethod.StartSendUnlock();
+                //读取唤醒源
+
+
+                model.EndTime = DateTime.Now;
+                if (model.Result == true)
+                {
+                    model.DifferenceVal = "0.000";
+                }
+                else if (model.Result == false)
+                {
+                    model.DifferenceVal = "1.000";
+                }
+                AddModelAction?.Invoke(model);
+
+                CommonMethod.Unlock();
+                PlayUDSHelper.MOSControl(MOSEnum.断开);//MOS断开
+
+
+
+
+                //CommonData.IT6122B.SetVoltageAndStable(currentVot);
+                CommonMethod.SetN8331(12.8);
+                PlayUDSHelper.SetSOC(80);
+
+                foreach (var item in sleepCurrResult.OrderByDescending(m => m.ChildrenItem))
+                {
+                    AddModelAction(item);
+                }
+                NewCanHelper.MOSControlVoltageEnable(true, false);
+                CommonData.TestCount++;
+                return isSuccess;
+            }
             else
             {
                 //判断是否存在休眠电流流程
@@ -289,34 +721,10 @@ namespace DetectionProcess.LT
                     throw new Exception($"未配置唤醒源参数");
                 }
                 currentVot = double.Parse(CommonData.N8331.GetVol4().Sum().ToString("0.0"));
-                //CommonData.IT6122B.SetVoltageAndStable(12);
-                //CommonData.N8331.SetVol4(12 / 4);
 
-                //    NewCanHelper.CtrolTotalCurrentCollection(true);
-
-                //PlayUDSHelper.SetSOC(90);
-                //CommonData.N69206H.SetCCModeh();
-                //CommonMethod.Sleep(100);
-                //CommonData.N69206H.SetOutput(true);
-                //CommonData.N69206H.SetCCModecurh(310);
-                ////设置电源
-                //CommonData.M3905D.SetOUTPut(1);
-                //CommonData.M3905D.SetVoltage(10);
-                //CommonData.M3905D.SetCurrent(310);
+                CommonMethod.SetN8331(12);
 
 
-                ////if (ConfigHelper.UdsParameters.jiesuo == "T09_M")
-                ////{
-                ////    Thread.Sleep(10000);
-                ////}
-                //CommonMethod.Sleep(4000);
-                //CommonData.M3905D.SetOUTPut(0);
-                //CommonData.N69206H.SetOutput(false);
-                //CommonData.M3905D.SetVoltage(0);
-
-                //NewCanHelper.CloseTotalCurrentCollection();
-
-                CommonMethod.SetN8331(13.2);
 
                 CommonData.IT6322.SetVol(13.2);
 
@@ -1200,25 +1608,31 @@ namespace DetectionProcess.LT
         }
 
 
-        public bool GuoYa()
+        public bool GuoYa(int flag = 1)
         {
             DateTime now = DateTime.Now;
             List<byte> data = new List<byte>();
             (bool, double) dl;
 
+            CommonMethod.SetN8331(12.8);
             //Class1.HuanXing(false);
             //发送休眠指令
-            if(ConfigHelper.UdsParameters.jiesuo == "T09_M")
+
+            if (flag== 1)
             {
-                CommonMethod.SetN8331(7);
-                CommonData.IT6322.SetVol(13);
+
+                CommonData.IT6322.SetVol(13.6);
             }
             else
             {
-                CommonData.IT6322.SetVol(14.5);
+                PlayUDSHelper.SetSOC(20);
+                CommonMethod.Sleep(60000);
+                CommonData.IT6322.SetVol(13);
             }
             
-            CommonMethod.Sleep(3000);
+            CommonMethod.Sleep(1000);
+
+
             #region 过压唤醒
             //关闭MOS
             ////MOS控制断开cmd
@@ -1235,15 +1649,19 @@ namespace DetectionProcess.LT
             
             dl = CommonMethod.GetSleep2CurrentFromPower(awatiTime: 8, threshold: GetSleepCurrMax("2"));
 
-            if (dl.Item1 == false)
+            if (flag == 1)
             {
-                AddSleepCurr("2", dl.Item2);
-                LogHelper.ShowMsg("过压唤醒二级休眠失败");
-              
-            }
-            else
-            {
-                AddSleepCurr("2", dl.Item2);
+
+                if (dl.Item1 == false)
+                {
+                    AddSleepCurr("2", dl.Item2);
+                    LogHelper.ShowMsg("过压唤醒二级休眠失败");
+
+                }
+                else
+                {
+                    AddSleepCurr("2", dl.Item2);
+                }
             }
 
 
@@ -1254,8 +1672,7 @@ namespace DetectionProcess.LT
          
 
             CommonData.IT6322.SetOutput(true);
-            CommonData.IT6322.SetVol(14.5);
-            CommonData.IT6322.SetOutput(true);
+          
 
             if (ConfigHelper.UdsParameters.jiesuo == "VOYAH_H47A" || ConfigHelper.UdsParameters.jiesuo == "VOYAH_H97" || ConfigHelper.UdsParameters.jiesuo == "RC_PK2C" || ConfigHelper.UdsParameters.jiesuo == "RC_PK1B"  ||
                 ConfigHelper.UdsParameters.jiesuo == "DF_DH1" || ConfigHelper.UdsParameters.jiesuo == "DF_XY-A" || ConfigHelper.UdsParameters.jiesuo == "WL_F710S")
@@ -1288,7 +1705,7 @@ namespace DetectionProcess.LT
             {
                 LogHelper.ShowMsg("过压唤醒成功");
             }
-            CommonMethod.SetN8331(12.8);
+       
 
             return true;
             #endregion
@@ -1310,20 +1727,16 @@ namespace DetectionProcess.LT
                 AddModelAction(new TestResult() { ChildrenItem = "唤醒源测试失败" });
                 throw new Exception("过压唤醒MOS控制断开失败");
             }
-            #region 硬件唤醒
-            XiuMian(1);
-            dl = CommonMethod.GetSleep1CurrentFromPower(awatiTime: 8, threshold: GetSleepCurrMax("1"));
 
+            #region 硬件唤醒
+            XiuMian(2);
+            dl = CommonMethod.GetSleep1CurrentFromPower(awatiTime: 8, threshold: GetSleepCurrMax("1"));
             if (dl.Item1 == false)
             {
-                AddSleepCurr("1", dl.Item2);
                 LogHelper.ShowMsg("硬件唤醒休眠失败");
                 return false;
             }
-            else
-            {
-                AddSleepCurr("1", dl.Item2);
-            }
+
             if (NewCanHelper.WakeOrSleep(true) == false)
             {
                 LogHelper.ShowMsg("硬件唤醒失败");
@@ -1367,12 +1780,17 @@ namespace DetectionProcess.LT
             CommonMethod.Sleep(1000);
 
             dl = CommonMethod.GetSleep1CurrentFromPower(awatiTime: 8, threshold: 10);
-
             if (dl.Item1 == false)
             {
+                AddSleepCurr("1", dl.Item2);
                 LogHelper.ShowMsg("电流唤醒休眠失败");
                 return false;
             }
+            else
+            {
+                AddSleepCurr("1", dl.Item2);
+            }
+           
             NewCanHelper.MOSControlVoltageEnable(true, false, false, gd: true);
             CommonMethod.Sleep(1000);
             //控制电流正向采集

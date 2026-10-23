@@ -5439,7 +5439,7 @@ namespace Common.UDS
             }
             else
             {
-                for (int i = 2; i < 22; i++)
+                for (int i = 2; i < 23; i++)
                 {
                     version += (char)temp.Item2[i];
 

@@ -43,7 +43,7 @@ namespace DetectionProcess.LT
 
             if (ConfigHelper.UdsParameters.jiesuo == "T09_M")
             {
-                barCode = barCode.Substring(0,11) + barCode.Substring(12, 7)+ barCode.Substring(20, 2);
+                barCode = barCode.Substring(9);
                 PlayUDSHelper.GoToAPP();
                 Thread.Sleep(1000);
                 CommonMethod.Unlock();

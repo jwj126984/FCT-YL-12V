@@ -578,11 +578,11 @@ namespace DetectionProcess.LT
                 LogHelper.Debug("初始化标定成功");
                 List<(double, double, double)> CalibrateTempVal = new List<(double, double, double)>();
 
-                CalibrateTempVal.Add((0, 0, 500));
-                CalibrateTempVal.Add((10, 5, 500));
-                CalibrateTempVal.Add((20, 5, 500));
-                CalibrateTempVal.Add((30, 5, 500));
-                CalibrateTempVal.Add((50, 5, 500));
+                CalibrateTempVal.Add((0, 0, 150));
+                CalibrateTempVal.Add((10, 5, 150));
+                CalibrateTempVal.Add((20, 5, 150));
+                CalibrateTempVal.Add((30, 5, 150));
+                CalibrateTempVal.Add((50, 5, 150));
                 CalibrateTempVal.Add((100, 10, 500));
                 CalibrateTempVal.Add((120, 10, 500));
                 CalibrateTempVal.Add((150, 10, 500));
@@ -640,7 +640,7 @@ namespace DetectionProcess.LT
 
 
 
-
+                        CommonMethod.Sleep(500);
 
 
                         var curall = getProduceCurrent();
@@ -691,34 +691,46 @@ namespace DetectionProcess.LT
                         {
                             //_canOperate.Send(data: "06 01 00 00 00 00 00 00");//正向
                             NewCanHelper.CtrolTotalCurrentCollection(false);
+                      
                         }
                         else
                         {
 
                             NewCanHelper.CtrolTotalCurrentCollection(true);
+
+                          
                             //_powerCMDM3905D.SetCurrent(350);
                         }
                     }
 
 
-                    CommonData.N69206H.SetCCMode();
-
+                    int flagfzh = 0;
                     int flagfz = 0;
-
                     for (int t = 0; t < CalibrateTempVal.Count - 1; t++)
                     {
 
-                        if (Math.Abs(CalibrateTempVal[t + 1].Item1) >= 100 && flagfz == 0)
+                        if (Math.Abs(CalibrateTempVal[t + 1].Item1) >= 100 && flagfzh == 0)
                         {
 
                             CommonData.N69206H.SetOutput(false);
-                            CommonMethod.Sleep(150);
+                            CommonMethod.Sleep(300);
                             CommonData.N69206H.SetCCModeh();
+                            //CommonMethod.Sleep(100);
+                            CommonData.N69206H.SetOutput(true);
+                            CommonMethod.Sleep(100);
+                            flagfzh = 1;
+                        }
+                        else if (Math.Abs(CalibrateTempVal[t + 1].Item1) < 100 && flagfz == 0)
+                        {
+                            CommonData.N69206H.SetOutput(false);
+                            CommonMethod.Sleep(300);
+                            CommonData.N69206H.SetCCMode();
                             //CommonMethod.Sleep(100);
                             CommonData.N69206H.SetOutput(true);
                             CommonMethod.Sleep(100);
                             flagfz = 1;
                         }
+                    
 
 
                         M3905D.SetVoltage(CalibrateTempVal[t + 1].Item2);

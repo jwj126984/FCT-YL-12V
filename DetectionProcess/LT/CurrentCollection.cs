@@ -322,7 +322,7 @@ namespace DetectionProcess.LT
                     if (Math.Abs(parameter.QualifiedValue.Value) >= 100 && flagfz == 0)
                     {
                         CommonData.N69206H.SetOutput(false);
-                        CommonMethod.Sleep(150);
+                        CommonMethod.Sleep(300);
                         CommonData.N69206H.SetCCModeh();
                         CommonData.N69206H.SetOutput(true);
                         CommonMethod.Sleep(100);
@@ -330,8 +330,13 @@ namespace DetectionProcess.LT
                     }
                     else if (Math.Abs(parameter.QualifiedValue.Value) < 100 && flagfz == 1)
                     {
-
+                        CommonData.N69206H.SetOutput(false);
+                        CommonMethod.Sleep(300);
                         CommonData.N69206H.SetCCMode();
+                        CommonData.N69206H.SetOutput(true);
+                        CommonMethod.Sleep(100);
+                      
+                       
                         flagfz = 0;
                     }
 

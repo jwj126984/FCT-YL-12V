@@ -37,7 +37,7 @@ namespace DetectionProcess.LT
 
             if (ConfigHelper.UdsParameters.jiesuo == "T09_M")
             {
-                barCode = barCode.Substring(0, 11) + barCode.Substring(12, 7) + barCode.Substring(20, 2);
+                barCode = barCode.Substring(9);
                 string s1 = null;
                 string s2 = null;
                 string s3 = null;
@@ -62,7 +62,7 @@ namespace DetectionProcess.LT
 
                 model = new TestResult();
                 model.ChildrenItem = "预编程次数";
-                model.QualifiedValue = "0001";
+                model.QualifiedValue = "0000";
             
                 model.MeasureVal = s2;
                 model.Result = model.MeasureVal == model.QualifiedValue;
@@ -70,7 +70,7 @@ namespace DetectionProcess.LT
 
                 model = new TestResult();
                 model.ChildrenItem = "编程次数";
-                model.QualifiedValue = "0001";
+                model.QualifiedValue = "0000";
              
                 model.MeasureVal = s3;
                 model.Result = model.MeasureVal == model.QualifiedValue;
