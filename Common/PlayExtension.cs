@@ -141,6 +141,14 @@ namespace Common
             {
                 return "分流器阻抗测量";
             }
+            else if (name == "Discur")
+            {
+                return "放电测试";
+            }
+            else if (name == "Cur0A")
+            {
+                return "0A时电流采集测试";
+            }
             else if (name == "endcs")
             {
                 return "出厂设置测试";

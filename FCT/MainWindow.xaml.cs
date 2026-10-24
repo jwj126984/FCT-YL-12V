@@ -1615,7 +1615,7 @@ namespace FCT
 
                "MOSControl," +
                "ModuleTemperature," +
-
+                "Cur0A," +
                "VoltageTest," +
 
                "BalancedTest," +
@@ -1683,9 +1683,9 @@ namespace FCT
                 {
                     detectItems = "CanTRTest,ProduceRead,PCBTemperature,MOSControl,ModuleTemperature,VoltageTest,BalancedTest,CurrentLimiting,CurrentCalibration,CurrentCollection,WorkingCurrent,WakeSourceTest,SleepingCurrent,ClearAH,SOCAndSOH,LBMSWrite,ClearDTC,BalancedAndAFE";
                 }
-                else if (jiesuo == "DF_DH1" || jiesuo == "DF_XY-A")
+                else if (jiesuo == "DF_DH1" || jiesuo == "DF_XY-A" || jiesuo == "VOYAH_H97" || jiesuo == "VOYAH_H47A")
                 {
-                    detectItems = "CanTRTest,ProduceRead,PCBTemperature,MOSControl,ModuleTemperature,Discur,VoltageTest,BalancedTest,CurrentLimiting,MOSSleepKeep,CurrentCalibration,CurrentCollection,WorkingCurrent,WakeSourceTest,SleepingCurrent,ClearAH,SOCAndSOH,LBMSWrite,ClearDTC,BalancedAndAFE";
+                    detectItems = "CanTRTest,ProduceRead,PCBTemperature,MOSControl,ModuleTemperature,Discur,VoltageTest,BalancedTest,CurrentLimiting,MOSSleepKeep,CurrentCalibration,CurrentCollection,WorkingCurrent,WakeSourceTest,SleepingCurrent,EEPROMTest,ClearAH,SOCAndSOH,LBMSWrite,ClearDTC,BalancedAndAFE";
                 }
                 else if (jiesuo == "WL_C1046")
                 {

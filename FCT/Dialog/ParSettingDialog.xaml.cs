@@ -198,6 +198,7 @@ namespace FCT.Dialog
                    
                "MOSControl," +
                "ModuleTemperature," +
+               "Cur0A," +
                 
                "VoltageTest," +
                   

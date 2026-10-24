@@ -44,6 +44,7 @@
     <Compile Include="DetectionHelper.cs" />
     <Compile Include="LT\BalancedAndAFE.cs" />
     <Compile Include="LT\BalancedTest.cs" />
+    <Compile Include="LT\Cur0A.cs" />
     <Compile Include="LT\endcs.cs" />
     <Compile Include="LT\Discur.cs" />
     <Compile Include="LT\FenLiuR.cs" />
