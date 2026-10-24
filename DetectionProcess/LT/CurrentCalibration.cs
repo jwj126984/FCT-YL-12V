@@ -569,7 +569,7 @@ namespace DetectionProcess.LT
                             //    throw new Exception("电流初始化标定失败");
                             //    //return false;
                             //}
-                            CommonMethod.Sleep(150);
+                            CommonMethod.Sleep(200);
                         }
 
                     }
@@ -578,14 +578,14 @@ namespace DetectionProcess.LT
                 LogHelper.Debug("初始化标定成功");
                 List<(double, double, double)> CalibrateTempVal = new List<(double, double, double)>();
 
-                CalibrateTempVal.Add((0, 0, 150));
-                CalibrateTempVal.Add((10, 5, 150));
-                CalibrateTempVal.Add((20, 5, 150));
-                CalibrateTempVal.Add((30, 5, 150));
-                CalibrateTempVal.Add((50, 5, 150));
-                CalibrateTempVal.Add((100, 10, 500));
-                CalibrateTempVal.Add((120, 10, 500));
-                CalibrateTempVal.Add((150, 10, 500));
+                CalibrateTempVal.Add((0, 0, 20));
+                CalibrateTempVal.Add((10, 5, 50));
+                CalibrateTempVal.Add((20, 5, 50));
+                CalibrateTempVal.Add((30, 5, 50));
+                CalibrateTempVal.Add((50, 5, 50));
+                CalibrateTempVal.Add((100, 10, 100));
+                CalibrateTempVal.Add((120, 10, 100));
+                CalibrateTempVal.Add((150, 10, 100));
 
 
                 LogHelper.Debug("MOS闭合");
@@ -698,7 +698,7 @@ namespace DetectionProcess.LT
 
                             NewCanHelper.CtrolTotalCurrentCollection(true);
 
-                          
+                            CommonMethod.Sleep(2000);
                             //_powerCMDM3905D.SetCurrent(350);
                         }
                     }
@@ -735,11 +735,15 @@ namespace DetectionProcess.LT
 
                         M3905D.SetVoltage(CalibrateTempVal[t + 1].Item2);
                         CommonData.M3905D.SetCurrentAndStable(CalibrateTempVal[t + 1].Item1, CalibrateTempVal[t + 1].Item2, CalibrateTempVal[t + 1].Item3 / 1000.0);
-                        CommonMethod.Sleep(500);
+                        CommonMethod.Sleep(600);
 
                         var curall2 = getProduceCurrent();
+
+
                         y1 = curall2.Item2;
                         x1 = curall2.Item1;
+
+                        LogHelper.ShowMsg($"设备电流:{y1},产品电流{x1}");
                         if (i == 1)
                         {
                             y1 = -y1;
@@ -816,7 +820,7 @@ namespace DetectionProcess.LT
                             //    //}
 
                             //}
-                            CommonMethod.Sleep(100);
+                            CommonMethod.Sleep(200);
                         }
                         if (ConfigHelper.UdsParameters.jiesuo == "T09_M")
                         {
