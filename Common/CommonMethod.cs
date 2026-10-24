@@ -352,7 +352,7 @@ namespace Common
         /// <returns></returns>
         public static (bool, double) GetSleep1CurrentFromPower(double awatiTime = 8, double threshold = 5)
         {
-
+            var par = CommonData.TestParameters.FirstOrDefault(m => m.Extend1 == "1" && m.MedthodName.ToLower() == "SleepingCurrent".ToLower());
             DateTime now = DateTime.Now;
             List<double> list = new List<double>();
             LogHelper.ShowMsg($"threshold:{threshold}");
@@ -377,7 +377,7 @@ namespace Common
                         }
                         LogHelper.ShowMsg($"xm{curr}");
                         list.Add(curr);
-                        if (curr >= 0 && curr < threshold)
+                        if (curr > par.MinVal.Value && curr < par.MaxVal.Value)
                         {
                             return (true, curr);
                         }

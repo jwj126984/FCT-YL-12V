@@ -290,12 +290,14 @@ namespace FCT.Dialog
                "PCBTemperature," +
                "MOSControl," +
                "ModuleTemperature," +
+                   "Discur," +
                "VoltageTest," +
                "BalancedTest," +
                "CurrentLimiting," +
                 "MOSSleepKeep," +
                "CurrentCalibration," +
                "CurrentCollection," +
+           
                "WorkingCurrent," +
                "WakeSourceTest," +
                "SleepingCurrent," +

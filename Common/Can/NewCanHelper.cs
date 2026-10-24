@@ -89,6 +89,7 @@ namespace Common.Can
             try
             {
                 bool result1 = _toolControl.SetDL3(b);
+                CommonMethod.Sleep(20);
                 bool result2 = _toolControl.SetDL4(b);
                 return result1 && result2;
             }
