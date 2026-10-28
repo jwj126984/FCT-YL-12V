@@ -269,6 +269,8 @@ namespace DetectionProcess.LT
                 LogHelper.Debug("------均衡测试------");
 
 
+          
+
 
                 var par = pars.FirstOrDefault();
                 if (par == null)
@@ -290,7 +292,13 @@ namespace DetectionProcess.LT
                 CommonData.IT6322.SetOutput(true);
                 CommonData.IT6322.SetVol(14.5);
                 CommonMethod.Sleep(200);
-                NewCanHelper.MOSControlVoltageEnable(true, true, true, false, false);
+                NewCanHelper.MOSControlVoltageEnable(true, false, false, gd: false);
+
+                var b11 = double.Parse(CommonData.N8331.SelectCurr(1));
+                var b21 = double.Parse(CommonData.N8331.SelectCurr(2));
+                var b31 = double.Parse(CommonData.N8331.SelectCurr(3));
+                var b41 = double.Parse(CommonData.N8331.SelectCurr(4));
+                var aa1 = CommonData.NXI_6400.GetCResult(1).Item1.FirstOrDefault() * 1000;
 
                 var result1 = new double[4] { -1, -1, -1, -1 };
 
@@ -320,35 +328,26 @@ namespace DetectionProcess.LT
                 else
                 {
                     {
+
                         //开启均衡1 3
                         if (PlayUDSHelper.StartChannelBalance(true) == false)
                         {
                             AddModelAction(new TestResult() { ChildrenItem = "均衡测试失败" });
                             throw new Exception("开启1、3通道均衡失败");
                         }
+                        //NewCanHelper.MOSControlVoltageEnable(true, false, false, gd: false);
 
-                        //{
-                        //    DateTime now = DateTime.Now;
-                        //    int awaitTime = 5;
-                        //    while (true)
-                        //    {
-                        //        if (PlayUDSHelper.AwaitStartChannelBalance() == true)
-                        //        {
-                        //            break;
-                        //        }
-                        //        if ((DateTime.Now - now).TotalSeconds > awaitTime)
-                        //        {
-                        //            LogHelper.Debug("等待开启1、3通道均衡超时");
-                        //            break;
-                        //            //return false;
-                        //        }
-                        //    }
-                        //}
+                        var b1 = double.Parse(CommonData.N8331.SelectCurr(1));
+                        var b2 = double.Parse(CommonData.N8331.SelectCurr(2));
+                        var b3 = double.Parse(CommonData.N8331.SelectCurr(3));
+                        var b4 = double.Parse(CommonData.N8331.SelectCurr(4));
+                        var aa = CommonData.NXI_6400.GetCResult(1).Item1.FirstOrDefault() * 1000;
+
                         for (int i = 0; i < 60; i++)
                         {
 
                             //查询第一通道电流
-                            var temp1 = double.Parse(CommonData.N8331.SelectCurr(1));
+                            var temp1 = double.Parse(CommonData.N8331.SelectCurr(1)) - CommonData.NXI_6400.GetCResult(1).Item1.FirstOrDefault() * 1000;
                             if (temp1 < par.MaxVal && temp1 > par.MinVal)
                             {
                                 if (result1[0] == -1)
@@ -358,7 +357,7 @@ namespace DetectionProcess.LT
                             }
 
                             //查询第三通道电流
-                            var temp2 = double.Parse(CommonData.N8331.SelectCurr(3));
+                            var temp2 = double.Parse(CommonData.N8331.SelectCurr(3)) - CommonData.NXI_6400.GetCResult(1).Item1.FirstOrDefault() * 1000;
                             if (temp2 < par.MaxVal && temp2 > par.MinVal)
                             {
                                 if (result1[2] == -1)
@@ -387,7 +386,8 @@ namespace DetectionProcess.LT
                         {
 
                             //查询第一通道电流
-                            var temp1 = double.Parse(CommonData.N8331.SelectCurr(2));
+                            var temp1 = double.Parse(CommonData.N8331.SelectCurr(2)) - CommonData.NXI_6400.GetCResult(1).Item1.FirstOrDefault() * 1000;
+                       
                             if (temp1 < par.MaxVal && temp1 > par.MinVal)
                             {
                                 if (result1[1] == -1)
@@ -397,7 +397,7 @@ namespace DetectionProcess.LT
                             }
 
                             //查询第三通道电流
-                            var temp2 = double.Parse(CommonData.N8331.SelectCurr(4));
+                            var temp2 = double.Parse(CommonData.N8331.SelectCurr(4)) - CommonData.NXI_6400.GetCResult(1).Item1.FirstOrDefault() * 1000;
                             if (temp2 < par.MaxVal && temp2 > par.MinVal)
                             {
                                 if (result1[3] == -1)
@@ -432,6 +432,8 @@ namespace DetectionProcess.LT
                         throw new Exception("结束通道均衡控制失败");
                     }
                 }
+              
+
 
 
 
@@ -482,11 +484,76 @@ namespace DetectionProcess.LT
                 model.StartTime = startTime.AddSeconds(span * 3);
                 model.EndTime = startTime.AddSeconds(span * 4);
                 AddModelAction(model);
+                if (ConfigHelper.UdsParameters.jiesuo == "T09_M")
+                {
+                    PlayUDSHelper.CloseChannelBalance();
+                    CommonMethod.Sleep(3000);
+
+                    double g1 = double.Parse(CommonData.N8331.SelectCurr(1)) - CommonData.NXI_6400.GetCResult(1).Item1.FirstOrDefault() * 1000;
+
+                    var a = CommonData.N8331.SelectCurr(1);
+                    var b = CommonData.NXI_6400.GetCResult(1).Item1.FirstOrDefault() * 1000;
+
+                    double g2 = double.Parse(CommonData.N8331.SelectCurr(2)) - CommonData.NXI_6400.GetCResult(1).Item1.FirstOrDefault() * 1000;
+                    var a2 = CommonData.N8331.SelectCurr(2);
+                    var b2 = CommonData.NXI_6400.GetCResult(1).Item1.FirstOrDefault() * 1000;
+                    double g3 = double.Parse(CommonData.N8331.SelectCurr(3)) - CommonData.NXI_6400.GetCResult(1).Item1.FirstOrDefault() * 1000;
+                    var a3 = CommonData.N8331.SelectCurr(3);
+                    var b3 = CommonData.NXI_6400.GetCResult(1).Item1.FirstOrDefault() * 1000;
+                    double g4 = double.Parse(CommonData.N8331.SelectCurr(4)) - CommonData.NXI_6400.GetCResult(1).Item1.FirstOrDefault() * 1000;
+                    var a4 = CommonData.N8331.SelectCurr(4);
+                    var b4 = CommonData.NXI_6400.GetCResult(1).Item1.FirstOrDefault() * 1000;
+
+
+                    model = new TestResult();
+                    model.ChildrenItem = "均衡电流测试通道1关闭";
+                    model.MeasurementStandard = "<1mA";
+                    model.QualifiedValue = "<1mA";
+                    model.MeasureVal = g1.ToString("0.000");
+                    model.Result = g1 < 1;
+                    model.StartTime = startTime;
+                    model.EndTime = startTime.AddSeconds(span);
+                    AddModelAction(model);
+
+                    model = new TestResult();
+                    model.ChildrenItem = "均衡电流测试通道2关闭";
+                    model.MeasurementStandard = "<1mA";
+                    model.QualifiedValue = "<1mA";
+                    model.MeasureVal = g2.ToString("0.000");
+                    model.Result = g2 < 1;
+                    model.StartTime = startTime;
+                    model.EndTime = startTime.AddSeconds(span);
+                    AddModelAction(model);
+
+                    model = new TestResult();
+                    model.ChildrenItem = "均衡电流测试通道3关闭";
+                    model.MeasurementStandard = "<1mA";
+                    model.QualifiedValue = "<1mA";
+                    model.MeasureVal = g3.ToString("0.000");
+                    model.Result = g3 < 1;
+                    model.StartTime = startTime;
+                    model.EndTime = startTime.AddSeconds(span);
+                    AddModelAction(model);
+
+                    model = new TestResult();
+                    model.ChildrenItem = "均衡电流测试通道4关闭";
+                    model.MeasurementStandard = "<1mA";
+                    model.QualifiedValue = "<1mA";
+                    model.MeasureVal = g4.ToString("0.000");
+                    model.Result = g4 < 1;
+                    model.StartTime = startTime;
+                    model.EndTime = startTime.AddSeconds(span);
+                    AddModelAction(model);
+                }
+
 
                 NewCanHelper.MOSControlVoltageEnable(true, false, false);
                 CommonData.IT6322.SetOutput(false);
                 CommonData.IT6322.SetVol(13.7);
                 CommonData.TestCount++;
+                
+
+
                 return true;
             }
 

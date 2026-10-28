@@ -1630,6 +1630,7 @@ namespace FCT
 
 
                "ClearAH," +
+               "AHClearConfirm,"+
                "SOCAndSOH," +
                "LBMSWrite," +
                "ClearDTC," +
