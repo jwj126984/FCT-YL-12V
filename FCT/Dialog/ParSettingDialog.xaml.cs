@@ -216,25 +216,20 @@ namespace FCT.Dialog
                 detect = "CanTRTest," +
                "ProduceRead," +
                "PCBTemperature," +
-                   
                "MOSControl," +
                "ModuleTemperature," +
                "Cur0A," +
-                
                "VoltageTest," +
-                  
                "BalancedTest," +
                "CurrentLimiting," +
-               
                "CurrentCalibration," +
                "CurrentCollection," +
                "WorkingCurrent," +
                  "MOSSleepKeep," +
                "WakeSourceTest," +
                "SleepingCurrent," +
-              
-
                "ClearAH," +
+               "AHClearConfirm," +
                "SOCAndSOH," +
                "LBMSWrite," +
                "ClearDTC," +

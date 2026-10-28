@@ -313,6 +313,10 @@ namespace Common
             {
                 return "清除累计充放电AH";
             }
+            else if (name == "AHClearConfirm")
+            {
+                return "累积充放电AH数清除确认";
+            }
 
             return name;
         }

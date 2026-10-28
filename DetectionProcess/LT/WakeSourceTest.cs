@@ -1029,10 +1029,10 @@ namespace DetectionProcess.LT
                 }
                 AddModelAction?.Invoke(model);
 
-                if (ConfigHelper.UdsParameters.jiesuo == "T09_M")
-                {
-                    PlayUDSHelper.ClearError();
-                }
+                //if (ConfigHelper.UdsParameters.jiesuo == "T09_M")
+                //{
+                //    PlayUDSHelper.ClearError();
+                //}
                 model = new TestResult();
                 model.StartTime = DateTime.Now;
                 model.ChildrenItem = "帮电唤醒";

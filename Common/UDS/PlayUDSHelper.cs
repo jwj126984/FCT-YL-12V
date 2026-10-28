@@ -1692,7 +1692,7 @@ namespace Common.UDS
         public static bool CloseChannelBalance()
         {
             LogHelper.Debug("关闭均衡通道");
-            byte[] arr = new byte[] { 0x61, 0x01, 0x00 };
+            byte[] arr = new byte[] { 0x4E, 0xA1, 0x03,0x00 };
             var temp = Send(arr, 0x2F);
             if (temp != null && temp.Item1 == 0x6F)
             {

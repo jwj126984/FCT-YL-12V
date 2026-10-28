@@ -274,6 +274,12 @@ namespace DetectionProcess.LT
                 CommonData.N69206H.SetCCMode();
                 foreach (var parameter in parsTemp)
                 {
+
+                    if (ConfigHelper.UdsParameters.jiesuo == "T09_M"&& Math.Abs(parameter.QualifiedValue.Value) == 1)
+                    {
+                        continue;
+
+                    }
                     DateTime start = DateTime.Now;
                     if (ConfigHelper.UdsParameters.jiesuo == "HQ_C1079" && parameter.QualifiedValue.Value == 1000)
                     {

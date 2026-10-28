@@ -40,13 +40,18 @@ namespace DetectionProcess.LT
             //}
             #endregion
 
-         //   NewCanHelper.SetCellTemperature(45);
-           
+            //   NewCanHelper.SetCellTemperature(45);
+
             var model = new TestResult() { ChildrenItem = "清除故障" };
             //model.
             CommonMethod.Unlock();
             PlayUDSHelper.ClearError();
+            CommonMethod.StopSendUnlock();
+
             CommonMethod.Sleep(200);
+
+
+            model.Result = false;
             if (PlayUDSHelper.ClearError())
             {
                 model.Result = true;
@@ -54,10 +59,50 @@ namespace DetectionProcess.LT
             }
             else
             {
-                model.Result = false;
-                AddModelAction(model);
-                return false;
+                int i;
+                for (i = 0; model.Result == false && i < 19; i++)
+                {
+                    CommonMethod.Sleep(1000);
+                    if (PlayUDSHelper.ClearError())
+                    {
+                        model.Result = true;
+                        AddModelAction(model);
+                        continue;
+                    }
+
+                }
+                if (i == 10)
+                {
+                    model.Result = false;
+                    AddModelAction(model);
+                    return false;
+                }
+
             }
+
+            //}
+            //if (PlayUDSHelper.ClearError())
+            //{
+            //    model.Result = true;
+            //    AddModelAction(model);
+            //}
+            //else
+            //{
+            //    CommonMethod.Sleep(3000);
+            //    if (PlayUDSHelper.ClearError())
+            //    {
+            //        model.Result = true;
+            //        AddModelAction(model);
+            //    }
+            //    else
+            //    {
+            //        model.Result = false;
+            //        AddModelAction(model);
+            //        return false;
+            //    }
+            //}
+            CommonMethod.StartSendUnlock();
+
             CommonData.TestCount++;
             return true;
         }
