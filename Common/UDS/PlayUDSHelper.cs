@@ -1349,7 +1349,7 @@ namespace Common.UDS
 
             if (ConfigHelper.UdsParameters.jiesuo == "ChangAn_C390" || ConfigHelper.UdsParameters.jiesuo == "DF_DH1" || ConfigHelper.UdsParameters.jiesuo == "DF_XY-A" ||
                 ConfigHelper.UdsParameters.jiesuo == "JAC_X6" || ConfigHelper.UdsParameters.jiesuo == "HQ_E702" || ConfigHelper.UdsParameters.jiesuo == "HQ_C1079" || ConfigHelper.UdsParameters.jiesuo == "ChangAn_B216" || 
-                ConfigHelper.UdsParameters.jiesuo == "WL_F710S" )
+                ConfigHelper.UdsParameters.jiesuo == "WL_F710S" || ConfigHelper.UdsParameters.jiesuo == "CN_D7")
             {
                 len = 0x40;
             }
@@ -1364,7 +1364,7 @@ namespace Common.UDS
                 len = 0x14;
             }
 
-            if ((!ConfigHelper.Cantype && len == 0x40 )|| ConfigHelper.UdsParameters.jiesuo == "DF_DH1" || ConfigHelper.UdsParameters.jiesuo == "DF_XY-A")
+            if ((!ConfigHelper.Cantype && len == 0x40 )|| ConfigHelper.UdsParameters.jiesuo == "DF_DH1" || ConfigHelper.UdsParameters.jiesuo == "DF_XY-A" || ConfigHelper.UdsParameters.jiesuo == "CN_D7")
             {
 
                 string data = $"10 12 27 02 {((byte)bytes[0]).ToString("X2")} {((byte)bytes[1]).ToString("X2")} {((byte)bytes[2]).ToString("X2")} {((byte)bytes[3]).ToString("X2")}";
@@ -1586,28 +1586,58 @@ namespace Common.UDS
             LogHelper.Debug("开启均衡");
             List<byte> arr = HexChange(ConfigHelper.UdsParameters.JHStart_DID);
             byte b;
-            if (isc1AndC3.HasValue)
+            if (ConfigHelper.UdsParameters.jiesuo == "CN_D7")
             {
-                b = (byte)(isc1AndC3.Value ? 0x05 : 0x0A);
-            }
-            else if(index > -1)
-            {
-                b = (byte)(1 << index);
+                if (isc1AndC3.Value)
+                {
+                    arr.Add(0x01);
+                    arr.Add(0x00);
+                    arr.Add(0x01);
+                    arr.Add(0x00);
+                }
+                else
+                {
+                    arr.Add(0x00);
+                    arr.Add(0x01);
+                    arr.Add(0x00);
+                    arr.Add(0x01);
+                }
+
+                var temp = Send(arr.ToArray(), byte.Parse(ConfigHelper.UdsParameters.JHStart_SID, System.Globalization.NumberStyles.HexNumber), uint.Parse(ConfigHelper.UdsParameters.TID, System.Globalization.NumberStyles.HexNumber), 12);
+                if (temp != null)
+                {
+                    if (temp.Item1 == 0x6f || temp.Item1 == 0x71)
+                    {
+                        return true;
+                    }
+                }
             }
             else
             {
-                b = 0x0f;
-            }
-            arr.Add(b);
-            var temp = Send(arr.ToArray(), byte.Parse(ConfigHelper.UdsParameters.JHStart_SID, System.Globalization.NumberStyles.HexNumber), uint.Parse(ConfigHelper.UdsParameters.TID, System.Globalization.NumberStyles.HexNumber));
-            if (temp != null)
-            {
-                if (temp.Item1 == 0x6f || temp.Item1 == 0x71 )
+                if (isc1AndC3.HasValue)
                 {
-                    return true;
+                    b = (byte)(isc1AndC3.Value ? 0x05 : 0x0A);
+                }
+                else if (index > -1)
+                {
+                    b = (byte)(1 << index);
+                }
+                else
+                {
+                    b = 0x0f;
+                }
+                arr.Add(b);
+                var temp = Send(arr.ToArray(), byte.Parse(ConfigHelper.UdsParameters.JHStart_SID, System.Globalization.NumberStyles.HexNumber), uint.Parse(ConfigHelper.UdsParameters.TID, System.Globalization.NumberStyles.HexNumber));
+                if (temp != null)
+                {
+                    if (temp.Item1 == 0x6f || temp.Item1 == 0x71)
+                    {
+                        return true;
+                    }
                 }
             }
-            return false;
+                return false;
+            
         }
 
         public static bool StartChannelBalance1068(bool? isc1AndC3 = null, int index = -1)
@@ -1678,10 +1708,21 @@ namespace Common.UDS
         {
             LogHelper.Debug("结束均衡控制");
             List<byte> arr = HexChange(ConfigHelper.UdsParameters.JHEnd_DID);
-            var temp = Send(arr.ToArray(), byte.Parse(ConfigHelper.UdsParameters.JHEnd_SID, System.Globalization.NumberStyles.HexNumber));
-            if (temp != null && temp.Item1 == 0x6F)
+            if (ConfigHelper.UdsParameters.jiesuo == "CN_D7")
             {
-                return true;
+                var temp = Send(arr.ToArray(), byte.Parse(ConfigHelper.UdsParameters.JHEnd_SID, System.Globalization.NumberStyles.HexNumber), uint.Parse(ConfigHelper.UdsParameters.TID, System.Globalization.NumberStyles.HexNumber), 12);
+                if (temp != null && temp.Item1 == 0x6F)
+                {
+                    return true;
+                }
+            }
+            else
+            {
+                var temp = Send(arr.ToArray(), byte.Parse(ConfigHelper.UdsParameters.JHEnd_SID, System.Globalization.NumberStyles.HexNumber));
+                if (temp != null && temp.Item1 == 0x6F)
+                {
+                    return true;
+                }
             }
             return false;
         }
@@ -1866,6 +1907,45 @@ namespace Common.UDS
                 var temp = Send(arr.ToArray(), byte.Parse(ConfigHelper.UdsParameters.MOSControl_SID, System.Globalization.NumberStyles.HexNumber));
 
                 if (temp != null && temp.Item1 == 0x6e)
+                {
+                    return true;
+                }
+                return false;
+            }
+            else if (ConfigHelper.UdsParameters.jiesuo == "CN_D7")
+            {
+                LogHelper.Debug($"MOS控制{MOSEnum}");
+                List<byte> arr = HexChange(ConfigHelper.UdsParameters.MOSControl_DID);
+
+                if (MOSEnum == MOSEnum.断开)
+                {
+                    arr.Add(0x00);
+                    arr.Add(0x00);
+                }
+                else if (MOSEnum == MOSEnum.充电闭合)
+                {
+
+                    arr.Add(0x01);
+                    arr.Add(0x00);
+
+                }
+                else if (MOSEnum == MOSEnum.放电闭合)
+                {
+
+                    arr.Add(0x00);
+                    arr.Add(0x01);
+
+                }
+                else
+                {
+
+                    arr.Add(0x01);
+                    arr.Add(0x01);
+
+                }
+                var temp = Send(arr.ToArray(), byte.Parse(ConfigHelper.UdsParameters.MOSControl_SID, System.Globalization.NumberStyles.HexNumber));
+
+                if (temp != null && temp.Item1 == 0x6F)
                 {
                     return true;
                 }
@@ -3346,6 +3426,73 @@ namespace Common.UDS
                 }
             }
         }
+        public static bool BarCodeCalibrateCN(string barValue)
+        {
+
+            LogHelper.Debug("序列号标定");
+            List<byte> bytes = new List<byte>();
+            bytes.Add(0xF1);
+            bytes.Add(0x8C);
+
+
+            for (int i = 0; i < 12; i++)
+            {
+                if (i < barValue.Length)
+                {
+                    bytes.Add(((byte)barValue[i]));
+                }
+                else
+                {
+                    bytes.Add(0x20);
+                }
+            }
+
+            string data = ConfigHelper.UdsParameters.PCH_Date;
+            foreach (var item in bytes)
+            {
+                data += " " + item.ToString("X2");
+            }
+            _data = null;
+            _uds.Send(uint.Parse(ConfigHelper.UdsParameters.TID, System.Globalization.NumberStyles.HexNumber), data, true, false, 20, true);
+            LogHelper.ShowMsg(data);
+
+            DateTime now = DateTime.Now;
+            return true;
+
+        }
+
+        public static bool VersionCalibateCN(string vision)
+        {
+            LogHelper.Debug("硬件版本标定");
+            List<byte> bytes = new List<byte>();
+            bytes.Add(0x14);
+            bytes.Add(0xB6);
+            for (int i = 0; i < 11; i++)
+            {
+                if (i < vision.Length)
+                {
+                    bytes.Add(((byte)vision[i]));
+                }
+                else
+                {
+                    bytes.Add(0x20);
+                }
+            }
+            string data = ConfigHelper.UdsParameters.YJ_Date;
+            foreach (var item in bytes)
+            {
+                data += " " + item.ToString("X2");
+            }
+            _data = null;
+            LogHelper.ShowMsg($"{data}");
+            _uds.Send(uint.Parse(ConfigHelper.UdsParameters.TID, System.Globalization.NumberStyles.HexNumber), data, true, true, 16, true);
+            LogHelper.ShowMsg($"{_uds}");
+            return true;
+
+        }
+
+
+
 
         public static bool BarCodeCalibrateMS(string barValue)
         {
@@ -4358,6 +4505,68 @@ namespace Common.UDS
                 version += (char)temp.Item2[i];
 
             }
+
+
+
+            return version;
+
+
+        }
+        public static string GetVersionCN(int level)
+        {
+            LogHelper.Debug("获取版本");
+
+
+            List<byte> bytes1 = new List<byte>();
+            switch (level)
+            {
+                case 0:
+                    bytes1.Add(0xF0);
+                    bytes1.Add(0x89);
+                    break;
+                case 1:
+                    bytes1.Add(0xF1);
+                    bytes1.Add(0x89);
+                    break;
+                case 2:
+                    bytes1.Add(0xF1);
+                    bytes1.Add(0x95);
+                    break;
+                case 3:
+                    bytes1.Add(0xF1);
+                    bytes1.Add(0x93);
+                    break;
+                case 4:
+                    bytes1.Add(0x14);
+                    bytes1.Add(0xB8);
+                    break;
+                case 5:
+                    bytes1.Add(0x14);
+                    bytes1.Add(0xB6);
+                    break;
+                case 6:
+                    bytes1.Add(0xF1);
+                    bytes1.Add(0x8C);
+                    break;
+                case 7:
+                    bytes1.Add(0xF1);
+                    bytes1.Add(0x80);
+                    break;
+
+            }
+            var temp = Send(bytes1.ToArray(), 0x22);
+            string version = "";
+
+            var lists = new List<byte>();
+
+
+            for (int i = 2; i < temp.Item2.Count; i++)
+            {
+                version += (char)temp.Item2[i];
+
+            }
+
+
 
 
 

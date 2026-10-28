@@ -706,7 +706,7 @@ namespace DetectionProcess.LT
             }
             else
             {
-                //判断是否存在休眠电流流程
+                //判断是否存在休眠电流 流程
                 var tempPar = CommonData.CurrentUserDetects.Select(m => m.Item1).FirstOrDefault(m => m == "SleepingCurrent");
                 isTestSleepCurr = !string.IsNullOrEmpty(tempPar);
 
@@ -860,7 +860,7 @@ namespace DetectionProcess.LT
                     ConfigHelper.UdsParameters.jiesuo != "ChangAn_B216" && ConfigHelper.UdsParameters.jiesuo != "ChangAn_C390" &&
                     ConfigHelper.UdsParameters.jiesuo != "HQ_E702" && ConfigHelper.UdsParameters.jiesuo != "HQ_C1079" &&
                     ConfigHelper.UdsParameters.jiesuo.Substring(0, 5) != "AVATR" && ConfigHelper.UdsParameters.jiesuo != "RC_PK2C" &&
-                    ConfigHelper.UdsParameters.jiesuo != "WL_F710S" && ConfigHelper.UdsParameters.jiesuo != "T09_M" && ConfigHelper.UdsParameters.jiesuo != "DF_DH1" && ConfigHelper.UdsParameters.jiesuo != "DF_XY-A")
+                    ConfigHelper.UdsParameters.jiesuo != "WL_F710S" && ConfigHelper.UdsParameters.jiesuo != "CN_D7" && ConfigHelper.UdsParameters.jiesuo != "T09_M" && ConfigHelper.UdsParameters.jiesuo != "DF_DH1" && ConfigHelper.UdsParameters.jiesuo != "DF_XY-A")
                 {
                     model = new TestResult();
 
@@ -1316,6 +1316,35 @@ namespace DetectionProcess.LT
                 model.Result = model.MeasureVal == model.QualifiedValue;
 
             }
+            else if (ConfigHelper.UdsParameters.jiesuo == "CN_D7")
+            {
+                CommonMethod.Sleep(1000);
+                if (index == 1)
+                {
+                    model.MeasureVal = ZCData.RTCCN.ToString();
+                }
+                else if (index == 2)
+                {
+                    model.MeasureVal = ZCData.GuoYaCN.ToString();
+                }
+                else if (index == 3)
+                {
+                    CommonMethod.Sleep(2000);
+                    model.MeasureVal = ZCData.YingJianCN.ToString();
+                }
+                else if (index == 4)
+                {
+                    model.MeasureVal = ZCData.DianLiuCN.ToString();
+                }
+                else if (index == 5)
+                {
+                    model.MeasureVal = ZCData.CanHXCN.ToString();
+                }
+
+                model.Result = model.MeasureVal == model.QualifiedValue;
+
+            }
+
             else if (ConfigHelper.UdsParameters.jiesuo == "VOYAH_H97" || ConfigHelper.UdsParameters.jiesuo == "VOYAH_H47A")
             {
                 if (index == 1)
@@ -1450,6 +1479,17 @@ namespace DetectionProcess.LT
                         }
                         LogHelper.ShowMsg(str);
                         model.MeasureVal = int.Parse((temp.Item2[2] & 0x07).ToString("X2")).ToString();
+                        model.Result = model.MeasureVal == model.QualifiedValue;
+                    }
+                    else if (ConfigHelper.UdsParameters.jiesuo == "CN_D7")
+                    {
+                        string str = "";
+                        foreach (var item in temp.Item2)
+                        {
+                            str += item.ToString("X2") + " ";
+                        }
+                        LogHelper.ShowMsg(str);
+                        model.MeasureVal = int.Parse((temp.Item2[4] & 0x07).ToString("X2")).ToString();
                         model.Result = model.MeasureVal == model.QualifiedValue;
                     }
                     else
@@ -1759,7 +1799,7 @@ namespace DetectionProcess.LT
                 LogHelper.ShowMsg("硬件唤醒成功");
             }
 
-            if (ConfigHelper.UdsParameters.jiesuo == "T09_M" || ConfigHelper.UdsParameters.jiesuo == "VOYAH_H97"|| ConfigHelper.UdsParameters.jiesuo == "VOYAH_H47A")
+            if (ConfigHelper.UdsParameters.jiesuo == "T09_M" || ConfigHelper.UdsParameters.jiesuo == "CN_D7" ||ConfigHelper.UdsParameters.jiesuo == "VOYAH_H97"|| ConfigHelper.UdsParameters.jiesuo == "VOYAH_H47A")
             {
                 CommonMethod.Sleep(1000);
             }

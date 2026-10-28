@@ -90,6 +90,81 @@ namespace DetectionProcess.LT
                     model.Result = model.MeasureVal == model.QualifiedValue;
                     AddModelAction(model);
                 }
+                else if (ConfigHelper.UdsParameters.jiesuo == "CN_D7")
+                {
+                    string s1 = null;
+                    string s2 = null;
+                    string s3 = null;
+                    string s4 = null;
+                    string s5 = null;
+                    string s6 = null;
+                    s1 = PlayUDSHelper.GetVersionCN(0).Trim();
+                    s2 = PlayUDSHelper.GetVersionCN(1).Trim();
+                    s3 = PlayUDSHelper.GetVersionCN(2).Trim();
+                    s4 = PlayUDSHelper.GetVersionCN(3).Trim();
+                    s5 = PlayUDSHelper.GetVersionCN(4).Trim();
+                    s6 = PlayUDSHelper.GetVersionCN(7).Trim();
+
+                    TestResult model = new TestResult();
+                    model.ChildrenItem = "OEM软件版本号";
+                    model.StartTime = DateTime.Now;
+                    model.EndTime = DateTime.Now;
+                    model.QualifiedValue = ConfigHelper.UdsParameters.RJ_DATA;
+                    model.MeasurementStandard = "";
+                    model.MeasureVal = s1;
+                    model.Result = model.MeasureVal == model.QualifiedValue;
+                    AddModelAction(model);
+
+                    model = new TestResult();
+                    model.ChildrenItem = "OEM硬件版本号";
+                    model.StartTime = DateTime.Now;
+                    model.EndTime = DateTime.Now;
+                    model.QualifiedValue = ConfigHelper.UdsParameters.YJ_DATA;
+                    model.MeasurementStandard = "";
+                    model.MeasureVal = s2;
+                    model.Result = model.MeasureVal == model.QualifiedValue;
+                    AddModelAction(model);
+
+                    model = new TestResult();
+                    model.ChildrenItem = "供应商软件版本号";
+                    model.StartTime = DateTime.Now;
+                    model.EndTime = DateTime.Now;
+                    model.QualifiedValue = ConfigHelper.UdsParameters.KHRJ_DATA;
+                    model.MeasurementStandard = "";
+                    model.MeasureVal = s3;
+                    model.Result = model.MeasureVal == model.QualifiedValue;
+                    AddModelAction(model);
+
+                    model = new TestResult();
+                    model.ChildrenItem = "供应商硬件版本号";
+                    model.StartTime = DateTime.Now;
+                    model.EndTime = DateTime.Now;
+                    model.QualifiedValue = ConfigHelper.UdsParameters.KHYJ_DATA;
+                    model.MeasurementStandard = "";
+                    model.MeasureVal = s4;
+                    model.Result = model.MeasureVal == model.QualifiedValue;
+                    AddModelAction(model);
+
+                    model = new TestResult();
+                    model.ChildrenItem = "自定义软件版本号";
+                    model.StartTime = DateTime.Now;
+                    model.EndTime = DateTime.Now;
+                    model.QualifiedValue = ConfigHelper.UdsParameters.LJ_DATA;
+                    model.MeasurementStandard = "";
+                    model.MeasureVal = s5;
+                    model.Result = model.MeasureVal == model.QualifiedValue;
+                    AddModelAction(model);
+
+                    model = new TestResult();
+                    model.ChildrenItem = "Bootloader版本号";
+                    model.StartTime = DateTime.Now;
+                    model.EndTime = DateTime.Now;
+                    model.QualifiedValue = ConfigHelper.UdsParameters.BOOT_DATA;
+                    model.MeasurementStandard = "";
+                    model.MeasureVal = s6;
+                    model.Result = model.MeasureVal == model.QualifiedValue;
+                    AddModelAction(model);
+                }
                 else if(ConfigHelper.UdsParameters.jiesuo == "QR_C1068")
                 {
                     string s2 = null;

@@ -670,7 +670,7 @@ namespace DetectionProcess.LT
                             throw new Exception($"电流差距过大，电源输出值{y0}，产品回读值{x0}");
                         }
                     }
-                    if (ConfigHelper.UdsParameters.jiesuo == "GreatWall_C03" || ConfigHelper.UdsParameters.jiesuo == "JAC_X6" || ConfigHelper.UdsParameters.jiesuo == "XP_12V")
+                    if (ConfigHelper.UdsParameters.jiesuo == "GreatWall_C03" || ConfigHelper.UdsParameters.jiesuo == "CN_D7" || ConfigHelper.UdsParameters.jiesuo == "JAC_X6" || ConfigHelper.UdsParameters.jiesuo == "XP_12V")
                     {
                         if (i == 0)
                         {

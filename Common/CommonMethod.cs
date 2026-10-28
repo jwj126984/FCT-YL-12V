@@ -314,7 +314,7 @@ namespace Common
             {
                 threshold = 20;
             }
-            if (ConfigHelper.UdsParameters.jiesuo == "HQ_C1079")
+            if (ConfigHelper.UdsParameters.jiesuo == "HQ_C1079" || ConfigHelper.UdsParameters.jiesuo == "CN_D7")
             {
                 threshold = 30;
             }

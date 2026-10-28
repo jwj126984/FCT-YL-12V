@@ -171,6 +171,33 @@ namespace DetectionProcess.LT
 
 
             }
+            else if (ConfigHelper.UdsParameters.jiesuo == "CN_D7")
+            {
+                barCode = barCode.Substring(23);
+
+
+                if (PlayUDSHelper.BarCodeCalibrateCN(barCode) == false)
+                {
+                    //LogHelper.ShowMsg("序列号写入失败");
+                    AddModelAction(new TestResult() { ChildrenItem = "LBMS写入失败" });
+                    throw new Exception("批次号写入失败");
+
+                }
+                Thread.Sleep(200);
+
+                if (PlayUDSHelper.VersionCalibateCN(par.MeasurementStandard) == false)
+                {
+                    //LogHelper.ShowMsg("硬件号写入失败");
+                    AddModelAction(new TestResult() { ChildrenItem = "LBMS写入失败" });
+                    throw new Exception("硬件号写入失败");
+
+                }
+                Thread.Sleep(200);
+
+
+
+
+            }
             else
             {
                 barCode = barCode.Substring(19);
