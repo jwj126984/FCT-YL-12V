@@ -1368,6 +1368,7 @@ namespace FCT.Dialog
                         new UdsParameter { Name = "客户硬件", Description = "0x", TextBoxName = "YJ_DATA", DefaultValue = "01 64 80" },
                         new UdsParameter { Name = "Bootloder", Description = "0x", TextBoxName = "BOOT_DATA", DefaultValue = "01 64 80" },
                         new UdsParameter { Name = "供应商软件版本号", Description = "0x", TextBoxName = "KHYJ_DATA", DefaultValue = "31" },
+                        new UdsParameter { Name = "OEM零件号", Description = "0x", TextBoxName = "LJ_DATA", DefaultValue = "01 64 80" },
                         new UdsParameter { Name = "Soft_ID", Description = "0x", TextBoxName = "Soft_ID", DefaultValue = "01 64 80" },
                         new UdsParameter { Name = "报告名称", Description = "0x", TextBoxName = "REPORT", DefaultValue = "01 64 80" }
                     }

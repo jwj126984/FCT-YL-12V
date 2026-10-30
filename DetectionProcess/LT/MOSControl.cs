@@ -272,7 +272,7 @@ namespace DetectionProcess.LT
             }
             else
             {
-
+                CommonMethod.SetN8331(13);
                 LogHelper.Debug("------MOS控制测试------");
                 _pars = pars;
 
@@ -317,21 +317,21 @@ namespace DetectionProcess.LT
                     throw new Exception("断开");
                 }
                 CommonMethod.Sleep(1500);
-                NewCanHelper.MOSControlVoltageEnable(true, false, true, true);
-                //CommonMethod.Sleep(2000);
-                //var wz = CommonData.NXI_6400.GetVResult();
-                //if (wz > 2)
-                //{
-                //    if (PlayUDSHelper.MOSControl(MOSEnum.断开) == false)
-                //    {
-                //        AddModelAction(new TestResult() { ChildrenItem = "MOS控制测试失败", Result = false });
-                //        throw new Exception("MOS断开失败");
-                //    }
-                //    wz = CommonData.NXI_6400.GetVResult();
+                NewCanHelper.MOSControlVoltageEnable(true, false, true, true,gd:false);
+                CommonMethod.Sleep(2000);
+                var wz = CommonData.NXI_6400.GetVResult();
+                if (wz > 3)
+                {
+                    if (PlayUDSHelper.MOSControl(MOSEnum.断开) == false)
+                    {
+                        AddModelAction(new TestResult() { ChildrenItem = "MOS控制测试失败", Result = false });
+                        throw new Exception("MOS断开失败");
+                    }
+                    wz = CommonData.NXI_6400.GetVResult();
 
 
-                //}
-                var fCloseDisChargeVoltage = PlayUDSHelper.GetMOSDischargeVoltage();
+                    }
+                    var fCloseDisChargeVoltage = PlayUDSHelper.GetMOSDischargeVoltage();
                 //（断开）充放电P+电压
 
                 if (ConfigHelper.UdsParameters.jiesuo == "ChangAn_C390" || ConfigHelper.UdsParameters.jiesuo == "HQ_E702" || ConfigHelper.UdsParameters.jiesuo == "HQ_C1079" || ConfigHelper.UdsParameters.jiesuo == "ChangAn_B216")
@@ -368,10 +368,11 @@ namespace DetectionProcess.LT
                 //Result("3", true, start.AddSeconds(span * 2), span, uex2);
                 Result("4", true, start.AddSeconds(span * 3), span, fCloseChargeVoltage);
                 Result("5", false, start.AddSeconds(span * 4), span, fCloseDisChargeVoltage);
-                //if (ConfigHelper.UdsParameters.jiesuo != "HQ_E702" || ConfigHelper.UdsParameters.jiesuo == "HQ_C1079")
-                //{
-                //    Result("6", false, start.AddSeconds(span * 5), span, wz);
-                //}
+                if (ConfigHelper.UdsParameters.jiesuo == "DF_DH1" || ConfigHelper.UdsParameters.jiesuo == "DF_XY-A" ||
+                ConfigHelper.UdsParameters.jiesuo == "VOYAH_H47A" || ConfigHelper.UdsParameters.jiesuo == "VOYAH_H97")
+                {
+                    Result("6", false, start.AddSeconds(span * 5), span, wz);
+                }
 
                 CommonData.TestCount++;
                 return true;

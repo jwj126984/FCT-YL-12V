@@ -54,7 +54,7 @@ namespace Common
 
             if (CommonData.BoardName == "WL_F710S")
             {
-                reportname = "WL_F610S";
+                reportname = ConfigHelper.UdsParameters.REPORT;
             }
 
             string filePath = dirPath + $"\\{reportname}_{list.FirstOrDefault().BoardNum}_{DateTime.Now.ToString("yyyyMMddHHmmss")}_{(CommonData.TestResult ? "PASS" : "FAIL")}.xlsx";

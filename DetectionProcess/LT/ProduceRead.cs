@@ -323,6 +323,7 @@ namespace DetectionProcess.LT
                     string s2 = null;
                     string s3 = null;
                     string s4 = null;
+                    string s5 = null;
 
 
 
@@ -330,6 +331,7 @@ namespace DetectionProcess.LT
                     s2 = PlayUDSHelper.GetVersionMS(1).Trim();
                     s3 = PlayUDSHelper.GetVersionMS(2).Trim();
                     s4 = PlayUDSHelper.GetVersionHQ(0).TrimEnd('\0');
+                    s5 = PlayUDSHelper.GetVersionHQ(4).TrimEnd('\0');
 
 
 
@@ -370,6 +372,88 @@ namespace DetectionProcess.LT
                     model.QualifiedValue = ConfigHelper.UdsParameters.KHYJ_DATA;
                     model.MeasurementStandard = "";
                     model.MeasureVal = s4;
+                    model.Result = model.MeasureVal == model.QualifiedValue;
+                    AddModelAction(model);
+
+                    model = new TestResult();
+                    model.ChildrenItem = "OEM零件号";
+                    model.StartTime = DateTime.Now;
+                    model.EndTime = DateTime.Now;
+                    model.QualifiedValue = ConfigHelper.UdsParameters.LJ_DATA;
+                    model.MeasurementStandard = "";
+                    model.MeasureVal = s5;
+                    model.Result = model.MeasureVal == model.QualifiedValue;
+                    AddModelAction(model);
+
+
+
+                }
+
+                else if (ConfigHelper.UdsParameters.jiesuo == "VOYAH_H97" || ConfigHelper.UdsParameters.jiesuo == "VOYAH_H47A")
+                {
+                    string s1 = null;
+                    string s2 = null;
+                    string s3 = null;
+                    string s4 = null;
+                    string s5 = null;
+
+
+
+                    s1 = PlayUDSHelper.GetVersionH97(0).Trim(); ;
+                    s2 = PlayUDSHelper.GetVersionH97(1).Trim(); ;
+                    s3 = PlayUDSHelper.GetVersionH97(2).Trim(); 
+                    s4 = PlayUDSHelper.GetVersionH97(3).Trim(); ;
+                    s5 = PlayUDSHelper.GetVersionH97(4).Trim(); ;
+
+
+
+                    TestResult model = new TestResult();
+                    model.ChildrenItem = "软件版本号";
+                    model.StartTime = DateTime.Now;
+                    model.EndTime = DateTime.Now;
+                    model.QualifiedValue = ConfigHelper.UdsParameters.RJ_DATA;
+                    model.MeasurementStandard = "";
+                    model.MeasureVal = s1;
+                    model.Result = model.MeasureVal == model.QualifiedValue;
+                    AddModelAction(model);
+
+                    model = new TestResult();
+                    model.ChildrenItem = "硬件版本号";
+                    model.StartTime = DateTime.Now;
+                    model.EndTime = DateTime.Now;
+                    model.QualifiedValue = ConfigHelper.UdsParameters.YJ_DATA;
+                    model.MeasurementStandard = "";
+                    model.MeasureVal = s2;
+                    model.Result = model.MeasureVal == model.QualifiedValue;
+                    AddModelAction(model);
+
+                    model = new TestResult();
+                    model.ChildrenItem = "BOOT版本号";
+                    model.StartTime = DateTime.Now;
+                    model.EndTime = DateTime.Now;
+                    model.QualifiedValue = ConfigHelper.UdsParameters.BOOT_DATA;
+                    model.MeasurementStandard = "";
+                    model.MeasureVal = s3;
+                    model.Result = model.MeasureVal == model.QualifiedValue;
+                    AddModelAction(model);
+
+                    model = new TestResult();
+                    model.ChildrenItem = "供应商软件版本号";
+                    model.StartTime = DateTime.Now;
+                    model.EndTime = DateTime.Now;
+                    model.QualifiedValue = ConfigHelper.UdsParameters.KHYJ_DATA;
+                    model.MeasurementStandard = "";
+                    model.MeasureVal = s4;
+                    model.Result = model.MeasureVal == model.QualifiedValue;
+                    AddModelAction(model);
+
+                    model = new TestResult();
+                    model.ChildrenItem = "零件号";
+                    model.StartTime = DateTime.Now;
+                    model.EndTime = DateTime.Now;
+                    model.QualifiedValue = ConfigHelper.UdsParameters.LJ_DATA;
+                    model.MeasurementStandard = "";
+                    model.MeasureVal = s5;
                     model.Result = model.MeasureVal == model.QualifiedValue;
                     AddModelAction(model);
 

@@ -252,7 +252,7 @@ namespace Common.UDS
                     LogHelper.Debug($"UDS 回复7F");
                     return null;
                 }
-                
+
                 list = new List<byte>();
                 for (int i = lenIndex + 3; i < len + lenIndex + 1; i++)
                 {
@@ -292,7 +292,7 @@ namespace Common.UDS
         public static bool GoToGC()
         {
             LogHelper.Debug("进入拓展");
-            var temp = Send(new byte[] { 0x63,0x00 }, 0x10, uint.Parse(ConfigHelper.UdsParameters.TID, System.Globalization.NumberStyles.HexNumber));
+            var temp = Send(new byte[] { 0x63, 0x00 }, 0x10, uint.Parse(ConfigHelper.UdsParameters.TID, System.Globalization.NumberStyles.HexNumber));
 
 
             temp = Send(new byte[] { 0x63, 0x03, 0x04, 0x0C, 0x08 }, 0x10, uint.Parse(ConfigHelper.UdsParameters.TID, System.Globalization.NumberStyles.HexNumber));
@@ -312,7 +312,7 @@ namespace Common.UDS
 
             temp = Send(new byte[] { 0x02 }, 0x10, uint.Parse(ConfigHelper.UdsParameters.TID, System.Globalization.NumberStyles.HexNumber));
             CommonMethod.Sleep(500);
-            temp = Send(new byte[] { 0x01, 0xF1, 0x84, 0xF1, 0x1F, 0xF2, 0x2F }, 0x31, uint.Parse(ConfigHelper.UdsParameters.TID, System.Globalization.NumberStyles.HexNumber),16);
+            temp = Send(new byte[] { 0x01, 0xF1, 0x84, 0xF1, 0x1F, 0xF2, 0x2F }, 0x31, uint.Parse(ConfigHelper.UdsParameters.TID, System.Globalization.NumberStyles.HexNumber), 16);
             CommonMethod.Sleep(20);
             temp = Send(new byte[] { 0x01 }, 0x11, uint.Parse(ConfigHelper.UdsParameters.TID, System.Globalization.NumberStyles.HexNumber));
             return temp != null;
@@ -470,7 +470,7 @@ namespace Common.UDS
             }
 
             return new List<byte>() { temp.Item2[1], temp.Item2[2], temp.Item2[3], temp.Item2[4], };
-            
+
         }
 
         public static bool Biaodin1068(List<double> a_b)
@@ -661,7 +661,7 @@ namespace Common.UDS
             LogHelper.Debug($"key{data}");
             _uds.Send(uint.Parse(ConfigHelper.UdsParameters.TID, System.Globalization.NumberStyles.HexNumber), data, true, true, 8, true);
 
-           
+
             //   _data = null;
             DateTime now = DateTime.Now;
             while (true)
@@ -699,7 +699,7 @@ namespace Common.UDS
             LogHelper.Debug($"key{data}");
             _uds.Send(uint.Parse(ConfigHelper.UdsParameters.TID, System.Globalization.NumberStyles.HexNumber), data, true, true, 8, true);
 
-          
+
             //   _data = null;
             DateTime now = DateTime.Now;
             while (true)
@@ -807,7 +807,7 @@ namespace Common.UDS
             LogHelper.Debug($"key{data}");
             _uds.Send(uint.Parse(ConfigHelper.UdsParameters.TID, System.Globalization.NumberStyles.HexNumber), data, true, true, 24, true);
             _data = null;
-          
+
             //   _data = null;
             DateTime now = DateTime.Now;
             while (true)
@@ -839,7 +839,7 @@ namespace Common.UDS
             LogHelper.Debug($"key{data}");
             _uds.Send(uint.Parse(ConfigHelper.UdsParameters.TID, System.Globalization.NumberStyles.HexNumber), data, true, true, 8, true);
             _data = null;
-           
+
 
             //   _data = null;
             DateTime now = DateTime.Now;
@@ -902,7 +902,7 @@ namespace Common.UDS
                 }
             }
         }
-        public static bool Biaodindy((double, double) a_b1, (double, double) a_b2, (double, double) a_b3, (double, double) a_b4,string str)
+        public static bool Biaodindy((double, double) a_b1, (double, double) a_b2, (double, double) a_b3, (double, double) a_b4, string str)
         {
             string data = $"10 13 2E {str} {((ushort)(a_b1.Item1 * 1000)).ConvertToFormattedHex(2)} {((uint)(a_b1.Item2 * 1000) >> 8).ToString("X2")}";
             LogHelper.Debug($"key{data}");
@@ -1028,7 +1028,7 @@ namespace Common.UDS
             LogHelper.Debug($"key{data}");
             _uds.Send(uint.Parse(ConfigHelper.UdsParameters.TID, System.Globalization.NumberStyles.HexNumber), data, true, true, 8, true);
             //  CommonMethod.Sleep(20);
-          
+
             //   _data = null;
             DateTime now = DateTime.Now;
             return true;
@@ -1102,7 +1102,7 @@ namespace Common.UDS
             LogHelper.Debug($"key{data}");
             _uds.Send(uint.Parse(ConfigHelper.UdsParameters.TID, System.Globalization.NumberStyles.HexNumber), data, true, true, 32, true);
             _data = null;
-           
+
             DateTime now = DateTime.Now;
             while (true)
             {
@@ -1218,7 +1218,7 @@ namespace Common.UDS
             data = $"21 {(((uint)(a_b.Item2 * 1000)) & 0xff).ToString("X2")} 03 E8 00 00 03 E8";
             LogHelper.Debug($"key{data}");
             _uds.Send(uint.Parse(ConfigHelper.UdsParameters.TID, System.Globalization.NumberStyles.HexNumber), data, true, true, 8, true);
-              CommonMethod.Sleep(20);
+            CommonMethod.Sleep(20);
             data = $"22 00 00 03 E8 00 00 03";
             LogHelper.Debug($"key{data}");
             _uds.Send(uint.Parse(ConfigHelper.UdsParameters.TID, System.Globalization.NumberStyles.HexNumber), data, true, true, 8, true);
@@ -1255,7 +1255,7 @@ namespace Common.UDS
             LogHelper.Debug($"key{data}");
             _uds.Send(uint.Parse(ConfigHelper.UdsParameters.TID, System.Globalization.NumberStyles.HexNumber), data, true, true, 32, true);
             _data = null;
-            
+
             DateTime now = DateTime.Now;
             while (true)
             {
@@ -1287,7 +1287,7 @@ namespace Common.UDS
             data = $"21 00 03 E8 00 00 03 E8";
             LogHelper.Debug($"key{data}");
             _uds.Send(uint.Parse(ConfigHelper.UdsParameters.TID, System.Globalization.NumberStyles.HexNumber), data, true, true, 8, true);
-              CommonMethod.Sleep(20);
+            CommonMethod.Sleep(20);
             data = $"22 00 00 03 E8 00 00 03";
             LogHelper.Debug($"key{data}");
             _uds.Send(uint.Parse(ConfigHelper.UdsParameters.TID, System.Globalization.NumberStyles.HexNumber), data, true, true, 8, true);
@@ -1348,7 +1348,7 @@ namespace Common.UDS
             byte len = (byte)(ConfigHelper.SelectType != "seres" ? 0x08 : 0x40);
 
             if (ConfigHelper.UdsParameters.jiesuo == "ChangAn_C390" || ConfigHelper.UdsParameters.jiesuo == "DF_DH1" || ConfigHelper.UdsParameters.jiesuo == "DF_XY-A" ||
-                ConfigHelper.UdsParameters.jiesuo == "JAC_X6" || ConfigHelper.UdsParameters.jiesuo == "HQ_E702" || ConfigHelper.UdsParameters.jiesuo == "HQ_C1079" || ConfigHelper.UdsParameters.jiesuo == "ChangAn_B216" || 
+                ConfigHelper.UdsParameters.jiesuo == "JAC_X6" || ConfigHelper.UdsParameters.jiesuo == "HQ_E702" || ConfigHelper.UdsParameters.jiesuo == "HQ_C1079" || ConfigHelper.UdsParameters.jiesuo == "ChangAn_B216" ||
                 ConfigHelper.UdsParameters.jiesuo == "WL_F710S" || ConfigHelper.UdsParameters.jiesuo == "CN_D7")
             {
                 len = 0x40;
@@ -1359,12 +1359,12 @@ namespace Common.UDS
                 len = 0x30;
             }
 
-            if( ConfigHelper.UdsParameters.jiesuo == "QR_C1068")
+            if (ConfigHelper.UdsParameters.jiesuo == "QR_C1068")
             {
                 len = 0x14;
             }
 
-            if ((!ConfigHelper.Cantype && len == 0x40 )|| ConfigHelper.UdsParameters.jiesuo == "DF_DH1" || ConfigHelper.UdsParameters.jiesuo == "DF_XY-A" || ConfigHelper.UdsParameters.jiesuo == "CN_D7")
+            if ((!ConfigHelper.Cantype && len == 0x40) || ConfigHelper.UdsParameters.jiesuo == "DF_DH1" || ConfigHelper.UdsParameters.jiesuo == "DF_XY-A" || ConfigHelper.UdsParameters.jiesuo == "CN_D7")
             {
 
                 string data = $"10 12 27 02 {((byte)bytes[0]).ToString("X2")} {((byte)bytes[1]).ToString("X2")} {((byte)bytes[2]).ToString("X2")} {((byte)bytes[3]).ToString("X2")}";
@@ -1545,7 +1545,7 @@ namespace Common.UDS
             {
                 isStart = !isStart;
             }
-                byte b = (byte)(isStart ? 0x01 : 0x00);
+            byte b = (byte)(isStart ? 0x01 : 0x00);
             bytes.Add(b);
             LogHelper.Debug($"{(isStart ? "开启" : "关闭")}限流模块");
             var temp = Send(bytes.ToArray(), byte.Parse(ConfigHelper.UdsParameters.XLOpen_SID, System.Globalization.NumberStyles.HexNumber));
@@ -1581,7 +1581,7 @@ namespace Common.UDS
         /// </summary>
         /// <param name="isc1AndC3">true 开启1 3通道，false的话开启2 4 通道</param>
         /// <returns></returns>
-        public static bool StartChannelBalance(bool? isc1AndC3 = null,int index = -1)
+        public static bool StartChannelBalance(bool? isc1AndC3 = null, int index = -1)
         {
             LogHelper.Debug("开启均衡");
             List<byte> arr = HexChange(ConfigHelper.UdsParameters.JHStart_DID);
@@ -1636,8 +1636,8 @@ namespace Common.UDS
                     }
                 }
             }
-                return false;
-            
+            return false;
+
         }
 
         public static bool StartChannelBalance1068(bool? isc1AndC3 = null, int index = -1)
@@ -1692,7 +1692,7 @@ namespace Common.UDS
         public static bool CloseChannelBalance()
         {
             LogHelper.Debug("关闭均衡通道");
-            byte[] arr = new byte[] { 0x4E, 0xA1, 0x03,0x00 };
+            byte[] arr = new byte[] { 0x4E, 0xA1, 0x03, 0x00 };
             var temp = Send(arr, 0x2F);
             if (temp != null && temp.Item1 == 0x6F)
             {
@@ -1887,22 +1887,22 @@ namespace Common.UDS
                 return false;
 
             }
-            else if(ConfigHelper.UdsParameters.jiesuo == "WL_C1046")
+            else if (ConfigHelper.UdsParameters.jiesuo == "WL_C1046")
             {
                 LogHelper.Debug($"MOS控制{MOSEnum}");
                 List<byte> arr = HexChange(ConfigHelper.UdsParameters.MOSControl_DID);
-                
-                if(MOSEnum == 0)
+
+                if (MOSEnum == 0)
                 {
                     arr.Add(0x60);
                     arr.Add(0x01);
                 }
                 else
                 {
-                    
+
                     arr.Add(0x61);
                     arr.Add(0x01);
-                    
+
                 }
                 var temp = Send(arr.ToArray(), byte.Parse(ConfigHelper.UdsParameters.MOSControl_SID, System.Globalization.NumberStyles.HexNumber));
 
@@ -1970,70 +1970,70 @@ namespace Common.UDS
 
         public static bool MOSControl2510(MOSEnum2510 MOSEnum)
         {
-            
-                LogHelper.Debug($"MOS控制{MOSEnum}");
-                List<byte> arr = new List<byte>() { 0x73, 0xBA, 0x03 };
 
-                if ((int)MOSEnum == 0)
+            LogHelper.Debug($"MOS控制{MOSEnum}");
+            List<byte> arr = new List<byte>() { 0x73, 0xBA, 0x03 };
+
+            if ((int)MOSEnum == 0)
+            {
+
+                List<byte> arr1 = new List<byte>() { 0x73, 0xBA, 0x00 };
+
+
+                var temp = Send(arr1.ToArray(), 0x2f);
+
+                if (temp != null && temp.Item1 == 0x6F)
                 {
-
-                    List<byte> arr1 = new List<byte>() { 0x73, 0xBA, 0x00 };
-
-
-                    var temp = Send(arr1.ToArray(), 0x2f);
-
-                    if (temp != null && temp.Item1 == 0x6F)
-                    {
-                        return true;
-                    }
-                    return false;
+                    return true;
                 }
-                else
+                return false;
+            }
+            else
+            {
+                if ((int)MOSEnum == 1)
                 {
-                    if ((int)MOSEnum == 1)
-                    {
-                        arr.Add(0x01);
-                    }
-                    else if ((int)MOSEnum == 2)
-                    {
-                        arr.Add(0x02);
-                    }
-                    else if ((int)MOSEnum == 3)
-                    {
-                        arr.Add(0x03);
-                    }
-                    else if ((int)MOSEnum == 4)
-                    {
-                        arr.Add(0x04);
-                    }
-                    else if ((int)MOSEnum == 5)
-                    {
-                        arr.Add(0x05);
-                    }
-                    else if ((int)MOSEnum == 6)
-                    {
-                        arr.Add(0x06);
-                    }
-                    else if ((int)MOSEnum == 7)
-                    {
-                        arr.Add(0x07);
-                    }
-
+                    arr.Add(0x01);
+                }
+                else if ((int)MOSEnum == 2)
+                {
+                    arr.Add(0x02);
+                }
+                else if ((int)MOSEnum == 3)
+                {
+                    arr.Add(0x03);
+                }
+                else if ((int)MOSEnum == 4)
+                {
+                    arr.Add(0x04);
+                }
+                else if ((int)MOSEnum == 5)
+                {
+                    arr.Add(0x05);
+                }
+                else if ((int)MOSEnum == 6)
+                {
+                    arr.Add(0x06);
+                }
+                else if ((int)MOSEnum == 7)
+                {
                     arr.Add(0x07);
-                    var temp = Send(arr.ToArray(), 0x2f);
-
-                    if (temp != null && temp.Item1 == 0x6F)
-                    {
-                        return true;
-                    }
-                    return false;
                 }
 
+                arr.Add(0x07);
+                var temp = Send(arr.ToArray(), 0x2f);
 
-           
+                if (temp != null && temp.Item1 == 0x6F)
+                {
+                    return true;
+                }
+                return false;
+            }
+
+
+
 
         }
-        
+
 
         public static bool StopMOSControl()
         {
@@ -2108,7 +2108,7 @@ namespace Common.UDS
         public static List<byte> GETEEPROM()
         {
             LogHelper.Debug("复位");
-            byte[] arr = new byte[] { 0x02,0xff };
+            byte[] arr = new byte[] { 0x02, 0xff };
             var temp = Send(arr, 0x19, isudslen: false);
             if (temp != null)
             {
@@ -2119,8 +2119,8 @@ namespace Common.UDS
 
         public static List<byte> SETEEPROM(byte[] arr)
         {
-            LogHelper.Debug("复位"); 
-           
+            LogHelper.Debug("复位");
+
             var temp = Send(arr, 0x19, isudslen: false);
             if (temp != null)
             {
@@ -2155,11 +2155,11 @@ namespace Common.UDS
             byte RESULT = 0;
             var temp = Send(arr.ToArray(), byte.Parse(ConfigHelper.UdsParameters.EEPROM_SID, System.Globalization.NumberStyles.HexNumber));
 
-            if(ConfigHelper.UdsParameters.jiesuo == "AVATR_E15")
+            if (ConfigHelper.UdsParameters.jiesuo == "AVATR_E15")
             {
                 return temp.Item2[52];
             }
-            
+
 
             CommonMethod.Sleep(20);
             var respensons = SendUDS2("30 00 00 00 00 00 00 00");
@@ -2180,11 +2180,11 @@ namespace Common.UDS
         public static byte EEPROMWL(byte[] arr)
         {
             LogHelper.Debug("读取EEPROM快照");
-           
-            byte RESULT = 0;
-            
 
-            if(ConfigHelper.UdsParameters.jiesuo == "AVATR_E15")
+            byte RESULT = 0;
+
+
+            if (ConfigHelper.UdsParameters.jiesuo == "AVATR_E15")
             {
                 var temp = Send(arr.ToArray(), byte.Parse(ConfigHelper.UdsParameters.EEPROM_SID, System.Globalization.NumberStyles.HexNumber), isudslen: false);
 
@@ -2210,8 +2210,8 @@ namespace Common.UDS
                 }
                 return RESULT;
             }
-                
-            
+
+
         }
         /// <summary>
         /// UDS获取均衡结果
@@ -2269,14 +2269,14 @@ namespace Common.UDS
         public static bool CloseEOL()
         {
             LogHelper.Debug("关闭EOL");
-            List<byte> bytes1 = new List<byte>() { 0x37, 0xC1, 0x03, 0x98};
+            List<byte> bytes1 = new List<byte>() { 0x37, 0xC1, 0x03, 0x98 };
             var temp = Send(bytes1.ToArray(), 0x2F);
 
-            
+
             CommonMethod.Sleep(50);
             bytes1 = new List<byte>() { 0x37, 0xC1, 0x03, 0xA8 };
             temp = Send(bytes1.ToArray(), 0x2F);
-               
+
             return true;
         }
 
@@ -2285,11 +2285,11 @@ namespace Common.UDS
             LogHelper.Debug("关闭EOL");
             List<byte> bytes1 = new List<byte>() { 0x37, 0xC1, 0x03, 0x98 };
             var temp = Send(bytes1.ToArray(), 0x2F);
-           
-                CommonMethod.Sleep(50);
-                bytes1 = new List<byte>() { 0x37, 0xC1, 0x03, 0x58 };
-                temp = Send(bytes1.ToArray(), 0x2F);
-              
+
+            CommonMethod.Sleep(50);
+            bytes1 = new List<byte>() { 0x37, 0xC1, 0x03, 0x58 };
+            temp = Send(bytes1.ToArray(), 0x2F);
+
             return true;
         }
         /// <summary>
@@ -2347,7 +2347,7 @@ namespace Common.UDS
         {
 
             if (ConfigHelper.UdsParameters.jiesuo == "DF_DH1" || ConfigHelper.UdsParameters.jiesuo == "ChangAn_B216" || ConfigHelper.UdsParameters.jiesuo == "ChangAn_C390" || ConfigHelper.UdsParameters.jiesuo.Substring(0, 5) == "AVATR" ||
-                ConfigHelper.UdsParameters.jiesuo == "RC_PK2C" || ConfigHelper.UdsParameters.jiesuo == "RC_PK1B" || ConfigHelper.UdsParameters.jiesuo == "WL_F710S" || 
+                ConfigHelper.UdsParameters.jiesuo == "RC_PK2C" || ConfigHelper.UdsParameters.jiesuo == "RC_PK1B" || ConfigHelper.UdsParameters.jiesuo == "WL_F710S" ||
                 ConfigHelper.UdsParameters.jiesuo == "T09_M" || ConfigHelper.UdsParameters.jiesuo == "WL_C1046")
 
             {
@@ -2371,7 +2371,7 @@ namespace Common.UDS
         {
             {
                 LogHelper.Debug("唤醒电流阈值");
-                List<byte> bytes1 = new List<byte> {};
+                List<byte> bytes1 = new List<byte> { };
                 if (ConfigHelper.UdsParameters.jiesuo == "WL_F710S")
                 {
                     bytes1 = HexChange("30 29");
@@ -2384,7 +2384,7 @@ namespace Common.UDS
                 {
                     bytes1 = HexChange("FD 11");
                 }
-                     
+
                 var temp = Send(bytes1.ToArray(), 0x22);
                 if (temp != null)
                 {
@@ -2396,7 +2396,7 @@ namespace Common.UDS
 
         }
 
-        
+
 
         public static List<byte> GetcurCA2()
         {
@@ -2426,7 +2426,7 @@ namespace Common.UDS
 
         }
 
-       
+
 
         public static bool CurrCalibrate(List<byte> cur)
         {
@@ -2445,9 +2445,9 @@ namespace Common.UDS
             {
                 data = $"05 2E FD 12 {(cur[2]).ToString("X2")} {(cur[3]).ToString("X2")} AA AA";
             }
-             
+
             _uds.Send(uint.Parse(ConfigHelper.UdsParameters.TID, System.Globalization.NumberStyles.HexNumber), data, true, true, 8, true);
-           
+
             DateTime now = DateTime.Now;
             _data = null;
             while (true)
@@ -2637,7 +2637,7 @@ namespace Common.UDS
         public static double GetMOSDischargeVoltage()
         {
 
-            if (ConfigHelper.UdsParameters.jiesuo == "ChangAn_B216" || ConfigHelper.UdsParameters.jiesuo == "ChangAn_C390" || ConfigHelper.UdsParameters.jiesuo.Substring(0, 5) == "AVATR" || 
+            if (ConfigHelper.UdsParameters.jiesuo == "ChangAn_B216" || ConfigHelper.UdsParameters.jiesuo == "ChangAn_C390" || ConfigHelper.UdsParameters.jiesuo.Substring(0, 5) == "AVATR" ||
                 ConfigHelper.UdsParameters.jiesuo == "RC_PK2C" || ConfigHelper.UdsParameters.jiesuo == "RC_PK1B" || ConfigHelper.UdsParameters.jiesuo == "WL_C1046" || ConfigHelper.UdsParameters.jiesuo == "WL_F710S" || ConfigHelper.UdsParameters.jiesuo == "T09_M")
 
             {
@@ -2798,15 +2798,15 @@ namespace Common.UDS
         {
             LogHelper.Debug("硬件版本标定");
             List<byte> bytes = new List<byte>();
-         
-           
-           
+
+
+
             bytes.Add(0x00);
             bytes.Add(0x00);
             bytes.Add(0x00);
-            bytes.Add(Convert.ToByte(vision.Substring(6, 2)) );
+            bytes.Add(Convert.ToByte(vision.Substring(6, 2)));
             bytes.Add(Convert.ToByte(vision.Substring(8, 2)));
-            string data = ConfigHelper.UdsParameters.PCH_Date + " 13" + " 1C" + " " + vision.Substring(0, 2) + " " + vision.Substring(2, 2)+" " + vision.Substring(4, 2);
+            string data = ConfigHelper.UdsParameters.PCH_Date + " 13" + " 1C" + " " + vision.Substring(0, 2) + " " + vision.Substring(2, 2) + " " + vision.Substring(4, 2);
             foreach (var item in bytes)
             {
                 data += " " + item.ToString("X2");
@@ -3034,7 +3034,7 @@ namespace Common.UDS
             _data = null;
             LogHelper.ShowMsg($"{data}");
             _uds.Send(uint.Parse(ConfigHelper.UdsParameters.TID, System.Globalization.NumberStyles.HexNumber), data, true, true, 40, true);
-           
+
             return true;
         }
 
@@ -3050,7 +3050,7 @@ namespace Common.UDS
                 {
                     bytes.Add(((byte)vision[i]));
                 }
-                
+
             }
             string data = ConfigHelper.UdsParameters.YJ_Date;
             foreach (var item in bytes)
@@ -3104,7 +3104,7 @@ namespace Common.UDS
             }
             string data = $"10 12 2E F0 89 {bytes[0].ToString("X2")} {bytes[1].ToString("X2")} {bytes[2].ToString("X2")}";
             LogHelper.ShowMsg($"{data}");
-           
+
             var temp = SendUDS(data);
             CommonMethod.Sleep(20);
             if (temp != null && temp[0] == 0x30)
@@ -3118,12 +3118,12 @@ namespace Common.UDS
                 temp = SendUDS(data);
                 DateTime now = DateTime.Now;
                 return true;
-                
+
             }
             return false;
         }
 
-        
+
 
         public static bool VersionCalibateWL(string vision)
         {
@@ -3148,7 +3148,7 @@ namespace Common.UDS
 
                 LogHelper.ShowMsg($"{data}");
                 _uds.Send(uint.Parse(ConfigHelper.UdsParameters.TID, System.Globalization.NumberStyles.HexNumber), data, true, true, 8, true);
-           
+
                 DateTime now = DateTime.Now;
                 return true;
 
@@ -3569,7 +3569,7 @@ namespace Common.UDS
             bytes.Add(0x8C);
             for (int i = 0; i < 20; i++)
             {
-                if(i < barValue.Length)
+                if (i < barValue.Length)
                 {
                     bytes.Add((byte)barValue[i]);
                 }
@@ -3577,7 +3577,7 @@ namespace Common.UDS
                 {
                     bytes.Add(0x20);
                 }
-              
+
             }
 
             string data = ConfigHelper.UdsParameters.PCH_Date;
@@ -3620,7 +3620,7 @@ namespace Common.UDS
 
             DateTime now = DateTime.Now;
             return true;
-           
+
         }
 
         public static bool BarCodeCalibrateGQ(string barValue)
@@ -3631,7 +3631,7 @@ namespace Common.UDS
             bytes.Add(0x8C);
             for (int i = 0; i < barValue.Length; i++)
             {
-                
+
                 bytes.Add((byte)barValue[i]);
             }
 
@@ -3656,12 +3656,12 @@ namespace Common.UDS
             bytes.Add(0xF1);
             bytes.Add(0x8C);
 
-            byte[] bcdbuf = new byte[barValue.Length/2];
+            byte[] bcdbuf = new byte[barValue.Length / 2];
             bytes.Add(0x20);
-            for (int i = 0; i < bcdbuf.Length-2; i++)
+            for (int i = 0; i < bcdbuf.Length - 2; i++)
             {
-                byte high = (byte)(barValue[i*2] - '0');
-                byte low = (byte)(barValue[i * 2+1] - '0');
+                byte high = (byte)(barValue[i * 2] - '0');
+                byte low = (byte)(barValue[i * 2 + 1] - '0');
                 bytes.Add((byte)((high << 4) | low));
             }
             bytes.Add(0x00);
@@ -3707,7 +3707,7 @@ namespace Common.UDS
             DateTime now = DateTime.Now;
             _data = null;
             return true;
-         
+
         }
 
         public static bool BarCodeCalibrateDF(string barValue)
@@ -3718,7 +3718,7 @@ namespace Common.UDS
             bytes.Add(0xF1);
             bytes.Add(0x8C);
 
-            
+
             for (int i = 0; i < barValue.Length; i++)
             {
                 bytes.Add((byte)barValue[i]);
@@ -3767,7 +3767,7 @@ namespace Common.UDS
         public static bool SCCalibrateWL(string barValue)
         {
 
-            byte[] arr = new byte[] { 0xF1, 0x8B, 0x20, Convert.ToByte(barValue.Substring(0, 2),16), Convert.ToByte(barValue.Substring(2, 2),16), Convert.ToByte(barValue.Substring(4, 2),16) };
+            byte[] arr = new byte[] { 0xF1, 0x8B, 0x20, Convert.ToByte(barValue.Substring(0, 2), 16), Convert.ToByte(barValue.Substring(2, 2), 16), Convert.ToByte(barValue.Substring(4, 2), 16) };
             var temp = Send(arr, 0x2E);
             if (temp != null && temp.Item1 == 0x6E)
             {
@@ -4116,7 +4116,7 @@ namespace Common.UDS
 
                     }
                 }
-                if(level == 2 && ConfigHelper.UdsParameters.jiesuo == "WL_F710S")
+                if (level == 2 && ConfigHelper.UdsParameters.jiesuo == "WL_F710S")
                 {
                     for (int i = 3; i < 6; i++)
                     {
@@ -4142,10 +4142,10 @@ namespace Common.UDS
                     {
                         if (respenson[0] == 0x21)
                         {
-                            
-                             version += respenson[1].ToString("");
-                            
-                             version += respenson[7].ToString("");
+
+                            version += respenson[1].ToString("");
+
+                            version += respenson[7].ToString("");
 
                         }
 
@@ -4157,7 +4157,7 @@ namespace Common.UDS
                             }
 
                         }
-                        
+
                     }
 
                     if (level == 1 || level == 0)
@@ -4171,7 +4171,7 @@ namespace Common.UDS
                                 version += (char)respenson[i];
                             }
 
-                            
+
                         }
                         else if (ConfigHelper.UdsParameters.jiesuo == "WL_F710S")
                         {
@@ -4214,7 +4214,7 @@ namespace Common.UDS
                                 }
                             }
                         }
-                            
+
 
                     }
                     else
@@ -4350,19 +4350,19 @@ namespace Common.UDS
                 if (ConfigHelper.UdsParameters.xieyi == "CAN")
                 {
                     var lists = new List<byte>();
-                    
+
                     for (int i = 3; i < 6; i++)
                     {
                         version += (char)temp.Item2[i];
 
                     }
-                    
+
 
                     var respensons = SendUDS2("30 00 00 AA AA AA AA AA");
 
                     foreach (var respenson in respensons)
                     {
-                        
+
                         for (int i = 1; i < 8; i++)
                         {
                             version += (char)respenson[i];
@@ -4385,7 +4385,7 @@ namespace Common.UDS
 
                     foreach (var respenson in respensons)
                     {
-                        if(respenson[0] == 0x21)
+                        if (respenson[0] == 0x21)
                         {
                             for (int i = 1; i < 8; i++)
                             {
@@ -4412,13 +4412,13 @@ namespace Common.UDS
                     }
                 }
 
-                        
+
                 return version;
-                
-                
+
+
             }
             return "";
-            
+
         }
 
         public static string GetVersionMS(int level)
@@ -4492,9 +4492,9 @@ namespace Common.UDS
                     break;
             }
 
-           
-           
-                
+
+
+
             var temp = Send(bytes1.ToArray(), 0x22);
             string version = "";
 
@@ -4579,7 +4579,7 @@ namespace Common.UDS
         {
             LogHelper.Debug("获取版本");
 
-            
+
             List<byte> bytes1 = new List<byte>() { 0xF1 };
             switch (level)
             {
@@ -4613,7 +4613,7 @@ namespace Common.UDS
 
                 }
             }
-            else if(level == 1)
+            else if (level == 1)
             {
                 for (int i = 2; i < 6; i++)
                 {
@@ -4629,7 +4629,7 @@ namespace Common.UDS
 
                 }
             }
-                
+
 
 
 
@@ -4638,7 +4638,7 @@ namespace Common.UDS
 
         }
 
-        
+
 
         public static string GetVersionH97(int level)
         {
@@ -4659,6 +4659,14 @@ namespace Common.UDS
                     bytes1.Add(0xF1);
                     bytes1.Add(0x80);
                     break;
+                case 3:
+                    bytes1.Add(0xF1);
+                    bytes1.Add(0x95);
+                    break;
+                case 4:
+                    bytes1.Add(0xF1);
+                    bytes1.Add(0x87);
+                    break;
             }
             var temp = Send(bytes1.ToArray(), 0x22);
             string version = "";
@@ -4670,7 +4678,7 @@ namespace Common.UDS
                 version += (char)temp.Item2[i];
 
             }
-            if(level == 2)
+            if (level == 2)
             {
                 var respensons = SendUDS2("30 00 00 AA AA AA AA AA");
 
@@ -4683,13 +4691,13 @@ namespace Common.UDS
                             version += (char)respenson[i];
                         }
                     }
-                    
+
 
 
 
                 }
             }
-            else 
+            else if (level == 0 || level == 1 || level == 4)
             {
                 var respensons = SendUDS2("30 00 00 AA AA AA AA AA");
 
@@ -4711,6 +4719,30 @@ namespace Common.UDS
                     }
 
 
+
+                }
+            }
+            else 
+            {
+                var respensons = SendUDS2("30 00 00 AA AA AA AA AA");
+
+                foreach (var respenson in respensons)
+                {
+
+                    if (respenson[0] == 0x21)
+                    {
+                        for (int i = 1; i < 8; i++)
+                        {
+                            version += (char)respenson[i];
+                        }
+                    }
+                    if (respenson[0] == 0x22)
+                    {
+                        for (int i = 1; i < 3; i++)
+                        {
+                            version += (char)respenson[i];
+                        }
+                    }
 
                 }
             }

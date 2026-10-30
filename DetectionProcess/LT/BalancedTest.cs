@@ -269,7 +269,7 @@ namespace DetectionProcess.LT
                 LogHelper.Debug("------均衡测试------");
 
 
-          
+                CommonMethod.Unlock();
 
 
                 var par = pars.FirstOrDefault();
@@ -288,11 +288,11 @@ namespace DetectionProcess.LT
                 }
 
                 DateTime startTime = DateTime.Now;
-                CommonMethod.SetN8331(14);
+                CommonMethod.SetN8331(13.6);
                 CommonData.IT6322.SetOutput(true);
-                CommonData.IT6322.SetVol(14.5);
+                CommonData.IT6322.SetVol(13.6);
                 CommonMethod.Sleep(200);
-                NewCanHelper.MOSControlVoltageEnable(true, false, false, gd: false);
+                NewCanHelper.MOSControlVoltageEnable(true, true, false, gd: false);
 
                 var b11 = double.Parse(CommonData.N8331.SelectCurr(1));
                 var b21 = double.Parse(CommonData.N8331.SelectCurr(2));

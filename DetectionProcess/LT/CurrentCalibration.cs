@@ -916,7 +916,15 @@ namespace DetectionProcess.LT
                                 modelTemp = new TestResult();
                                 modelTemp.ChildrenItem = $"正向[{CalibrateTempVal[t].Item1} - {CalibrateTempVal[t + 1].Item1}]B";
                                 modelTemp.MeasureVal = B[i, t].ToString("0.000");
-                                modelTemp.Result = true;
+                                modelTemp.MeasurementStandard = "[-3,3]";
+                                if (B[i, t] >= -3 && B[i, t] <= 3)
+                                {
+                                    modelTemp.Result = true;
+                                }
+                                else
+                                {
+                                    modelTemp.Result = false;
+                                }
                                 AddModelAction(modelTemp);
                             }
                             else
@@ -939,7 +947,15 @@ namespace DetectionProcess.LT
                                 modelTemp = new TestResult();
                                 modelTemp.ChildrenItem = $"反向[{CalibrateTempVal[t].Item1}  -  {CalibrateTempVal[t + 1].Item1}]B";
                                 modelTemp.MeasureVal = B[i, t].ToString("0.000");
-                                modelTemp.Result = true;
+                                modelTemp.MeasurementStandard = "[-3,3]";
+                                if (B[i, t] >= -3 && B[i, t] <= 3)
+                                {
+                                    modelTemp.Result = true;
+                                }
+                                else
+                                {
+                                    modelTemp.Result = false;
+                                }
                                 AddModelAction(modelTemp);
                             }
                         }
