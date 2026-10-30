@@ -322,7 +322,7 @@ namespace Common
                 ConfigHelper.UdsParameters.jiesuo == "VOYAH_H47A" || ConfigHelper.UdsParameters.jiesuo == "VOYAH_H97")
             {
                 threshold = 30;
-                threshold1 = 40;
+                threshold1 = 50;
             }
             if (ConfigHelper.UdsParameters.jiesuo == "HQ_E702" || ConfigHelper.UdsParameters.jiesuo == "HQ_C1079" || ConfigHelper.UdsParameters.jiesuo == "WL_C1046" || ConfigHelper.UdsParameters.jiesuo == "RC_PK2C" || ConfigHelper.UdsParameters.jiesuo == "RC_PK1B" ||
                 ConfigHelper.UdsParameters.jiesuo == "WL_F710S"  )
