@@ -950,7 +950,7 @@ namespace DetectionProcess.LT
                     model.DifferenceVal = "1.000";
                 }
                 AddModelAction?.Invoke(model);
-
+                DateTime dateTime = DateTime.Now;
                 model = new TestResult();
                 model.StartTime = DateTime.Now;
                 model.ChildrenItem = "电流唤醒";
@@ -967,7 +967,12 @@ namespace DetectionProcess.LT
                     model.Result = true;
                 }
                 CommonMethod.StartSendAwaken();
-
+                var dateTime1 = DateTime.Now - dateTime;
+                LogHelper.ShowMsg($"电流唤醒时间{dateTime1.TotalMilliseconds}");
+                if (dateTime1.TotalMilliseconds > 5000)
+                {
+                    throw new Exception("休眠时间超5s");
+                }
                 if (ConfigHelper.UdsParameters.jiesuo != "WL_F710S")
                 {
                     GetWakeSource(model, 4);
@@ -981,8 +986,8 @@ namespace DetectionProcess.LT
                 CommonMethod.Unlock();
                 CommonMethod.StartSendUnlock();
                 //读取唤醒源
-
                 model.EndTime = DateTime.Now;
+
                 if (model.Result == true)
                 {
                     model.DifferenceVal = "0.000";
