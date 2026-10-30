@@ -267,6 +267,36 @@ namespace DetectionProcess.LT
                 model.Result = model.MeasureVal == model.QualifiedValue;
                 AddModelAction(model);
             }
+            else if (ConfigHelper.UdsParameters.jiesuo == "CN_D7")
+            {
+
+                string s1 = "";
+                string s2 = "";
+
+                barCode = barCode.Substring(23);
+
+                s1 = PlayUDSHelper.GetVersionCN(6).Trim();
+                s2 = PlayUDSHelper.GetVersionCN(5).Trim();
+
+                TestResult model = new TestResult();
+
+                model.ChildrenItem = par.ChildrenItem;
+                model.Extend1 = "1";
+                model.QualifiedValue = par.MeasurementStandard;
+                model.MeasurementStandard = par.MeasurementStandard;
+                model.MeasureVal = s2;
+                model.Result = model.MeasureVal == model.QualifiedValue;
+                AddModelAction(model);
+
+                model = new TestResult();
+                model.ChildrenItem = "批次号";
+                model.Extend1 = "1";
+                model.QualifiedValue = barCode;
+                model.MeasurementStandard = barCode;
+                model.MeasureVal = s1;
+                model.Result = model.MeasureVal == model.QualifiedValue;
+                AddModelAction(model);
+            }
             else
             {
                 barCode = barCode.Substring(19);

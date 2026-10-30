@@ -20,9 +20,19 @@ namespace DetectionProcess.LT
         static string BarCodeDay = "123456789ABCDEFGHJKLMNPRSTVWXYZ";
         public override bool Start(IEnumerable<TestParameter> pars)
         {
+            if (ConfigHelper.UdsParameters.jiesuo == "T09_M")
+            {
+                if (PlayUDSHelper.Reset())
+                {
+                    AddModelAction(new TestResult() { ChildrenItem = "复位" });
+                }
+                else
+                {
+                    AddModelAction(new TestResult() { ChildrenItem = "复位失败", Result = false });
+                    throw new Exception("复位失败");
+                }
+            }
             LogHelper.Debug("------LBMS写入------");
-
-            
 
             if (ConfigHelper.UdsParameters.jiesuo == "HQ_E702" )
             {
@@ -30,7 +40,8 @@ namespace DetectionProcess.LT
                 return true;
             }
             CommonMethod.Unlock();
-            
+           
+
             var par = pars.FirstOrDefault(m => m.ChildrenItem.Contains("硬件"));
             if (pars.Count() == 0)
             {
@@ -44,14 +55,16 @@ namespace DetectionProcess.LT
             if (ConfigHelper.UdsParameters.jiesuo == "T09_M")
             {
 
-                barCode = barCode.Substring(9);
-          
 
-          
                 if (ConfigHelper.UdsParameters.REPORT == "GAV_V57") {
+                    barCode = barCode.Substring(0, 11) + barCode.Substring(12,7)+barCode.Substring(20,2);
                     PlayUDSHelper.GoToAPP_V57();
                 } else {
-                    PlayUDSHelper.GoToAPP(); }
+                    barCode = barCode.Substring(9);
+                    PlayUDSHelper.GoToAPP(); 
+                }
+
+
 
                 Thread.Sleep(1000);
                 CommonMethod.Unlock();
@@ -166,6 +179,33 @@ namespace DetectionProcess.LT
 
                 }
 
+
+
+
+
+            }
+            else if (ConfigHelper.UdsParameters.jiesuo == "CN_D7")
+            {
+                barCode = barCode.Substring(23);
+
+
+                if (PlayUDSHelper.BarCodeCalibrateCN(barCode) == false)
+                {
+                    //LogHelper.ShowMsg("序列号写入失败");
+                    AddModelAction(new TestResult() { ChildrenItem = "LBMS写入失败" });
+                    throw new Exception("批次号写入失败");
+
+                }
+                Thread.Sleep(200);
+
+                if (PlayUDSHelper.VersionCalibateCN(par.MeasurementStandard) == false)
+                {
+                    //LogHelper.ShowMsg("硬件号写入失败");
+                    AddModelAction(new TestResult() { ChildrenItem = "LBMS写入失败" });
+                    throw new Exception("硬件号写入失败");
+
+                }
+                Thread.Sleep(200);
 
 
 
@@ -524,10 +564,24 @@ namespace DetectionProcess.LT
                 }
             }
 
-                
+            if (ConfigHelper.UdsParameters.jiesuo == "T09_M")
+            {
+                if (PlayUDSHelper.Reset())
+                {
+                    AddModelAction(new TestResult() { ChildrenItem = "BSM写入成功" });
 
-                
-            
+                    AddModelAction(new TestResult() { ChildrenItem = "复位" });
+                }
+                else
+                {
+                    AddModelAction(new TestResult() { ChildrenItem = "复位失败", Result = false });
+                    throw new Exception("复位失败");
+                }
+            }
+
+
+
+
             CommonData.TestCount++;
             return true;
         }

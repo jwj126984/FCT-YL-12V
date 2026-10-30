@@ -169,6 +169,27 @@ namespace FCT.Dialog
                "ClearDTC," +
                "BalancedAndAFE";
             }
+            else if (ConfigHelper.UdsParameters.jiesuo == "CN_D7")
+            {
+                detect = "CanTRTest," +
+               "ProduceRead," +
+               "PCBTemperature," +
+               "MOSControl," +
+               "ModuleTemperature," +
+               "VoltageTest," +
+               "BalancedTest," +
+               "CurrentLimiting," +
+               "CurrentCalibration," +
+               "CurrentCollection," +
+               "WorkingCurrent," +
+               "WakeSourceTest," +
+               "SleepingCurrent," +
+               "ClearAH," +
+               "SOCAndSOH," +
+               "LBMSWrite," +
+               "ClearDTC," +
+               "BalancedAndAFE";
+            }
             else if (ConfigHelper.UdsParameters.jiesuo == "AVATR_E15")
             {
                 detect = "CanTRTest," +
@@ -195,25 +216,20 @@ namespace FCT.Dialog
                 detect = "CanTRTest," +
                "ProduceRead," +
                "PCBTemperature," +
-                   
                "MOSControl," +
                "ModuleTemperature," +
                "Cur0A," +
-                
                "VoltageTest," +
-                  
                "BalancedTest," +
                "CurrentLimiting," +
-               
                "CurrentCalibration," +
                "CurrentCollection," +
                "WorkingCurrent," +
                  "MOSSleepKeep," +
                "WakeSourceTest," +
                "SleepingCurrent," +
-              
-
                "ClearAH," +
+               "AHClearConfirm," +
                "SOCAndSOH," +
                "LBMSWrite," +
                "ClearDTC," +
@@ -1271,6 +1287,7 @@ namespace FCT.Dialog
 
                 });
             }
+
             else if (ConfigHelper.UdsParameters.jiesuo == "T09_M")
             {
                 testItem.Add(new UdsTestItem
@@ -1285,6 +1302,23 @@ namespace FCT.Dialog
                         new UdsParameter { Name = "零件号", Description = "0x", TextBoxName = "LJ_DATA", DefaultValue = "01 64 80" },
                         new UdsParameter { Name = "Bootloder", Description = "0x", TextBoxName = "BOOT_DATA", DefaultValue = "01 64 80" },
                          new UdsParameter { Name = "报告名称", Description = "0x", TextBoxName = "REPORT", DefaultValue = "01 64 80" }
+                    }
+
+                });
+            }
+            else if (ConfigHelper.UdsParameters.jiesuo == "CN_D7")
+            {
+                testItem.Add(new UdsTestItem
+                {
+                    TestName = "软硬件版本条件判断",
+                    Parameters = new List<UdsParameter>
+                    {
+                        new UdsParameter { Name = "OEM软件", Description = "0x", TextBoxName = "RJ_DATA", DefaultValue = "31" },
+                        new UdsParameter { Name = "OEM硬件", Description = "0x", TextBoxName = "YJ_DATA", DefaultValue = "31" },
+                        new UdsParameter { Name = "供应商软件", Description = "0x", TextBoxName = "KHRJ_DATA", DefaultValue = "31" },
+                        new UdsParameter { Name = "供应商硬件", Description = "0x", TextBoxName = "KHYJ_DATA", DefaultValue = "31" },
+                        new UdsParameter { Name = "自定义软件", Description = "0x", TextBoxName = "LJ_DATA", DefaultValue = "01 64 80" },
+                        new UdsParameter { Name = "Bootloder", Description = "0x", TextBoxName = "BOOT_DATA", DefaultValue = "01 64 80" }
                     }
 
                 });

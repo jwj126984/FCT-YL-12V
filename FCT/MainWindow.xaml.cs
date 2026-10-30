@@ -1630,6 +1630,7 @@ namespace FCT
 
 
                "ClearAH," +
+               "AHClearConfirm,"+
                "SOCAndSOH," +
                "LBMSWrite," +
                "ClearDTC," +
@@ -1698,6 +1699,27 @@ namespace FCT
                 else if (jiesuo == "VOYAH_H56C" || jiesuo == "XP_12V")
                 {
                     detectItems = "CanTRTest,ProduceRead,PCBTemperature,MOSControl,VoltageTest,BalancedTest,CurrentLimiting,MOSSleepKeep,CurrentCalibration,CurrentCollection,WorkingCurrent,WakeSourceTest,SleepingCurrent,EEPROMTest,ClearAH,SOCAndSOH,LBMSWrite,ClearDTC,BalancedAndAFE";
+                }
+                else if (ConfigHelper.UdsParameters.jiesuo == "CN_D7")
+                {
+                    detectItems = "CanTRTest," +
+                   "ProduceRead," +
+                   "PCBTemperature," +
+                   "MOSControl," +
+                   "ModuleTemperature," +
+                   "VoltageTest," +
+                   "BalancedTest," +
+                   "CurrentLimiting," +
+                   "CurrentCalibration," +
+                   "CurrentCollection," +
+                   "WorkingCurrent," +
+                   "WakeSourceTest," +
+                   "SleepingCurrent," +
+                   "ClearAH," +
+                   "SOCAndSOH," +
+                   "LBMSWrite," +
+                   "ClearDTC," +
+                   "BalancedAndAFE";
                 }
                 else
                 {

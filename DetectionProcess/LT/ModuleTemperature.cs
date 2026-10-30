@@ -21,7 +21,7 @@ namespace DetectionProcess.LT
             
 
             if (ConfigHelper.UdsParameters.jiesuo == "HQ_E702"  || ConfigHelper.UdsParameters.jiesuo == "VOYAH_H97" || ConfigHelper.UdsParameters.jiesuo == "VOYAH_H47A" || ConfigHelper.UdsParameters.jiesuo == "WL_F710S" || 
-                ConfigHelper.UdsParameters.jiesuo == "T09_M" || ConfigHelper.UdsParameters.jiesuo == "QR_C1068" || ConfigHelper.UdsParameters.jiesuo == "DF_DH1" || ConfigHelper.UdsParameters.jiesuo == "DF_XY-A")
+                ConfigHelper.UdsParameters.jiesuo == "T09_M" || ConfigHelper.UdsParameters.jiesuo == "CN_D7" || ConfigHelper.UdsParameters.jiesuo == "QR_C1068" || ConfigHelper.UdsParameters.jiesuo == "DF_DH1" || ConfigHelper.UdsParameters.jiesuo == "DF_XY-A")
             {
                 DateTime startTime = DateTime.Now;
                 (double, double, double) ts1 = (0, 0, 0);

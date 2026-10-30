@@ -456,6 +456,43 @@ namespace Common.UDS
                 return DataParsing.CanDataParsing(GetData(0x33B), 113, 1, 1, 0, 5);
             }
         }
+
+
+        public static double CanHXCN
+        {
+            get
+            {
+                return DataParsing.CanDataParsing(GetData(0x248), 416, 1, 1, 0, 5);
+            }
+        }
+        public static double RTCCN
+        {
+            get
+            {
+                return DataParsing.CanDataParsing(GetData(0x248), 426, 1, 1, 0, 5);
+            }
+        }
+        public static double DianLiuCN
+        {
+            get
+            {
+                return DataParsing.CanDataParsing(GetData(0x248), 429, 1, 1, 0, 5);
+            }
+        }
+        public static double GuoYaCN
+        {
+            get
+            {
+                return DataParsing.CanDataParsing(GetData(0x248), 428, 1, 1, 0, 5);
+            }
+        }
+        public static double YingJianCN
+        {
+            get
+            {
+                return DataParsing.CanDataParsing(GetData(0x248), 427, 1, 1, 0, 5);
+            }
+        }
         /// <summary>
         /// 单体电压1
         /// </summary>
@@ -529,6 +566,29 @@ namespace Common.UDS
 
             }
         }
+
+        /// <summary>
+        /// 累积充电AH（LBMS_CumuChargeAh, 0x3CD, 起始位360, 24bit, 精度0.1, 偏移0）
+        /// </summary>
+        public static double CumuChargeAh
+        {
+            get
+            {
+                return DataParsing.CanDataParsing(GetData(0x3CD), 360, 24, 0.1, 0, 100000, 0);
+            }
+        }
+
+        /// <summary>
+        /// 累积放电AH（LBMS_CumuDischargeAh, 0x3CD, 起始位384, 24bit, 精度0.1, 偏移0）
+        /// </summary>
+        public static double CumuDischargeAh
+        {
+            get
+            {
+                return DataParsing.CanDataParsing(GetData(0x3CD), 384, 24, 0.1, 0, 100000, 0);
+            }
+        }
+
 
         public static (double, double, double) DXTemperatures1068
         {
