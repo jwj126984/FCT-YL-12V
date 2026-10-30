@@ -425,7 +425,7 @@ namespace Common.UDS
         {
             get
             {
-                return DataParsing.CanDataParsing(GetData(0x33B), 116, 1, 1, 0, 5);
+                return DataParsing.CanDataParsing(GetData(0x33B), 117, 3, 1, 0, 5);
             }
         }
         public static double RTCDF
@@ -439,7 +439,7 @@ namespace Common.UDS
         {
             get
             {
-                return DataParsing.CanDataParsing(GetData(0x33B), 115, 1, 1, 0, 5);
+                return DataParsing.CanDataParsing(GetData(0x33B), 117, 3, 1, 0, 5);
             }
         }
         public static double GuoYaDF

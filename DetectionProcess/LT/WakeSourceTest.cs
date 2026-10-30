@@ -734,6 +734,10 @@ namespace DetectionProcess.LT
                 }
                 currentVot = double.Parse(CommonData.N8331.GetVol4().Sum().ToString("0.0"));
 
+                //CommonData.Relay.SetRelayCard1(18, true);
+                //CommonData.Relay.SetRelayCard1(19, true);
+                //CommonData.Relay.SetRelayCard1(20, true);
+                //CommonData.Relay.SetRelayCard1(21, true);
                 CommonMethod.SetN8331(13.6);
 
 
@@ -1206,6 +1210,8 @@ namespace DetectionProcess.LT
                 {
                     AddModelAction(item);
                 }
+
+        
                 NewCanHelper.MOSControlVoltageEnable(true, false);
                 CommonData.TestCount++;
                 return isSuccess;
