@@ -30,7 +30,7 @@ namespace DetectionProcess.LT
 
             CommonData.N36200.SetVoltage(12.8);
             CommonData.N36200.SetCurrent(100);
-            
+
 
             CommonData.N69206H.SetOutput(false);
             CommonMethod.Sleep(150);
@@ -74,13 +74,17 @@ namespace DetectionProcess.LT
                 }
 
             }
-
+            DateTime endTime = DateTime.Now;
+            var span = (endTime - now).TotalSeconds;
             var model = new TestResult();
             model.ChildrenItem = "放电测试";
+            model.StartTime = endTime;
+            model.EndTime = endTime.AddSeconds(span);
+            model.MeasurementStandard = "100A";
+            model.MeasureVal = "100A";
             model.MeasurementStandard = "";
             model.QualifiedValue = "";
-         
-        model.Result = result;
+            model.Result = result;
             
             AddModelAction(model);
 
