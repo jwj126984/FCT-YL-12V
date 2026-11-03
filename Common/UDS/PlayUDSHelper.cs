@@ -4521,11 +4521,11 @@ namespace Common.UDS
             switch (level)
             {
                 case 0:
-                    bytes1.Add(0xF0);
+                    bytes1.Add(0xF1);
                     bytes1.Add(0x89);
                     break;
                 case 1:
-                    bytes1.Add(0xF1);
+                    bytes1.Add(0xF0);
                     bytes1.Add(0x89);
                     break;
                 case 2:

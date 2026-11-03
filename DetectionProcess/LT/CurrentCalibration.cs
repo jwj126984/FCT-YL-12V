@@ -709,7 +709,7 @@ namespace DetectionProcess.LT
                     for (int t = 0; t < CalibrateTempVal.Count - 1; t++)
                     {
 
-                        if (Math.Abs(CalibrateTempVal[t + 1].Item1) >= 100 && flagfzh == 0)
+                        if (Math.Abs(CalibrateTempVal[t + 1].Item1) > 50 && flagfzh == 0)
                         {
 
                             CommonData.N69206H.SetOutput(false);
@@ -720,7 +720,7 @@ namespace DetectionProcess.LT
                             CommonMethod.Sleep(100);
                             flagfzh = 1;
                         }
-                        else if (Math.Abs(CalibrateTempVal[t + 1].Item1) < 100 && flagfz == 0)
+                        else if (Math.Abs(CalibrateTempVal[t + 1].Item1) <= 50 && flagfz == 0)
                         {
                             CommonData.N69206H.SetOutput(false);
                             CommonMethod.Sleep(500);
