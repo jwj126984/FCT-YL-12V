@@ -46,13 +46,28 @@ namespace DetectionProcess.LT
             CommonMethod.Sleep(5000);
             bool result = false;
 
+
+            var currStr = CommonData.N36200.GetMeasureCurrent();
+            double cur = double.Parse(currStr);
+
+            for (int i = 0; i < 10; i++)
+            {
+                currStr = CommonData.N36200.GetMeasureCurrent();
+                cur = double.Parse(currStr);
+                LogHelper.ShowMsg($"xm{cur}");
+                if (cur < 90 || cur > 110)
+                {
+                    CommonMethod.Sleep(1000);
+                }
+                else
+                {
+                    break;
+                }
+            }
+
             DateTime now = DateTime.Now;
-         
             while (true)
             {
-                var currStr = CommonData.N36200.GetMeasureCurrent();
-                double cur = double.Parse(currStr);
-                LogHelper.ShowMsg($"xm{cur}");
                 if (cur > 90 && cur <110)
                 {
                     CommonMethod.Sleep(2000);
