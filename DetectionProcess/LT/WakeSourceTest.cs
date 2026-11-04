@@ -599,6 +599,53 @@ namespace DetectionProcess.LT
                 }
                 AddModelAction?.Invoke(model);
 
+                
+
+
+               
+
+
+
+                model = new TestResult();
+                model.StartTime = DateTime.Now;
+                model.ChildrenItem = "可以帮电唤醒测试";
+                model.QualifiedValue = ConfigHelper.UdsParameters.GetHX_GY;
+                model.MeasurementStandard = ConfigHelper.UdsParameters.GetHX_GY;
+
+                b1 = GuoYa();
+
+
+                if (b1 == false)
+                {
+                    isSuccess = false;
+                    //model.Result = false;
+                }
+                else
+                {
+                    //model.Result = true;
+                }
+                CommonMethod.StartSendAwaken();
+                CommonMethod.Sleep(50);
+                GetWakeSource(model, 2);
+                if (NewCanHelper.WakeOrSleep(true) == false)
+                {
+                    LogHelper.MessageBoxShow("工装唤醒失败");
+                }
+                CommonMethod.Unlock();
+                CommonMethod.StartSendUnlock();
+                //读取唤醒源
+                model.EndTime = DateTime.Now;
+                if (model.Result == true)
+                {
+                    model.DifferenceVal = "0.000";
+                }
+                else if (model.Result == false)
+                {
+                    model.DifferenceVal = "1.000";
+                }
+                AddModelAction?.Invoke(model);
+
+
                 model = new TestResult();
                 model.StartTime = DateTime.Now;
                 model.ChildrenItem = "硬件唤醒";
@@ -653,50 +700,7 @@ namespace DetectionProcess.LT
                 AddModelAction?.Invoke(model);
 
 
-               
 
-
-
-                model = new TestResult();
-                model.StartTime = DateTime.Now;
-                model.ChildrenItem = "可以帮电唤醒测试";
-                model.QualifiedValue = ConfigHelper.UdsParameters.GetHX_GY;
-                model.MeasurementStandard = ConfigHelper.UdsParameters.GetHX_GY;
-
-                b1 = GuoYa();
-
-
-                if (b1 == false)
-                {
-                    isSuccess = false;
-                    //model.Result = false;
-                }
-                else
-                {
-                    //model.Result = true;
-                }
-                CommonMethod.StartSendAwaken();
-                CommonMethod.Sleep(50);
-                GetWakeSource(model, 2);
-                if (NewCanHelper.WakeOrSleep(true) == false)
-                {
-                    LogHelper.MessageBoxShow("工装唤醒失败");
-                }
-                CommonMethod.Unlock();
-                CommonMethod.StartSendUnlock();
-                //读取唤醒源
-
-
-                model.EndTime = DateTime.Now;
-                if (model.Result == true)
-                {
-                    model.DifferenceVal = "0.000";
-                }
-                else if (model.Result == false)
-                {
-                    model.DifferenceVal = "1.000";
-                }
-                AddModelAction?.Invoke(model);
 
                 CommonMethod.Unlock();
                 PlayUDSHelper.MOSControl(MOSEnum.断开);//MOS断开

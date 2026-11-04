@@ -3,6 +3,7 @@ using Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -33,6 +34,10 @@ namespace DetectionProcess
             {
                 throw new ArgumentNullException("实例名称不能为空");
             }
+
+
+            //var A = Assembly.GetAssembly(typeof(DetectionProcess.LT.Cur0A));
+
             var type = Type.GetType(Detect + instanceName);
             if (type == null)
             {
