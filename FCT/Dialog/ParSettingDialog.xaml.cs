@@ -307,7 +307,7 @@ namespace FCT.Dialog
                "PCBTemperature," +
                "MOSControl," +
                "ModuleTemperature," +
-                   "Discur," +
+                
                "VoltageTest," +
                "BalancedTest," +
                "CurrentLimiting," +
@@ -315,6 +315,30 @@ namespace FCT.Dialog
                "CurrentCalibration," +
                "CurrentCollection," +
            
+               "WorkingCurrent," +
+               "WakeSourceTest," +
+               "SleepingCurrent," +
+               "ClearAH," +
+               "SOCAndSOH," +
+               "LBMSWrite," +
+               "ClearDTC," +
+               "BalancedAndAFE";
+            }
+            else if (ConfigHelper.UdsParameters.jiesuo == "VOYAH_H97" || ConfigHelper.UdsParameters.jiesuo == "VOYAH_H47A")
+            {
+                detect = "CanTRTest," +
+               "ProduceRead," +
+               "PCBTemperature," +
+               "MOSControl," +
+               "ModuleTemperature," +
+                   "Discur," +
+               "VoltageTest," +
+               "BalancedTest," +
+               "CurrentLimiting," +
+                "MOSSleepKeep," +
+               "CurrentCalibration," +
+               "CurrentCollection," +
+
                "WorkingCurrent," +
                "WakeSourceTest," +
                "SleepingCurrent," +
