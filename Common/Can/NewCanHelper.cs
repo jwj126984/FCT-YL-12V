@@ -283,6 +283,45 @@ namespace Common.Can
             }
         }
 
+        public static void ControlLED(int Color = 0)
+        {
+            try
+            {
+                bool result = true;
+                if (Color == 1)
+                {
+                    result &= _relay.SetRelayCard1(22,true);
+                    result &= _relay.SetRelayCard1(23, false);
+                    result &= _relay.SetRelayCard2(26, false);
+              
+
+                }
+                else if (Color == 2)
+                {
+                    result &= _relay.SetRelayCard1(22, false);
+                    result &= _relay.SetRelayCard1(23, true);
+                    result &= _relay.SetRelayCard2(26, false);
+                }
+                else if (Color == 3)
+                {
+                    result &= _relay.SetRelayCard1(22, false);
+                    result &= _relay.SetRelayCard1(23, false);
+                    result &= _relay.SetRelayCard2(26, true);
+                }
+                else 
+                {
+                    result &= _relay.SetRelayCard1(22, false);
+                    result &= _relay.SetRelayCard1(23, false);
+                    result &= _relay.SetRelayCard2(26, false);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Debug($"初始化所有继电器失败: {ex.Message}");
+              
+            }
+        }
         public static void SetCellTemperature(double d)
         {
             try

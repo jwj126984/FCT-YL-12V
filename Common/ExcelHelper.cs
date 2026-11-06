@@ -57,7 +57,7 @@ namespace Common
                 reportname = ConfigHelper.UdsParameters.REPORT;
             }
 
-            string filePath = dirPath + $"\\{reportname}_{list.FirstOrDefault().BoardNum}_{DateTime.Now.ToString("yyyyMMddHHmmss")}_{(CommonData.TestResult ? "PASS" : "FAIL")}.xlsx";
+            string filePath = dirPath + $"\\{reportname}_{list.FirstOrDefault().BoardNum}_{DateTime.Now.ToString("yyyyMMddHHmmss")}-{CommonData.Key_Vals.FirstOrDefault(m => m.CommKey == "RscName").CommValue}_{(CommonData.TestResult ? "PASS" : "FAIL")}.xlsx";
             var extension = System.IO.Path.GetExtension(filePath);
 
             if (extension.Equals(".xlsx"))

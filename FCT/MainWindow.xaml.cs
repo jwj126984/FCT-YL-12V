@@ -627,7 +627,7 @@ namespace FCT
                                     tr.Abort();
                                 }
                                 CommonData.TestCount = 0;
-
+                                NewCanHelper.ControlLED(0);
                                 CommonData.M3905D.SetOUTPut(0);
                                 CommonData.N8331.SetOutPut4(false);
                                 NewCanHelper.ControlZhiJu(false);
@@ -747,6 +747,8 @@ namespace FCT
                             {
                                 #region 准备阶段
                                 NewCanHelper.InitAllRelays();
+
+                                NewCanHelper.ControlLED(3);
                                 CommonMethod.Sleep(100);
                                 NewCanHelper.MOSControlVoltageEnable(true, false,false);
                                 CommonMethod.InitFrameFile(CommonData.CurrentBarCode);
@@ -1187,13 +1189,29 @@ namespace FCT
 
             NewCanHelper.InitAllRelays();
 
+            
+
             #region 显示判断总结果
             if (isStopPressDown == false)
             {
                 var failResult = testResults.FirstOrDefault(m => m.Result == false);
+               
+              
+
                 this.Dispatcher.Invoke(() =>
                 {
                     bool b = failResult == null&&CommonData.CurrentUserDetects.Count==CommonData.TestCount;//2025-5-19新增判断总项数
+
+                    if (b)
+                    {
+                        NewCanHelper.ControlLED(1);
+                    }
+                    else
+                    {
+                        NewCanHelper.ControlLED(2);
+                    }
+
+
                     this.Dispatcher.Invoke(() =>
                     {
                         if (this.IsEnabled == true)
