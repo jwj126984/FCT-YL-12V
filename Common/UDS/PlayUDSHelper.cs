@@ -3747,7 +3747,7 @@ namespace Common.UDS
             LogHelper.ShowMsg($"{data}");
             _data = null;
             CommonMethod.Sleep(20);
-            data = $"21 {int.Parse(barValue[11].ToString()).ToString("X2")} 20 20 20 20 20 {((byte)barValue[7]).ToString("X2")}";
+            data = $"21 {int.Parse(barValue[11].ToString()).ToString("X2")} 20 20 20 20 {((byte)barValue[6]).ToString("X2")} {((byte)barValue[7]).ToString("X2")}";
             LogHelper.ShowMsg($"{data}");
             _uds.Send(uint.Parse(ConfigHelper.UdsParameters.TID, System.Globalization.NumberStyles.HexNumber), data, true, true, 8, true);
             CommonMethod.Sleep(20);
@@ -5536,6 +5536,7 @@ namespace Common.UDS
                         string version1 = "";
                         string version2 = "";
                         string version3 = "";
+                        string version4 = "";
                         for (int i = 3; i < 6; i++)
                         {
                             version1 += ((int)temp.Item2[i]).ToString();
@@ -5570,8 +5571,37 @@ namespace Common.UDS
 
 
                             }
-                        }
-                        else
+                        }else
+                            if (ConfigHelper.UdsParameters.jiesuo == "WL_F710S")
+                            {
+                                foreach (var respenson in respensons)
+                                {
+
+                                    if (respenson[0] == 0x21)
+                                    {
+
+                                        version1 += ((int)respenson[1]).ToString();
+                                        version2 += (char)respenson[6];
+
+                                        version4 += (char)respenson[7];
+
+
+                                    }
+
+                                    if (respenson[0] == 0x22)
+                                    {
+                                        for (int i = 1; i < 4; i++)
+                                        {
+                                            version3 += respenson[i].ToString("D2");
+                                        }
+
+                                    }
+
+
+                                }
+                                version = version3  + version2 + version4+ version1;
+                            }
+                            else
                         {
                             foreach (var respenson in respensons)
                             {
