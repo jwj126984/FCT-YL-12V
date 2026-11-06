@@ -158,7 +158,45 @@ namespace DetectionProcess.LT
             AddModelAction(model);
             CommonData.TestCount++;
 
+            try
+            {
+                CommonMethod.StopSendAwaken();
+                CommonMethod.StopSendUnlock();
 
+                CommonMethod.Unlock();
+                if (ConfigHelper.UdsParameters.jiesuo == "RC_PK2C")
+                {
+                    var temp = PlayUDSHelper.UdsSleep(1);
+                    if (temp == null)
+                    {
+                        AddModelAction(new TestResult() { ChildrenItem = "一级休眠", Result = false });
+                    }
+                    else
+                    {
+                        AddModelAction(new TestResult() { ChildrenItem = "一级休眠", Result = null });
+                    }
+                }
+                else
+                {
+                    var temp = PlayUDSHelper.UdsSleep(2);
+                    if (temp == null)
+                    {
+                        AddModelAction(new TestResult() { ChildrenItem = "二级休眠", Result = false });
+                    }
+                    else
+                    {
+                        AddModelAction(new TestResult() { ChildrenItem = "二级休眠", Result = null });
+                    }
+                }
+
+
+
+
+            }
+            catch (Exception)
+            {
+
+            }
 
 
             return true;
