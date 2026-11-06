@@ -872,6 +872,7 @@ namespace FCT
                                     LogHelper.Debug("设置 M3905D 0V350A");
                                     power2.SetVoltage(0);
                                     mesC = power2.SetCurrentAndStable(0);
+                                    power2.SetOUTPut(0);
                                 });
                                 Task.WaitAll(task1, task2);
                                 LogHelper.Debug("设置NXI-6400采集卡采集电流模式");
