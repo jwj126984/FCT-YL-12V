@@ -408,46 +408,26 @@ namespace Common.SerialportHelper
         /// </summary>
         /// <param name="v"></param>
         /// <returns>设置值</returns>
-        public string SetVoltage(double v)
+        public void SetVoltage(double v)
         {
             LogHelper.Debug(PowerType + " " + "设置电压输出值 VOLTage " + v);
             SendAndWaitForResponse("VOLTage " + v, false);
-            ////回读
-            //DateTime now = DateTime.Now;
-            //while (true)
-            //{
-            //    var v1 = double.Parse(GetMEASVoltage());
-            //    if (Math.Abs(v - v1) < CommonData.PowerVoltageOffset)
-            //    {
-            //        break;
-            //    }
-            //    if ((DateTime.Now - now).TotalSeconds > 5)
-            //    {
-            //        throw new Exception("设置电源超时");
-            //    }
-            //}
-            ////设置使能
-            //var outPut= SetOUTPut(1);
-            //if (outPut.ToString().Contains( "1")==false) {
-            //    throw new Exception("使能失败");
-            //}
+           
 
 
-            LogHelper.Debug(PowerType + " " + "回读设置值 VOLTage?");
-            return SendAndWaitForResponse("VOLTage?").Trim();
+            
         }
         /// <summary>
         /// 设置电流值
         /// </summary>
         /// <param name="c"></param>
         /// <returns>设置值</returns>
-        public string SetCurrent(double c)
+        public void SetCurrent(double c)
         {
             LogHelper.Debug(PowerType + " " + "设置电流值 CURRent " + c);
             SendAndWaitForResponse("CURRent " + c, false);
 
-            LogHelper.Debug(PowerType + " " + "回读设置值 CURRent?");
-            return SendAndWaitForResponse("CURRent?");
+           
 
         }
         /// <summary>

@@ -2707,7 +2707,7 @@ namespace DetectionProcess.LT
 
         public bool DianLiudf()
         {
-            DateTime now = DateTime.Now;
+           
             List<byte> data = new List<byte>();
             (bool, double) dl;
             #region 电流唤醒
@@ -2727,7 +2727,7 @@ namespace DetectionProcess.LT
             {
                 AddSleepCurr("1", dl.Item2, "电流");
             }
-
+            DateTime now = DateTime.Now;
             NewCanHelper.MOSControlVoltageEnable(true, false, false, gd: true);
             CommonMethod.Sleep(100);
             //控制电流正向采集
@@ -2753,6 +2753,9 @@ namespace DetectionProcess.LT
             CommonMethod.Sleep(100);
             NewCanHelper.MOSControlVoltageEnable(true, false, false, gd: false);
             CommonMethod.Sleep(500);
+
+            var dateTime1 = DateTime.Now - now;
+            LogHelper.ShowMsg($"设备操时间时间一：{dateTime1.TotalMilliseconds}");
             dl = CommonMethod.GetWorkCurrentFromPower(awatiTime: 1.5, threshold: 20);
             AddWorkCurr( dl.Item2, "电流");
             //if (ConfigHelper.UdsParameters.jiesuo == "T09_M")
@@ -2762,13 +2765,14 @@ namespace DetectionProcess.LT
             LogHelper.Debug("电流唤醒时间");
             TestResult test = new TestResult();
 
-
+            DateTime now1 = DateTime.Now;
 
             CommonData.N69206H.SetOutput(false);
             CommonData.M3905D.SetVoltage(0);
             CommonData.M3905D.SetOUTPut(0);
             NewCanHelper.CloseTotalCurrentCollection();
-
+            var dateTime2 = DateTime.Now - now1;
+            LogHelper.ShowMsg($"设备操时间时间二：{dateTime2.TotalMilliseconds}");
             LogHelper.ShowMsg("电流唤醒成功");
             if (dl.Item1 == false)
             {
