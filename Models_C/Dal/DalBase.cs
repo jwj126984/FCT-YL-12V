@@ -13,7 +13,7 @@ namespace Models_C.Dal
 
         //static string conStr = $"Server=10.144.182.71;Port=3306;Database=seres;Uid=root;Pwd=play0726;Allow User Variables=True";
 
-        static string conStr = $"Server=127.0.0.1;Port=3306;Database={ConfigHelper.SelectType};Uid=root;Pwd=123456;Allow User Variables=True;AllowPublicKeyRetrieval=true;SSL Mode=None";
+        static string conStr = $"Server=127.0.0.1;Port=3306;Database=lt;Uid=root;Pwd=123456;Allow User Variables=True;AllowPublicKeyRetrieval=true;SSL Mode=None";
         protected static IDataBase ado = PlayDBHelper.ADOHelper.GetADO(conStr);
 
         
