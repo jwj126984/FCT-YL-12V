@@ -17,7 +17,7 @@ namespace DetectionProcess.LT
         {
             LogHelper.Debug("------均衡与AFE诊断测试------");
 
-            
+          
 
             int testnum = 0;
             TestResult model;
@@ -33,15 +33,35 @@ namespace DetectionProcess.LT
                 model = new TestResult();
                 model.StartTime = DateTime.Now;
 
+                if (ConfigHelper.UdsParameters.jiesuo == "DF_DH1" || ConfigHelper.UdsParameters.jiesuo == "DF_XY-A" || ConfigHelper.UdsParameters.jiesuo == "VOYAH_H47A" || ConfigHelper.UdsParameters.jiesuo == "VOYAH_H97")
+                {
+                    CommonMethod.Unlock();
+                    CommonMethod.StopSendAwaken();
+                    CommonMethod.StopSendUnlock();
 
-                //if (PlayUDSHelper.Reset() == false)
-                //{
-                //    //LogHelper.ShowMsg("复位失败");
-                //    AddModelAction(new TestResult() { ChildrenItem = "均衡与AFE诊断测试失败" });
-                //    throw new Exception("复位失败");
-                //}
-                //AddModelAction(new TestResult() { ChildrenItem = "复位", Extend1 = "-1" });
-             //   CommonMethod.Sleep(6000);
+                    if (PlayUDSHelper.UdsSleep(1) == null)
+                    {
+                        LogHelper.ShowMsg("休眠失败");
+                        throw new Exception("休眠失败");
+                    }
+
+                    var dl = CommonMethod.GetSleep1CurrentFromPower();
+
+
+                    CommonMethod.StartSendAwaken();
+
+                    dl = CommonMethod.GetWorkCurrentFromPower();
+                    if (dl.Item1 == false)
+                    {
+                        LogHelper.ShowMsg("唤醒失败");
+                        return false;
+                    }
+
+                    CommonMethod.Sleep(5000);
+                }
+                    
+
+
                 var result = PlayUDSHelper.GetBalancedAndAFE();
                 model.EndTime = DateTime.Now;
                 model.ChildrenItem = par.ChildrenItem;
