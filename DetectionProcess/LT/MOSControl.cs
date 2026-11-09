@@ -361,7 +361,7 @@ namespace DetectionProcess.LT
 
 
                 var end = DateTime.Now;
-                var span = (start - end).TotalSeconds;
+                var span = (end - start).TotalSeconds;
 
                 Result("1", true, start, span, fOpenChargeVoltage);
                 Result("2", true, start.AddSeconds(span * 1), span, fOpenDisChargeVoltage);

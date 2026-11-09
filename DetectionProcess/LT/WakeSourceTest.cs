@@ -1003,9 +1003,16 @@ namespace DetectionProcess.LT
                 AddModelAction?.Invoke(model);
 
 
+                model = new TestResult();
+                model.StartTime = DateTime.Now;
+                model.ChildrenItem = "电流唤醒时间";
+                model.QualifiedValue = "<5s";
+                model.MeasurementStandard = "<5s";
+                model.MeasureVal = (dateTime1.TotalMilliseconds/1000).ToString("0.000");
+                model.Result = (dateTime1.TotalMilliseconds / 1000) < 5;
 
 
-
+                AddModelAction?.Invoke(model);
 
 
 
