@@ -1,13 +1,14 @@
-﻿using Common.UDS;
+﻿using AllData;
 using Common;
+using Common.Can;
+using Common.UDS;
 using Model;
+using Models_C.Dal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Models_C.Dal;
-using AllData;
 
 namespace DetectionProcess.LT
 {
@@ -35,28 +36,29 @@ namespace DetectionProcess.LT
 
                 if (ConfigHelper.UdsParameters.jiesuo == "DF_DH1" || ConfigHelper.UdsParameters.jiesuo == "DF_XY-A" || ConfigHelper.UdsParameters.jiesuo == "VOYAH_H47A" || ConfigHelper.UdsParameters.jiesuo == "VOYAH_H97")
                 {
-                    CommonMethod.Unlock();
-                    CommonMethod.StopSendAwaken();
-                    CommonMethod.StopSendUnlock();
+                    //NewCanHelper.MOSControlVoltageEnable(true, false, false, gd: false);
+                    //CommonMethod.Unlock();
+                    //CommonMethod.StopSendAwaken();
+                    //CommonMethod.StopSendUnlock();
 
-                    if (PlayUDSHelper.UdsSleep(1) == null)
-                    {
-                        LogHelper.ShowMsg("休眠失败");
-                        throw new Exception("休眠失败");
-                    }
+                    //if (PlayUDSHelper.UdsSleep(1) == null)
+                    //{
+                    //    LogHelper.ShowMsg("休眠失败");
 
-                    var dl = CommonMethod.GetSleep1CurrentFromPower();
+                    //}
+
+                    //var dl = CommonMethod.GetSleep1CurrentFromPower();
 
 
-                    CommonMethod.StartSendAwaken();
+                    //CommonMethod.StartSendAwaken();
 
-                    dl = CommonMethod.GetWorkCurrentFromPower();
-                    if (dl.Item1 == false)
-                    {
-                        LogHelper.ShowMsg("唤醒失败");
-                        return false;
-                    }
+                    //dl = CommonMethod.GetWorkCurrentFromPower();
+                    //if (dl.Item1 == false)
+                    //{
+                    //    LogHelper.ShowMsg("唤醒失败");
 
+                    //}
+                    PlayUDSHelper.Reset();
                     CommonMethod.Sleep(5000);
                 }
                     
@@ -178,46 +180,52 @@ namespace DetectionProcess.LT
             AddModelAction(model);
             CommonData.TestCount++;
 
-            try
-            {
-                CommonMethod.StopSendAwaken();
-                CommonMethod.StopSendUnlock();
 
-                CommonMethod.Unlock();
-                if (ConfigHelper.UdsParameters.jiesuo == "RC_PK2C")
+            if (ConfigHelper.UdsParameters.jiesuo == "DF_DH1" || ConfigHelper.UdsParameters.jiesuo == "DF_XY-A" )
+            {
+                try
                 {
-                    var temp = PlayUDSHelper.UdsSleep(1);
-                    if (temp == null)
+                    CommonMethod.StopSendAwaken();
+                    CommonMethod.StopSendUnlock();
+
+                    CommonMethod.Unlock();
+                    if (ConfigHelper.UdsParameters.jiesuo == "RC_PK2C")
                     {
-                        AddModelAction(new TestResult() { ChildrenItem = "一级休眠", Result = false });
+                        var temp = PlayUDSHelper.UdsSleep(1);
+                        if (temp == null)
+                        {
+                            AddModelAction(new TestResult() { ChildrenItem = "一级休眠", Result = false });
+                        }
+                        else
+                        {
+                            AddModelAction(new TestResult() { ChildrenItem = "一级休眠", Result = null });
+                        }
                     }
                     else
                     {
-                        AddModelAction(new TestResult() { ChildrenItem = "一级休眠", Result = null });
+                        var temp = PlayUDSHelper.UdsSleep(2);
+                        if (temp == null)
+                        {
+                            AddModelAction(new TestResult() { ChildrenItem = "二级休眠", Result = false });
+                        }
+                        else
+                        {
+                            AddModelAction(new TestResult() { ChildrenItem = "二级休眠", Result = null });
+                        }
                     }
+
+
+
+
                 }
-                else
+                catch (Exception)
                 {
-                    var temp = PlayUDSHelper.UdsSleep(2);
-                    if (temp == null)
-                    {
+                   
                         AddModelAction(new TestResult() { ChildrenItem = "二级休眠", Result = false });
-                    }
-                    else
-                    {
-                        AddModelAction(new TestResult() { ChildrenItem = "二级休眠", Result = null });
-                    }
+                    
+                  
                 }
-
-
-
-
             }
-            catch (Exception)
-            {
-
-            }
-
 
             return true;
         }

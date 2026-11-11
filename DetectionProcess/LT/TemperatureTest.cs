@@ -76,14 +76,14 @@ namespace DetectionProcess.LT
                     //model.MeasurementStandard = par.MeasurementStandard;
                     model.MeasurementStandard = par.MeasurementStandard;
 
-                    model.QualifiedValue = $"[{chargeMOS}]";
+                    model.QualifiedValue = $"[22,28]";
                     double num = (double)par.MeasurementStandard.GetNumber();
                     model.MeasureVal = pcb.ToString("0.000");
 
                     //model.DifferenceVal = (double.Parse(model.MeasureVal) - double.Parse(model.QualifiedValue)).ToString("0.000");
                     //model.Result = Math.Abs(double.Parse(model.DifferenceVal)) <= num;
                     model.DifferenceVal = (double.Parse(model.MeasureVal) - chargeMOS).ToString("0.000");
-                    model.Result = Math.Abs(double.Parse(model.DifferenceVal)) <= num;
+                    model.Result = Math.Abs(double.Parse(model.DifferenceVal)) <= num && pcb >= 22 && pcb <= 28;
                     model.EndTime = start.AddSeconds(span);
                     AddModelAction(model);
                 }
@@ -102,12 +102,12 @@ namespace DetectionProcess.LT
                     model.StartTime = start.AddSeconds(span);
                     model.ChildrenItem = par.ChildrenItem;
                     model.MeasurementStandard = par.MeasurementStandard;
-                    model.QualifiedValue = pcb.ToString("0.000");
+                    model.QualifiedValue = $"[22,28]";
                     double num = (double)par.MeasurementStandard.GetNumber();
                     model.MeasureVal = chargeMOS.ToString("0.000");
 
                     model.DifferenceVal = (double.Parse(model.MeasureVal) - pcb).ToString("0.000");
-                    model.Result = Math.Abs(double.Parse(model.DifferenceVal)) <= num;
+                    model.Result = Math.Abs(double.Parse(model.DifferenceVal)) <= num && chargeMOS >= 22 && chargeMOS <= 28;
                     model.EndTime = start.AddSeconds(span * 2);
                     AddModelAction(model);
                 }
@@ -125,11 +125,11 @@ namespace DetectionProcess.LT
                     model.StartTime = start.AddSeconds(span * 2);
                     model.ChildrenItem = par.ChildrenItem;
                     model.MeasurementStandard = par.MeasurementStandard;
-                    model.QualifiedValue = pcb.ToString("0.000");
+                    model.QualifiedValue = $"[22,28]";
                     double num = (double)par.MeasurementStandard.GetNumber();
                     model.MeasureVal = disChargeMOS.ToString("0.000");
                     model.DifferenceVal = (double.Parse(model.MeasureVal) - pcb).ToString("0.000");
-                    model.Result = Math.Abs(double.Parse(model.DifferenceVal)) <= num;
+                    model.Result = Math.Abs(double.Parse(model.DifferenceVal)) <= num && disChargeMOS >= 22 && disChargeMOS <= 28;
                     model.EndTime = start.AddSeconds(span * 3);
                     AddModelAction(model);
                 }
@@ -150,12 +150,12 @@ namespace DetectionProcess.LT
                         model.StartTime = start.AddSeconds(span * 3);
                         model.ChildrenItem = par.ChildrenItem;
                         model.MeasurementStandard = par.MeasurementStandard;
-                        model.QualifiedValue = pcb.ToString("0.000");
+                        model.QualifiedValue = $"[22,28]";
                         double num = (double)par.MeasurementStandard.GetNumber();
                         model.MeasureVal = limit.ToString("0.000");
 
                         model.DifferenceVal = (double.Parse(model.MeasureVal) - pcb).ToString("0.000");
-                        model.Result = Math.Abs(double.Parse(model.DifferenceVal)) <= num;
+                        model.Result = Math.Abs(double.Parse(model.DifferenceVal)) <= num && limit >= 22 && limit <= 28;
                         model.EndTime = start.AddSeconds(span * 4);
                         AddModelAction(model);
                     }
