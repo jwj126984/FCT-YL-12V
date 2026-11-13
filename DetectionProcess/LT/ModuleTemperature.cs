@@ -18,7 +18,10 @@ namespace DetectionProcess.LT
         {
             LogHelper.Debug("------电芯温度测试------");
 
-            
+            var par = CommonData.TestParameters.FirstOrDefault(m => m.ChildrenItem.ToLower().Contains("pcb温度".ToLower()));
+
+            var MAXT = par.MaxVal;
+            var MINT = par.MinVal;
 
             if (ConfigHelper.UdsParameters.jiesuo == "HQ_E702"  || ConfigHelper.UdsParameters.jiesuo == "VOYAH_H97" || ConfigHelper.UdsParameters.jiesuo == "VOYAH_H47A" || ConfigHelper.UdsParameters.jiesuo == "WL_F710S" || 
                 ConfigHelper.UdsParameters.jiesuo == "T09_M" || ConfigHelper.UdsParameters.jiesuo == "CN_D7" || ConfigHelper.UdsParameters.jiesuo == "QR_C1068" || ConfigHelper.UdsParameters.jiesuo == "DF_DH1" || ConfigHelper.UdsParameters.jiesuo == "DF_XY-A")
@@ -56,11 +59,11 @@ namespace DetectionProcess.LT
                 model.StartTime = startTime;
                 model.EndTime = startTime.AddSeconds(span);
                 model.ChildrenItem = "电芯1温度测试点";
-                model.QualifiedValue = $"[22,28]";
+                model.QualifiedValue = $"[{MINT},{MAXT}]";
                 model.MeasureVal = ts1.Item1.ToString("0.000");
                 model.DifferenceVal = (ts1.Item1 - pcb).ToString("0.000");
                 double num = 2;
-                model.Result = Math.Abs((ts1.Item1 - pcb)) <= num && ts1.Item1 >= 22 && ts1.Item1 <= 28;
+                model.Result = Math.Abs((ts1.Item1 - pcb)) <= num && ts1.Item1 >= MINT && ts1.Item1 <= MAXT;
                 AddModelAction(model);
 
                 model = new TestResult();
@@ -68,11 +71,11 @@ namespace DetectionProcess.LT
                 model.StartTime = startTime;
                 model.EndTime = startTime.AddSeconds(span);
                 model.ChildrenItem = "电芯2温度测试点";
-                model.QualifiedValue = $"[22,28]";
+                model.QualifiedValue = $"[{MINT},{MAXT}]";
                 model.MeasureVal = ts1.Item2.ToString("0.000");
                 model.DifferenceVal = (ts1.Item2 - pcb).ToString("0.000");
                 num = 2;
-                model.Result = Math.Abs((ts1.Item2 - pcb)) <= num && ts1.Item2 >= 22 && ts1.Item2 <= 28;
+                model.Result = Math.Abs((ts1.Item2 - pcb)) <= num && ts1.Item2 >= MINT && ts1.Item2 <= MAXT;
                 AddModelAction(model);
 
                 if (ConfigHelper.UdsParameters.jiesuo != "QR_C1068" )
@@ -82,11 +85,11 @@ namespace DetectionProcess.LT
                     model.StartTime = startTime;
                     model.EndTime = startTime.AddSeconds(span);
                     model.ChildrenItem = "电芯3温度测试点";
-                    model.QualifiedValue = $"[22,28]";
+                    model.QualifiedValue = $"[{MINT} ,{MAXT}]";
                     model.MeasureVal = ts1.Item3.ToString("0.000");
                     model.DifferenceVal = (ts1.Item3 - pcb).ToString("0.000");
                     num = 2;
-                    model.Result = Math.Abs((ts1.Item3 - pcb)) <= num && ts1.Item3 >= 22 && ts1.Item3 <= 28;
+                    model.Result = Math.Abs((ts1.Item3 - pcb)) <= num && ts1.Item3 >= MINT && ts1.Item3 <= MAXT;
                     AddModelAction(model);
                 }
                     

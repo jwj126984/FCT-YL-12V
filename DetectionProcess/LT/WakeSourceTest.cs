@@ -2735,7 +2735,7 @@ namespace DetectionProcess.LT
                 AddSleepCurr("1", dl.Item2, "电流");
             }
             DateTime now = DateTime.Now;
-            NewCanHelper.MOSControlVoltageEnable(true, false, false, gd: true);
+         //   NewCanHelper.MOSControlVoltageEnable(true, false, false, gd: true);
             CommonMethod.Sleep(100);
             //控制电流正向采集
             if (ConfigHelper.UdsParameters.jiesuo == "ChangAn_B216" || ConfigHelper.UdsParameters.jiesuo == "ChangAn_C390" || ConfigHelper.UdsParameters.jiesuo == "HQ_C1079" || ConfigHelper.UdsParameters.jiesuo.Substring(0, 5) == "AVATR" ||
@@ -2758,7 +2758,7 @@ namespace DetectionProcess.LT
             CommonData.M3905D.SetCurrent(5);
             CommonData.M3905D.SetOUTPut(1);
             CommonMethod.Sleep(100);
-            NewCanHelper.MOSControlVoltageEnable(true, false, false, gd: false);
+       //     NewCanHelper.MOSControlVoltageEnable(true, false, false, gd: false);
             CommonMethod.Sleep(500);
 
             var dateTime1 = DateTime.Now - now;
