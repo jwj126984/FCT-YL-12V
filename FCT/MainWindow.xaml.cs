@@ -1248,13 +1248,13 @@ namespace FCT
 
             //CanHelper.StopTest();
             NewCanHelper.EndTest();
-          //  NewCanHelper.RESET(1);
-         //   CommonMethod.StopSendAwaken();
-          //  CommonMethod.StopSendUnlock();
+            //  NewCanHelper.RESET(1);
+            CommonMethod.StopSendAwaken();
+            CommonMethod.StopSendUnlock();
 
-           
 
-            
+
+
 
             //CanHelper.AwaitQiTingUp();
             CommonData.IsTesting = false;

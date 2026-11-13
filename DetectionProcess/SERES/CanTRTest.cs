@@ -1,5 +1,6 @@
 ﻿using Common;
 using Common.Can;
+using Common.SerialportHelper;
 using Model;
 using Models_C;
 using System;
@@ -38,6 +39,9 @@ namespace DetectionProcess.SERES
             //    throw new Exception("终端电阻上电使能失败");
             //}
             //CommonMethod.Sleep(1000);
+
+            CommonData.N8331.SetOutPut4(false);
+            CommonMethod.Sleep(1000);
             CommonData.Relay.SetRelayCard1(5,true);
             CommonMethod.Sleep(2000);
             double num = (double)par.MeasurementStandard.GetNumber();
